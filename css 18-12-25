@@ -7,8 +7,9 @@
   --color-5: #e5e5eb;
   --color-6: #dddde2;
   
-  /* Semantic colors */
-
+  /* Fuentes */
+--titulos: 'Poppins';
+--cuerpo1: 'Open Sans';
 }
 
 .oscuro {
@@ -19,14 +20,27 @@
   --color-4: #0c2b45;
   --color-5: #070713;
   
-  /* Semantic colors */
-  --text: #f7fdf7;
-  --surface: #14191f;
-  --primary: #0c4542;
-  --secondary: #0c2b45;
-  --background: #070713;
+  /* Fuentes */
+--titulos: 'Poppins';
+--subtil: 'Cormorant Garamond';  
+--cuerpo1: 'Open Sans';
 
 }
+
+@font-face {
+    font-family: 'Cormorant Garamond';
+    font-style: normal; 
+    src: url('https://dl.dropbox.com/scl/fi/ij6k79a7evtqiizdaosws/CormorantGaramond-Italic-VariableFont_wght.ttf?rlkey=jr8msrjtq0d7zm529mk4lsqvp&st=3w2dxays&dl=1') 
+    format('truetype');
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal; 
+    src: url('https://dl.dropbox.com/scl/fi/fo3u5mp48i3s9gmh26h8s/OpenSans-VariableFont_wdth-wght.ttf?rlkey=w0lu3xqf25p5i8is1w8rbokvl&st=a4oc4sty&dl=1') 
+    format('truetype');
+}
+
 
 #wrap {
     width: 1200px;
@@ -37,4 +51,5 @@
     max-width: 1200px;
     font-size: clamp(14px, 1vw, 10vh);
     color: var(--color-1);
+    font-family: var(--cuerpo1);
 }
