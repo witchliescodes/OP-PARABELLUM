@@ -1,0 +1,38 @@
+.claro {
+      /* Mi Paleta */
+  --color-1: #0a0a15;
+  --color-2: #6f9bd3;
+  --color-3: #6f70d3;
+  --color-4: #faf8fc;
+  --color-5: #e5e5eb;
+  --color-6: #dddde2;
+  
+  /* Semantic colors */
+
+}
+
+.oscuro {
+  /* Mi Paleta */
+  --color-1: #f7fdf7;
+  --color-2: #14191f;
+  --color-3: #0c4542;
+  --color-4: #0c2b45;
+  --color-5: #070713;
+  
+  /* Semantic colors */
+  --text: #f7fdf7;
+  --surface: #14191f;
+  --primary: #0c4542;
+  --secondary: #0c2b45;
+  --background: #070713;
+
+}
+
+#wrap {
+    width: 1200px;
+    margin: 0 auto;
+    background-color: var(--color-6);
+    border: none;
+    padding: 50px;
+    max-width: 1200px;
+}
