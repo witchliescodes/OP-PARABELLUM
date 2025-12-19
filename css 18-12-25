@@ -31,8 +31,10 @@
 #wrap {
     width: 1200px;
     margin: 0 auto;
-    background-color: var(--color-6);
+    background-color: var(--color-4);
     border: none;
     padding: 50px;
     max-width: 1200px;
+    font-size: clamp(14px, 1vw, 10vh);
+    color: var(--color-1);
 }
