@@ -3,13 +3,18 @@
 <html xmlns="http://www.w3.org/1999/xhtml" dir="{S_CONTENT_DIRECTION}" id="min-width" lang="{L_LANG_HTML}"
 	  xml:lang="{L_LANG_HTML}" {NAMESPACE_FB_LIKE} {NAMESPACE_FB} {NAMESPACE_BBCODE}>
 <head>
-  	<meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-    	<link href="https://solar-icons.gitlab.io/i/icons.css" rel="stylesheet" crossorigin />
-    	<script src="https://unpkg.com/akar-icons-fonts"></script>
-   	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
-	<title>{SITENAME_TITLE}{PAGE_TITLE}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <link href="https://solar-icons.gitlab.io/i/icons.css" rel="stylesheet" crossorigin />
+  <script src="https://unpkg.com/akar-icons-fonts"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"/>
+  <script src="https://kit.fontawesome.com/a96fcf6740.js" crossorigin="anonymous"></script>  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
+  <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-solid-rounded/css/uicons-solid-rounded.css' />
+	
+  <title>{SITENAME_TITLE}{PAGE_TITLE}</title>
 	<meta http-equiv="content-type" content="text/html; charset={S_CONTENT_ENCODING}"/>
 	<meta http-equiv="content-script-type" content="text/javascript"/>
 	<meta http-equiv="content-style-type" content="text/css"/>
@@ -182,10 +187,7 @@
 			display: inline !important;
 		}
 
-		<!--
-		BEGIN switch_ticker_new
-
-		-->
+		<!-- BEGIN switch_ticker_new -->
 		.jcarousel-skin-tango .jcarousel-item {
 			text-align: center;
 			width: 10px;
@@ -199,10 +201,7 @@
 			margin-bottom: {switch_ticker.SPACING}px;
 		}
 
-		<!--
-		END switch_ticker_new
-
-		-->
+		<!-- END switch_ticker_new -->
 	</style>
 	{HOSTING_JS}
 
@@ -221,6 +220,71 @@
 </head>
 
 <body id="phpbb" class="claro">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />  
+  
+<header class="parahead">
+<navbar>
+    <div class="f-nvpar">
+             <a href="{U_INDEX}" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" title="Inicio"><i class="fi fi-sr-home"></i></a>
+            <!-- BEGIN switch_user_logged_in -->
+             <a href="" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" title="Miembros"><i class="fi fi-sr-user"></i></a>
+             <a href="" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" title="Grupos"><i class="fi fi-sr-users"></i></a>
+             <button data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" title="Aumentar tamaño de letra"><i class="fi fi-sr-square-plus"></i></button>
+             <button data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" title="Disminuir tamaño de letra"><i class="fi fi-sr-square-minus"></i></button>
+             <a href="" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" title="Desconectarse"><i class="fi fi-sr-exit"></i></a>
+            <!-- END switch_user_logged_in -->
+            <!-- BEGIN switch_user_logged_out -->
+             <a href="" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" title="Conectarse"><i class="fi fi-sr-power"></i></a>
+             <a href="" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" title="Registrarse"><i class="fi fi-sr-user-add"></i></a>
+             <!-- END switch_user_logged_out --> 
+    </div>
+    <div class="s-navpar">
+        <nav id="switcheroo" class="switcheroo" direction="vertical" position="top" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" title="Cambio de cuentas"><i class="fi fi-sr-convert-shapes"></i></nav>
+        <button 
+         id="modo-oscuro"
+         class="modo-oscuro"
+         aria-label="modo oscuro"
+         data-bs-custom-class="custom-tooltip" 
+         data-bs-toggle="tooltip" 
+         title="Cambio de tema diurno/nocturno">
+          <i class="bi bi-sun-fill"></i>
+        </button>
+        <div class="dropdown">
+           <button id="dropdown-trigger" class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Panel del usuario 
+           </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" id="perfil-link-container" href="#"><i class="bi bi-person-circle"></i></a></li>
+                    <script>
+                          if (_userdata && _userdata.user_id > 0) {
+                          const link = document.createElement("a");
+                          link.href = "/u" + _userdata.user_id;
+                          link.textContent = "Mi perfil";
+                          link.className = "link-perfil";
+                          document.getElementById("perfil-link-container").appendChild(link);
+                          }
+                    </script>
+              <a href="" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" title="Mensajería privada">Mensajeria privada</a>
+              <li><a class="dropdown-item" href="#"><i class="bi bi-bookmark-star"></i> Nuevos usuarios</a></li>
+              <li><a class="dropdown-item" href="#"><i class="bi bi-cart-plus"></i> Búsqeda</a></li>
+              <li><a class="dropdown-item" href="#"><i class="bi bi-cart-plus"></i> Tienda</a></li>
+              <li><a class="dropdown-item" href="/profile?mode=editprofile"><i class="bi bi-gear"></i> Configuración</a></li>
+              <li><a class="dropdown-item" href="/search?search_id=watchsearch"><i class="bi bi-folder2-open"></i> Mis temas supervisados</a></li>
+              <li><a class="dropdown-item" href="/search?search_id=topicdraftsearch"><i class="bi bi-pen"></i> Borradores de temas</a></li>
+              <li><a class="dropdown-item" href="/search?search_id=draftsearch"><i class="bi bi-text-wrap"></i> Borradores de mensajes</a></li>
+              <li><a class="dropdown-item" href="/profile?mode=editprofile&page_profil=avatars"><i class="bi bi-palette"></i> Cambiar Avatar</a></li>
+              <li><a class="dropdown-item" href="/profile?mode=editprofile&page_profil=signature"><i class="bi bi-camera"></i> Cambiar firma</a></li>
+            </ul>
+     </div>
+     <div class="usimg"><script>document.write(_userdata.avatar);</script>avatar</div>
+    </div>
+</navbar>
+
+<banner>banner con imagenes en stack</banner>
+</header>     
+  
+
+ 
 <!-- BEGIN hitskin_preview -->
 <div id="hitskin_preview" style="display: block;">
 	<h1><img src="https://2img.net/i/fa/hitskin/hitskin_logo.png" alt=""/> <em>Hit</em>skin.com</h1>
@@ -302,6 +366,8 @@
 </div>
 <!-- END switch_like_popup -->
 
+  
+  
 <div class="conteneur_minwidth_IE">
 	<div class="conteneur_layout_IE">
 		<div class="conteneur_container_IE">
