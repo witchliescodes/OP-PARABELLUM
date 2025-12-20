@@ -10,6 +10,7 @@
   /* Fuentes */
 --titulos: 'Poppins';
 --cuerpo1: 'Open Sans';
+--subtil: 'Cormorant Garamond';  
 }
 
 .oscuro {
@@ -42,14 +43,103 @@
 }
 
 
-#wrap {
+body.claro, body.oscuro {
+    background-color: var(--color-6);
+    z-index: 10;
+}
+
+
+.parahead {
     width: 1200px;
+    height: 250px;
     margin: 0 auto;
     background-color: var(--color-4);
+    padding: 30px 50px;
+    max-width: 100%; 
+    border-radius: 20px;
+    position: relative; 
+    top: 50px;
+    z-index: 10; 
+}
+
+.parahead navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: -webkit-fill-available;
+    height: auto;
+}
+
+.f-nvpar{
+    display: flex;
+    width: -webkit-fill-available;
+    align-items: center;
+    justify-content: start;
+}
+
+.f-nvpar a, .f-nvpar button {
+    color: var(--color-3);
+    text-decoration: none;
+    font-size: 1.2em;
+    margin: 0px 15px 0 0;
     border: none;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: auto;
+}
+
+.s-navpar {
+    width: -webkit-fill-available;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.switcheroo i, element.style {
+    border: none;
+    background: transparent;
+    color: var(--color-3);
+    width: 30px;
+    margin: 0 15px 0 0;
+    cursor: pointer;
+}
+
+.btn-secondary {
+background-color: transparent!important;
+border: none!important;
+color: var(--color-3)!important;
+font-size: 1.2em!important;
+font-family: var(--cuerpo1)!important;
+}
+
+
+.dropdown-menu.show {
+    display: block;
+    z-index: 99999 !important;
+}
+
+.parahead banner {
+    background-color: var(--color-3);
+    width: 1100px;
+    height: 600px;
+    display: flex;
+    position: absolute;
+    left: 50px; 
+    top: 100px;  
+    border-radius: 13px;
+    z-index: 9999; 
+    
+}
+
+#wrap {
+    width: 1200px;
+    margin: 100px auto; 
+    background-color: var(--color-4);
     padding: 50px;
-    max-width: 1200px;
-    font-size: clamp(14px, 1vw, 10vh);
-    color: var(--color-1);
-    font-family: var(--cuerpo1);
+    position: relative; 
+    z-index: 1; 
+    border-radius: 20px;
 }
