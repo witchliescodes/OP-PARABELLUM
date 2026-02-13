@@ -315,8 +315,10 @@
     <div class="f-nvpar">
              <a href="{U_INDEX}" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" title="Inicio"><i class="fi fi-sr-home"></i></a>
             <!-- BEGIN switch_user_logged_in -->
+             <a href="" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" title="Mensajería privada">Mensajeria privada</a>
              <a href="" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" title="Miembros"><i class="fi fi-sr-user"></i></a>
              <a href="" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" title="Grupos"><i class="fi fi-sr-users"></i></a>
+             <a href="" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" title="buscar">Busqueda</a>     
              <button data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" title="Aumentar tamaño de letra"><i class="fi fi-sr-square-plus"></i></button>
              <button data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" title="Disminuir tamaño de letra"><i class="fi fi-sr-square-minus"></i></button>
              <a href="" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" title="Desconectarse"><i class="fi fi-sr-exit"></i></a>
@@ -358,7 +360,6 @@
                           document.getElementById("perfil-link-container").appendChild(link);
                           }
                     </script>
-              <a href="" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" title="Mensajería privada">Mensajeria privada</a>
               <li><a class="dropdown-item" href="#"><i class="bi bi-bookmark-star"></i> Nuevos usuarios</a></li>
               <li><a class="dropdown-item" href="#"><i class="bi bi-cart-plus"></i> Búsqeda</a></li>
               <li><a class="dropdown-item" href="#"><i class="bi bi-cart-plus"></i> Tienda</a></li>
@@ -385,43 +386,6 @@
 				{JAVASCRIPT}
 
 				<div id="page-header">
-					<div class="headerbar">
-						<div class="inner"><span class="corners-top"><span></span></span>
-
-							<div id="logo-desc">
-								<a href="{U_INDEX}" id="logo"><img loading="lazy" src="{LOGO}" alt="{L_INDEX}"/></a>
-								<!-- BEGIN switch_h1 -->
-								<div id="site-title">{switch_h1.MAIN_SITENAME}</div>
-								<!-- END switch_h1 -->
-								<!-- BEGIN switch_desc -->
-								<p>{switch_desc.SITE_DESCRIPTION}</p>
-								<!-- END switch_desc -->
-							</div>
-
-							<span class="corners-bottom"><span></span></span></div>
-					</div>
-
-					<div class="navbar">
-						<div class="inner"><span class="corners-top"><span></span></span>
-
-							
-
-							<!-- BEGIN switch_search_box -->
-							<div id="search-box">
-								<form method="get" action="{ACTION_SEARCH}" id="search">
-									<p class="nomargin"><input type="text" name="search_keywords" id="keywords"
-															   maxlength="128" class="inputbox search"
-															   value="{L_SEARCH}..."
-															   onclick="if (this.value == '{L_SEARCH}...') this.value = '';"
-															   onblur="if (this.value == '') this.value = '{L_SEARCH}...';"/>
-										{JS_SESSION_ID_INPUT}
-										<input class="button2" type="submit" value="{L_SEARCH}"/></p>
-								</form>
-							</div>
-							<!-- END switch_search_box -->
-
-							<span class="corners-bottom"><span></span></span></div>
-					</div>
 
 					<!-- BEGIN switch_ticker_new -->
 					<div id="fa_ticker_blockD" style="margin-top:4px;">
@@ -463,6 +427,7 @@
 				</div>
 
 				<div id="page-body">
+                                  a ver aquí como sale
 
 					<div id="{ID_CONTENT_CONTAINER}"{CLASS_CONTENT_CONTAINER}>
 						<div id="outer-wrapper">
