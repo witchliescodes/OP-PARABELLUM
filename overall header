@@ -315,11 +315,11 @@
     <div class="f-nvpar">
              <a href="{U_INDEX}" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" title="Inicio"><i class="fi fi-sr-home"></i></a>
             <!-- BEGIN switch_user_logged_in -->
-             <a href="/profile?mode=editprofile" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" title="Mensajería privada">configuracion</a>
-             <a href="/privmsg?folder=inbox" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" title="Mensajería privada">Mensajeria privada</a>
+             <a href="/profile?mode=editprofile" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" title="Editar mi perfil"><i class="bi bi-person-fill"></i></a>
+             <a href="/privmsg?folder=inbox" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" title="Mensajería privada"><i class="bi bi-envelope-fill"></i></a>
              <a href="/memberlist" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" title="Miembros"><i class="fi fi-sr-user"></i></a>
              <a href="/groups" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" title="Grupos"><i class="fi fi-sr-users"></i></a>
-             <a href="/search" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" title="buscar">Busqueda</a>     
+             <a href="/search" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" title="buscar"><i class="bi bi-search"></i></a>     
              <button data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" title="Aumentar tamaño de letra"><i class="fi fi-sr-square-plus"></i></button>
              <button data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" title="Disminuir tamaño de letra"><i class="fi fi-sr-square-minus"></i></button>
              <a href="/login?logout=1" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" title="Desconectarse"><i class="fi fi-sr-exit"></i></a>
