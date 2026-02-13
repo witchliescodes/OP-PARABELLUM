@@ -42,24 +42,35 @@
     format('truetype');
 }
 
+.conteneur_container_IE {
+    width: 1200px;
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+  flex-flow: column;
+}
+
 
 body.claro, body.oscuro {
     background-color: var(--color-6);
     z-index: 10;
+    display: flex; 
+    flex-flow: column;
+    align-items: center; 
+    justify-content: center;
 }
 
 
 .parahead {
-    width: 1200px;
-    height: 250px;
-    margin: 0 auto;
+    width: 100%;
+    max-width: 1200px;
+    min-height: 250px;
+    margin: 100px auto;
     background-color: var(--color-4);
-    padding: 30px 50px;
-    max-width: 100%; 
+    padding: clamp(20px, 5vw, 50px);
     border-radius: 20px;
-    position: relative; 
-    top: 50px;
-    z-index: 10; 
+    position: relative;
+    z-index: 10;
 }
 
 .parahead navbar {
@@ -227,18 +238,46 @@ font-family: var(--cuerpo1)!important;
     display: flex;
     position: absolute;
     left: 50px; 
-    top: 100px;  
+    top: 140px;  
     border-radius: 13px;
     z-index: 999; 
     
 }
 
 #wrap {
-    width: 1200px;
-    margin: 100px auto; 
+    width: 100%;
+    max-width: 1200px;
+    margin: 100px auto;
     background-color: var(--color-4);
-    padding: 50px;
-    position: relative; 
-    z-index: 1; 
+    padding: clamp(20px, 5vw, 50px);
     border-radius: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+/**RESPONSIVE**/
+
+@media (max-width: 1024px) {
+  .conteneur_container_IE {
+    width: 100%;
+}
+
+      .parahead {
+        width: 97%;
+        margin: 40px auto;
+        padding: clamp(20px, 5vw, 50px);
+        min-height: auto;
+        min-height: 250px;
+    }
+
+    #wrap {
+        width: 90%;
+        margin: 40px auto;
+        padding: clamp(20px, 5vw, 50px);
+        min-height: auto;
+    }
+  
+    .parahead banner {
+    	width: 89%; 
+    }
 }
