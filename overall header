@@ -310,18 +310,17 @@
 <div class="conteneur_minwidth_IE">
 	<div class="conteneur_layout_IE">
 		<div class="conteneur_container_IE">
-                  <header class="parahead">
+                 <header class="parahead">
 <navbar>
     <div class="f-nvpar">
              <a href="{U_INDEX}" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" title="Inicio"><i class="fi fi-sr-home"></i></a>
             <!-- BEGIN switch_user_logged_in -->
-             <a href="/profile?mode=editprofile" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" title="Editar mi perfil"><i class="bi bi-person-fill"></i></a>
              <a href="/privmsg?folder=inbox" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" title="Mensajería privada"><i class="bi bi-envelope-fill"></i></a>
              <a href="/memberlist" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" title="Miembros"><i class="fi fi-sr-user"></i></a>
              <a href="/groups" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" title="Grupos"><i class="fi fi-sr-users"></i></a>
              <a href="/search" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" title="buscar"><i class="bi bi-search"></i></a>     
-             <button data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" title="Aumentar tamaño de letra"><i class="fi fi-sr-square-plus"></i></button>
-             <button data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" title="Disminuir tamaño de letra"><i class="fi fi-sr-square-minus"></i></button>
+             <button id="btn-aumentar" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" title="Aumentar tamaño de letra"><i class="fi fi-sr-square-plus"></i></button>
+             <button id="btn-disminuir" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" title="Disminuir tamaño de letra"><i class="fi fi-sr-square-minus"></i></button>
              <a href="/login?logout=1" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" title="Desconectarse"><i class="fi fi-sr-exit"></i></a>
             <!-- END switch_user_logged_in -->
             <!-- BEGIN switch_user_logged_out -->
@@ -333,8 +332,9 @@
         <nav id="switcheroo" class="switcheroo" direction="vertical" position="top" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" title="Cambio de cuentas"><i class="fi fi-sr-convert-shapes"></i></nav>
       
 <div class="multismultis" id="ventana-cuentas">
-    <div class="multis-header">Mis Cuentas</div>
+ <div class="multis-header"><h1>Mis Cuentas</h1></div>
     <div id="contemultis"></div> 
+  <div class="cagreg"></div>
 </div>
       
       <button 
@@ -351,6 +351,8 @@
                 Panel del usuario 
            </button>
             <ul class="dropdown-menu">
+              <div class="puspj">
+                <h4>Cuenta</h4>
               <li><a class="dropdown-item" id="perfil-link-container" href="#"><i class="bi bi-person-circle"></i></a></li>
                     <script>
                           if (_userdata && _userdata.user_id > 0) {
@@ -361,26 +363,49 @@
                           document.getElementById("perfil-link-container").appendChild(link);
                           }
                     </script>
-              <li><a class="dropdown-item" href="#"><i class="bi bi-bookmark-star"></i> Nuevos usuarios</a></li>
-              <li><a class="dropdown-item" href="#"><i class="bi bi-cart-plus"></i> Búsqeda</a></li>
-              <li><a class="dropdown-item" href="#"><i class="bi bi-cart-plus"></i> Tienda</a></li>
               <li><a class="dropdown-item" href="/profile?mode=editprofile"><i class="bi bi-gear"></i> Configuración</a></li>
+              <li><a class="dropdown-item" href="/profile?mode=editprofile&page_profil=avatars"><i class="bi bi-palette"></i> Cambiar Avatar</a></li>
+              <li><a class="dropdown-item" href="/profile?mode=editprofile&page_profil=signature"><i class="bi bi-camera"></i> Cambiar firma</a></li>  
               <li><a class="dropdown-item" href="/search?search_id=watchsearch"><i class="bi bi-folder2-open"></i> Mis temas supervisados</a></li>
               <li><a class="dropdown-item" href="/search?search_id=topicdraftsearch"><i class="bi bi-pen"></i> Borradores de temas</a></li>
               <li><a class="dropdown-item" href="/search?search_id=draftsearch"><i class="bi bi-text-wrap"></i> Borradores de mensajes</a></li>
-              <li><a class="dropdown-item" href="/profile?mode=editprofile&page_profil=avatars"><i class="bi bi-palette"></i> Cambiar Avatar</a></li>
-              <li><a class="dropdown-item" href="/profile?mode=editprofile&page_profil=signature"><i class="bi bi-camera"></i> Cambiar firma</a></li>
+              </div>
+              <div class="puadmin">
+              <h4>Administrativos</h4>
+              <li><a class="dropdown-item" href="#"><i class="bi bi-cart-plus"></i> Cierre de temas</a></li>
+              <li><a class="dropdown-item" href="#"><i class="bi bi-cart-plus"></i> Registro único</a></li>
+              <li><a class="dropdown-item" href="#"><i class="bi bi-cart-plus"></i> Peticiones administrativas</a></li>
+              </div>
+              <div class="puenlaces">
+                <h4>Personaje</h4>
+              <li><a class="dropdown-item" href="#"><i class="bi bi-bookmark-star"></i> Nuevos usuarios</a></li>
+              <li><a class="dropdown-item" href="#"><i class="bi bi-cart-plus"></i> Busquedas</a></li>
+              <li><a class="dropdown-item" href="#"><i class="bi bi-bookmark-star"></i> Reserva de PB</a></li>
+              <li><a class="dropdown-item" href="#"><i class="bi bi-cart-plus"></i> Busquedas</a></li>
+              </div>
             </ul>
      </div>
      <div class="usimg"><script>document.write(_userdata.avatar);</script>avatar</div>
     </div>
 </navbar>
-
-<banner>banner con imagenes en stack</banner>
-                    <ul class="linklist navlinks{NAVBAR_BORDERLESS}" style="display: none;">
-								<li>{GENERATED_NAV_BAR}</li>
-							</ul>
-</header>       
+<ul class="linklist navlinks{NAVBAR_BORDERLESS}" style="display: none;">
+<li>{GENERATED_NAV_BAR}</li>
+</ul>
+</header>   
+                  
+<banner>
+  <img class="parfon"></img>
+  <div class="imagba">
+    <img class="manga1" />
+    <img class="manga2" />
+    <img class="manga3" />
+    <img class="manga4" />
+  </div>
+  <div class="partitle">
+    <h1>ONE PIECE</h1>
+    <h1>PARABELLUM</h1>
+  </div>
+</banner>    
                   
 			<div id="wrap">
 				<a id="top" name="top" accesskey="t"></a>
