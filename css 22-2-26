@@ -65,7 +65,7 @@ html, body {
 }
 
 .conteneur_container_IE {
-  width: min(100%, 1200px);
+  width: min(100%, 1300px);
     display: flex;
     align-items: center; 
     justify-content: center; 
@@ -324,15 +324,21 @@ display: flex !important;
   flex-direction: row;
   flex-wrap: wrap;
   z-index: 99999 !important;
-  
+  overflow: hidden;
 }
 
 .dropdown-item {
     color: var(--color-1)!important;
-    background-color: var(--tcolor3)!important;
+    background-color: var(--color-3)!important;
     border-radius: 5px!important;
     margin: 10px 0 0 0!important;
     text-align: justify!important;
+    transition: background 400ms ease-in-out, color 400ms ease-in-out;
+}
+
+.dropdown-item:hover {
+    background: linear-gradient(90deg, var(--color-2), var(--color-3))!important;
+    color: var(--color-1)!important;
 }
 
 .dropdown-item i {
@@ -392,7 +398,7 @@ display: flex !important;
 
 banner {
     background-color: var(--color-3);
-  width: min(100%, 1100px);
+  width: min(90%, 1100px);
     height: 600px;
     display: flex;
     top: -97px;
@@ -404,7 +410,7 @@ banner {
 
 banner .parfon {
     background-image: var(--fondobase);
-    width: inherit;
+    width: 100%;
     height: inherit;
     background-size: 314%;
     background-position: unset;
