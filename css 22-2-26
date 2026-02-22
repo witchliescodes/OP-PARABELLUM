@@ -1,5 +1,5 @@
 .claro {
-      /* Mi Paleta */
+  /* Mi Paleta */
   --color-1: #0a0a15;
   --color-2: #6f9bd3;
   --color-3: #6f70d3;
@@ -284,11 +284,19 @@ body.claro, body.oscuro {
 }
 
 .btn-secondary {
-background-color: transparent!important;
-border: none!important;
-color: var(--color-3)!important;
-font-size: 1.2em!important;
-font-family: var(--cuerpo1)!important;
+    background-color: var(--color-3) !important;
+    border: none !important;
+    color: var(--color-6) !important;
+    font-size: 1em !important;
+    font-family: var(--cuerpo1) !important;
+    margin: 0 10px 0 0px;
+}
+
+.btn-secondary.show {
+    background-color: var(--color-6) !important;
+    border: 1px solid var(--color-3) !important;
+    color: var(--color-3) !important;
+    font-weight: 700;
 }
 
 
@@ -307,11 +315,16 @@ font-family: var(--cuerpo1)!important;
     padding: 10px !important;
 }
 
+.dropdown-toggle show {
+      background-color: var(--tcolor3)!important;
+}
+
 .dropdown-menu.show {
 display: flex !important;
   flex-direction: row;
   flex-wrap: wrap;
   z-index: 99999 !important;
+  
 }
 
 .dropdown-item {
