@@ -351,6 +351,7 @@
                 Panel del usuario 
            </button>
             <ul class="dropdown-menu">
+              <!-- BEGIN switch_user_logged_in -->
               <div class="puspj">
                 <h4>Cuenta</h4>
               <li><a class="dropdown-item" id="perfil-link-container" href="#"><i class="bi bi-person-circle"></i></a></li>
@@ -370,6 +371,7 @@
               <li><a class="dropdown-item" href="/search?search_id=topicdraftsearch"><i class="bi bi-pen"></i> Borradores de temas</a></li>
               <li><a class="dropdown-item" href="/search?search_id=draftsearch"><i class="bi bi-text-wrap"></i> Borradores de mensajes</a></li>
               </div>
+              <!-- END switch_user_logged_in -->
               <div class="puadmin">
               <h4>Administrativos</h4>
               <li><a class="dropdown-item" href="#"><i class="bi bi-cart-plus"></i> Cierre de temas</a></li>
