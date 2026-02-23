@@ -354,7 +354,7 @@
             <ul class="dropdown-menu">
               <!-- BEGIN switch_user_logged_in -->
               <div class="puspj">
-                <h4 class="animate__animated animate__backInDown">Cuenta</h4>
+              <h4 class="dlin animate__animated animate__backInDown">Cuenta <i class="bi bi-eye-fill"></i></h4>
               <li class="animate__animated animate__backInDown"><a class="dropdown-item" id="perfil-link-container" href="#"><i class="bi bi-person-circle"></i></a></li>
                     <script>
                           if (_userdata && _userdata.user_id > 0) {
@@ -373,18 +373,18 @@
               <li class="animate__animated animate__backInDown"><a class="dropdown-item" href="/search?search_id=draftsearch"><i class="bi bi-text-wrap"></i> Borradores de mensajes</a></li>
               </div>
               <!-- END switch_user_logged_in -->
-              <div class="puadmin">
-              <h4 class="animate__animated animate__backInDown">Administrativos</h4>
-              <li class="animate__animated animate__backInDown"><a class="dropdown-item" href="#"><i class="bi bi-cart-plus"></i> Cierre de temas</a></li>
-              <li class="animate__animated animate__backInDown"><a class="dropdown-item" href="#"><i class="bi bi-cart-plus"></i> Registro único</a></li>
-              <li class="animate__animated animate__backInDown"><a class="dropdown-item" href="#"><i class="bi bi-cart-plus"></i> Peticiones administrativas</a></li>
-              </div>
               <div class="puenlaces">
-              <h4 class="animate__animated animate__backInDown">Personaje</h4>
+              <h4 class="dlin animate__animated animate__backInDown">Personaje <i class="bi bi-file-person-fill"></i></h4>
               <li class="animate__animated animate__backInDown"><a class="dropdown-item" href="#"><i class="bi bi-bookmark-star"></i> Nuevos usuarios</a></li>
               <li class="animate__animated animate__backInDown"><a class="dropdown-item" href="#"><i class="bi bi-cart-plus"></i> Busquedas</a></li>
               <li class="animate__animated animate__backInDown"><a class="dropdown-item" href="#"><i class="bi bi-bookmark-star"></i> Reserva de PB</a></li>
               <li class="animate__animated animate__backInDown"><a class="dropdown-item" href="#"><i class="bi bi-cart-plus"></i> Busquedas</a></li>
+              </div>
+              <div class="puadmin">
+              <h4 class="dlin animate__animated animate__backInDown">Administrativos <i class="bi bi-hammer"></i></h4>
+              <li class="animate__animated animate__backInDown"><a class="dropdown-item" href="#"><i class="bi bi-cart-plus"></i> Cierre de temas</a></li>
+              <li class="animate__animated animate__backInDown"><a class="dropdown-item" href="#"><i class="bi bi-cart-plus"></i> Registro único</a></li>
+              <li class="animate__animated animate__backInDown"><a class="dropdown-item" href="#"><i class="bi bi-cart-plus"></i> Peticiones administrativas</a></li>
               </div>
             </ul>
      </div>
