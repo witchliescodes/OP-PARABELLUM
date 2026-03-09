@@ -49,13 +49,13 @@
 --subtil: 'Cormorant Garamond';  
 /*Imagenes*/
 /*Fondos*/
---fondobase: url('https://images2.imgbox.com/60/a2/EZorbTlR_o.png');
+--fondobase: url('https://images2.imgbox.com/fd/59/jveyvmMq_o.jpg');
 --fondo1: url('https://images2.imgbox.com/a2/65/ChE531pF_o.png');
 /*Banner*/
---manga1: url('https://images2.imgbox.com/66/c8/ElFgF1BY_o.png');
---pj1: url('https://images2.imgbox.com/cd/14/cN2trDyz_o.png');
+--manga1: url('https://images2.imgbox.com/00/58/7YH9HoLh_o.png');
+--pj1: url('https://images2.imgbox.com/a8/05/vmZpi8cU_o.png');
 --manga2: url('https://images2.imgbox.com/de/eb/AcPVlysX_o.png');
---manga3: url('https://images2.imgbox.com/24/64/EWhKVWzv_o.png');
+--manga3: url('https://images2.imgbox.com/3b/45/dxCdG65Q_o.png');
 
 }
 
@@ -87,6 +87,13 @@
     z-index: 99999999999!important;
 }
 
+
+img {
+  display: block;
+  image-rendering: auto;
+  border: none !important; 
+  
+}
 
 html, body {
   width: 100%;
@@ -139,6 +146,222 @@ body.claro, body.oscuro {
     box-shadow: 1px 1px 15px var(--color-4);
 }
 
+/*NOTIFICACIONES FLOTANTES*/
+
+#fa_toolbar {
+    position: absolute !important;
+    margin: -73px 0 0 0;
+}
+
+#fa_notifications {
+    position: fixed !important;
+    top: 20px !important;
+    right: 20px !important;
+    z-index: 9999 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background-color: var(--color-2, var(--color-1)) !important;
+    border-radius: 5px !important;
+    box-shadow: 0 4px 12px var(--color-2) !important;
+    transition: all 0.3s ease !important;
+    text-decoration: none;
+}
+
+#fa_notifications::before {
+    content: "\f0f3" !important;
+    font-family: "FontAwesome" !important;
+    font-size: 1em !important;
+    color: var(--color-5) !important;
+    line-height: 1 !important;
+    margin: 0 10px 0 4px;
+}
+
+/* Efecto hover */
+#fa_notifications:hover {
+    background-color: var(--color-3) !important;
+    transform: scale(1.1) !important;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Transformamos el span del contador */
+#notif_unread {
+    position: absolute !important;
+    top: -5px !important;
+    right: -5px !important;
+    background-color: var(--acento5, #dc3545) !important;
+    color: white !important;
+    font-size: 12px !important;
+    font-weight: bold !important;
+    min-width: 20px !important;
+    height: 20px !important;
+    border-radius: 10px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 0 4px !important;
+    border: 2px solid white !important;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2) !important;
+    
+    /* El texto viene como "(2)", extraemos solo el número */
+    &::before {
+        content: attr(data-numero);
+    }
+}
+
+/* Animación cuando hay no leídas */
+#fa_notifications.unread {
+    animation: flotar 2s ease-in-out infinite !important;
+}
+
+@keyframes flotar {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+
+/* ===== ESTILOS PARA EL DROPDOWN ===== */
+#notif_list {
+    position: fixed !important;
+    top: 90px !important; /* Debajo del botón */
+    right: 20px !important;
+    left: auto !important; /* Anulamos el left dinámico de FA */
+    width: 350px !important;
+    max-width: 90vw !important;
+    background: white !important;
+    border-radius: 12px !important;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2) !important;
+    border: 1px solid rgba(0,0,0,0.1) !important;
+    padding: 0 !important;
+    list-style: none !important;
+    z-index: 10000 !important;
+}
+
+/* Header del dropdown (lo creamos con un pseudo-elemento) */
+#notif_list::before {
+    content: "Notificaciones" !important;
+    display: block !important;
+    padding: 15px 20px !important;
+    border-bottom: 1px solid #e9ecef !important;
+    background: linear-gradient(135deg, var(--acento2, #f8f9fa), var(--acento1, #e9ecef)) !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    color: var(--color-texto, #212529) !important;
+    border-radius: 12px 12px 0 0 !important;
+}
+
+/* Items de notificaciones */
+#notif_list li {
+    padding: 12px 20px !important;
+    border-bottom: 1px solid #f1f3f5 !important;
+    margin: 0 !important;
+}
+
+#notif_list li:hover {
+    background-color: #f8f9fa !important;
+}
+
+#notif_list li.unread {
+    background-color: #f0f7ff !important;
+    border-left: 3px solid var(--acento3, #007bff) !important;
+}
+
+/* Item "Ver todas" */
+#notif_list li.see_all {
+    text-align: center !important;
+    background-color: #f8f9fa !important;
+    border-radius: 0 0 12px 12px !important;
+}
+
+#notif_list li.see_all a {
+    color: var(--acento3, #007bff) !important;
+    text-decoration: none !important;
+    font-weight: 500 !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    #fa_notifications {
+        top: 10px !important;
+        right: 10px !important;
+        width: 48px !important;
+        height: 48px !important;
+    }
+    
+    #fa_notifications::before {
+        font-size: 20px !important;
+    }
+    
+    #notif_list {
+        top: 70px !important;
+        right: 10px !important;
+        width: 300px !important;
+    }
+}
+
+/* Ocultamos el left dinámico que pone Foroactivo */
+#notif_list[style*="left"] {
+    left: auto !important;
+    right: 20px !important;
+}
+
+/*NUEVOS MENSAJES PRIVADOS*/
+
+.oscruro .oppmsj[data-new-mps] {
+    filter: drop-shadow(0px 0px 6px var(--color-2));
+    position: relative;
+}
+.claro .oppmsj[data-new-mps] {
+    filter: drop-shadow(0px 0px 2px var(--color-3));
+    position: relative;
+}
+
+.oppmsj[data-new-mps] i {
+    font-family: 'bootstrap-icons', sans-serif; 
+    &::before {
+        content: "\F691";
+    }
+    animation: campanita 3s ease-in-out infinite;
+    display: inline-block;
+    transform-origin: top center; 
+}
+
+.oppmsj[data-new-mps]::before {
+    content: var(--mensajes);
+    position: absolute;
+    top: -6px;
+    right: -10px;
+    background-color: var(--color-2);
+    color: var(--color-1);
+    font-size: 11px;
+    padding: 2px 5px;
+    border-radius: 21%;
+    line-height: 1;
+    z-index: 10;
+}
+
+@keyframes campanita {
+    0% {
+        transform: rotate(0deg);
+    }
+    5% {
+        transform: rotate(12deg); /* Un pequeño balanceo a la derecha */
+    }
+    10% {
+        transform: rotate(-8deg); /* Luego a la izquierda, pero un poco menos */
+    }
+    15% {
+        transform: rotate(4deg);  /* Otro pequeño ajuste */
+    }
+    20% {
+        transform: rotate(0deg);  /* Vuelve a su posición original */
+    }
+    100% {
+        transform: rotate(0deg);  /* Se queda quieto hasta que el ciclo se repite */
+    }
+}
+.oppmensaj { display: none;}
+
+/*FIN NUEVOS MENSAJES PRIVADOS*/
 
 .parahead navbar {
     display: flex;
@@ -492,6 +715,7 @@ display: flex !important;
   position: relative;
   overflow: hidden;
   z-index: 0;
+  padding: 2px 6px!important;
 }
 
 .dropdown-item a {
@@ -582,17 +806,29 @@ banner {
     z-index: 99 !important;
 }
 
-banner .parfon {
+.claro banner .parfon {
+    background-image: var(--fondobase);
+    width: 206%;
+    height: inherit;
+    background-size: 175%;
+    background-position: 0% 31%;
+    opacity: 0.2;
+    mix-blend-mode: difference;
+    position: absolute;
+}
+
+ .oscuro banner .parfon {
     background-image: var(--fondobase);
     width: 100%;
     height: inherit;
-    background-size: 314%;
-    background-position: unset;
-    opacity: 0.9;
-    mix-blend-mode: color-dodge;
+    background-size: 112%;
+    background-position: 0% 74%;
+    opacity: 0.2;
+    mix-blend-mode: hard-light;
     position: absolute;
     transform: rotateX(-180deg);
 }
+
 
 .imagba {
     width: 100%;
@@ -603,55 +839,75 @@ banner .parfon {
     position: relative;
 }
 
-.manga1 {
-    background-image: var(--manga1);
-    width: 100%;
-    height: 100%;
-    background-size: 120%;
-    background-position: 42% 86%;
-    opacity: 0.6;
-    mix-blend-mode: plus-lighter;
-    position: absolute;
-    z-index: 1;
+.imagba img{
+  display:block;
+  image-rendering:-webkit-optimize-contrast;
+  image-rendering:crisp-edges;
+  backface-visibility:hidden;
+  transform:translateZ(0);
+  position:absolute;
+  bottom:0;
+  height:100%;
 }
 
-.manga2 {
-    background-image: var(--pj1);
-    width: inherit;
-    height: inherit;
-    background-size: cover;
-    background-position: center center;
+.claro .manga1 {
+    content: var(--manga1);
+    opacity: 0.3;
     position: absolute;
-    z-index: 2;
 }
 
-.manga3 {
-    background-image: var(--manga2);
+.claro .manga2 {
+    content: var(--pj1);
     width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center -550%; 
-    position: absolute;
-    left: 0;
-    opacity: 0.5;
-    z-index: 3;
-    background-repeat: no-repeat;
-    transform: rotate(180deg) translateZ(0);
-    backface-visibility: hidden;
-    margin: 0;
+    height: 107%;
+    transform: translateY(22px);
 }
-
-.manga4 {
-    background-image: var(--manga3);
-    width: 100%;
-    height: 100%;
-    background-size: initial;
-    background-position: center 77%;
-    transform: rotateY(180deg);
+.claro .manga3 {
+    content: var(--manga2);
+    mix-blend-mode: soft-light;
     position: absolute;
-    z-index: 4;
-    opacity: 0.5;
+    width: 120%;
+    top: -326px;
+    left: -130px;
+    opacity: 0.8;
+}
+.claro .manga4 {
+    content: var(--manga3);
     mix-blend-mode: multiply;
+    width: 170%;
+    opacity: 0.2;
+    height: 178%;
+    top: -48%;
+    left: -19%;
+    transform: scaleX(-1);
+}
+
+.oscuro .manga1 {
+    content: var(--manga1);
+    opacity: 0.5;
+    z-index: 4;
+    mix-blend-mode: soft-light;
+}
+.oscuro .manga2 {
+    content: var(--pj1);
+    width: 120%;
+    height: 109%;
+    position: absolute;
+}
+.oscuro .manga3 {
+    content: var(--manga2);
+    z-index: 3;
+    width: 140%;
+    position: absolute;
+    left: -200px;
+    top: -311px;
+    mix-blend-mode: soft-light;
+}
+.oscuro .manga4 {
+    content: var(--manga3);
+    z-index: 4;
+    mix-blend-mode: hue;
+    opacity: 0.2;
 }
 
 .partitle {
@@ -670,6 +926,14 @@ banner .parfon {
     font-size: 6em;
     margin: 10px;
     text-shadow: 0 0 15px var(--color-3);
+}
+
+.oscuro .partitle h1 {
+    color: var(--color-5);
+    font-weight: 900;
+    font-size: 6em;
+    margin: 10px;
+    text-shadow: 0 0 15px var(--color-4);
 }
 
 #page-body {
@@ -714,14 +978,14 @@ banner .parfon {
     overflow-x: hidden;
   }
 
-  #wrap {
-    width: 100%;
-    max-width: 100%;
-    margin: 40px auto;
-    padding: clamp(20px, 5vw, 50px);
-    min-height: auto;
-    box-sizing: border-box;
-  }
+    #wrap {
+        width: 100%;
+        max-width: 100%;
+        margin: -490px auto;
+        padding: clamp(20px, 5vw, 50px);
+        min-height: auto;
+        box-sizing: border-box;
+    }
   
   .parahead banner {
     width: 100%;
@@ -754,12 +1018,6 @@ banner .parfon {
     padding: 0 0 10px 0;
     border-right: none;
     border-bottom: 1px solid var(--color-3);
-  }
-
-
-  .puenlaces {
-    padding-bottom: 0;
-    border-bottom: none !important;
   }
 
   .puspj h4, .puadmin h4, .puenlaces h4 {
