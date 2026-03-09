@@ -1,1027 +1,479 @@
-.claro {
-  /* Mi Paleta */
-  --color-1: #0a0a15;
-  --color-2: #6f9bd3;
-  --color-3: #6f70d3;
-  --color-4: #faf8fc;
-  --color-5: #e5e5eb;
-  --color-6: #dddde2;
-  /*Transparencias*/
-  --tcolor3: #6f70d38c;
-  --tcolor4: #1f1f3ec2;
-  /*DEGRADADOS*/
-  --deg3: linear-gradient(145deg, #6f9bd3, #6f70d3);
-  --deg2: linear-gradient(90deg, #6f9bd3, #6f70d3);
-  --deg1: linear-gradient(145deg, #e5e5eb, #dddde2);
-  /* Fuentes */
---titulos: 'Poppins';
---cuerpo1: 'Open Sans';
---subtil: 'Cormorant Garamond';  
-/*Imagenes*/
-/*Fondos*/
---fondobase: url('https://images2.imgbox.com/60/a2/EZorbTlR_o.png');
---fondo1: url('https://images2.imgbox.com/be/39/wRwzX2Zd_o.png');
-/*Banner*/
---manga1: url('https://images2.imgbox.com/66/c8/ElFgF1BY_o.png');
---pj1: url('https://images2.imgbox.com/cd/14/cN2trDyz_o.png');
---manga2: url('https://images2.imgbox.com/de/eb/AcPVlysX_o.png');
---manga3: url('https://images2.imgbox.com/24/64/EWhKVWzv_o.png');
-}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+		"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="{S_CONTENT_DIRECTION}" id="min-width" lang="{L_LANG_HTML}"
+	  xml:lang="{L_LANG_HTML}" {NAMESPACE_FB_LIKE} {NAMESPACE_FB} {NAMESPACE_BBCODE}>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <link href="https://solar-icons.gitlab.io/i/icons.css" rel="stylesheet" crossorigin />
+  <script src="https://unpkg.com/akar-icons-fonts"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"/>
+  <script src="https://kit.fontawesome.com/a96fcf6740.js" crossorigin="anonymous"></script>  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
+  <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-solid-rounded/css/uicons-solid-rounded.css' />
+	
+  <title>{SITENAME_TITLE}{PAGE_TITLE}</title>
+	<meta http-equiv="content-type" content="text/html; charset={S_CONTENT_ENCODING}"/>
+	<meta http-equiv="content-script-type" content="text/javascript"/>
+	<meta http-equiv="content-style-type" content="text/css"/>
+	<!-- BEGIN switch_compat_meta -->
+	<meta http-equiv="X-UA-Compatible" content="IE={switch_compat_meta.VERSION}"/>
+	<!-- END switch_compat_meta -->
+	<!-- BEGIN switch_canonical_url -->
+	<link rel="canonical" href="{switch_canonical_url.CANONICAL_URL}"/>
+	<!-- END switch_canonical_url -->
+	{META_FAVICO}
+	{META}
+	{META_FB_LIKE}
+	<meta name="title" content="{SITENAME_TITLE}{PAGE_TITLE}"/>
+	{T_HEAD_STYLESHEET}
+	{CSS}
+	<link rel="search" type="application/opensearchdescription+xml" href="/improvedsearch.xml" title="{SITENAME}"/>
+	<link rel="search" type="application/opensearchdescription+xml" href="{URL_BOARD_DIRECTORY}/search/improvedsearch.xml" title="{SEARCH_FORUMS}"/>
+	<script src="{JQUERY_PATH}" type="text/javascript"></script>
+	<!-- BEGIN switch_recent_jquery -->
+	<script src="{JS_DIR}jquery1.9/jquery-migrate-1.4.1.js" type="text/javascript"></script>
+	<script src="{JQUERY_DIR}browser/v1.0/jquery.browser.min.js" type="text/javascript"></script>
+	<script src="{JQUERY_DIR}support/jquery.support.js" type="text/javascript"></script>
+	<!-- END switch_recent_jquery -->
+	<script src="{JS_DIR}{L_LANG}.js" type="text/javascript"></script>
+	{RICH_SNIPPET_GOOGLE}
 
-.oscuro {
-  /* Mi Paleta */
-  --color-1: #0b0e11;
-  --color-2: #0c4542;
-  --color-3: #d76060;
-  --color-4: #14191f;
-  --color-5: #faf8fc;
-  --color-6: #291213;
-  /*Transparencias*/
-  --tcolor3: #6f70d38c;
-  --tcolor4: #1f1f3ec2;
-    /*DEGRADADOS*/
-  --deg3: linear-gradient(145deg, #291213, #14191f);
-  --deg2: linear-gradient(145deg, #d76060, #0c4542);
-  --deg1: linear-gradient(145deg, #14191f, #291213);
-  /* Fuentes */
---titulos: 'Poppins';
---cuerpo1: 'Open Sans';
---subtil: 'Cormorant Garamond';  
-/*Imagenes*/
-/*Fondos*/
---fondobase: url('https://images2.imgbox.com/fd/59/jveyvmMq_o.jpg');
---fondo1: url('https://images2.imgbox.com/a2/65/ChE531pF_o.png');
-/*Banner*/
---manga1: url('https://images2.imgbox.com/00/58/7YH9HoLh_o.png');
---pj1: url('https://images2.imgbox.com/a8/05/vmZpi8cU_o.png');
---manga2: url('https://images2.imgbox.com/de/eb/AcPVlysX_o.png');
---manga3: url('https://images2.imgbox.com/3b/45/dxCdG65Q_o.png');
+	<!-- BEGIN switch_fb_login -->
+	<script src="https://connect.facebook.net/{switch_fb_login.FB_LOCAL}/all.js" type="text/javascript"></script>
+	<script src="{switch_fb_login.JS_FB_LOGIN}" type="text/javascript"></script>
+	<!-- END switch_fb_login -->
 
-}
+	<!-- BEGIN switch_ticker -->
+	<link type="text/css" rel="stylesheet" href="{JQUERY_DIR}ticker/ticker.css"/>
+	<script src="{JQUERY_DIR}ticker/ticker.js" type="text/javascript"></script>
+	<!-- END switch_ticker -->
 
-@font-face {
-    font-family: 'Cormorant Garamond';
-    font-style: normal; 
-    src: url('https://dl.dropbox.com/scl/fi/ij6k79a7evtqiizdaosws/CormorantGaramond-Italic-VariableFont_wght.ttf?rlkey=jr8msrjtq0d7zm529mk4lsqvp&st=3w2dxays&dl=1') 
-    format('truetype');
-}
+	<!-- BEGIN switch_ticker_new -->
+	<script src="{JQUERY_DIR}jcarousel/jquery.jcarousel.js" type="text/javascript"></script>
+	<script type="text/javascript">//<![CDATA[
+		/* Definir le sens de direction en fonction du panneau admin */
+		var tickerDirParam = "{switch_ticker.DIRECTION}";
+		var slid_vert = false;
+		var auto_dir = 'next';
+		var h_perso = parseInt({switch_ticker.HEIGHT});
 
-@font-face {
-    font-family: 'Open Sans';
-    font-style: normal; 
-    src: url('https://dl.dropbox.com/scl/fi/fo3u5mp48i3s9gmh26h8s/OpenSans-VariableFont_wdth-wght.ttf?rlkey=w0lu3xqf25p5i8is1w8rbokvl&st=a4oc4sty&dl=1') 
-    format('truetype');
-}
+		switch (tickerDirParam) {
+			case 'top' :
+				slid_vert = true;
+				break;
 
-/*Tooltip*/
+			case 'left':
+				break;
 
-.claro .custom-tooltip {
-  --bs-tooltip-bg: #6f70d3;
-  --bs-tooltip-color: #dddde2;
-  z-index: 99999999999!important;
-}
+			case 'bottom':
+				slid_vert = true;
+				auto_dir = 'prev';
+				break;
 
-.oscuro .custom-tooltip {
-  --bs-tooltip-bg: #0c4542;
-  --bs-tooltip-color: #f5f3fc;
-    z-index: 99999999999!important;
-}
+			case 'right':
+				auto_dir = 'prev';
+				break;
+
+			default:
+				slid_vert = true;
+		}
+
+		$(document).ready(function () {
+
+			$('#fa_ticker_content').css('display', 'block');
+
+			var width_max = $('ul#fa_ticker_content').width();
+			var width_item = Math.floor(width_max / {switch_ticker.SIZE});
+
+			if (width_max > 0) {
+				$('ul#fa_ticker_content li').css('float', 'left').css('list-style', 'none').width(width_item).find('img').each(function () {
+					if ($(this).width() > width_item) {
+						var ratio = $(this).width() / width_item;
+						var new_height = Math.round($(this).height() / ratio);
+						$(this).height(new_height).width(width_item);
+					}
+				});
+
+				if (slid_vert) {
+					var height_max = h_perso;
+
+					$('ul#fa_ticker_content li').each(function () {
+						if ($(this).height() > height_max) {
+							height_max = $(this).height();
+						}
+					});
+
+					$('ul#fa_ticker_content').width(width_item).height(height_max).css('marginLeft', 'auto').css('marginRight', 'auto');
+					$('ul#fa_ticker_content li').height(height_max);
+				}
 
 
-img {
-  display: block;
-  image-rendering: auto;
-  border: none !important; 
+				$('#fa_ticker_content').jcarousel({
+					vertical: slid_vert,
+					wrap: 'circular',
+					auto: {switch_ticker.STOP_TIME},
+					auto_direction: auto_dir,
+					scroll: 1,
+					size: {switch_ticker.SIZE},
+					height_max: height_max,
+					animation: {switch_ticker.SPEED}
+				});
+			} else {
+				$('ul#fa_ticker_content li:not(:first)').css('display', 'none');
+				$('ul#fa_ticker_content li:first').css('list-style', 'none').css('text-align', 'center');
+			}
+		});
+		//]]>
+	</script>
+	<!-- END switch_ticker_new -->
+
+	<script type="text/javascript">//<![CDATA[
+		$(document).ready(function () {
+			<!-- BEGIN switch_enable_pm_popup -->
+			pm = window.open('{U_PRIVATEMSGS_POPUP}', '_faprivmsg', 'HEIGHT=225,resizable=yes,WIDTH=400');
+			if (pm != null) {
+				pm.focus();
+			}
+			<!-- END switch_enable_pm_popup -->
+			<!-- BEGIN switch_report_popup -->
+			report = window.open('{switch_report_popup.U_REPORT_POPUP}', '_phpbbreport', 'HEIGHT={switch_report_popup.S_HEIGHT},resizable=yes,scrollbars=no,WIDTH={switch_report_popup.S_WIDTH}');
+			if (report != null) {
+				report.focus();
+			}
+			<!-- END switch_report_popup -->
+			<!-- BEGIN switch_ticker -->
+			$(document).ready(function () {
+				Ticker.start({
+					height: {switch_ticker.HEIGHT},
+					spacing: {switch_ticker.SPACING},
+					speed: {switch_ticker.SPEED},
+					direction: '{switch_ticker.DIRECTION}',
+					pause: {switch_ticker.STOP_TIME}
+				});
+			});
+			<!-- END switch_ticker -->
+		});
+
+		<!-- BEGIN switch_login_popup -->
+		var logInPopUpLeft, logInPopUpTop, logInPopUpWidth = {LOGIN_POPUP_WIDTH},
+			logInPopUpHeight = {LOGIN_POPUP_HEIGHT}, logInBackgroundResize = true, logInBackgroundClass = false;
+		<!-- END switch_login_popup -->
+
+		<!-- BEGIN switch_login_popup -->
+		$(document).ready(function () {
+			$(window).resize(function () {
+				var windowWidth = document.documentElement.clientWidth;
+				var popupWidth = $("#login_popup").width();
+				var mypopup = $("#login_popup");
+
+				$("#login_popup").css({
+					"left": windowWidth / 2 - popupWidth / 2
+				});
+			});
+		});
+		<!-- END switch_login_popup -->
+		//]]>
+	</script>
+	{GREETING_POPUP}
+	<style type="text/css">
+		#page-footer, div.navbar, div.navbar ul.linklist {
+			display: block !important;
+		}
+
+		ul.linklist li.rightside, ul.linklist li.rightside a.copyright {
+			display: inline !important;
+		}
+
+		<!-- BEGIN switch_ticker_new -->
+		.jcarousel-skin-tango .jcarousel-item {
+			text-align: center;
+			width: 10px;
+		}
+
+		.jcarousel-skin-tango .jcarousel-item-horizontal {
+			margin-right: {switch_ticker.SPACING}px;
+		}
+
+		.jcarousel-skin-tango .jcarousel-item-vertical {
+			margin-bottom: {switch_ticker.SPACING}px;
+		}
+
+		<!-- END switch_ticker_new -->
+	</style>
+	{HOSTING_JS}
+
+	<!-- BEGIN google_analytics_code -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id={G_ANALYTICS_ID}"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', '{G_ANALYTICS_ID}', {'anonymize_ip': true, 'store_gac': false, 'cookie_expires': 13 * 30 * 24 * 60 * 60});
+		<!-- BEGIN google_analytics_code_bis -->
+		gtag('config', '{G_ANALYTICS_ID_BIS}', {'anonymize_ip': true, 'store_gac': false, 'cookie_expires': 13 * 30 * 24 * 60 * 60});
+		<!-- END google_analytics_code_bis -->
+	</script>
+	<!-- END google_analytics_code -->
+</head>
+
+<body id="phpbb" class="claro">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />  
   
-}
 
-html, body {
-  width: 100%;
-  overflow-x: clip;
-}
+ 
+<!-- BEGIN hitskin_preview -->
+<div id="hitskin_preview" style="display: block;">
+	<h1><img src="https://2img.net/i/fa/hitskin/hitskin_logo.png" alt=""/> <em>Hit</em>skin.com</h1>
+	<div class="content">
+		<p>
+			{hitskin_preview.L_THEME_SITE_PREVIEW}
+			<br/>
+			<span>{hitskin_preview.U_INSTALL_THEME}<a href="https://{hitskin_preview.U_RETURN_THEME}">{hitskin_preview.L_RETURN_THEME}</a></span>
+		</p>
+
+	</div>
+</div>
+<!-- END hitskin_preview -->
+
+<!-- BEGIN inactive_users_modal -->
+<div id="inactive_popup" style="z-index: 10000 !important; width: 480px;">
+	<div class="h3">{inactive_users_modal.L_MODAL_TITLE}</div>
+	<div id="inactive_popup_message">{inactive_users_modal.L_MODAL_BODY}</div>
+	<div id="inactive_popup_buttons">
+		<input type="button" id="inactive_popup_url" class="button1" value="{inactive_users_modal.L_MODAL_BUTTON}" />
+		<input type="button" id="inactive_popup_close" class="button2" value="{inactive_users_modal.L_CLOSE}" />
+	</div>
+</div>
+<script type="text/javascript">
+	$('#inactive_popup #inactive_popup_close').on('mouseup', function () {
+		document.cookie = "modal_require_activation_closed=1; max-age=86400*15; path=/;";
+		$('#inactive_popup').hide(50);
+	});
+	$('#inactive_popup #inactive_popup_url').on('mouseup', function () {
+		document.cookie = "modal_require_activation_closed=1; max-age=86400*15; path=/;";
+		location.href = '{inactive_users_modal.U_MODAL}'
+	})
+</script>
+<!-- END inactive_users_modal -->
+
+<!-- BEGIN switch_login_popup -->
+<div id="login_popup" style="z-index: 10000 !important;">
+	<div class="h3">{SITENAME}</div>
+	{LOGIN_POPUP_MSG}
+	<!-- BEGIN switch_quick_login -->
+	<br/><br/>
+	<div>
+		<div class="h3">{switch_login_popup.switch_quick_login.L_QUICK_CONNECT}</div>
+		<div class="mt10">
+			<div class="social_btn">
+				<!-- BEGIN fb_quick_connect -->
+				<div class="fb-login-button"></div>
+				<!-- END fb_quick_connect -->
+				&nbsp;
+				<!-- BEGIN topicit_quick_connect -->
+				<div class="ti-connect"></div>
+				<!-- END topicit_quick_connect -->
+			</div>
+		</div>
+	</div>
+	<br/>
+	<!-- END switch_quick_login -->
+	<div id="login_popup_buttons">
+		<form action="{S_LOGIN_ACTION}" method="get">
+			<input type="submit" class="button1" value="{L_LOGIN}"/>
+			<input type="button" class="button1" value="{L_REGISTER}" onclick="parent.location='{U_REGISTER}';"/>
+			<input id="login_popup_close" type="button" class="button2" value="{L_DONT_DISPLAY_AGAIN}"/>
+		</form>
+	</div>
+</div>
+<!-- END switch_login_popup -->
+
+<!-- BEGIN switch_like_popup -->
+<div id="like_popup" style="z-index: 10000 !important;">
+	<div class="h3">{SITENAME}</div>
+	{LIKE_POPUP_MSG}
+	<div id="like_popup_buttons">
+		<form action="{S_LOGIN_ACTION}" method="get">
+			<input type="submit" class="button1" value="{L_LOGIN}"/>
+			<input type="button" class="button1" value="{L_REGISTER}" onclick="parent.location='{U_REGISTER}';"/>
+			<input id="like_popup_close" type="button" class="button2" value="{L_LIKE_CLOSE}"/>
+		</form>
+	</div>
+</div>
+<!-- END switch_like_popup -->
 
-.conteneur_minwidth_IE {
-    width: -webkit-fill-available;
-    display: flex;
-    align-items: center;
-    justify-content:center;
-}
-
-.conteneur_container_IE {
-  width: min(100%, 1300px);
-    display: flex;
-    align-items: center; 
-    justify-content: center; 
-  flex-flow: column;
-}
-
-
-body.claro, body.oscuro {
-    background-image: var(--fondo1);
-    background-size: inherit;
-    background-repeat: no-repeat;
-    background-position: top center;
-    z-index: 10;
-    display: flex; 
-    flex-flow: column;
-    align-items: center; 
-    justify-content: center;
-}
-
-
-.parahead {
-    width: 100%;
-    max-width: 1200px;
-    min-height: 250px;
-    margin: 100px auto 0;
-    background-color: var(--color-4);
-    padding: clamp(20px, 5vw, 50px);
-    border-radius: 20px;
-    position: relative;
-    box-shadow: 1px 1px 30px var(--color-3);
-}
-
-.oscuro .parahead, .oscuro #wrap {
-    background-color: var(--color-4);
-    box-shadow: 1px 1px 15px var(--color-4);
-}
-
-/*NOTIFICACIONES FLOTANTES*/
-
-#fa_toolbar {
-    position: absolute !important;
-    margin: -73px 0 0 0;
-}
-
-#fa_notifications {
-    position: fixed !important;
-    top: 20px !important;
-    right: 20px !important;
-    z-index: 9999 !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    background-color: var(--color-2, var(--color-1)) !important;
-    border-radius: 10% !important;
-    box-shadow: 0 4px 12px var(--color-2) !important;
-    transition: all 0.3s ease !important;
-    text-decoration: none;
-}
-
-#fa_notifications::before {
-    content: "\f0f3" !important;
-    font-family: "FontAwesome" !important;
-    font-size: 1em !important;
-    color: var(--color-5) !important;
-    line-height: 1 !important;
-    margin: 0 10px 0 4px;
-}
-
-/* Efecto hover */
-#fa_notifications:hover {
-    background-color: var(--color-3) !important;
-    transform: scale(1.1) !important;
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3) !important;
-}
-
-/* Transformamos el span del contador */
-#notif_unread {
-    position: absolute !important;
-    top: -5px !important;
-    right: -5px !important;
-    background-color: var(--acento5, #dc3545) !important;
-    color: white !important;
-    font-size: 12px !important;
-    font-weight: bold !important;
-    min-width: 20px !important;
-    height: 20px !important;
-    border-radius: 10px !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    padding: 0 4px !important;
-    border: 2px solid white !important;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2) !important;
-    
-    /* El texto viene como "(2)", extraemos solo el número */
-    &::before {
-        content: attr(data-numero);
-    }
-}
-
-/* Animación cuando hay no leídas */
-#fa_notifications.unread {
-    animation: flotar 2s ease-in-out infinite !important;
-}
-
-@keyframes flotar {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-5px); }
-}
-
-/* ===== ESTILOS PARA EL DROPDOWN ===== */
-#notif_list {
-    position: fixed !important;
-    top: 90px !important; /* Debajo del botón */
-    right: 20px !important;
-    left: auto !important; /* Anulamos el left dinámico de FA */
-    width: 350px !important;
-    max-width: 90vw !important;
-    background: white !important;
-    border-radius: 12px !important;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2) !important;
-    border: 1px solid rgba(0,0,0,0.1) !important;
-    padding: 0 !important;
-    list-style: none !important;
-    z-index: 10000 !important;
-}
-
-/* Header del dropdown (lo creamos con un pseudo-elemento) */
-#notif_list::before {
-    content: "Notificaciones" !important;
-    display: block !important;
-    padding: 15px 20px !important;
-    border-bottom: 1px solid #e9ecef !important;
-    background: linear-gradient(135deg, var(--acento2, #f8f9fa), var(--acento1, #e9ecef)) !important;
-    font-size: 16px !important;
-    font-weight: 600 !important;
-    color: var(--color-texto, #212529) !important;
-    border-radius: 12px 12px 0 0 !important;
-}
-
-/* Items de notificaciones */
-#notif_list li {
-    padding: 12px 20px !important;
-    border-bottom: 1px solid #f1f3f5 !important;
-    margin: 0 !important;
-}
-
-#notif_list li:hover {
-    background-color: #f8f9fa !important;
-}
-
-#notif_list li.unread {
-    background-color: #f0f7ff !important;
-    border-left: 3px solid var(--acento3, #007bff) !important;
-}
-
-/* Item "Ver todas" */
-#notif_list li.see_all {
-    text-align: center !important;
-    background-color: #f8f9fa !important;
-    border-radius: 0 0 12px 12px !important;
-}
-
-#notif_list li.see_all a {
-    color: var(--acento3, #007bff) !important;
-    text-decoration: none !important;
-    font-weight: 500 !important;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    #fa_notifications {
-        top: 10px !important;
-        right: 10px !important;
-        width: 48px !important;
-        height: 48px !important;
-    }
-    
-    #fa_notifications::before {
-        font-size: 20px !important;
-    }
-    
-    #notif_list {
-        top: 70px !important;
-        right: 10px !important;
-        width: 300px !important;
-    }
-}
-
-/* Ocultamos el left dinámico que pone Foroactivo */
-#notif_list[style*="left"] {
-    left: auto !important;
-    right: 20px !important;
-}
-
-/*NUEVOS MENSAJES PRIVADOS*/
-
-.oscruro .oppmsj[data-new-mps] {
-    filter: drop-shadow(0px 0px 6px var(--color-2));
-    position: relative;
-}
-.claro .oppmsj[data-new-mps] {
-    filter: drop-shadow(0px 0px 2px var(--color-3));
-    position: relative;
-}
-
-.oppmsj[data-new-mps] i {
-    font-family: 'bootstrap-icons', sans-serif; 
-    &::before {
-        content: "\F691";
-    }
-    animation: campanita 3s ease-in-out infinite;
-    display: inline-block;
-    transform-origin: top center; 
-}
-
-.oppmsj[data-new-mps]::before {
-    content: var(--mensajes);
-    position: absolute;
-    top: -6px;
-    right: -10px;
-    background-color: var(--color-2);
-    color: var(--color-1);
-    font-size: 11px;
-    padding: 2px 5px;
-    border-radius: 21%;
-    line-height: 1;
-    z-index: 10;
-}
-
-@keyframes campanita {
-    0% {
-        transform: rotate(0deg);
-    }
-    5% {
-        transform: rotate(12deg); /* Un pequeño balanceo a la derecha */
-    }
-    10% {
-        transform: rotate(-8deg); /* Luego a la izquierda, pero un poco menos */
-    }
-    15% {
-        transform: rotate(4deg);  /* Otro pequeño ajuste */
-    }
-    20% {
-        transform: rotate(0deg);  /* Vuelve a su posición original */
-    }
-    100% {
-        transform: rotate(0deg);  /* Se queda quieto hasta que el ciclo se repite */
-    }
-}
-.oppmensaj { display: none;}
-
-/*FIN NUEVOS MENSAJES PRIVADOS*/
-
-.parahead navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: -webkit-fill-available;
-    height: auto;
-}
-
-.f-nvpar{
-    display: flex;
-    width: -webkit-fill-available;
-    align-items: center;
-    justify-content: start;
-}
-
-.f-nvpar a, .f-nvpar button {
-    color: var(--color-3);
-    text-decoration: none;
-    font-size: 1.2em;
-    margin: 0px 15px 0 0;
-    border: none;
-    background: transparent;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 30px;
-    height: auto;
-}
-
-.s-navpar {
-    width: -webkit-fill-available;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-}
-
-/*SWITCHEROO*/
-
-.multismultis {
-    position: absolute;
-    top: 150px;
-    right: 0px;
-    left: auto;
-    width: min(95vw, 500px);
-     max-width: calc(100vw - 20px);
-       box-sizing: border-box;
-    background: var(--color-4);
-    border: 1px solid var(--color-3);
-    border-radius: 15px;
-    padding: 15px;
-    z-index: 999;
-    display: block;
-    visibility: hidden;
-    opacity: 0;
-    transform: translateY(-20px);
-    transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s;
-    pointer-events: none;
-}
-
-.multismultis.abirrr {
-    visibility: visible;
-    opacity: 1;
-    transform: translateY(0);
-    z-index: 999999 !important; 
-    pointer-events: auto;     
-}
-
-.multis-header {
-    padding: 20px;
-    border-bottom: 1px solid var(--color-3);
-    text-align: center;
-    width: -webkit-fill-available;
-    height: -webkit-fill-available;
-    margin: 0 0 22px 0;
-}
-
-.multis-header h1 {
-    margin: 0;
-    text-transform: uppercase;
-    font-size: 1.2em;
-    font-weight: 800;
-    letter-spacing: 1px;
-    color: var(--color-3);
-}
-
-.multismultis .switcheroo__squircles {
-    position: static !important;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-    justify-content: center;
-    justify-items: center;
-    padding: 0;
-    list-style: none;
-
-}
-
-.switcheroo__squircle {
-    width: 150px;
-    height: stretch;
-    background: var(--color-6);
-    border-radius: 7px;
-    padding: 10px;
-    overflow: hidden;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-flow: column;
-    line-height: 1em;
-}
-
-.switcheroo__squircle:last-child, .switcheroo__squircle:last-child .switcheroo__popper-text {
-    background: var(--color-3);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--color-4);
-    font-size: 0.9em;
-    font-family: var(--cuerpo1);
-    text-transform: uppercase;
-    font-weight: 600;
-    line-height: 1em;
-    cursor: pointer;
-    box-shadow: none;
-}
-
-
-.switcheroo__avatar {
-    width: 130px;
-    height: 60px;
-    overflow: hidden;
-    border-radius: 10px;
-    cursor: pointer;
-    box-shadow: 0 0 6px var(--color-2);
-}
-
-.switcheroo__avatar img {
-    max-width: 300px;
-    max-height: 500px;
-    width: 145px;
-    height: 200px;
-    margin: -10px 0 0 0px;
-    object-fit: cover;
-}
-
-.switcheroo__squircle.active .switcheroo__avatar {
-    box-shadow: 0 0 10px var(--color-3);
-}
-
-
-
-.switcheroo__delete {
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    margin: 0;
-    cursor: pointer;
-    background: var(--color-2);
-    width: 25px;
-    height: 25px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 6px;
-    color: var(--color-4);
-}
-
-.switcheroo__popper {
-    display: flex;
-    width: 100%;
-    margin: 10px 0 0 0;
-}
-
-.switcheroo__popper-text {
-    width: 100%;
-    height: 100%;
-    box-sizing: border-box;
-    font-size: 0.5em;
-    color: var(--color-4);
-    font-family: var(--cuerpo1);
-    line-height: 1em;
-    text-align: center;
-    background: var(--color-2);
-    padding: 5px 10px;
-    border-radius: 5px;
-    text-transform: uppercase;
-    font-weight: 600;
-    box-shadow: 0 0 10px var(--color-2);
-}
-
-.switcheroo__squircle.active .switcheroo__delete, .switcheroo__squircle.active .switcheroo__popper-text {
-    background-color: var(--color-3);
-    box-shadow: 0 0 7px var(--color-3);
-    border: none;
-}
-
-
-.switcheroo i, .s-navpar .modo-oscuro {
-    border: none;
-    background: transparent;
-    color: var(--color-3);
-    width: 30px;
-    margin: 0 15px 0 0;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.monomer-overlay {
-    position: fixed;
-    background: var(--tcolor4);
-    inset: 0;
-    z-index: 99999999 !important;
-  display: flex; 
-  align-items: center; 
-  justify-content: center;
-}
-
-.monomer-modal {
-    z-index: 9999999999 !important;
-    inset: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-flow: column;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: var(--color-6);
-    border-radius: 20px;
-    padding: 30px;
-    height: fit-content;
-    box-shadow: 0 0 10px var(--color-3);
-    border: 1px solid var(--color-3);
-}
-
-.btn-secondary {
-    background-color: var(--color-3) !important;
-    border: none !important;
-    color: var(--color-6) !important;
-    font-size: 1em !important;
-    font-family: var(--cuerpo1) !important;
-    margin: 0 10px 0 0px;
-}
-
-.btn-secondary.show {
-    background: var(--deg1) !important;
-    border: 1px solid var(--color-3) !important;
-    color: var(--color-3) !important;
-    font-weight: 700;
-}
-
-.close-button {
-    position: absolute;
-    top: 0;
-    right: 0;
-    border: none;
-    background: var(--color-3);
-    padding: 5px 10px 5px 10px;
-    border-top-right-radius: 20px;
-    color: var(--color-4);
-    font-size: 1.2em;
-    border-bottom-left-radius: 20px;
-}
-
-.monomer-modal__content {
-    width: 100%;
-}
-
-
-.switcheroo__form {
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    justify-content: center;
-}
-
-
-.switcheroo__form-row {
-    padding: 10px;
-    display: flex;
-    align-self: stretch;
-    flex-flow: column;
-    justify-content: space-between;
-}
-
-.switcheroo__form-label {
-    font-size: 1em;
-    font-family: var(--cuerpo1);
-    text-transform: uppercase;
-    font-weight: 800;
-    line-height: 14px;
-    text-align: end;
-    color: var(--color-3);
-    position: relative;
-    top: 2px;
-}
-
-.switcheroo__form-input {
-    border: none;
-    padding: 10px;
-    border-radius: 10px;
-    background: var(--color-6);
-}
-
-.switcheroo__form-button {
-    border: none;
-    background: var(--color-3);
-    padding: 7px;
-    border-radius: 7px;
-    color: var(--color-6);
-}
-
-.dropdown-menu {
-    display: none;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 8px;
-    --dropdown-offset-y: clamp(8px, 2vw, 22px);
-    margin-top: var(--dropdown-offset-y) !important;
-    width: max-content;
-    max-width: calc(100vw - 20px) !important;
-    box-sizing: border-box;
-    background: var(--deg1) !important;
-    border: 1px solid var(--color-3) !important;
-    padding: 10px !important;
-}
-
-.dropdown-toggle show {
-      background-color: var(--tcolor3)!important;
-}
-
-.dropdown-menu.show {
-display: flex !important;
-  flex-direction: row;
-  flex-wrap: wrap;
-  z-index: 99999 !important;
-      width: 45vw;
-  overflow: hidden;
-}
-
-.dropdown-item {
-  background-color: var(--color-3) !important; 
-  border-radius: 5px !important; 
-  margin: 10px 0 0 0 !important; 
-  transition: color 0.4s ease-in-out;
-  position: relative;
-  overflow: hidden;
-  z-index: 0;
-  padding: 2px 6px!important;
-}
-
-.dropdown-item a {
-    text-align: justify !important; 
-    color: var(--color-1) !important;
-    font-size: 1em;
-  font-family: var(--cuerpo1);
-}
-
-.dropdown-item::before{
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: var(--deg3)!important;
-  opacity: 0;
-  transition: opacity 0.4s ease!important;
-  z-index: 0;
-}
-.dropdown-item:hover::before { 
-  opacity: 1; 
   
-}
-
-.dropdown-item * {
-  position: relative;
-  z-index: 2;
-}
-
-.dropdown-item:hover {
-  color: var(--color-5) !important;
-}
-
-.puspj, .puadmin, .puenlaces {
-    flex: 1 1 0;
-    background: transparent;
-    border-right: 1px solid var(--color-3);
-    padding: 0 10px 0 0px;
-    margin: 0 10px 0 0;
-}
-
-.puadmin {
-    border: none!important;
-    padding: 0;
-    margin: 0;
-}
-
-.puspj h4, .puadmin h4, .puenlaces h4 {
-    font-size: 1em;
-    text-transform: uppercase;
-    border-bottom: 1px solid var(--color-3);
-    padding: 0 0 10px;
-    width: -webkit-fill-available;
-    display: flex;
-    align-items: center;
-    font-weight: 800;
-    color: var(--color-3);
-    flex-flow: row-reverse;
-    justify-content: space-between;
-    width: -webkit-fill-available;
-}
-
-.usimg {
-    width: 60px;
-    height: 60px;
-    overflow: hidden;
-    border-radius: 15%;
-    border: 4px solid var(--color-3);
-}
-.usimg img{
-    max-width: 300px;
-    max-height: 500px;
-    object-fit: cover;
-    width: 150px;
-    height: 250px;
-    margin: -28px 0 0 -33px;
-}
-
-
-banner {
-    background-color: var(--color-3);
-  width: min(90%, 1100px);
-    height: 600px;
-    display: flex;
-    top: -97px;
-    border-radius: 13px;
-    overflow: hidden;
-    position: relative;
-    z-index: 99 !important;
-}
-
-.claro banner .parfon {
-    background-image: var(--fondobase);
-    width: 206%;
-    height: inherit;
-    background-size: 175%;
-    background-position: 0% 31%;
-    opacity: 0.2;
-    mix-blend-mode: difference;
-    position: absolute;
-}
-
- .oscuro banner .parfon {
-    background-image: var(--fondobase);
-    width: 100%;
-    height: inherit;
-    background-size: 112%;
-    background-position: 0% 74%;
-    opacity: 0.2;
-    mix-blend-mode: hard-light;
-    position: absolute;
-    transform: rotateX(-180deg);
-}
-
-
-.imagba {
-    width: 100%;
-    height: -webkit-fill-available;
-    display: grid;
-    grid-template-areas: "stack";
-    z-index: 0;
-    position: relative;
-}
-
-.imagba img{
-  display:block;
-  image-rendering:-webkit-optimize-contrast;
-  image-rendering:crisp-edges;
-  backface-visibility:hidden;
-  transform:translateZ(0);
-  position:absolute;
-  bottom:0;
-  height:100%;
-}
-
-.claro .manga1 {
-    content: var(--manga1);
-    opacity: 0.3;
-    position: absolute;
-}
-
-.claro .manga2 {
-    content: var(--pj1);
-    width: 100%;
-    height: 107%;
-    transform: translateY(22px);
-}
-.claro .manga3 {
-    content: var(--manga2);
-    mix-blend-mode: soft-light;
-    position: absolute;
-    width: 120%;
-    top: -326px;
-    left: -130px;
-    opacity: 0.8;
-}
-.claro .manga4 {
-    content: var(--manga3);
-    mix-blend-mode: multiply;
-    width: 170%;
-    opacity: 0.2;
-    height: 178%;
-    top: -48%;
-    left: -19%;
-    transform: scaleX(-1);
-}
-
-.oscuro .manga1 {
-    content: var(--manga1);
-    opacity: 0.5;
-    z-index: 4;
-    mix-blend-mode: soft-light;
-}
-.oscuro .manga2 {
-    content: var(--pj1);
-    width: 120%;
-    height: 109%;
-    position: absolute;
-}
-.oscuro .manga3 {
-    content: var(--manga2);
-    z-index: 3;
-    width: 140%;
-    position: absolute;
-    left: -200px;
-    top: -311px;
-    mix-blend-mode: soft-light;
-}
-.oscuro .manga4 {
-    content: var(--manga3);
-    z-index: 4;
-    mix-blend-mode: hue;
-    opacity: 0.2;
-}
-
-.partitle {
-    position: absolute;
-    width: -webkit-fill-available;
-    height: -webkit-fill-available;
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.partitle h1 {
-    color: var(--color-4);
-    font-weight: 900;
-    font-size: 6em;
-    margin: 10px;
-    text-shadow: 0 0 15px var(--color-3);
-}
-
-.oscuro .partitle h1 {
-    color: var(--color-5);
-    font-weight: 900;
-    font-size: 6em;
-    margin: 10px;
-    text-shadow: 0 0 15px var(--color-4);
-}
-
-#page-body {
-    margin: 290px 0 0 0;
-    width: 100%;
-}
-
-#wrap {
-    width: 100%;
-    max-width: 1200px;
-    margin: -380px auto 100px;
-    background-color: var(--color-4);
-    padding: clamp(20px, 5vw, 50px);
-    border-radius: 20px;
-    position: relative;
-    z-index: 1;
-    box-shadow: 1px 1px 30px var(--color-3);
-}
-
-
-/**RESPONSIVE**/
-@media (max-width: 1024px) {
-  .conteneur_container_IE {
-    width: 100%;
-    max-width: 100%;
-    padding-inline: 10px;
-    box-sizing: border-box;
-  }
-
-  .parahead {
-    width: 100%;
-    max-width: 100%;
-    margin: 40px auto 0;
-    padding: clamp(20px, 5vw, 50px);
-    min-height: 250px;
-    box-sizing: border-box;
-  }
   
-  #page-body {
-    margin: 390px 0 0 0;
-    width: 100%;
-    overflow-x: hidden;
-  }
+<div class="conteneur_minwidth_IE">
+	<div class="conteneur_layout_IE">
+		<div class="conteneur_container_IE">
+                 <header class="parahead">
+<navbar>
+    <div class="f-nvpar">
+             <a href="{U_INDEX}" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" title="Inicio"><i class="fi fi-sr-home"></i></a>
+            <!-- BEGIN switch_user_logged_in -->
+             <a href="/privmsg?folder=inbox" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" title="Mensajería privada" class="oppmsj"><i class="bi bi-envelope-fill"></i></a>
+             <a href="/memberlist" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" title="Miembros"><i class="fi fi-sr-user"></i></a>
+             <a href="/groups" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" title="Grupos"><i class="fi fi-sr-users"></i></a>
+             <a href="/search" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" title="buscar"><i class="bi bi-search"></i></a>     
+             <button id="btn-aumentar" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" title="Aumentar tamaño de letra"><i class="fi fi-sr-square-plus"></i></button>
+             <button id="btn-disminuir" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" title="Disminuir tamaño de letra"><i class="fi fi-sr-square-minus"></i></button>
+             <a href="/login?logout=1" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" title="Desconectarse"><i class="fi fi-sr-exit"></i></a>
+            <!-- END switch_user_logged_in -->
+            <!-- BEGIN switch_user_logged_out -->
+             <a href="/login" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" title="Conectarse"><i class="fi fi-sr-power"></i></a>
+             <a href="/register" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" title="Registrarse"><i class="fi fi-sr-user-add"></i></a>
+             <!-- END switch_user_logged_out --> 
+    </div>
+    <div class="s-navpar">
+        <nav id="switcheroo" class="switcheroo" direction="vertical" position="top" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" title="Cambio de cuentas"><i class="fi fi-sr-convert-shapes"></i></nav>
+      
+<div class="multismultis" id="ventana-cuentas">
+ <div class="multis-header"><h1>Mis Cuentas</h1></div>
+    <div id="contemultis"></div> 
+  <div class="cagreg"></div>
+</div>
+      
+      <button 
+         id="modo-oscuro"
+         class="modo-oscuro"
+         aria-label="modo oscuro"
+         data-bs-custom-class="custom-tooltip" 
+         data-bs-toggle="tooltip" 
+         title="Cambio de tema diurno/nocturno">
+          <i class="bi bi-sun-fill"></i>
+        </button>
+        <div class="dropdown">
+           <button id="dropdown-trigger" class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Panel del usuario 
+           </button>
+            <ul class="dropdown-menu">
+              <!-- BEGIN switch_user_logged_in -->
+              <div class="puspj">
+              <h4 class="dlin animate__animated animate__backInDown">Cuenta <i class="bi bi-eye-fill"></i></h4>
+              <li class="animate__animated animate__backInDown"><a class="dropdown-item" id="perfil-link-container" href="#"><i class="bi bi-person-circle"></i></a></li>
+              <script>
+		if (_userdata && _userdata.user_id > 0) {
+  		const container = document.getElementById("perfil-link-container");
+  		container.href = "/u" + _userdata.user_id;
+  		const span = document.createElement("span");
+  		span.textContent = " Mi perfil";	
+  		container.appendChild(span);
+		}
+               </script>
+                <li class="animate__animated animate__backInDown"><a class="dropdown-item" href="/profile?mode=editprofile"><i class="bi bi-gear"></i><span> Configuración</span></a></li>
+                <li class="animate__animated animate__backInDown"><a class="dropdown-item" href="/profile?mode=editprofile&page_profil=avatars"><i class="bi bi-palette"></i><span> Cambiar Avatar</span></a></li>
+              <li class="animate__animated animate__backInDown"><a class="dropdown-item" href="/profile?mode=editprofile&page_profil=signature"><i class="bi bi-camera"></i><span> Cambiar Firma</span></a></li>  
+              <li class="animate__animated animate__backInDown"><a class="dropdown-item" href="/search?search_id=watchsearch"><i class="bi bi-folder2-open"></i><span> Mis temas supervisados</span></a></li>
+              <li class="animate__animated animate__backInDown"><a class="dropdown-item" href="/search?search_id=topicdraftsearch"><i class="bi bi-pen"></i><span> Borradores de temas</span></a></li>
+              <li class="animate__animated animate__backInDown"><a class="dropdown-item" href="/search?search_id=draftsearch"><i class="bi bi-text-wrap"></i><span> Borradores de mensajes</span></a></li>
+              </div>
+              <!-- END switch_user_logged_in -->
+              <div class="puenlaces">
+              <h4 class="dlin animate__animated animate__backInDown">Personaje <i class="bi bi-file-person-fill"></i></h4>
+              <li class="animate__animated animate__backInDown"><a class="dropdown-item" href="#"><i class="bi bi-bookmark-star"></i><span> Nuevos usuarios</span></a></li>
+              <li class="animate__animated animate__backInDown"><a class="dropdown-item" href="#"><i class="bi bi-cart-plus"></i><span> Busquedas</span></a></li>
+              <li class="animate__animated animate__backInDown"><a class="dropdown-item" href="#"><i class="bi bi-bookmark-star"></i><span> Reserva de PB</span></a></li>
+              <li class="animate__animated animate__backInDown"><a class="dropdown-item" href="#"><i class="bi bi-cart-plus"></i><span> Busquedas</span></a></li>
+              </div>
+              <div class="puadmin">
+              <h4 class="dlin animate__animated animate__backInDown">Administrativos <i class="bi bi-hammer"></i></h4>
+              <li class="animate__animated animate__backInDown"><a class="dropdown-item" href="#"><i class="bi bi-cart-plus"></i><span> Cierre de temas</span></a></li>
+              <li class="animate__animated animate__backInDown"><a class="dropdown-item" href="#"><i class="bi bi-cart-plus"></i><span> Registro único</span></a></li>
+              <li class="animate__animated animate__backInDown"><a class="dropdown-item" href="#"><i class="bi bi-cart-plus"></i><span> Peticiones administrativas</span></a></li>
+              </div>
+            </ul>
+     </div>
+     <div class="usimg"><script>document.write(_userdata.avatar);</script>avatar</div>
+    </div>
+</navbar>
+<div class="oppmensaj">                  
+<ul class="linklist navlinks{NAVBAR_BORDERLESS}">
+<li>{GENERATED_NAV_BAR}</li>
+</ul>
+</div>       
+</header>   
+                  
+<banner>
+  <img class="parfon"></img>
+  <div class="imagba">
+    <img class="manga1" />
+    <img class="manga2" />
+    <img class="manga3" />
+    <img class="manga4" />
+  </div>
+  <div class="partitle">
+    <h1>ONE PIECE</h1>
+    <h1>PARABELLUM</h1>
+  </div>
+</banner>    
+                  
+			<div id="wrap">
+				<a id="top" name="top" accesskey="t"></a>
+				{JAVASCRIPT}
 
-    #wrap {
-        width: 100%;
-        max-width: 100%;
-        margin: -490px auto;
-        padding: clamp(20px, 5vw, 50px);
-        min-height: auto;
-        box-sizing: border-box;
-    }
-  
-  .parahead banner {
-    width: 100%;
-    max-width: 100%;
-  }
+				<div id="page-header">
 
- .multismultis {
-    width: min(96vw, 500px);
-    max-width: calc(100vw - 20px);
-    right: 10px;
-  }
+					<!-- BEGIN switch_ticker_new -->
+					<div id="fa_ticker_blockD" style="margin-top:4px;">
+						<div class="module">
+							<div class="inner">
+								<span class="corners-top"><span></span></span>
+								<div id="fa_ticker_container">
+									<ul id="fa_ticker_content" class="jcarousel-skin-tango" style="display:none">
+										<!-- BEGIN ticker_row -->
+										<li>{switch_ticker.ticker_row.ELEMENT}</li>
+										<!-- END ticker_row -->
+									</ul>
+								</div>
+								<span class="corners-bottom"><span></span></span>
+							</div>
+						</div>
+					</div>
+					<!-- END switch_ticker_new -->
 
-  .dropdown-menu {
-    --dropdown-offset-y: clamp(16px, 6vw, 40px);
-    width: 100%;
-    max-width: 100% !important;
-    flex-direction: column;
-    align-items: stretch;
-    gap: 10px;
-  }
+					<!-- BEGIN switch_ticker -->
+					<div id="fa_ticker_block" style="margin-top:4px;">
+						<div class="module">
+							<div class="inner">
+								<span class="corners-top"><span></span></span>
+								<div id="fa_ticker_container">
+									<div id="fa_ticker" style="height:{switch_ticker.HEIGHT}px;">
+										<div class="fa_ticker_content">
+											<!-- BEGIN ticker_row -->
+											<div>{switch_ticker.ticker_row.ELEMENT}</div>
+											<!-- END ticker_row -->
+										</div>
+									</div>
+								</div>
+								<span class="corners-bottom"><span></span></span>
+							</div>
+						</div>
+					</div>
+					<!-- END switch_ticker -->
+				</div>
 
-  .dropdown-menu.show {
+				<div id="page-body">
+                                  a ver aquí como sale
 
-    width: 4500px;
-  }
+					<div id="{ID_CONTENT_CONTAINER}"{CLASS_CONTENT_CONTAINER}>
+						<div id="outer-wrapper">
+							<div id="wrapper">
+								<div id="container">
+									<div id="content">
 
-  .puspj, .puadmin, .puenlaces {
-    width: 100%;
-    margin: 0;
-    padding: 0 0 10px 0;
-    border-right: none;
-    border-bottom: 1px solid var(--color-3);
-  }
+										<div id="{ID_LEFT}">
+											<!-- BEGIN giefmod_index1 -->
+											{giefmod_index1.MODVAR}
+											<!-- BEGIN saut -->
+											<div style="height:{SPACE_ROW}px"></div>
+											<!-- END saut -->
+											<!-- END giefmod_index1 -->
+										</div>
 
-  .puspj h4, .puadmin h4, .puenlaces h4 {
-    padding: 0 0 10px 0;
-  }
-}
-
+										<div id="main">
+											<div id="main-content">
