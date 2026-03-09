@@ -177,48 +177,27 @@ body.claro, body.oscuro {
     margin: 0 10px 0 4px;
 }
 
-/* Efecto hover */
+
 #fa_notifications:hover {
     background-color: var(--color-3) !important;
     transform: scale(1.1) !important;
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3) !important;
-    text-decoration: none;
+    text-decoration: none!important;
 }
 
-/* Transformamos el span del contador */
-#notif_unread {
-    position: absolute !important;
-    top: -5px !important;
-    right: -5px !important;
-    background-color: var(--acento5, #dc3545) !important;
-    color: white !important;
-    font-size: 12px !important;
-    font-weight: bold !important;
-    min-width: 20px !important;
-    height: 20px !important;
-    border-radius: 10px !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    padding: 0 4px !important;
-    border: 2px solid white !important;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2) !important;
-    
-    /* El texto viene como "(2)", extraemos solo el número */
-    &::before {
-        content: attr(data-numero);
-    }
+#fa_toolbar #fa_right #fa_notifications.unread #notif_unread {
+    display: inline;
+    background: var(--color-3);
+    padding: 1px;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+    font-size: 0.8em;
 }
 
-/* Animación cuando hay no leídas */
-#fa_notifications.unread {
-    animation: flotar 2s ease-in-out infinite !important;
-}
-
-@keyframes flotar {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-5px); }
-}
 
 /* ===== ESTILOS PARA EL DROPDOWN ===== */
 #notif_list {
