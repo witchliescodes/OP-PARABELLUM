@@ -133,7 +133,7 @@ body.claro, body.oscuro {
     width: 100%;
     max-width: 1200px;
     min-height: 250px;
-    margin: 100px auto 0;
+    margin: 5px auto 0;
     background-color: var(--color-4);
     padding: clamp(20px, 5vw, 50px);
     border-radius: 20px;
@@ -308,10 +308,9 @@ body.claro, body.oscuro {
 .oppmsj[data-new-mps]::before {
     content: var(--mensajes);
     position: absolute;
-    top: -6px;
-    right: -10px;
+    margin: -18px 0 0 25px;
     background-color: var(--color-2);
-    color: var(--color-1);
+    color: var(--color-5);
     font-size: 11px;
     padding: 2px 5px;
     border-radius: 21%;
