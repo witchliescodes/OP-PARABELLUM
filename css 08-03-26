@@ -26,6 +26,8 @@
 --pj1: url('https://images2.imgbox.com/cd/14/cN2trDyz_o.png');
 --manga2: url('https://images2.imgbox.com/de/eb/AcPVlysX_o.png');
 --manga3: url('https://images2.imgbox.com/24/64/EWhKVWzv_o.png');
+/*Tablón de anuncios*/
+--pes1: url('https://images2.imgbox.com/6d/3a/hjFQbiE6_o.png');
 }
 
 .oscuro {
@@ -56,7 +58,8 @@
 --pj1: url('https://images2.imgbox.com/a8/05/vmZpi8cU_o.png');
 --manga2: url('https://images2.imgbox.com/de/eb/AcPVlysX_o.png');
 --manga3: url('https://images2.imgbox.com/3b/45/dxCdG65Q_o.png');
-
+/*Tablón de anuncios*/
+--pes1: url('https://images2.imgbox.com/6d/3a/hjFQbiE6_o.png');
 }
 
 @font-face {
@@ -1218,7 +1221,7 @@ banner {
  }
 
 .ladoa {
-    width: 60%;
+    width: 75%;
     display: flex;
     align-items: flex-start;
     flex-flow: column;
@@ -1453,17 +1456,45 @@ banner {
 
 
 .ladob {
-    width: -webkit-fill-available;
+    width: auto;
     height: -webkit-fill-available;
-    background: aliceblue;
     margin: 0;
     overflow: hidden;
 }
 
 .bienp {
     background: var(--color-3);
-    padding: 30px;
+    padding: 15px 30px;
     border-radius: 10px;
+    margin: 0 0 10px 0;
+}
+
+.bienp p {
+    margin: 0;
+    font-family: var(--titulos);
+    text-transform: uppercase;
+    letter-spacing: 0.5em;
+    text-align: center;
+    color: var(--color-1);
+    display: inline-block;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: clamp(0.9rem, 2.8vw, 1.5em);
+}
+
+
+.tabim1 {
+    background: var(--pes1);
+    width: 100%;
+    height: 88%;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: scaleX(-1);
+    position: relative;
+    top: -24px;
 }
 
 /* Labels con flechas (SIEMPRE VISIBLES) */
@@ -1536,17 +1567,12 @@ banner {
     box-sizing: border-box;
   }
   
-  #page-body {
-    margin: 390px 0 0 0;
-    width: 100%;
-    overflow-x: hidden;
-  }
 
-    #wrap {
+#wrap {
         width: 100%;
         max-width: 100%;
         margin: -490px auto;
-        padding: clamp(20px, 5vw, 50px);
+        padding: 430px 48px;
         min-height: auto;
         box-sizing: border-box;
     }
@@ -1678,6 +1704,14 @@ banner {
     display: flex;
 }
 
+  
+#sinscroll {
+    width: 47%;
+}
+  
+  .linky p {
+    font-size: 1.1em;
+}
 
 }
 
