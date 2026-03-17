@@ -423,8 +423,7 @@
 <div class="paradiv pestana active" id="pestana1">
 <div class="ladoa">
 <div class="pambi">
-<h3 class="ppam">
-Ambientación <em class="bi bi-lightning-charge-fill"></em>                     
+<h3 class="ppam">Ambientación <em class="bi bi-lightning-charge-fill"></em>                     
 </h3>
 Ice cream danish gummi bears powder cotton candy donut. Bear claw biscuit muffin shortbread pastry dessert cake. Carrot cake cake fruitcake lollipop oat cake powder fruitcake topping. Cheesecake topping sugar plum candy cake. Toffee cake bear claw pie marzipan chocolate cake. Halvah chupa chups cake dragée tart gummies liquorice bonbon. Caramels bear claw shortbread chocolate cake soufflé. Caramels bonbon pie halvah cotton candy. Biscuit dessert oat cake powder pastry muffin carrot cake marzipan. Dessert jelly-o cake sugar plum icing jelly jelly. Pastry topping caramels shortbread fruitcake. Wafer caramels apple pie liquorice jelly cotton candy powder. Bear claw pie jelly ice cream pudding jelly croissant candy. Topping marzipan wafer lollipop cotton candy chocolate cake ice cream. Tart candy canes liquorice chocolate cake danish. Bear claw gingerbread powder carrot cake jelly beans pudding biscuit. Marshmallow jelly beans carrot cake tiramisu gummies sweet roll carrot cake lollipop pastry. Sweet tart chupa chups chupa chups cheesecake jujubes. Icing gingerbread gummies marzipan wafer dessert. Ice cream pastry macaroon biscuit cookie lemon drops jujubes sweet roll. Lemon drops dessert apple pie brownie gummi bears gummi bears cake apple pie. Sesame snaps apple pie liquorice apple pie muffin dragée chocolate jelly-o chocolate. Cake halvah caramels macaroon lollipop. Chupa chups candy canes brownie gummi bears soufflé macaroon gummi bears. Donut chocolate lollipop sweet roll tootsie roll halvah liquorice cupcake candy canes. Bonbon soufflé cake donut dessert. Macaroon sugar plum jelly beans marzipan pastry icing pastry.                              
 </div>
@@ -471,7 +470,9 @@ Ice cream danish gummi bears powder cotton candy donut. Bear claw biscuit muffin
 <p>Welcome</p>
 <p><script>document.write(_userdata.username);</script></p>
 </div>
-<img class="tabim1" />                             
+<div class="tabconi">
+<div class="tabim1"></div> 
+</div>                          
 <div class="ralia">
 Links de acceso                     
 </div>
