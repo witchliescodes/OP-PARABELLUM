@@ -1148,7 +1148,6 @@ banner {
 }
 
 #page-body {
-    margin: 290px 0 0 0;
     width: 100%;
 }
 
@@ -1157,12 +1156,12 @@ banner {
     max-width: 1200px;
     margin: -380px auto 100px;
     background-color: var(--color-4);
-    padding: clamp(20px, 5vw, 50px);
+    padding: 310px 55px;
     border-radius: 20px;
     position: relative;
     z-index: 1;
     box-shadow: 1px 1px 30px var(--color-3);
-  color: var(--color-1);
+    color: var(--color-1);
 }
 
 .oscuro #wrap {
@@ -1383,7 +1382,7 @@ banner {
 }
 
 .ulavi {
-    width: 100px;
+    width: 80px;
     height: 100%;
     overflow: hidden;
     margin: 0 10px 0 0;
@@ -1452,6 +1451,20 @@ banner {
     margin: 0 5px 0 0px;
 }
 
+
+.ladob {
+    width: -webkit-fill-available;
+    height: -webkit-fill-available;
+    background: aliceblue;
+    margin: 0;
+    overflow: hidden;
+}
+
+.bienp {
+    background: var(--color-3);
+    padding: 30px;
+    border-radius: 10px;
+}
 
 /* Labels con flechas (SIEMPRE VISIBLES) */
 .labels {
