@@ -468,7 +468,8 @@ Ice cream danish gummi bears powder cotton candy donut. Bear claw biscuit muffin
 			                     
 <div class="ladob">
 <div class="bienp">
-Bienvenido usuario                              
+<h1>Welcome</h1>
+<h1><script>document.write(_userdata.username);</script></h1>
 </div>
 <img class="tabim1" />                             
 <div class="ralia">
