@@ -1716,16 +1716,15 @@ banner {
 }
 
 @media (min-width: 1025px) {
-
     .paranun {
-    padding: 20px;
-    border-radius: 10px;
-    margin: 35px 0 0 0;
-    position: relative;
-    width: -webkit-fill-available;
-    height: 650px;
-}
-
+        padding: 20px;
+        border-radius: 10px;
+        margin: 35px 0 0 0;
+        width: -webkit-fill-available;
+        height: 650px;
+        position: relative;
+        overflow: hidden;
+    }
     .paranun h1 {
         font-size: 4rem;
         font-weight: 800;
