@@ -478,26 +478,38 @@ Ice cream danish gummi bears powder cotton candy donut. Bear claw biscuit muffin
 </div>      
 <!--STAFF -->  
 <div class="oppstaf btn-modal" data-bs-toggle="modal" data-bs-target="#staffModal" role="button" tabindex="0">
-  <span class="oppstaf__label">aquí va el staff</span>
+<span class="oppstaf__label">aquí va el staff</span>
 </div>
   
 <div class="modal fade" id="staffModal" tabindex="-1" aria-labelledby="staffModalLabel" aria-hidden="true" data-bs-backdrop="false">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-      <div class="modal-header">
-        <h5 class="modal-title" id="staffModalLabel"><em class="game-icon game-icon-laurel-crown"></em>Staff</h5>
-        <p class="tiop">"Si vis pacem, parabellum"</p>
-        <p>Bienvenidos a OP Parabellum, a continuación, presentamos al equipo administrativo, sin el cual este foro no podría mantenerse en pie, si tienes alguna duda, preguntanos con gusto, estamos para dar respuesta a tus preguntas.</p>
+<div class="oppmodal1 modal-dialog modal-dialog-centered">
+<div class="modal-content">
+<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"><i class="bi bi-x-lg"></i></button>
+<div class="modal-header">
+<h5 class="modal-title" id="staffModalLabel"><em class="game-icon game-icon-laurel-crown"></em>Staff</h5>
+<p class="tiop">"Si vis pacem, parabellum"</p>
+<p>Bienvenidos a OP Parabellum, a continuación, presentamos al equipo administrativo, sin el cual este foro no podría mantenerse en pie, si tienes alguna duda, preguntanos con gusto, estamos para dar respuesta a tus preguntas.</p>
       </div>
       <div class="modal-body">
-        <!-- contenido personalizado -->
+        <!-- STAFF 1 -->
+        <div class="psta1">
+          <div class="stcar">
+            <h3>Nombre del coso</h3>
+            <dfn>Webmaster</dfn>
+            <p>Breve mensaje bonito para que la gente agarre confianza con el staff, o pa enlistar ahi las tareas de cada cuenta. </p>
+            <div class="stcon">
+              <a href="/" title="Perfil" data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip"><i class="bi bi-file-earmark-person-fill"></i></a>
+              <a href="/" title="Perfil" data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip"><i class="bi bi-envelope-heart-fill"></i></a>
+            </div>
+          </div>
+        </div>
+        <!-- FIN STAFF 1-->
       </div>
     </div>
   </div>
-</div>  
-<!--FIN STAFF -->    
+</div>     
 </div>
+  
 </div>
 <!--  Pestaña 2: Periodicos  -->                       
 <div class="paradiv pestana" id="pestana2">
