@@ -472,10 +472,26 @@ Ice cream danish gummi bears powder cotton candy donut. Bear claw biscuit muffin
 </div>
 <div class="tabconi">
 <div class="tabim1"></div> 
-</div>                          
-<div class="ralia">
-Links de acceso                     
+</div>      
+<!--STAFF -->  
+<div class="oppstaf btn-modal" data-bs-toggle="modal" data-bs-target="#staffModal" role="button" tabindex="0">
+  <span class="oppstaf__label">aquí va el staff</span>
 </div>
+  
+<div class="modal fade" id="staffModal" tabindex="-1" aria-labelledby="staffModalLabel" aria-hidden="true" data-bs-backdrop="false">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staffModalLabel">Staff</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <!-- contenido personalizado -->
+      </div>
+    </div>
+  </div>
+</div>  
+<!--FIN STAFF -->    
 </div>
 </div>
 <!--  Pestaña 2: Periodicos  -->                       
