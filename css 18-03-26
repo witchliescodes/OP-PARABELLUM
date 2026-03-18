@@ -11,7 +11,6 @@
   --tcolor3: #6f70d38c;
   --tcolor4: #1f1f3ec2;
   --tcolor5: #faf8fc75;
-
   /*DEGRADADOS*/
   --deg3: linear-gradient(145deg, #6f9bd3, #6f70d3);
   --deg2: linear-gradient(90deg, #6f9bd3, #6f70d3);
@@ -1718,6 +1717,8 @@ banner {
     align-items: end;
     justify-content: flex-end;
     background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
 }
 
 .psta1:nth-child(1) {
@@ -1761,12 +1762,20 @@ background-image: var(--staff6);
     font-family: var(--cuerpo1);
 }
 
-.stcar p {
+.stcar span {
     font-size: 0.8em;
     line-height: 1.2em;
     font-family: var(--cuerpo1);
     text-align: justify;
     hyphens: auto;
+    background: linear-gradient(360deg, var(--tcolor3), var(--tcolor5));
+    padding: 0.3em;
+    border-radius: 4px;
+    color: var(--color-6);
+    -webkit-box-decoration-break: clone;
+    display: inline;
+    font-weight: 500;
+    overflow: auto;
 }
 
 .stcon {
