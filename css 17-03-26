@@ -9,6 +9,8 @@
   /*Transparencias*/
   --tcolor3: #6f70d38c;
   --tcolor4: #1f1f3ec2;
+  --tcolor5: #faf8fc75;
+  --tcolor6: ;
   /*DEGRADADOS*/
   --deg3: linear-gradient(145deg, #6f9bd3, #6f70d3);
   --deg2: linear-gradient(90deg, #6f9bd3, #6f70d3);
@@ -27,7 +29,11 @@
 --manga2: url('https://images2.imgbox.com/de/eb/AcPVlysX_o.png');
 --manga3: url('https://images2.imgbox.com/24/64/EWhKVWzv_o.png');
 /*Tablón de anuncios*/
---pes1: url('https://images2.imgbox.com/6d/3a/hjFQbiE6_o.png');
+--pes1: url('https://images2.imgbox.com/6d/3a/hjFQbiE6_o.png'); 
+--staff1: url('https://images2.imgbox.com/69/4b/ISXgO8VW_o.png'); /*Imagen 1 de staff*/
+--staff2: url('https://images2.imgbox.com/69/4b/ISXgO8VW_o.png'); /*Imagen 2 de staff*/
+--staff3: url('https://images2.imgbox.com/69/4b/ISXgO8VW_o.png'); /*Imagen 3 de staff*/
+--staff4: url('https://images2.imgbox.com/69/4b/ISXgO8VW_o.png'); /*Imagen 4 de staff*/
 }
 
 .oscuro {
@@ -59,7 +65,11 @@
 --manga2: url('https://images2.imgbox.com/de/eb/AcPVlysX_o.png');
 --manga3: url('https://images2.imgbox.com/3b/45/dxCdG65Q_o.png');
 /*Tablón de anuncios*/
---pes1: url('https://images2.imgbox.com/6d/3a/hjFQbiE6_o.png');
+--pes1: url('https://images2.imgbox.com/6d/3a/hjFQbiE6_o.png'); 
+--staff1: url('https://images2.imgbox.com/69/4b/ISXgO8VW_o.png'); /*Imagen 1 de staff*/
+--staff2: url('https://images2.imgbox.com/69/4b/ISXgO8VW_o.png'); /*Imagen 2 de staff*/
+--staff3: url('https://images2.imgbox.com/69/4b/ISXgO8VW_o.png'); /*Imagen 3 de staff*/
+--staff4: url('https://images2.imgbox.com/69/4b/ISXgO8VW_o.png'); /*Imagen 4 de staff*/
 }
 
 .modal {
@@ -1603,15 +1613,18 @@ banner {
 
 .oppmodal1 .modal-header {
     display: flex;
-    flex-flow: column!important;
+    flex-flow: column !important;
     flex-shrink: 0;
     width: 20%;
-    background: var(--color-3);
+    margin: 10px!important;
+    background: var(--color-3)!important;
     align-items: center;
     padding: var(--bs-modal-header-padding);
     border-bottom: var(--bs-modal-header-border-width) solid var(--bs-modal-header-border-color);
     border-top-left-radius: var(--bs-modal-inner-border-radius);
     border-top-right-radius: var(--bs-modal-inner-border-radius);
+    border-bottom-right-radius: calc(0.5rem - (1px))!important;
+    border-bottom-left-radius: calc(0.5rem - (1px))!important;
 }
 
 .oppmodal1 .modal-header .tiop {
@@ -1622,6 +1635,17 @@ banner {
     font-style: italic;
     line-height: 1em;
     text-align: center;
+}
+
+.modal-header .restaff {
+    width: 100%;
+    text-align: justify;
+    line-height: 1em;
+    font-size: 1em;
+    font-family: var(--cuerpo1);
+    color: var(--color-5);
+    hyphens: auto;
+    margin: 10px;
 }
 
 .oppmodal1 .modal-title {
@@ -1642,6 +1666,61 @@ banner {
     margin: 0;
     height: 115px;
     color: var(--color-5);
+}
+
+.modal-body {
+    position: relative;
+    flex: 1 1 auto;
+    padding: var(--bs-modal-padding);
+    margin: 10px;
+    background: var(--color-5);
+    border-radius: 10px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.psta1 {
+    background: var(--color-1);
+    width: 30%;
+    height: 220px;
+    margin: 10px;
+    border-radius: 6px;
+    display: flex;
+    align-items: end;
+}
+
+.psta1:nth-child(1) {
+background-image: var(--staff1);
+}
+.psta1:nth-child(2) {
+background-image: var(--staff2);
+}
+.psta1:nth-child(3) {
+background-image: var(--staff3);
+}
+.psta1:nth-child(4) {
+background-image: var(--staff4);
+}
+.psta1:nth-child(5) {
+background-image: var(--staff5);
+}
+.psta1:nth-child(6) {
+background-image: var(--staff6);
+}
+
+.stcar {
+    width: 100%;
+    height: -webkit-fill-available;
+    padding: 10px;
+    background: linear-gradient(to top, var(--color-3) 0%, var(--tcolor3) 40%, transparent 100%);
+}
+
+.stcar h3 {
+    margin: 0;
+    font-size: 1em;
+    font-family: var(--titulos);
 }
 
 
