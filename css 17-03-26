@@ -62,6 +62,10 @@
 --pes1: url('https://images2.imgbox.com/6d/3a/hjFQbiE6_o.png');
 }
 
+.modal {
+    --bs-modal-width: 1200px!important;
+}
+
 @font-face {
     font-family: 'Cormorant Garamond';
     font-style: normal; 
@@ -180,6 +184,35 @@ body.claro, body.oscuro {
 .oscuro .parahead, .oscuro #wrap {
     background-color: var(--color-4);
     box-shadow: 1px 1px 15px var(--color-4);
+}
+
+#preloader {
+  position: fixed;
+  inset: 0;
+  background: rgba(3, 3, 7, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+#preloader.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.preloader__spinner {
+  width: 60px;
+  height: 60px;
+  border: 4px solid rgba(255, 255, 255, 0.25);
+  border-top-color: var(--color-5);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
 }
 
 /*NOTIFICACIONES FLOTANTES*/
@@ -1459,7 +1492,7 @@ banner {
     height: -webkit-fill-available;
     overflow: hidden;
     position: absolute;
-    margin: 0 4px 0 543px;
+    margin: 0 4px 0 545px;
 }
 
 .bienp {
@@ -1503,6 +1536,104 @@ banner {
     top: -35px;
     left: -31px;
 }
+
+.oppstaf {
+  position: absolute;
+  width: 220px;
+  height: 200px;
+  margin: 300px 0 0 0;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: var(--color-3);
+  cursor: pointer;
+  transition: transform 200ms ease, filter 200ms ease;
+  background-image: url('/ruta/a/la/imagen.png');
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: multiply;
+}
+
+.oppstaf:hover {
+  transform: translateY(-4px);
+  filter: drop-shadow(0 8px 12px rgba(0, 0, 0, 0.25));
+}
+
+.oppstaf__label {
+  color: var(--color-5);
+  font-family: var(--titulos);
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.35);
+}
+
+/*MODAL DEL STAFF*/
+
+.oppmodal1 .modal-dialog {
+  max-width: 1200px!important;
+}
+
+.btn-close {
+    --bs-btn-close-white-filter: invert(1) grayscale(100%) brightness(200%);
+    box-sizing: content-box;
+    width: 1em;
+    height: 1em;
+    padding: .25em .25em;
+    color: var(--color-6)!important;
+    background: var(--bs-danger)!important;
+    border: 0;
+    border-radius: .375rem;
+    position: absolute;
+    opacity: var(--bs-btn-close-opacity);
+}
+
+.modal-content {
+    position: relative;
+    display: flex;
+    flex-direction: row!important;
+    width: 100%;
+    color: var(--color-6);
+    pointer-events: auto;
+    background-color: var(--color-1);
+    background-clip: padding-box;
+    border: var(--bs-modal-border-width) solid var(--bs-modal-border-color);
+    border-radius: var(--bs-modal-border-radius);
+    outline: 0;
+}
+
+.modal-header {
+    display: flex;
+    flex-flow: column!important;
+    flex-shrink: 0;
+    width: 20%;
+    background: var(--color-3);
+    align-items: center;
+    padding: var(--bs-modal-header-padding);
+    border-bottom: var(--bs-modal-header-border-width) solid var(--bs-modal-header-border-color);
+    border-top-left-radius: var(--bs-modal-inner-border-radius);
+    border-top-right-radius: var(--bs-modal-inner-border-radius);
+}
+
+.modal-title {
+    line-height: var(--bs-modal-title-line-height);
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+    margin: -10px 0 0 0;
+    font-size: 2em;
+    text-transform: uppercase;
+    font-family: var(--titulos);
+    color: var(--color-5);
+    letter-spacing: 0.2em;
+}
+
+.modal-title i {
+    font-size: 3em;
+    margin: 0;
+    height: 115px;
+    color: var(--color-5);
+}
+
 
 /* Labels con flechas (SIEMPRE VISIBLES) */
 .labels {
@@ -1754,17 +1885,17 @@ banner {
     height: -webkit-fill-available;
 }
 
-.labels {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    width: 100px;
-    position: absolute;
-    z-index: 10;
-    align-items: center;
-    flex-flow: column;
-    margin: -180px 0 0 800px;
-}
+    .labels {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        width: 100px;
+        position: absolute;
+        z-index: 10;
+        align-items: center;
+        flex-flow: column;
+        margin: -180px 0 0 820px;
+    }
 
     
 }
