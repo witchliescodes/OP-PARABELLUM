@@ -1682,10 +1682,12 @@ banner {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    font-size: 0.9em;
+    font-size: 0.8em;
     font-family: var(--cuerpo1);
     text-transform: uppercase;
     line-height: 1em;
+    font-weight: 800;
+    border-radius: 3px;
 }
 
 .modal-body {
