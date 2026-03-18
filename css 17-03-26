@@ -1618,6 +1618,7 @@ banner {
 .oppmodal1 .modal-header {
     display: flex;
     flex-flow: column !important;
+    justify-content: space-evenly!important;
     flex-shrink: 0;
     width: 20%;
     margin: 10px!important;
@@ -1670,6 +1671,21 @@ banner {
     margin: 0;
     height: 115px;
     color: var(--color-5);
+}
+
+.pslink {
+    width: 100%;
+    background: var(--color-1);
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.9em;
+    font-family: var(--cuerpo1);
+    text-transform: uppercase;
+    line-height: 1em;
 }
 
 .modal-body {
