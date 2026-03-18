@@ -489,9 +489,7 @@ Ice cream danish gummi bears powder cotton candy donut. Bear claw biscuit muffin
 <h5 class="modal-title" id="staffModalLabel"><em class="game-icon game-icon-laurel-crown"></em>Staff</h5>
 <p class="tiop">"Si vis pacem, parabellum"</p>
 <p class="restaff">Bienvenidos a OP Parabellum, a continuación, presentamos al equipo administrativo, sin el cual este foro no podría mantenerse en pie, si tienes alguna duda, preguntanos con gusto, estamos para dar respuesta a tus preguntas.</p>
-<div class="pslink">
-<a href="/"><i class="bi bi-pin-angle-fill"></i> Normas Generales</a>  
-</div>
+<a href="/" class="pslink"><i class="bi bi-pin-angle-fill"></i> Normas Generales</a>  
 </div>
 <div class="modal-body">
 <!-- STAFF 1 -->
