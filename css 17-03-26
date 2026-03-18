@@ -1688,11 +1688,14 @@ banner {
 .psta1 {
     background: var(--color-1);
     width: 30%;
-    height: 220px;
+    height: 278px;
     margin: 10px;
     border-radius: 6px;
     display: flex;
+    flex-flow: column;
     align-items: end;
+    justify-content: flex-end;
+    background-position: center;
 }
 
 .psta1:nth-child(1) {
@@ -1716,10 +1719,11 @@ background-image: var(--staff6);
 
 .stcar {
     width: 100%;
-    height: -webkit-fill-available;
     padding: 10px;
-    background: linear-gradient(to top, var(--color-3) 4%, var(--tcolor3) 35%, transparent 100%);
+    background: linear-gradient(to top, var(--color-3) 21%, var(--tcolor3) 52%, transparent 100%);
     border-radius: 6px;
+    display: flex;
+    flex-flow: column;
 }
 
 .stcar h3 {
@@ -1734,7 +1738,7 @@ background-image: var(--staff6);
 }
 
 .stcar p {
-    font-size: 1em;
+    font-size: 0.8em;
     line-height: 1.2em;
     font-family: var(--cuerpo1);
     text-align: justify;
