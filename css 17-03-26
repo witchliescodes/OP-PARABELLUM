@@ -6,11 +6,12 @@
   --color-4: #faf8fc;
   --color-5: #e5e5eb;
   --color-6: #0a0a15;
+  --color-7: #1d1d59;
   /*Transparencias*/
   --tcolor3: #6f70d38c;
   --tcolor4: #1f1f3ec2;
   --tcolor5: #faf8fc75;
-  --tcolor6: ;
+
   /*DEGRADADOS*/
   --deg3: linear-gradient(145deg, #6f9bd3, #6f70d3);
   --deg2: linear-gradient(90deg, #6f9bd3, #6f70d3);
@@ -30,9 +31,9 @@
 --manga3: url('https://images2.imgbox.com/24/64/EWhKVWzv_o.png');
 /*Tablón de anuncios*/
 --pes1: url('https://images2.imgbox.com/6d/3a/hjFQbiE6_o.png'); 
---staff1: url('https://images2.imgbox.com/69/4b/ISXgO8VW_o.png'); /*Imagen 1 de staff*/
+--staff1: url('https://i.pinimg.com/736x/ab/d1/7d/abd17d92868d81d9ca6b4f89fb740cf1.jpg'); /*Imagen 1 de staff*/
 --staff2: url('https://images2.imgbox.com/69/4b/ISXgO8VW_o.png'); /*Imagen 2 de staff*/
---staff3: url('https://images2.imgbox.com/69/4b/ISXgO8VW_o.png'); /*Imagen 3 de staff*/
+--staff3: url('https://i.pinimg.com/736x/c5/99/ee/c599ee1935eeb4e90160cd6b82633c8c.jpg'); /*Imagen 3 de staff*/
 --staff4: url('https://images2.imgbox.com/69/4b/ISXgO8VW_o.png'); /*Imagen 4 de staff*/
 --staff5: url('https://images2.imgbox.com/69/4b/ISXgO8VW_o.png'); /*Imagen 5 de staff*/
 --staff6: url('https://images2.imgbox.com/69/4b/ISXgO8VW_o.png'); /*Imagen 6 de staff*/
@@ -46,6 +47,7 @@
     --color-4: #14191f;
     --color-5: #f8fcfb;
     --color-6: #c5cccc;
+    --color-7: #390909;
   /*Transparencias*/
   --tcolor3: #0c4542a1;
   --tcolor4: #d760603d;
@@ -540,7 +542,7 @@ body.claro, body.oscuro {
     top: 10px;
     left: 50%;
     transform: translateX(-50%);
-    width: 1200px;
+    width: 99%;
     max-width: 100%;
     z-index: 999;
     box-shadow: 0px 0px 33px var(--tcolor3);
@@ -1584,7 +1586,7 @@ banner {
 /*MODAL DEL STAFF*/
 
 .oppmodal1 .modal-dialog {
-  max-width: 1200px!important;
+  max-width: 1100px!important;
 }
 
 .oppmodal1 .btn-close {
@@ -1593,12 +1595,14 @@ banner {
     width: 1em;
     height: 1em;
     padding: .25em .25em;
-    color: var(--color-6)!important;
-    background: var(--bs-danger)!important;
+    color: var(--color-6) !important;
+    background: var(--bs-danger) !important;
     border: 0;
     border-radius: .375rem;
     position: absolute;
     opacity: var(--bs-btn-close-opacity);
+    right: 0;
+    z-index: 99;
 }
 
 .oppmodal1 .modal-content {
@@ -1749,7 +1753,7 @@ background-image: var(--staff6);
     font-size: 1em;
     font-family: var(--titulos);
     color: var(--color-5);
-    text-shadow: 1px 1px 0 var(--color-3), -1px 1px 0 var(--color-3), 1px -1px 0 var(--color-3), -1px -1px 0 var(--color-3);
+    text-shadow: 1px 1px 0 var(--color-7), -1px 1px 0 var(--color-7), 1px -1px 0 var(--color-7), -1px -1px 0 var(--color-7);
 }
 
 .stcar dfn {
