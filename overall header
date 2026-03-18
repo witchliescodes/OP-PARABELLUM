@@ -476,11 +476,11 @@ Ice cream danish gummi bears powder cotton candy donut. Bear claw biscuit muffin
 <div class="tabconi">
 <div class="tabim1"></div> 
 </div>      
-<!--STAFF -->  
+<!-- BOTÓN STAFF -->  
 <div class="oppstaf btn-modal" data-bs-toggle="modal" data-bs-target="#staffModal" role="button" tabindex="0">
 <span class="oppstaf__label">aquí va el staff</span>
 </div>
-  
+ <!-- MODAL STAFF -->  
 <div class="modal fade" id="staffModal" tabindex="-1" aria-labelledby="staffModalLabel" aria-hidden="true" data-bs-backdrop="false">
 <div class="oppmodal1 modal-dialog modal-dialog-centered">
 <div class="modal-content">
@@ -489,92 +489,95 @@ Ice cream danish gummi bears powder cotton candy donut. Bear claw biscuit muffin
 <h5 class="modal-title" id="staffModalLabel"><em class="game-icon game-icon-laurel-crown"></em>Staff</h5>
 <p class="tiop">"Si vis pacem, parabellum"</p>
 <p class="restaff">Bienvenidos a OP Parabellum, a continuación, presentamos al equipo administrativo, sin el cual este foro no podría mantenerse en pie, si tienes alguna duda, preguntanos con gusto, estamos para dar respuesta a tus preguntas.</p>
-      </div>
-      <div class="modal-body">
-        <!-- STAFF 1 -->
-        <div class="psta1">
-          <div class="stcar">
-            <h3>Nombre del coso</h3>
-            <dfn>Webmaster</dfn>
-            <p>Breve mensaje bonito para que la gente agarre confianza con el staff, o pa enlistar ahi las tareas de cada cuenta. </p>
-            <div class="stcon">
-              <a href="/" title="Perfil" data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip"><i class="bi bi-file-earmark-person-fill"></i></a>
-              <a href="/" title="Perfil" data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip"><i class="bi bi-envelope-heart-fill"></i></a>
-            </div>
-          </div>
-        </div>
-        <!-- FIN STAFF 1-->
-        <!-- STAFF 2 -->
-        <div class="psta1">
-          <div class="stcar">
-            <h3>Nombre del coso</h3>
-            <dfn>Webmaster</dfn>
-            <p>Breve mensaje bonito para que la gente agarre confianza con el staff, o pa enlistar ahi las tareas de cada cuenta. </p>
-            <div class="stcon">
-              <a href="/" title="Perfil" data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip"><i class="bi bi-file-earmark-person-fill"></i></a>
-              <a href="/" title="Perfil" data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip"><i class="bi bi-envelope-heart-fill"></i></a>
-            </div>
-          </div>
-        </div>
-        <!-- FIN STAFF 2-->
-        <!-- STAFF 3 -->
-        <div class="psta1">
-          <div class="stcar">
-            <h3>Nombre del coso</h3>
-            <dfn>Webmaster</dfn>
-            <p>Breve mensaje bonito para que la gente agarre confianza con el staff, o pa enlistar ahi las tareas de cada cuenta. </p>
-            <div class="stcon">
-              <a href="/" title="Perfil" data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip"><i class="bi bi-file-earmark-person-fill"></i></a>
-              <a href="/" title="Perfil" data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip"><i class="bi bi-envelope-heart-fill"></i></a>
-            </div>
-          </div>
-        </div>
-        <!-- FIN STAFF 3-->
-        <!-- STAFF 4 -->
-        <div class="psta1">
-          <div class="stcar">
-            <h3>Nombre del coso</h3>
-            <dfn>Webmaster</dfn>
-            <p>Breve mensaje bonito para que la gente agarre confianza con el staff, o pa enlistar ahi las tareas de cada cuenta. </p>
-            <div class="stcon">
-              <a href="/" title="Perfil" data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip"><i class="bi bi-file-earmark-person-fill"></i></a>
-              <a href="/" title="Perfil" data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip"><i class="bi bi-envelope-heart-fill"></i></a>
-            </div>
-          </div>
-        </div>
-        <!-- FIN STAFF 4-->
-        <!-- STAFF 5 -->
-        <div class="psta1">
-          <div class="stcar">
-            <h3>Nombre del coso</h3>
-            <dfn>Webmaster</dfn>
-            <p>Breve mensaje bonito para que la gente agarre confianza con el staff, o pa enlistar ahi las tareas de cada cuenta. </p>
-            <div class="stcon">
-              <a href="/" title="Perfil" data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip"><i class="bi bi-file-earmark-person-fill"></i></a>
-              <a href="/" title="Perfil" data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip"><i class="bi bi-envelope-heart-fill"></i></a>
-            </div>
-          </div>
-        </div>
-        <!-- FIN STAFF 5-->
-        <!-- STAFF 5 -->
-        <div class="psta1">
-          <div class="stcar">
-            <h3>Nombre del coso</h3>
-            <dfn>Webmaster</dfn>
-            <p>Breve mensaje bonito para que la gente agarre confianza con el staff, o pa enlistar ahi las tareas de cada cuenta. </p>
-            <div class="stcon">
-              <a href="/" title="Perfil" data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip"><i class="bi bi-file-earmark-person-fill"></i></a>
-              <a href="/" title="Perfil" data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip"><i class="bi bi-envelope-heart-fill"></i></a>
-            </div>
-          </div>
-        </div>
-        <!-- FIN STAFF 5-->
-      </div>
-    </div>
-  </div>
+<div class="pslink">
+<a href="/"><i class="bi bi-pin-angle-fill"></i> Normas Generales</a>  
+</div>
+</div>
+<div class="modal-body">
+<!-- STAFF 1 -->
+<div class="psta1">
+<div class="stcar">
+<h3>Nombre del coso</h3>
+<dfn>Webmaster</dfn>
+<p>Breve mensaje bonito para que la gente agarre confianza con el staff, o pa enlistar ahi las tareas de cada cuenta. </p>
+<div class="stcon">
+<a href="/" title="Perfil" data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip"><i class="bi bi-file-earmark-person-fill"></i></a>
+<a href="/" title="Perfil" data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip"><i class="bi bi-envelope-heart-fill"></i></a>
+</div>
+</div>
+</div>
+<!-- FIN STAFF 1-->
+<!-- STAFF 2 -->
+<div class="psta1">
+<div class="stcar">
+<h3>Nombre del coso</h3>
+<dfn>Webmaster</dfn>
+<p>Breve mensaje bonito para que la gente agarre confianza con el staff, o pa enlistar ahi las tareas de cada cuenta. </p>
+<div class="stcon">
+<a href="/" title="Perfil" data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip"><i class="bi bi-file-earmark-person-fill"></i></a>
+<a href="/" title="Perfil" data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip"><i class="bi bi-envelope-heart-fill"></i></a>
+</div>
+</div>
+</div>
+<!-- FIN STAFF 2-->
+<!-- STAFF 3 -->
+<div class="psta1">
+<div class="stcar">
+<h3>Nombre del coso</h3>
+<dfn>Webmaster</dfn>
+<p>Breve mensaje bonito para que la gente agarre confianza con el staff, o pa enlistar ahi las tareas de cada cuenta. </p>
+<div class="stcon">
+<a href="/" title="Perfil" data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip"><i class="bi bi-file-earmark-person-fill"></i></a>
+<a href="/" title="Perfil" data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip"><i class="bi bi-envelope-heart-fill"></i></a>
+</div>
+</div>
+</div>
+<!-- FIN STAFF 3-->
+<!-- STAFF 4 -->
+<div class="psta1">
+<div class="stcar">
+<h3>Nombre del coso</h3>
+<dfn>Webmaster</dfn>
+<p>Breve mensaje bonito para que la gente agarre confianza con el staff, o pa enlistar ahi las tareas de cada cuenta. </p>
+<div class="stcon">
+<a href="/" title="Perfil" data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip"><i class="bi bi-file-earmark-person-fill"></i></a>
+<a href="/" title="Perfil" data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip"><i class="bi bi-envelope-heart-fill"></i></a>
+</div>
+</div>
+</div>
+<!-- FIN STAFF 4-->
+<!-- STAFF 5 -->
+<div class="psta1">
+<div class="stcar">
+<h3>Nombre del coso</h3>
+<dfn>Webmaster</dfn>
+<p>Breve mensaje bonito para que la gente agarre confianza con el staff, o pa enlistar ahi las tareas de cada cuenta. </p>
+<div class="stcon">
+<a href="/" title="Perfil" data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip"><i class="bi bi-file-earmark-person-fill"></i></a>
+<a href="/" title="Perfil" data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip"><i class="bi bi-envelope-heart-fill"></i></a>
+</div>
+</div>
+</div>
+<!-- FIN STAFF 5-->
+<!-- STAFF 5 -->
+<div class="psta1">
+<div class="stcar">
+<h3>Nombre del coso</h3>
+<dfn>Webmaster</dfn>
+<p>Breve mensaje bonito para que la gente agarre confianza con el staff, o pa enlistar ahi las tareas de cada cuenta. </p>
+<div class="stcon">
+<a href="/" title="Perfil" data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip"><i class="bi bi-file-earmark-person-fill"></i></a>
+<a href="/" title="Perfil" data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip"><i class="bi bi-envelope-heart-fill"></i></a>
+</div>
+</div>
+</div>
+<!-- FIN STAFF 5-->
+</div>
+</div>
+</div>
 </div>     
 </div>
-  
+<!-- FIN MODAL -->  
 </div>
 <!--  Pestaña 2: Periodicos  -->                       
 <div class="paradiv pestana" id="pestana2">
