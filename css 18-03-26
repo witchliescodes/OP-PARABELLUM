@@ -50,7 +50,7 @@
   /*Transparencias*/
   --tcolor3: #d760603d;
   --tcolor4: #0c4542a1;
-    --tcolor5: #faf8fc75;
+  --tcolor5: #2e141457;
     /*DEGRADADOS*/
   --deg3: linear-gradient(145deg, #291213, #14191f);
   --deg2: linear-gradient(145deg, #d76060, #0c4542);
@@ -1279,7 +1279,7 @@ banner {
  }
 
 .ladoa {
-    width: 58%;
+    width: 60%;
     display: flex;
     align-items: flex-start;
     flex-flow: column;
@@ -1517,21 +1517,21 @@ banner {
     height: -webkit-fill-available;
     overflow: hidden;
     position: absolute;
-    margin: 0 4px 0 545px;
+    margin: 0px 0px 0 650px;
 }
 
 .bienp {
     background: var(--color-3);
-    padding: 15px 30px;
+    padding: 8px 30px;
     border-radius: 10px;
-    margin: 0 0 10px 0;
+    margin: 0px 0 24px 0;
 }
 
 .bienp p {
     margin: 0;
     font-family: var(--titulos);
     text-transform: uppercase;
-    letter-spacing: 0.5em;
+    letter-spacing: 1em;
     text-align: center;
     color: var(--color-1);
     display: inline-block;
@@ -1545,26 +1545,25 @@ banner {
 
 .tabconi {
     width: 100%;
-    height: 82%;
+    height: 81%;
     position: absolute;
 }
-
 .tabim1 {
     background: var(--pes1);
-    width: 118%;
-    height: 105%;
+    width: 120%;
+    height: 118%;
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
     transform: scaleX(-1);
     position: relative;
-    top: -35px;
-    left: -31px;
+    top: -71px;
+    left: -30px;
 }
 
 .oppstaf {
   position: absolute;
-  width: 220px;
+  width: 210px;
   height: 200px;
   margin: 300px 0 0 0;
   border-radius: 8px;
@@ -1656,8 +1655,8 @@ banner {
 .modal-header .restaff {
     width: 100%;
     text-align: justify;
-    line-height: 1em;
-    font-size: 1em;
+    line-height: 1.5em;
+    font-size: 0.9em;
     font-family: var(--cuerpo1);
     color: var(--color-5);
     hyphens: auto;
@@ -1691,6 +1690,7 @@ banner {
     padding: 10px;
     text-align: center;
     display: flex;
+    flex-flow: row-reverse;
     align-items: center;
     justify-content: space-between;
     font-size: 0.8em;
@@ -1761,16 +1761,11 @@ background-image: var(--staff6);
 
 .stcar h3 {
     width: -webkit-fill-available;
-    margin: -16px 0;
+    margin: -10px 0;
     font-size: 1em;
     font-family: var(--titulos);
     color: var(--color-5);
     text-shadow: 1px 1px 0 var(--color-7), -1px 1px 0 var(--color-7), 1px -1px 0 var(--color-7), -1px -1px 0 var(--color-7);
-}
-
-.stcar dfn {
-    font-size: 0.6em;
-    font-family: var(--cuerpo1);
 }
 
 .stcar span {
@@ -1782,10 +1777,11 @@ background-image: var(--staff6);
     background: var(--tcolor5);
     margin: 10px 0;
     padding: 6px 0px 0 6px;
+    text-shadow: 1px 1px 0 var(--color-6), -1px 1px 0 var(--color-6), 1px -1px 0 var(--color-6), -1px -1px 0 var(--color-6);
     border-radius: 4px;
-    color: var(--color-6);
+    color: var(--color-1);
     -webkit-box-decoration-break: clone;
-    font-weight: 500;
+    font-weight: 600;
     overflow: auto;
     white-space: normal;
     overflow-wrap: anywhere;
@@ -1806,6 +1802,27 @@ background-image: var(--staff6);
     background: var(--color-1);
     padding: 7px;
     border-radius: 10px;
+    align-items: center;
+}
+
+.stcon dfn {
+    font-size: 0.7em;
+    font-family: var(--titulos);
+    letter-spacing: 1px;
+    line-height: 1.5em;
+    font-weight: 800;
+}
+
+
+.conlipp{
+    width: -webkit-fill-available;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.conlipp a {
+    margin: 0 0px 0 10px;
 }
 
 /* Labels con flechas (SIEMPRE VISIBLES) */
@@ -2067,8 +2084,23 @@ background-image: var(--staff6);
         z-index: 10;
         align-items: center;
         flex-flow: column;
-        margin: -180px 0 0 820px;
+        margin: -147px 0 0 975px;
     }
 
+  .labels button {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--color-2) !important;
+    color: var(--color-5);
+    font-size: 1em;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
     
 }
