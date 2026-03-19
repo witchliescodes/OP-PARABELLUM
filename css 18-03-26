@@ -29,7 +29,8 @@
 --manga2: url('https://images2.imgbox.com/de/eb/AcPVlysX_o.png');
 --manga3: url('https://images2.imgbox.com/24/64/EWhKVWzv_o.png');
 /*Tablón de anuncios*/
---pes1: url('https://images2.imgbox.com/6d/3a/hjFQbiE6_o.png'); 
+--pes1: url('https://images2.imgbox.com/6d/3a/hjFQbiE6_o.png'); /*IMagen pestaña1*/
+--botstf: url('https://images2.imgbox.com/a9/a6/xwTJzHLK_o.png'); /*Imagenbotonstaff*/
 --staff1: url('https://i.pinimg.com/736x/ab/d1/7d/abd17d92868d81d9ca6b4f89fb740cf1.jpg'); /*Imagen 1 de staff*/
 --staff2: url('https://i.pinimg.com/736x/5f/03/09/5f0309417f874fa8b3d2ccb6c122bcbd.jpg'); /*Imagen 2 de staff*/
 --staff3: url('https://i.pinimg.com/1200x/86/e3/bd/86e3bd35ec6d21e69ef7f63d00fb2dda.jpg'); /*Imagen 3 de staff*/
@@ -69,7 +70,8 @@
 --manga2: url('https://images2.imgbox.com/de/eb/AcPVlysX_o.png');
 --manga3: url('https://images2.imgbox.com/3b/45/dxCdG65Q_o.png');
 /*Tablón de anuncios*/
---pes1: url('https://images2.imgbox.com/6d/3a/hjFQbiE6_o.png'); 
+--pes1: url('https://images2.imgbox.com/6d/3a/hjFQbiE6_o.png'); /*IMagen pestaña1*/
+--botstf: url('https://images2.imgbox.com/d4/9c/esE6babS_o.png'); /*Imagenbotonstaff*/  
 --staff1: url('https://i.pinimg.com/736x/66/27/0b/66270b11e0717a951118061b0f59c195.jpg'); /*Imagen 1 de staff*/
 --staff2: url('https://i.pinimg.com/736x/fb/af/13/fbaf13aabf8c582a9d2dd17709d061bd.jpg'); /*Imagen 2 de staff*/
 --staff3: url('https://i.pinimg.com/736x/bc/51/76/bc51768d3aae88f42031874f1e983fcd.jpg'); /*Imagen 3 de staff*/
@@ -104,20 +106,18 @@ body.oscuro::-webkit-scrollbar-thumb { border:solid 9px var(--color-1);backgroun
 
 /*CUSTOM SCROLL BAR*/
 /* Works on Firefox */
-{
-  scrollbar-width: thin;
-  scrollbar-color: var(--color-3) var(--color-1);
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-3) var(--color-1);
 }
 
 /* Works on Chrome, Edge, and Safari */
-::-webkit-scrollbar {
-  width: 6px;
-      border-radius: 10px;
+*::-webkit-scrollbar {
+  width: 10px;
 }
 
 *::-webkit-scrollbar-track {
-      background: var(--color-1);
-    border-radius: 10px;
+  background: var(--color-1);
 }
 
 *::-webkit-scrollbar-thumb {
@@ -125,7 +125,6 @@ body.oscuro::-webkit-scrollbar-thumb { border:solid 9px var(--color-1);backgroun
   border-radius: 20px;
   border: 3px solid var(--color-1);
 }
-
 /*FIN CUSTOM SCROLL BAR*/
 
 /*Tooltip*/
@@ -1562,27 +1561,27 @@ banner {
 }
 
 .oppstaf {
-  position: absolute;
-  width: 210px;
-  height: 200px;
-  margin: 300px 0 0 0;
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  background: var(--color-3);
-  cursor: pointer;
-  transition: transform 200ms ease, filter 200ms ease;
-  background-image: url('/ruta/a/la/imagen.png');
-  background-size: cover;
-  background-position: center;
-  background-blend-mode: multiply;
+    position: absolute;
+    width: 210px;
+    height: 200px;
+    margin: 295px 0 0 10px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: var(--color-3);
+    cursor: pointer;
+    transition: transform 200ms ease, filter 200ms ease;
+    background-image: url(/ruta/a/la/imagen.png);
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply;
 }
 
 .oppstaf:hover {
-  transform: translateY(-4px);
-  filter: drop-shadow(0 8px 12px rgba(0, 0, 0, 0.25));
+    transform: translateY(-3px);
+    box-shadow: 0px 0px 10px var(--color-3);
 }
 
 .oppstaf__label {
@@ -1776,7 +1775,7 @@ background-image: var(--staff6);
     hyphens: auto;
     background: var(--tcolor5);
     margin: 10px 0;
-    padding: 6px 0px 0 6px;
+    padding: 6px 6px 0 6px;
     text-shadow: 1px 1px 0 var(--color-6), -1px 1px 0 var(--color-6), 1px -1px 0 var(--color-6), -1px -1px 0 var(--color-6);
     border-radius: 4px;
     color: var(--color-1);
