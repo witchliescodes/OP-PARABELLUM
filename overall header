@@ -488,7 +488,15 @@ Ice cream danish gummi bears powder cotton candy donut. Bear claw biscuit muffin
 </div>
 <!--  Pestaña 2: Periodicos  -->                       
 <div class="paradiv pestana" id="pestana2">
-pestaña 2                          
+  <div class="event">
+    <div class="titlevent">
+      <h1>Eventos</h1>
+      <p>"Da click en +, para leer sobre los eventos"</p>
+    </div>
+    <div class="eve">1</div>
+    <div class="eve">2</div>
+    <div class="eve">3</div>
+  </div>                     
 </div>
 <!-- Pestaña 3: Últimos Temas-->                       
 <div class="paradiv pestana" id="pestana3">
