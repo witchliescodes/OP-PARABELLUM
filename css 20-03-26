@@ -1870,6 +1870,18 @@ background-image: var(--staff6);
     height: 200px;
 }
 
+.titlevent {
+    height: -webkit-fill-available;
+    width: 200px;
+    background: var(--color-3);
+    border-radius: 10px;
+    padding: 10px;
+    color: var(--color-5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 /* Labels con flechas (SIEMPRE VISIBLES) */
 .labels {
     display: flex;
