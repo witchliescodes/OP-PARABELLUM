@@ -39,7 +39,7 @@
 --staff5: url('https://i.pinimg.com/736x/b1/b8/ed/b1b8ed4d947adaca0346417129bb6827.jpg'); /*Imagen 5 de staff*/
 --staff6: url('https://i.pinimg.com/736x/f0/e7/d7/f0e7d79238b6f979c1700ea0216329a0.jpg'); /*Imagen 6 de staff*/
   /*PESTAÑA2*/
---tevent: url('https://images2.imgbox.com/b2/5d/ncgnw1dh_o.jpg');    
+--tevent: url('https://images2.imgbox.com/bb/d6/Zbtd40qr_o.png');    
 }
 
 :root .oscuro  {
@@ -83,7 +83,7 @@
 --staff5: url('https://i.pinimg.com/736x/26/e6/12/26e612029595fab52c9b5f3775353b92.jpg'); /*Imagen 5 de staff*/
 --staff6: url('https://i.pinimg.com/1200x/73/f7/a5/73f7a5d3000cca8c9212acf5abeb3ab4.jpg'); /*Imagen 6 de staff*/  
   /*PESTAÑA2*/
---tevent: url('https://images2.imgbox.com/b2/5d/ncgnw1dh_o.jpg');  
+--tevent: url('https://images2.imgbox.com/f0/cb/mt5xKnfk_o.png');  
 }
 
 .modal {
@@ -1897,13 +1897,19 @@ background-image: var(--staff6);
     padding: 10px;
     color: var(--color-5);
     border-radius: 10px;
+    height: -webkit-fill-available;
+    width: -webkit-fill-available;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .titlevent h1 {
     font-size: 1em;
     letter-spacing: 2px;
-    color: var(--color-1);
-    margin: 0;
+    color: var(--color-5);
+    margin: 0 0 8px 0;
     position: relative;
     font-family: var(--titulos);
     text-align: center;
@@ -1911,9 +1917,24 @@ background-image: var(--staff6);
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 10px;
     text-transform: uppercase;
+    text-shadow: 1px 1px 0 var(--color-7), -1px 1px 0 var(--color-7), 1px -1px 0 var(--color-7), -1px -1px 0 var(--color-7);
 }
+
+.pple p {
+    text-align: center;
+    line-height: 1em;
+    font-size: 0.8em;
+    font-style: italic;
+}
+
+.eve {
+    width: 250px;
+    height: -webkit-fill-available;
+    background: var(--color-3);
+    border-radius: 10px;
+}
+
 
 /* Labels con flechas (SIEMPRE VISIBLES) */
 .labels {
