@@ -29,6 +29,7 @@
 --manga2: url('https://images2.imgbox.com/de/eb/AcPVlysX_o.png');
 --manga3: url('https://images2.imgbox.com/24/64/EWhKVWzv_o.png');
 /*Tablón de anuncios*/
+  /*PESTAÑA1*/
 --pes1: url('https://images2.imgbox.com/6d/3a/hjFQbiE6_o.png'); /*IMagen pestaña1*/
 --botstf: url('https://images2.imgbox.com/77/39/e6m4iCFD_o.png'); /*Imagenbotonstaff*/
 --staff1: url('https://i.pinimg.com/736x/ab/d1/7d/abd17d92868d81d9ca6b4f89fb740cf1.jpg'); /*Imagen 1 de staff*/
@@ -37,6 +38,8 @@
 --staff4: url('https://i.pinimg.com/736x/7a/56/33/7a563311267ee52a55bae59d6597fde3.jpg'); /*Imagen 4 de staff*/
 --staff5: url('https://i.pinimg.com/736x/b1/b8/ed/b1b8ed4d947adaca0346417129bb6827.jpg'); /*Imagen 5 de staff*/
 --staff6: url('https://i.pinimg.com/736x/f0/e7/d7/f0e7d79238b6f979c1700ea0216329a0.jpg'); /*Imagen 6 de staff*/
+  /*PESTAÑA2*/
+--tevent: url('https://images2.imgbox.com/b2/5d/ncgnw1dh_o.jpg');    
 }
 
 :root .oscuro  {
@@ -70,6 +73,7 @@
 --manga2: url('https://images2.imgbox.com/de/eb/AcPVlysX_o.png');
 --manga3: url('https://images2.imgbox.com/3b/45/dxCdG65Q_o.png');
 /*Tablón de anuncios*/
+  /*PESTAÑA1*/
 --pes1: url('https://images2.imgbox.com/dc/e6/kVglMGAB_o.png'); /*IMagen pestaña1*/
 --botstf: url('https://images2.imgbox.com/d1/0e/8cYyxuFB_o.png'); /*Imagenbotonstaff*/  
 --staff1: url('https://i.pinimg.com/736x/66/27/0b/66270b11e0717a951118061b0f59c195.jpg'); /*Imagen 1 de staff*/
@@ -78,6 +82,8 @@
 --staff4: url('https://i.pinimg.com/736x/f6/a6/0c/f6a60ccaed22e778aae7d5cc81966107.jpg'); /*Imagen 4 de staff*/
 --staff5: url('https://i.pinimg.com/736x/26/e6/12/26e612029595fab52c9b5f3775353b92.jpg'); /*Imagen 5 de staff*/
 --staff6: url('https://i.pinimg.com/1200x/73/f7/a5/73f7a5d3000cca8c9212acf5abeb3ab4.jpg'); /*Imagen 6 de staff*/  
+  /*PESTAÑA2*/
+--tevent: url('https://images2.imgbox.com/b2/5d/ncgnw1dh_o.jpg');  
 }
 
 .modal {
@@ -1397,7 +1403,9 @@ banner {
     color: var(--color-3);
     border-radius: 7px;
     width: -webkit-fill-available;
-    letter-spacing: 0em;
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 2px;
 }
 
 .ladoa .pulti h1 span {
@@ -1867,25 +1875,33 @@ background-image: var(--staff6);
     align-items: center;
     justify-content: space-between;
     width: stretch;
-    height: 200px;
+    height: 220px;
 }
 
 .titlevent {
     height: -webkit-fill-available;
-    width: 200px;
+    width: 230px;
     background: var(--color-3);
     border-radius: 10px;
-    padding: 10px;
-    color: var(--color-5);
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: end;
     flex-flow: column;
+    background-image: var(--tevent);
+    background-position: 50% 30%;
+    background-size: 105%;
+}
+
+.pple {
+    background: linear-gradient(to top, var(--color-3) 0%, var(--tcolor3) 40%, transparent 100%);
+    padding: 10px;
+    color: var(--color-5);
+    border-radius: 10px;
 }
 
 .titlevent h1 {
     font-size: 1em;
-    letter-spacing: 0px;
+    letter-spacing: 2px;
     color: var(--color-1);
     margin: 0;
     position: relative;
@@ -1896,6 +1912,7 @@ background-image: var(--staff6);
     align-items: center;
     justify-content: center;
     padding: 10px;
+    text-transform: uppercase;
 }
 
 /* Labels con flechas (SIEMPRE VISIBLES) */
@@ -2089,7 +2106,7 @@ background-image: var(--staff6);
     font-size: 20px;
   }
 
-.paranun h1 {
+/*.paranun h1 {
     font-size: 3rem;
     font-weight: 800;
     letter-spacing: 0.31em;
@@ -2103,7 +2120,7 @@ background-image: var(--staff6);
     text-align: center;
     width: max-content;
     display: flex;
-}
+}*/
 
   
 #sinscroll {
@@ -2126,22 +2143,6 @@ background-image: var(--staff6);
         position: relative;
         overflow: hidden;
     }
-    .paranun h1 {
-        font-size: 4rem;
-        font-weight: 800;
-        letter-spacing: 0.3em;
-        text-transform: uppercase;
-        color: var(--color-3);
-        padding-bottom: 15px;
-        position: absolute;
-        line-height: 1em;
-        margin: -50px 0 0 0;
-        font-family: var(--cuerpo1);
-        text-align: center;
-        width: -webkit-fill-available;
-        display: flex;
-    }
-
 
 .pestanas-contenedor {
     position: relative;
