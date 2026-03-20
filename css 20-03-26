@@ -1530,11 +1530,11 @@ banner {
     margin: 0;
     font-family: var(--titulos);
     text-transform: uppercase;
-    letter-spacing: 1em;
+    letter-spacing: 15px;
     text-align: center;
     color: var(--color-1);
     display: inline-block;
-    width: 100%;
+    width: stretch;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -1542,10 +1542,9 @@ banner {
 }
 
 .conname {
-letter-spacing: 1px;
+    letter-spacing: 1px;
     width: stretch;
 }
-
 
 .tabconi {
     width: 100%;
