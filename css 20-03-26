@@ -1216,7 +1216,7 @@ banner {
     max-width: 1200px;
     margin: -380px auto 100px;
     background-color: var(--color-4);
-    padding: 310px 55px;
+    padding: 310px 55px 0;
     border-radius: 20px;
     position: relative;
     z-index: 1;
@@ -1542,8 +1542,7 @@ banner {
 }
 
 .conname {
-    letter-spacing: 1px;
-    width: stretch;
+    letter-spacing: 1px!important;
 }
 
 .tabconi {
@@ -1859,6 +1858,16 @@ background-image: var(--staff6);
 .conlipp a {
     margin: 0 0px 0 10px;
       color: var(--color-3);
+}
+
+/*SEGUNDA PESTAÑA*/
+
+.event {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: stretch;
+    height: 200px;
 }
 
 /* Labels con flechas (SIEMPRE VISIBLES) */
