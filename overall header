@@ -490,12 +490,14 @@ Ice cream danish gummi bears powder cotton candy donut. Bear claw biscuit muffin
 <div class="paradiv pestana" id="pestana2">
   <div class="event">
     <div class="titlevent">
+      <div class="pple">
       <h1>Eventos</h1>
       <p>"Da click en +, para leer sobre los eventos"</p>
+      </div>
     </div>
-    <div class="eve">1</div>
-    <div class="eve">2</div>
-    <div class="eve">3</div>
+    <div class="event">1</div>
+    <div class="event">2</div>
+    <div class="event">3</div>
   </div>                     
 </div>
 <!-- Pestaña 3: Últimos Temas-->                       
