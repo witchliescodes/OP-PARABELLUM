@@ -70,7 +70,7 @@
 --manga2: url('https://images2.imgbox.com/de/eb/AcPVlysX_o.png');
 --manga3: url('https://images2.imgbox.com/3b/45/dxCdG65Q_o.png');
 /*Tablón de anuncios*/
---pes1: url('https://images2.imgbox.com/6d/3a/hjFQbiE6_o.png'); /*IMagen pestaña1*/
+--pes1: url('https://images2.imgbox.com/dc/e6/kVglMGAB_o.png'); /*IMagen pestaña1*/
 --botstf: url('https://images2.imgbox.com/d1/0e/8cYyxuFB_o.png'); /*Imagenbotonstaff*/  
 --staff1: url('https://i.pinimg.com/736x/66/27/0b/66270b11e0717a951118061b0f59c195.jpg'); /*Imagen 1 de staff*/
 --staff2: url('https://i.pinimg.com/736x/fb/af/13/fbaf13aabf8c582a9d2dd17709d061bd.jpg'); /*Imagen 2 de staff*/
@@ -1512,7 +1512,7 @@ banner {
 }
 
 .ladob {
-    width: auto;
+    width: stretch;
     height: -webkit-fill-available;
     overflow: hidden;
     position: absolute;
@@ -1541,6 +1541,11 @@ banner {
     font-size: clamp(0.9rem, 2.8vw, 1.5em);
 }
 
+.conname {
+letter-spacing: 1px;
+    width: stretch;
+}
+
 
 .tabconi {
     width: 100%;
@@ -1558,6 +1563,19 @@ banner {
     position: relative;
     top: -71px;
     left: -30px;
+}
+
+
+.oscuro .tabim1 {
+transform: scaleX(1);
+    width: 109%;
+    height: 118%;
+    position: relative;
+    top: -68px;
+    left: -21px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .oppstaf {
