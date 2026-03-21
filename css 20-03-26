@@ -2015,6 +2015,12 @@ background-image: var(--staff3);
     color: var(--color-5);
 }
 
+.neve a {
+    margin: 10px;
+    font-size: 1.5em;
+    color: var(--color-7);
+}
+
 /* Labels con flechas (SIEMPRE VISIBLES) */
 .labels {
     display: flex;
