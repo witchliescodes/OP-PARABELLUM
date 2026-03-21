@@ -2006,7 +2006,14 @@ background-image: var(--staff3);
     justify-content: space-between;
 }
 
-
+.neve h2 {
+    font-size: 1em;
+    margin: 0 10px;
+    line-height: 1.5em;
+    text-transform: capitalize;
+    font-family: var(--titulos);
+    color: var(--color-5);
+}
 
 /* Labels con flechas (SIEMPRE VISIBLES) */
 .labels {
