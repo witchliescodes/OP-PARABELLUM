@@ -1933,8 +1933,35 @@ background-image: var(--staff6);
     height: -webkit-fill-available;
     background: var(--color-3);
     border-radius: 10px;
+      overflow: hidden;
 }
 
+.ieve {
+    margin: 10px;
+    border-radius: 10px;
+    height: 60%;
+    background-size: cover;
+    border: 1px solid var(--color-7);
+}
+
+.ieve:nth-child(1) {
+background-image: var(--staff1);
+}
+.ieve:nth-child(2) {
+background-image: var(--staff2);
+}
+.ieve:nth-child(3) {
+background-image: var(--staff3);
+}
+
+
+.neve {
+    display: flex;
+    align-items: center;
+    width: -webkit-fill-available;
+    height: 30%;
+    justify-content: space-between;
+}
 
 /* Labels con flechas (SIEMPRE VISIBLES) */
 .labels {
