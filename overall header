@@ -525,7 +525,12 @@ Ice cream danish gummi bears powder cotton candy donut. Bear claw biscuit muffin
         <a href="/"><i class="bi bi-folder-symlink-fill"></i></a>
       </div>
     </div>
-  </div>                     
+  </div>   
+  <div class="midp">
+    <div class="tpest"></div>
+    <div class="peric">periodico</div>
+  </div>
+  <div class="lowp">busquedas y sabias qué</div>
 </div>
 <!-- Pestaña 3: Últimos Temas-->                       
 <div class="paradiv pestana" id="pestana3">
