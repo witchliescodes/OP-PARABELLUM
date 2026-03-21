@@ -1933,7 +1933,8 @@ background-image: var(--staff6);
     height: -webkit-fill-available;
     background: var(--color-3);
     border-radius: 10px;
-      overflow: hidden;
+    overflow: hidden;
+  position: relative;
 }
 
 .ieve {
@@ -1971,17 +1972,30 @@ background-image: var(--staff3);
     border-radius: 10px;
 }
 
-.ieve p{
+.ieve p {
     position: absolute;
     width: 228px;
     height: 130px;
     text-align: justify;
     hyphens: auto;
-    font-size: 1em;
-    line-height: 1.4em;
+    font-size: 0.9em;
+    line-height: 1.5em;
     padding: 7px;
     margin: 0;
     border-radius: 10px;
+}
+
+.ieve > .heve,
+.ieve > p {
+  transform: translateY(-40px);
+  opacity: 0;
+  transition: transform 0.35s ease, opacity 0.35s ease;
+}
+
+.eve:hover .ieve > .heve,
+.eve:hover .ieve > p {
+  transform: translateY(0);
+  opacity: 1;
 }
 
 .neve {
