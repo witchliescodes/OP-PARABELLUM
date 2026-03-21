@@ -39,7 +39,8 @@
 --staff5: url('https://i.pinimg.com/736x/b1/b8/ed/b1b8ed4d947adaca0346417129bb6827.jpg'); /*Imagen 5 de staff*/
 --staff6: url('https://i.pinimg.com/736x/f0/e7/d7/f0e7d79238b6f979c1700ea0216329a0.jpg'); /*Imagen 6 de staff*/
   /*PESTAÑA2*/
---tevent: url('https://images2.imgbox.com/bb/d6/Zbtd40qr_o.png');    
+--pes2: url('https://images2.imgbox.com/97/01/aIORv10q_o.png'); /*imagen pestaña 2*/
+--tevent: url('https://images2.imgbox.com/bb/d6/Zbtd40qr_o.png'); /*imagen evento*/   
 }
 
 :root .oscuro  {
@@ -83,7 +84,8 @@
 --staff5: url('https://i.pinimg.com/736x/26/e6/12/26e612029595fab52c9b5f3775353b92.jpg'); /*Imagen 5 de staff*/
 --staff6: url('https://i.pinimg.com/1200x/73/f7/a5/73f7a5d3000cca8c9212acf5abeb3ab4.jpg'); /*Imagen 6 de staff*/  
   /*PESTAÑA2*/
---tevent: url('https://images2.imgbox.com/f0/cb/mt5xKnfk_o.png');  
+--pes2: url('https://images2.imgbox.com/97/01/aIORv10q_o.png'); /*imagen pestaña 2*/
+--tevent: url('https://images2.imgbox.com/bb/d6/Zbtd40qr_o.png'); /*imagen evento*/  
 }
 
 .modal {
@@ -1946,14 +1948,14 @@ background-image: var(--staff6);
   overflow: hidden;
 }
 
-.ieve:nth-child(1) {
-background-image: var(--staff1);
-}
-.ieve:nth-child(2) {
+.eve:nth-child(2) .ieve {
 background-image: var(--staff2);
 }
-.ieve:nth-child(3) {
+.eve:nth-child(3) .ieve {
 background-image: var(--staff3);
+}
+.eve:nth-child(4) .ieve {
+background-image: var(--staff1);
 }
 
 .heve {
@@ -2020,6 +2022,31 @@ background-image: var(--staff3);
     font-size: 1.5em;
     color: var(--color-7);
 }
+
+.midp {
+    width: -webkit-fill-available;
+    height: 230px;
+    margin: 10px 0 10px 0;
+    background: red;
+}
+
+.cpd {
+    width: 32%;
+    height: 63%;
+    position: absolute;
+}
+
+.tpest {
+    width: 103%;
+    background-image: var(--pes2);
+    height: 126%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+    top: -54px;
+}
+
+
 
 /* Labels con flechas (SIEMPRE VISIBLES) */
 .labels {
