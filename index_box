@@ -11,44 +11,70 @@
 
 <!-- BEGIN catrow -->
 	<!-- BEGIN tablehead -->
-		<div class="forabg">
+		<div class="cateopp">
 			<div class="titlecate">
-                          <h1>{catrow.tablehead.L_FORUM}</h1>
+                          {catrow.tablehead.L_FORUM}
 			</div>
                   
-			<div class="foros opp">
+			<div class="oppfor">
 	<!-- END tablehead -->
 
 	<!-- BEGIN forumrow -->
 				
                           <div class="fori">
-                            <div class="numc"></div>
-                            <div class="dscont">
-                              <div class="dscp">
-                                <div class="ftile"><a href="{catrow.forumrow.U_VIEWFORUM}" class="forumtitle">{catrow.forumrow.FORUM_NAME}</a></div>
-                                {catrow.forumrow.FORUM_DESC}
-                                <div class="opp-cf"><dl class="icon" style="background:url({catrow.forumrow.FORUM_FOLDER_IMG});"></dl></div>
-                              <div class="typ">
-                                <div class="topics"><p>{catrow.forumrow.TOPICS}</p> <dfn>temasz</dfn></div>
-				<div class="posts"><p>{catrow.forumrow.POSTS}</p> <dfn>posts</dfn></div>
-                              </div>
-                                <div class="oppava">
-					<!-- BEGIN avatar -->
-                                  <div class="davip">{catrow.forumrow.avatar.LAST_POST_AVATAR}</div>
-					<!-- END avatar -->
-				</div>
-                                <div class="ultima">
-                                <div class="culti">
-					<!-- BEGIN switch_topic_title -->
-					<a href="{catrow.forumrow.U_LATEST_TOPIC}" title="{catrow.forumrow.LATEST_TOPIC_TITLE}">{catrow.forumrow.LATEST_TOPIC_NAME}</a><br />
-					<!-- END switch_topic_title -->
-                                  </div>
-                                  <p>{catrow.forumrow.USER_LAST_POST}</p>
-				</div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>	
+  <div class="numc"></div>
+
+  <div class="dscont">
+    <div class="dscp">
+
+      <div class="ftile">
+        <a href="{catrow.forumrow.U_VIEWFORUM}" class="forumtitle">
+          {catrow.forumrow.FORUM_NAME}
+        </a>
+      </div>
+
+      {catrow.forumrow.FORUM_DESC}
+
+      <div class="opp-cf">
+        <dl class="icon" style="background:url({catrow.forumrow.FORUM_FOLDER_IMG});"></dl>
+      </div>
+
+      <div class="typ">
+        <div class="topics">
+          <p>{catrow.forumrow.TOPICS}</p>
+          <dfn>temasz</dfn>
+        </div>
+
+        <div class="posts">
+          <p>{catrow.forumrow.POSTS}</p>
+          <dfn>posts</dfn>
+        </div>
+      </div>
+
+      <div class="oppava">
+        <!-- BEGIN avatar -->
+        <div class="davip">
+          {catrow.forumrow.avatar.LAST_POST_AVATAR}
+        </div>
+        <!-- END avatar -->
+      </div>
+
+      <div class="ultima">
+        <div class="culti">
+          <!-- BEGIN switch_topic_title -->
+          <a href="{catrow.forumrow.U_LATEST_TOPIC}" title="{catrow.forumrow.LATEST_TOPIC_TITLE}">
+            {catrow.forumrow.LATEST_TOPIC_NAME}
+          </a>
+          <br />
+          <!-- END switch_topic_title -->
+        </div>
+
+        <p>{catrow.forumrow.USER_LAST_POST}</p>
+      </div>
+
+    </div>
+  </div>
+</div>
 				
 	<!-- END forumrow -->
 
