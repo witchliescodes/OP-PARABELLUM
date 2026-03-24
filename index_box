@@ -12,71 +12,50 @@
 <!-- BEGIN catrow -->
 	<!-- BEGIN tablehead -->
 		<div class="forabg">
-			<div class="inner"><span class="corners-top"><span></span></span>
-			<ul class="topiclist">
-				<li class="header">
-					<dl class="icon">
-						<dd class="dterm"><div class="table-title">{catrow.tablehead.L_FORUM}</div></dd>
-						<dd class="topics">{L_TOPICS}</dd>
-						<dd class="posts">{L_POSTS}</dd>
-						<dd class="lastpost"><span>{L_LASTPOST}</span></dd>
-					</dl>
-				</li>
-			</ul>
-			<ul class="topiclist forums">
+			<div class="titlecate">
+                          <h1>{catrow.tablehead.L_FORUM}</h1>
+			</div>
+                  
+			<div class="foros opp">
 	<!-- END tablehead -->
 
 	<!-- BEGIN forumrow -->
-				<li class="row">
-					<dl class="icon" style="background:url({catrow.forumrow.FORUM_FOLDER_IMG}) no-repeat scroll {catrow.forumrow.INC_LEVEL} 50%;">
-						<dd class="dterm">
-							<div style="display: block; margin : 0 {catrow.forumrow.INC_LEVEL_RIGHT} 0 {catrow.forumrow.INC_LEVEL_LEFT};">
-								<h{catrow.forumrow.LEVEL} class="hierarchy">
-								<a href="{catrow.forumrow.U_VIEWFORUM}" class="forumtitle">{catrow.forumrow.FORUM_NAME}</a>
-								</h{catrow.forumrow.LEVEL}>
-								<br />
-								{catrow.forumrow.FORUM_DESC}
-
-								<!-- BEGIN switch_moderators_links -->
-									{catrow.forumrow.switch_moderators_links.L_MODERATOR}{catrow.forumrow.switch_moderators_links.MODERATORS}
-								<!-- END switch_moderators_links -->
-								{catrow.forumrow.L_LINKS}{catrow.forumrow.LINKS}
-								<strong>{forumrow.L_SUBFORUM_STR}</strong> {forumrow.SUBFORUMS}
-							</div>
-						</dd>
-						<dd class="topics">{catrow.forumrow.TOPICS} <dfn>{L_TOPICS}</dfn></dd>
-						<dd class="posts">{catrow.forumrow.POSTS} <dfn>{L_POSTS}</dfn></dd>
-						<dd class="lastpost">
-							<!-- BEGIN ads -->
-							<span class="AD_LastPA">
-                                <span class="lastpost-avatar"><img src="{catrow.forumrow.ads.IMG}" alt="{catrow.forumrow.ads.TITLE}" loading="lazy" /></span>
-                                <span class="AD_LastInfos">
-                                    <b><a href="{catrow.forumrow.ads.LINK}">{catrow.forumrow.ads.TITLE}</a></b><br />
-                                    {catrow.forumrow.ads.DATE}<br />
-                                    {catrow.forumrow.ads.LOCATION}
-                                </span>
-							</span>
-                            <!-- END ads -->
-							
-                            <!-- BEGIN avatar -->
-                            <span class="lastpost-avatar">{catrow.forumrow.avatar.LAST_POST_AVATAR}</span>
-                            <!-- END avatar -->
-
-							<span>
-							<!-- BEGIN switch_topic_title -->
-							<a href="{catrow.forumrow.U_LATEST_TOPIC}" title="{catrow.forumrow.LATEST_TOPIC_TITLE}">{catrow.forumrow.LATEST_TOPIC_NAME}</a><br />
-							<!-- END switch_topic_title -->
-							{catrow.forumrow.USER_LAST_POST}
-							</span>
-						</dd>
-					</dl>
-				</li>
+				
+                          <div class="fori">
+                            <div class="numc"></div>
+                            <div class="dscont">
+                              <div class="dscp">
+                                <div class="ftile"><a href="{catrow.forumrow.U_VIEWFORUM}" class="forumtitle">{catrow.forumrow.FORUM_NAME}</a></div>
+                                {catrow.forumrow.FORUM_DESC}
+                                <div class="opp-cf"><dl class="icon" style="background:url({catrow.forumrow.FORUM_FOLDER_IMG});"></dl></div>
+                              <div class="typ">
+                                <div class="topics"><p>{catrow.forumrow.TOPICS}</p> <dfn>temasz</dfn></div>
+				<div class="posts"><p>{catrow.forumrow.POSTS}</p> <dfn>posts</dfn></div>
+                              </div>
+                                <div class="oppava">
+					<!-- BEGIN avatar -->
+                                  <div class="davip">{catrow.forumrow.avatar.LAST_POST_AVATAR}</div>
+					<!-- END avatar -->
+				</div>
+                                <div class="ultima">
+                                <div class="culti">
+					<!-- BEGIN switch_topic_title -->
+					<a href="{catrow.forumrow.U_LATEST_TOPIC}" title="{catrow.forumrow.LATEST_TOPIC_TITLE}">{catrow.forumrow.LATEST_TOPIC_NAME}</a><br />
+					<!-- END switch_topic_title -->
+                                  </div>
+                                  <p>{catrow.forumrow.USER_LAST_POST}</p>
+				</div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>	
+				
 	<!-- END forumrow -->
 
 	<!-- BEGIN tablefoot -->
-				</ul>
+			</div>
 
-			<span class="corners-bottom"><span></span></span></div>
+			
 		</div>
 	<!-- END tablefoot -->
 <!-- END catrow -->
