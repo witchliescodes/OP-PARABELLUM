@@ -161,6 +161,15 @@
     border-radius: 10px;
 }
   
+.zarp.titlecate h2 em {
+    margin: 0px 240px 0px 0px;
+    font-size: 2em;
+    color: var(--color-3);
+    filter: drop-shadow(0px 0px 2px var(--color-3));
+    padding: 10px;
+    border-radius: 10px;
+}  
+  
 /*Titulos personalizados*/  
 .titlecate.bien h2 {
 background-image: var(--bien);
@@ -168,6 +177,10 @@ background-image: var(--bien);
   
 .titlecate.pers h2 {
 background-image: var(--crea);
+}  
+  
+.titlecate.zarp h2 {
+background-image: var(--zarp);
 }  
   
 /*FIN DE TITULOS*/
@@ -217,7 +230,7 @@ background-image: var(--crea);
     border-radius: 6px;
 }
   
-.oppfor.prep {
+.oppfor.zarp {
     background: var(--color-5);
     padding: 10px;
     width: -webkit-fill-available;
@@ -253,7 +266,7 @@ background-image: var(--crea);
     overflow: hidden;
 }
   
-.oppfor.prep .fori {
+.oppfor.zarp .fori {
     background: var(--color-4);
     border-radius: .85rem;
     padding: .8rem;
@@ -284,44 +297,44 @@ background-image: var(--crea);
 }
   
 /*CAT CREACION*/
-.oppfor.crea .fori:nth-child(1) {
+.oppfor.pers .fori:nth-child(1) {
     grid-column: 1;
     grid-row: span 4;
 }
-.oppfor.crea .fori:nth-child(2) {
+.oppfor.pers .fori:nth-child(2) {
     grid-column: 2;
     grid-row: span 4;
 }
-.oppfor.crea .fori:nth-child(3) {
+.oppfor.pers .fori:nth-child(3) {
     grid-column: 1;
     grid-row: span 6;
 }
-.oppfor.crea .fori.fori:nth-child(4) {
+.oppfor.pers .fori.fori:nth-child(4) {
     grid-column: 2;
     grid-row: span 3;
 }
-.oppfor.crea .fori:nth-child(5) {
+.oppfor.pers .fori:nth-child(5) {
     grid-column: 2;
     grid-row: span 3;
 }
 /*PREPARACION*/
-.oppfor.prep .fori:nth-child(1) {
+.oppfor.zarp .fori:nth-child(1) {
     grid-column: 1;
     grid-row: 1 / span 4;
 }
-.oppfor.prep .fori:nth-child(2) {
+.oppfor.zarp .fori:nth-child(2) {
     grid-column: 2;
     grid-row: 1 / span 3;
 }
-.oppfor.prep .fori:nth-child(3) {
+.oppfor.zarp .fori:nth-child(3) {
     grid-column: 2;
     grid-row: 4 / span 2;
 }
-.oppfor.prep .fori:nth-child(4) {
+.oppfor.zarp .fori:nth-child(4) {
     grid-column: 1;
     grid-row: 5 / span 3;
 }
-.oppfor.prep .fori:nth-child(5) {
+.oppfor.zarp .fori:nth-child(5) {
     grid-column: 2;
     grid-row: 6 / span 2;
 }
