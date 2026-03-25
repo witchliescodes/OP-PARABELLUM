@@ -42,7 +42,9 @@
 --pes2: url('https://images2.imgbox.com/97/01/aIORv10q_o.png'); /*imagen pestaña 2*/
 --tevent: url('https://images2.imgbox.com/bb/d6/Zbtd40qr_o.png'); /*imagen evento*/   
   /*CATEGORIAS*/
---bien: url('https://images2.imgbox.com/76/a3/oK9CBhl9_o.png');  
+--bien: url('https://images2.imgbox.com/46/9f/YrVrROQb_o.png');  
+--crea: url('https://images2.imgbox.com/d8/11/WWL6WILc_o.png');  
+--zarp: url('https://images2.imgbox.com/7c/ad/dMbkVEns_o.png');  
 }
 
 :root .oscuro  {
@@ -89,11 +91,17 @@
 --pes2: url('https://images2.imgbox.com/97/01/aIORv10q_o.png'); /*imagen pestaña 2*/
 --tevent: url('https://images2.imgbox.com/bb/d6/Zbtd40qr_o.png'); /*imagen evento*/  
   /*CATEGORIAS*/
---bien: url('https://images2.imgbox.com/51/c7/1h6Vu0hy_o.png');    
+--bien: url('https://images2.imgbox.com/5c/7c/5K2jhWS3_o.png');    
+--crea: url('https://images2.imgbox.com/94/b1/0UAE2iYz_o.png');    
+--zarp: url('https://images2.imgbox.com/fd/d1/ZE5GrvVD_o.png');    
 }
 
 .modal {
     --bs-modal-width: 1200px!important;
+}
+
+#main-content {
+    margin: 20px 0 0 0;
 }
 
 #main-content .inner { display: none;}
