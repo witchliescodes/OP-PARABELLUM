@@ -143,8 +143,17 @@
     color: var(--color-3);
 }
 
-.titlecate h2 em {
+.bien.titlecate h2 em {
     margin: 0px 199px 0px 0px;
+    font-size: 2em;
+    color: var(--color-3);
+    filter: drop-shadow(0px 0px 2px var(--color-3));
+    padding: 10px;
+    border-radius: 10px;
+}
+  
+.pers.titlecate h2 em {
+    margin: 0px 215px 0px 0px;
     font-size: 2em;
     color: var(--color-3);
     filter: drop-shadow(0px 0px 2px var(--color-3));
@@ -156,6 +165,10 @@
 .titlecate.bien h2 {
 background-image: var(--bien);
 }
+  
+.titlecate.pers h2 {
+background-image: var(--crea);
+}  
   
 /*FIN DE TITULOS*/
 
@@ -189,7 +202,7 @@ background-image: var(--bien);
     border-radius: 6px;
 }
 
-.oppfor.crea {
+.oppfor.pers {
     background: var(--color-5);
     padding: 10px;
     width: -webkit-fill-available;
@@ -233,7 +246,7 @@ background-image: var(--bien);
     overflow: hidden;
 }
   
-.oppfor.crea .fori {
+.oppfor.pers .fori {
     background: var(--color-4);
     border-radius: .85rem;
     padding: .8rem;
