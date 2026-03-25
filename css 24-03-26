@@ -41,6 +41,8 @@
   /*PESTAÑA2*/
 --pes2: url('https://images2.imgbox.com/97/01/aIORv10q_o.png'); /*imagen pestaña 2*/
 --tevent: url('https://images2.imgbox.com/bb/d6/Zbtd40qr_o.png'); /*imagen evento*/   
+  /*CATEGORIAS*/
+--bien: url('https://images2.imgbox.com/76/a3/oK9CBhl9_o.png');  
 }
 
 :root .oscuro  {
@@ -86,11 +88,15 @@
   /*PESTAÑA2*/
 --pes2: url('https://images2.imgbox.com/97/01/aIORv10q_o.png'); /*imagen pestaña 2*/
 --tevent: url('https://images2.imgbox.com/bb/d6/Zbtd40qr_o.png'); /*imagen evento*/  
+  /*CATEGORIAS*/
+--bien: url('https://images2.imgbox.com/51/c7/1h6Vu0hy_o.png');    
 }
 
 .modal {
     --bs-modal-width: 1200px!important;
 }
+
+#main-content .inner { display: none;}
 
 @font-face {
     font-family: 'Cormorant Garamond';
@@ -2096,78 +2102,8 @@ background-image: var(--staff1);
 }
 
 
-/*CATEGORIAS Y SUBFOROS*/
-
-.titlecate h2 {
-    background: var(--color-5);
-    display: flex;
-    flex-flow: row-reverse;
-    justify-content: space-between;
-    align-items: center;
-    border-radius: 6px;
-    height: 120px;
-}
 
 
-.titlecate h2 p{
-    margin: 10px;
-    font-size: 1em;
-    font-family: var(--titulos);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: var(--color-3);
-}
-
-.titlecate h2 em{
-    margin: 26px;
-    font-size: 1.3em;
-    color: var(--color-3);
-    background: var(--color-1);
-    box-shadow: 0px 0px 10px var(--color-3);
-    padding: 10px;
-    border-radius: 10px;
-}
-
-
-.oppfor.admi {
-    background: var(--color-5);
-    padding: 10px;
-    width: -webkit-fill-available;
-    height: -webkit-fill-available;
-    position: relative;
-    overflow: hidden;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-auto-flow: dense;
-    grid-auto-rows: 20px;
-    gap: 0.75rem;
-    margin: 0 0 10px 0;
-    border-radius: 6px;
-}
-
-.oppfor.admi .fori {
-    background: var(--color-4);
-    border-radius: .85rem;
-    padding: .8rem;
-    overflow: hidden;
-}
-.oppfor.admi .fori:nth-child(1) {
-  grid-row: span 2;
-}
-
-
-.oppfor.admi .fori:nth-child(2) {
-  grid-row: span 1;
-}
-
-
-.oppfor.admi .fori:nth-child(3) {
- grid-row: span 3;
-}
-
-.oppfor.admi .fori:nth-child(4) {
-   grid-row: span 1;
-}
 
 /**RESPONSIVE CCOMPLETO**/
 @media (max-width: 1024px) {
