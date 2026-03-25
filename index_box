@@ -117,19 +117,25 @@
 <style>
 /*CATEGORIAS Y SUBFOROS*/
 
+.cateopp {
+    margin: 25px 0 0 0;
+    width: -webkit-fill-available;
+    height: -webkit-fill-available;
+}  
+  
 .titlecate h2 {
     background: var(--color-5);
     display: flex;
     flex-flow: row-reverse;
-    justify-content: space-between;
+    justify-content: end;
     align-items: center;
     border-radius: 6px;
     height: 120px;
 }
 
 
-.titlecate h2 p{
-    margin: 10px;
+.titlecate h2 p {
+    margin: 0 30px;
     font-size: 1em;
     font-family: var(--titulos);
     text-transform: uppercase;
@@ -137,16 +143,21 @@
     color: var(--color-3);
 }
 
-.titlecate h2 em{
-    margin: 26px;
-    font-size: 1.3em;
+.titlecate h2 em {
+    margin: 0px 420px 0px 0px;
+    font-size: 2em;
     color: var(--color-3);
-    background: var(--color-1);
-    box-shadow: 0px 0px 10px var(--color-3);
+    filter: drop-shadow(0px 0px 2px var(--color-3));
     padding: 10px;
     border-radius: 10px;
 }
-
+  
+/*Titulos personalizados*/  
+.titlecate.bien h2 {
+background-image: var(--bien);
+}
+  
+/*FIN DE TITULOS*/
 
 .oppfor.admi {
     background: var(--color-5);
@@ -207,7 +218,6 @@
     margin: 0 0 10px 0;
     border-radius: 6px;
 }  
-
 
 .oppfor.admi .fori {
     background: var(--color-4);
