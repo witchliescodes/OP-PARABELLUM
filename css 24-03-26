@@ -45,6 +45,7 @@
 --bien: url('https://images2.imgbox.com/46/9f/YrVrROQb_o.png');  
 --crea: url('https://images2.imgbox.com/d8/11/WWL6WILc_o.png');  
 --zarp: url('https://images2.imgbox.com/7c/ad/dMbkVEns_o.png');  
+--admi: url('https://images2.imgbox.com/97/25/43zVrQPy_o.png');  
 }
 
 :root .oscuro  {
@@ -93,7 +94,8 @@
   /*CATEGORIAS*/
 --bien: url('https://images2.imgbox.com/5c/7c/5K2jhWS3_o.png');    
 --crea: url('https://images2.imgbox.com/94/b1/0UAE2iYz_o.png');    
---zarp: url('https://images2.imgbox.com/fd/d1/ZE5GrvVD_o.png');    
+--zarp: url('https://images2.imgbox.com/fd/d1/ZE5GrvVD_o.png'); 
+--admi: url('https://images2.imgbox.com/61/6e/k8wBlUXM_o.png');    
 }
 
 .modal {
