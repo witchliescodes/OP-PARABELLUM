@@ -162,13 +162,13 @@
 }
   
 .zarp.titlecate h2 em {
-    margin: 0px 240px 0px 0px;
+    margin: 0px 245px 0px 0px;
     font-size: 2em;
     color: var(--color-3);
     filter: drop-shadow(0px 0px 2px var(--color-3));
     padding: 10px;
     border-radius: 10px;
-}  
+}
   
 /*Titulos personalizados*/  
 .titlecate.bien h2 {
@@ -183,6 +183,9 @@ background-image: var(--crea);
 background-image: var(--zarp);
 }  
   
+.titlecate.admi h2 {
+background-image: var(--admi);
+}    
 /*FIN DE TITULOS*/
 
 .oppfor.admi {
