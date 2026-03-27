@@ -312,10 +312,9 @@
 <!-- END switch_like_popup -->
 
   
-  
 <div class="conteneur_minwidth_IE">
 	<div class="conteneur_layout_IE">
-		<div class="conteneur_container_IE">
+		<div class="conteneur_container_IE">           
                  <header class="parahead">
 <navbar>
     <div class="f-nvpar">
@@ -418,6 +417,7 @@
   </div>
 </banner>    
                   
+ <div class="naviga"> <a class="pnav" href="{U_INDEX}"><span>{L_INDEX}</span></a>{NAV_CAT_DESC}</div>                           
 			<div id="wrap">
    
 <div class="paranun">
