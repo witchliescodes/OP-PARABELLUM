@@ -417,7 +417,9 @@ background-image: var(--admi);
 }  
   
 /*IMAGENES DE SUBFOROS*/ 
-.admi.f-img:nth-child(1) {}  
+.admi.f-img:nth-child(1) {
+  background-image: var(--sadm);
+  }  
 
 /*SUBFOROS*/
 .dscont {
