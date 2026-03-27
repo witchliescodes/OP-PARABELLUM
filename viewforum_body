@@ -1,0 +1,93 @@
+{BOARD_INDEX}
+
+
+<div class="pagination">
+	<!-- BEGIN show_plus_menu -->
+	<br />
+	<a href="{U_MARK_READ}">{L_MARK_TOPICS_READ}</a>&nbsp;&bull;&nbsp;
+	<script type="text/javascript">//<![CDATA[
+		var url_newposts = '{U_NEWPOSTS_JS_PLUS_MENU}';
+		var url_egosearch = '{U_EGOSEARCH_JS_PLUS_MENU}';
+		var url_unanswered = '{U_UNANSWERED_JS_PLUS_MENU}';
+		var url_watchsearch = '{U_WATCHSEARCH_JS_PLUS_MENU}';
+		insert_plus_menu_new('f{FORUM_ID}&amp;f={FORUM_ID}','{JS_SESSION_ID}', {JS_AUTH_FAVOURITES});
+	//]]>
+	</script>
+	<!-- END show_plus_menu -->
+	{PAGINATION}
+	<br /><br />
+</div>
+
+<div class="topic-actions">
+<!-- BEGIN switch_user_authpost -->
+	<div class="buttons">
+		<div class="post-icon"><a href="{U_POST_NEW_TOPIC}" accesskey="n" rel="nofollow"><img src="{POST_IMG}" class="{POST_IMG_ID}" alt="{L_POST_NEW_TOPIC}" /></a></div>
+	</div>
+<!-- END switch_user_authpost -->
+  
+  
+	<div class="search-box">
+		<form method="get" id="forum-search" action="{S_SEARCHBOX_ACTION}">
+		<fieldset>
+			<input class="inputbox search tiny" type="text" name="search_keywords" id="search_keywords" size="20" value="{L_SEARCH}" onclick="if (this.value == '{L_SEARCH}') this.value = '';" onblur="if (this.value == '') this.value = '{L_SEARCH}';" />
+			&nbsp;<input class="button2" type="submit" value="{L_SEARCH}" />
+			<input type="hidden" value="{SEARCH_WHERE}" name="search_where" />
+		</fieldset>
+		</form>
+	</div>
+  
+  
+	
+</div>
+
+{TOPICS_LIST_BOX}
+
+<div class="topic-actions">
+	<!-- BEGIN switch_user_authpost -->
+	<div class="buttons">
+		<div class="post-icon"><a href="{U_POST_NEW_TOPIC}" accesskey="n" rel="nofollow"><img src="{POST_IMG}" class="{POST_IMG_ID}" alt="{L_POST_NEW_TOPIC}" /></a></div>
+	</div>
+	<!-- END switch_user_authpost -->
+
+	<div class="pagination">
+		{PAGINATION}<br />
+		<a href="{U_MARK_READ}">{L_MARK_TOPICS_READ}</a>&nbsp;&bull;&nbsp;{S_WATCH_FORUM}&nbsp;&bull;&nbsp;<a href="#top">{L_BACK_TO_TOP}</a><br /><br />
+	</div>
+</div>
+
+<div class="clear"></div>
+
+<div class="action-box">
+	<!-- BEGIN switch_sort_options -->
+	<div id="sort-box">
+		<form method="post" class="sort-form">
+			<fieldset>
+				<label>{switch_sort_options.L_SORT_BY}:&nbsp;</label>
+				<select name="sort_method">
+					{switch_sort_options.S_OPTIONS}
+				</select>&nbsp;
+				<input class="button2" type="submit" value="{switch_sort_options.L_SORT}" />
+			</fieldset>
+		</form>
+	</div>
+	<!-- END switch_sort_options -->
+
+	<form action="{S_JUMPBOX_ACTION}" method="get" name="jumpbox" onsubmit="if(document.jumpbox.f.value == -1){return false;}">
+		<fieldset class="vf_jumpbox">
+			<label>{L_JUMP_TO}:&nbsp;</label>
+			{S_JUMPBOX_SELECT}&nbsp;
+			<input class="button2" type="submit" value="{L_GO}" />
+		</fieldset>
+	</form>
+</div>
+
+{LOGGED_IN_USER_LIST}
+
+<div id="info_open" style="display:block;clear:both">
+<div class="h3">{L_MODERATOR}</div>
+<p>{MODERATORS}</p>
+
+<div class="h3">{L_TABS_PERMISSIONS}</div>
+<p>{S_AUTH_LIST}</p>
+
+</div>
