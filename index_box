@@ -291,6 +291,7 @@ background-image: var(--admi);
     border-radius: .85rem;
     padding: .8rem;
     overflow: hidden;
+    position: relative;
 }  
   
 .oppfor.admi .fori {
@@ -365,7 +366,7 @@ background-image: var(--admi);
     grid-column: 2;
     grid-row: span 3;
 }
-/*PREPARACION*/
+/*cate zarpemos*/
 .oppfor.zarp .fori:nth-child(1) {
     grid-column: 1;
     grid-row: 1 / span 4;
@@ -414,4 +415,38 @@ background-image: var(--admi);
 .oppfor .fori:nth-child(4) {
   
 }  
+  
+/*IMAGENES DE SUBFOROS*/ 
+.admi.f-img:nth-child(1) {}  
+
+/*SUBFOROS*/
+.dscont {
+      position: absolute;
+  }  
+  
+.dscp {}
+  
+.ftile {}
+  
+.ftile a {}
+  
+.descripy {}
+  
+.descripy p {}  
+  
+.f-linky {}
+  
+.opp-cf {}
+  
+.typ {}
+  
+.topics {}  
+.posts {} 
+.oppava {}
+.davip {}
+.ultima {}
+.culti {}  
+.ultima p {}
+.ultima a {}
+ultima strong {}  
 </style>
