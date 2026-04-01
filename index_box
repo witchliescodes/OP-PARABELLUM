@@ -42,12 +42,12 @@
       <div class="typ">
         <div class="topics">
           <p>{catrow.forumrow.TOPICS}</p>
-          <dfn>temasz</dfn>
+          <dfn data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" title="temas"><i class="bi bi-file-text-fill"></i></dfn>
         </div>
 
         <div class="posts">
           <p>{catrow.forumrow.POSTS}</p>
-          <dfn>posts</dfn>
+          <dfn data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" title="Respuestas"><i class="bi bi-card-text"></i></dfn>
         </div>
       </div>
 
@@ -422,11 +422,35 @@ background-image: var(--admi);
 .oppfor.admi .fori:nth-child(1) .dscont .opp-cf {
     position: absolute;
     top: 0;
-    width: 30px;
+    width: 30%;
     height: 30px;
     margin: 10px;
     border-radius: 0.38em;
+    overflow: hidden;
 }
+  
+.oppfor.admi .fori:nth-child(1) .dscont .opp-cf dl.icon[style*="fleido"] {
+    width: -webkit-fill-available;
+    height: -webkit-fill-available;
+    background: var(--bs-success-bg-subtle) !important;
+    margin: 0;
+}
+  
+.oppfor.admi .fori:nth-child(1) .dscont .opp-cf dl.icon[style*="fleido"]::before {
+    content: '\f12a';
+    font-family: 'Font Awesome 7 Free';
+    font-weight: 900;
+    font-size: 20px;
+    color: var(--color-3);
+}
+  
+.oppfor.admi .fori:nth-child(1) .dscont .opp-cf dl.icon[style*="fleido"]::after{
+    content: 'Foro Leido';
+    font-family: var(--cuerpo1);
+    font-weight: 800;
+    font-size: 20px;
+    color: var(--color-3);
+}  
   
 .oppfor.admi .fori:nth-child(1) .dscont .ultima {
     position: absolute;
@@ -455,7 +479,9 @@ background-image: var(--admi);
     hyphens: auto;
 }
 .oppfor.admi .fori:nth-child(1) .dscont .ultima .culti a{
-      margin: 10px;
+      margin: 10px; 
+    color: var(--color-1);
+
   }
   
 .oppfor.admi .fori:nth-child(1) .dscont .ultima p {
@@ -481,16 +507,60 @@ background-image: var(--admi);
     margin: 10px;
 }
   
+.oppfor.admi .fori:nth-child(1) .dscont .oppava img {
+    object-fit: cover;
+    width: 100px;
+    margin: -15px 0 0 -16px;
+}  
+  
 .oppfor.admi .fori:nth-child(1) .dscont .typ {
     position: absolute;
     top: 264px;
     left: 308px;
     display: flex;
-    background: var(--bs-black);
+    background: var(--color-1);
     height: 50px;
     width: 38%;
     margin: 0 10px;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 0.38em;
+    color: var(--color-7);
 }
+  
+.oppfor.admi .fori:nth-child(1) .dscont .typ i {
+    color: var(--color-3);
+}  
+
+.oppfor.admi .fori:nth-child(1) .dscont .f-linky {
+    position: absolute;
+    top: 197px;
+    left: 248px;
+    margin: 10px;
+    background: var(--color-1);
+    padding: 10px;
+    width: 49%;
+    border-radius: 0.28em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+  
+.oppfor.admi .fori:nth-child(1) .dscont .f-linky a {
+    color: var(--color-3);
+    font-weight: 800;
+    margin: 0 5px;
+    font-size: 1.2em;
+}
+  
+.oppfor.admi .fori:nth-child(1) .dscont .topics,  .oppfor.admi .fori:nth-child(1) .dscont .posts {
+display: flex;
+    align-items: center;
+}
+  
+.oppfor.admi .fori:nth-child(1) .dscont .topics p, .oppfor.admi .fori:nth-child(1) .dscont .posts p {
+    margin: 0 5px;
+}  
   
 .oppfor.admi .fori:nth-child(2) {
     grid-row: span 3;
