@@ -417,13 +417,28 @@ background-image: var(--admi);
 }  
   
 /*IMAGENES DE SUBFOROS*/ 
-.admi.f-img:nth-child(1) {
+.admi.fori .f-img:nth-child(1) {
   background-image: var(--sadm);
   }  
 
 /*SUBFOROS*/
+.numc {
+    position: absolute;
+    background: var(--color-3);
+    margin: 0 0 -7px 0;
+    top: 5px;
+    right: 5px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+}  
+  
 .dscont {
-      position: absolute;
+position: absolute;
+width: 95%;
   }  
   
 .dscp {}
