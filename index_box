@@ -63,7 +63,7 @@
         <div class="culti">
           <!-- BEGIN switch_topic_title -->
           <a href="{catrow.forumrow.U_LATEST_TOPIC}" title="{catrow.forumrow.LATEST_TOPIC_TITLE}">
-            {catrow.forumrow.LATEST_TOPIC_NAME}
+           por {catrow.forumrow.LATEST_TOPIC_NAME}
           </a>
           <br />
           <!-- END switch_topic_title -->
@@ -436,6 +436,38 @@ background-image: var(--admi);
     background: var(--color-3);
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
+    align-items: center;
+    justify-content: space-between;
+}
+  
+.oppfor.admi .fori:nth-child(1) .dscont .descripy p {
+    position: absolute;
+    top: 196px;
+    width: 47%;
+    height: 40%;
+    background: var(--color-4);
+    overflow: auto;
+    margin: 0 10px 0 0;
+    padding: 10px 5px 10px 10px;
+    color: var(--color-7);
+    font-size: 1em;
+    text-align: justify;
+    hyphens: auto;
+}
+.oppfor.admi .fori:nth-child(1) .dscont .ultima .culti a{
+      margin: 10px;
+  }
+  
+.oppfor.admi .fori:nth-child(1) .dscont .ultima p {
+    display: flex;
+    margin: 0;
+    font-size: 1em;
+    color: var(--color-1);
+}
+
+.oppfor.admi .fori:nth-child(1) .dscont .ultima strong {
+    margin: 0 0 0 10px;
+    color: var(--color-6);
 }
   
 .oppfor.admi .fori:nth-child(2) {
