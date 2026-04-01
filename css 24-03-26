@@ -1,3 +1,9 @@
+:root {
+/*IMAGENES DE SUBFOROS*/
+/*ADministración*/  
+  --sadm: url('https://i.pinimg.com/1200x/16/bd/24/16bd24dfd18a1af3bd035a7d3d1708a7.jpg');  
+}
+
 :root .claro{
   /* Mi Paleta */
   --color-1: #dddde2;
@@ -46,6 +52,7 @@
 --crea: url('https://images2.imgbox.com/d8/11/WWL6WILc_o.png');  
 --zarp: url('https://images2.imgbox.com/7c/ad/dMbkVEns_o.png');  
 --admi: url('https://images2.imgbox.com/97/25/43zVrQPy_o.png');  
+--mare: url('https://images2.imgbox.com/bd/ad/2JasDQGx_o.png');  
 }
 
 :root .oscuro  {
@@ -96,6 +103,7 @@
 --crea: url('https://images2.imgbox.com/94/b1/0UAE2iYz_o.png');    
 --zarp: url('https://images2.imgbox.com/fd/d1/ZE5GrvVD_o.png'); 
 --admi: url('https://images2.imgbox.com/61/6e/k8wBlUXM_o.png');    
+--mare: url('https://images2.imgbox.com/88/e0/L0Ojnrlu_o.png');    
 }
 
 .modal {
@@ -106,7 +114,7 @@
     margin: 20px 0 0 0;
 }
 
-#main-content .inner { display: none;}
+/*#main-content .inner { display: none;}*/
 
 @font-face {
     font-family: 'Cormorant Garamond';
@@ -179,8 +187,19 @@ html, body {
 }
 
 a {
-    text-decoration: none!important;
+  
+  text-decoration: none!important;
   transition: all 300ms ease-in-out;
+}
+
+a:visited {
+  color: var(--color-1);
+font-weight: 600;
+}
+
+a:hover {
+  font-weight: 800;
+  color: var(--color-2);
 }
 
 .conteneur_minwidth_IE {
