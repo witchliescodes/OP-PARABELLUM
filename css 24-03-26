@@ -186,14 +186,14 @@ html, body {
   overflow-x: clip;
 }
 
-a {
-  
-  text-decoration: none!important;
-  transition: all 300ms ease-in-out;
+a:link {
+    color: var(--color-7);
+    text-decoration: none;
+    transition: all 300ms ease-in-out;
 }
 
 a:visited {
-  color: var(--color-1);
+  color: var(--color-2);
 font-weight: 600;
 }
 
