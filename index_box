@@ -423,35 +423,55 @@ background-image: var(--admi);
 .oppfor.admi .fori:nth-child(1) .dscont .opp-cf {
     position: absolute;
     top: 0;
-    width: 30%;
-    height: 30px;
+    width: -webkit-fill-available;
+    height: auto;
     margin: 10px;
     border-radius: 0.38em;
     overflow: hidden;
 }
   
 .oppfor.admi .fori:nth-child(1) .dscont .opp-cf dl.icon[style*="fleido"] {
-    width: -webkit-fill-available;
+    width: fit-content;
     height: -webkit-fill-available;
-    background: var(--bs-success-bg-subtle) !important;
     margin: 0;
+    display: flex;
+    align-items: center;
 }
   
 .oppfor.admi .fori:nth-child(1) .dscont .opp-cf dl.icon[style*="fleido"]::before {
     content: '\f12a';
     font-family: 'Font Awesome 7 Free';
     font-weight: 900;
-    font-size: 20px;
+    font-size: 1em;
     color: var(--color-3);
+    background: var(--color-1);
+    height: 30px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    outline: 1px solid var(--color-3);
 }
   
-.oppfor.admi .fori:nth-child(1) .dscont .opp-cf dl.icon[style*="fleido"]::after{
+.oppfor.admi .fori:nth-child(1) .dscont .opp-cf dl.icon[style*="fleido"]::after {
     content: 'Foro Leido';
     font-family: var(--cuerpo1);
     font-weight: 800;
-    font-size: 20px;
+    font-size: 1em;
     color: var(--color-3);
-}  
+    background: var(--color-1);
+    width: 100%;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    outline: 1px solid var(--color-3);
+    margin: 0px 10px 0 10px;
+    padding: 0 8px 0 8px;
+    line-height: 1em;
+}
   
 .oppfor.admi .fori:nth-child(1) .dscont .ultima {
     position: absolute;
