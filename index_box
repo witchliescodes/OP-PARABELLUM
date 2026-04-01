@@ -406,19 +406,41 @@ background-image: var(--admi);
     font-family: var(--titulos);
     margin: 10px 10px 8px 10px;
     border-radius: 0.28em;
-  text-decoration: none;
+    text-decoration: none;
+    z-index: 99;
 }  
   
 .oppfor.admi .fori:nth-child(1) .dscont .f-img {
     width: 100%;
     height: 170px;
-}  
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    z-index: 9;
+}
+  
+.oppfor.admi .fori:nth-child(1) .dscont .f-img::after {
+  background: var(--tcolor6); 
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}   
+  
   
 .oppfor.admi .fori:nth-child(1) .dscont .d-im {
     width: 100%;
-    height: 100%;
+    height: 170px;
     background-size: cover;
-}  
+    background-position: unset;
+    background-repeat: no-repeat;
+    transition: all 400ms ease-in-out;
+}
+  
+.oppfor.admi .fori:nth-child(1) .dscont .f-img:hover .d-im {
+  transform: scale(1.05);
+}
+
   
 .oppfor.admi .fori:nth-child(1) .dscont .opp-cf {
     position: absolute;
@@ -428,6 +450,7 @@ background-image: var(--admi);
     margin: 10px;
     border-radius: 0.38em;
     overflow: hidden;
+    z-index: 99;
 }
   
 .oppfor.admi .fori:nth-child(1) .dscont .opp-cf dl.icon[style*="fleido"] {
@@ -439,14 +462,14 @@ background-image: var(--admi);
 }
   
 .oppfor.admi .fori:nth-child(1) .dscont .opp-cf dl.icon[style*="fleido"]::before {
-    content: '\f12a';
+    content: '\f00c';
     font-family: 'Font Awesome 7 Free';
     font-weight: 900;
-    font-size: 1em;
+    font-size: 0.7em;
     color: var(--color-3);
     background: var(--color-1);
-    height: 30px;
-    padding: 10px;
+    height: 25px;
+    padding: 7px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -458,24 +481,24 @@ background-image: var(--admi);
     content: 'Foro Leido';
     font-family: var(--cuerpo1);
     font-weight: 800;
-    font-size: 1em;
+    font-size: 0.7em;
     color: var(--color-3);
     background: var(--color-1);
     width: 100%;
-    height: 30px;
+    height: 25px;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 5px;
     outline: 1px solid var(--color-3);
     margin: 0px 10px 0 10px;
-    padding: 0 8px 0 8px;
+    padding: 1px 7px 0px 7px;
     line-height: 1em;
 }
   
 .oppfor.admi .fori:nth-child(1) .dscont .ultima {
     position: absolute;
-    top: 170px;
+    top: 162px;
     width: 100%;
     display: flex;
     background: var(--color-3);
@@ -483,27 +506,16 @@ background-image: var(--admi);
     border-bottom-right-radius: 10px;
     align-items: center;
     justify-content: space-between;
+    font-size: 0.9em;
+    padding: 6px 10px 0 10px;
+    height: 34px;
+    z-index: 1;
 }
   
-.oppfor.admi .fori:nth-child(1) .dscont .descripy p {
-    position: absolute;
-    top: 196px;
-    width: 47%;
-    height: 40%;
-    background: var(--color-4);
-    overflow: auto;
-    margin: 0 10px 0 0;
-    padding: 10px 5px 10px 10px;
-    color: var(--color-7);
-    font-size: 1em;
-    text-align: justify;
-    hyphens: auto;
-}
-.oppfor.admi .fori:nth-child(1) .dscont .ultima .culti a{
-      margin: 10px; 
+.oppfor.admi .fori:nth-child(1) .dscont .ultima .culti a {
     color: var(--color-1);
-
-  }
+    font-size: 0.7em;
+}
   
 .oppfor.admi .fori:nth-child(1) .dscont .ultima p {
     display: flex;
@@ -511,11 +523,35 @@ background-image: var(--admi);
     font-size: 1em;
     color: var(--color-1);
 }
+  
+.oppfor.admi .fori:nth-child(1) .dscont .ultima p .last-post-icon, .oppfor.admi .fori:nth-child(1) .dscont .ultima p img  { display: none;}  
 
 .oppfor.admi .fori:nth-child(1) .dscont .ultima strong {
     margin: 0 0 0 10px;
     color: var(--color-6);
 }
+  
+  
+.oppfor.admi .fori:nth-child(1) .dscont .descripy {
+    position: absolute;
+    top: 207px;
+    width: 45%;
+    height: 32%;
+    background: var(--color-5);
+    overflow: auto;
+    margin: 0 10px 0 10px;
+    padding: 5px 5px 10px 10px;
+    border-radius: 10px;
+}
+  
+.oppfor.admi .fori:nth-child(1) .dscont .descripy p {
+    color: var(--color-6);
+    font-size: 0.9em;
+    LINE-HEIGHT: 1.5em;
+    text-align: justify;
+    hyphens: auto;
+}  
+  
   
 .oppfor.admi .fori:nth-child(1) .dscont .oppava  {
     position: absolute;
@@ -612,22 +648,23 @@ display: flex;
   background-image: var(--sadm);
   }  
 
-/*SUBFOROS*/
+/*SUBFOROS GENERALES*/
+ 
 .numc {
     position: absolute;
     background: var(--color-3);
     margin: 0 0 -7px 0;
     top: 5px;
     right: 5px;
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 100%;
-    z-index: 9;
+    z-index: 999;
     font-family: var(--titulos);
-    font-size: 1em;
+    font-size: 0.7em;
 }
   
 .dscont {
@@ -635,6 +672,7 @@ position: absolute;
 width: 100%; 
 height: 100%;
   }  
+  
   
 .dscp {}
   
