@@ -195,11 +195,13 @@ a:link {
 a:visited {
   color: var(--color-2);
 font-weight: 600;
+      text-decoration: none;
 }
 
 a:hover {
   font-weight: 800;
   color: var(--color-2);
+      text-decoration: none;
 }
 
 .conteneur_minwidth_IE {
