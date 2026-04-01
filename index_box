@@ -406,6 +406,7 @@ background-image: var(--admi);
     font-family: var(--titulos);
     margin: 10px 10px 8px 10px;
     border-radius: 0.28em;
+  text-decoration: none;
 }  
   
 .oppfor.admi .fori:nth-child(1) .dscont .f-img {
