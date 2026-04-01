@@ -2,6 +2,23 @@
 /*IMAGENES DE SUBFOROS*/
 /*ADministración*/  
   --sadm: url('https://i.pinimg.com/1200x/16/bd/24/16bd24dfd18a1af3bd035a7d3d1708a7.jpg');  
+  --smod: url('https://i.pinimg.com/1200x/16/bd/24/16bd24dfd18a1af3bd035a7d3d1708a7.jpg');  
+  --snar: url('https://i.pinimg.com/1200x/16/bd/24/16bd24dfd18a1af3bd035a7d3d1708a7.jpg');  
+  --spap: url('https://i.pinimg.com/1200x/16/bd/24/16bd24dfd18a1af3bd035a7d3d1708a7.jpg');  
+/*ADministración*/    
+  --dpri: url('https://i.pinimg.com/1200x/16/bd/24/16bd24dfd18a1af3bd035a7d3d1708a7.jpg');  
+  --dgui: url('https://i.pinimg.com/1200x/16/bd/24/16bd24dfd18a1af3bd035a7d3d1708a7.jpg'); 
+  --dcron: url('https://i.pinimg.com/1200x/16/bd/24/16bd24dfd18a1af3bd035a7d3d1708a7.jpg');  
+  --dnot: url('https://i.pinimg.com/1200x/16/bd/24/16bd24dfd18a1af3bd035a7d3d1708a7.jpg');  
+  --dpre: url('https://i.pinimg.com/1200x/16/bd/24/16bd24dfd18a1af3bd035a7d3d1708a7.jpg'); 
+/*PERSONAJES*/
+  --pexp: url('https://i.pinimg.com/1200x/16/bd/24/16bd24dfd18a1af3bd035a7d3d1708a7.jpg');  
+  --phoj: url('https://i.pinimg.com/1200x/16/bd/24/16bd24dfd18a1af3bd035a7d3d1708a7.jpg');  
+  --pres: url('https://i.pinimg.com/1200x/16/bd/24/16bd24dfd18a1af3bd035a7d3d1708a7.jpg');  
+  --pcom: url('https://i.pinimg.com/1200x/16/bd/24/16bd24dfd18a1af3bd035a7d3d1708a7.jpg');  
+  --paku: url('https://i.pinimg.com/1200x/16/bd/24/16bd24dfd18a1af3bd035a7d3d1708a7.jpg');  
+/*ZARPEMOS*/
+  --
 }
 
 :root .claro{
@@ -17,6 +34,7 @@
   --tcolor3: #6f70d38c;
   --tcolor4: #1f1f3ec2;
   --tcolor5: #faf8fc75;
+  --tcolor6: #1f1f3e61;
   /*DEGRADADOS*/
   --deg3: linear-gradient(145deg, #6f9bd3, #6f70d3);
   --deg2: linear-gradient(90deg, #6f9bd3, #6f70d3);
@@ -68,6 +86,7 @@
   --tcolor3: #d760603d;
   --tcolor4: #0c4542a1;
   --tcolor5: #2e141457;
+  --tcolor6: #2e141461;
     /*DEGRADADOS*/
   --deg3: linear-gradient(145deg, #291213, #14191f);
   --deg2: linear-gradient(145deg, #d76060, #0c4542);
