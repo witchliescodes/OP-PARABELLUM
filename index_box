@@ -571,8 +571,8 @@ background-image: var(--admi);
   
 .oppfor.admi .fori:nth-child(1) .dscont .oppava img {
     object-fit: cover;
-    width: 100px;
-    margin: -15px 0 0 -16px;
+    width: 80px;
+    margin: -7px 0 0 -7px;
 }  
   
 .oppfor.admi .fori:nth-child(1) .dscont .typ {
@@ -646,6 +646,7 @@ display: flex;
     z-index: 9;
     box-shadow: 0 11px 10px var(--tcolor6);
 }
+  
    
 .oppfor.admi .fori:nth-child(2) .dscont .d-im {
     width: 100%;
@@ -660,6 +661,37 @@ display: flex;
   transform: scale(1.05);
 }
   
+.oppfor.admi .fori:nth-child(2) .dscont .oppava {
+    position: absolute;
+    top: 254px;
+    margin: 10px;
+    z-index: 9;
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0px 20px var(--tcolor6);
+}
+  
+.oppfor.admi .fori:nth-child(2) .dscont .oppava img {
+    max-width: 300px;
+    max-height: 500px;
+    object-fit: cover;
+    width: 80px;
+    margin: -7px 0 0 -7px;
+}    
+  
+.oppfor.admi .fori:nth-child(2) .dscont .descripy {
+    position: absolute;
+    top: 0;
+    right: 30px;
+    background: var(--color-5);
+    width: 45%;
+    height: 50%;
+    margin: 10px;
+    border-radius: 10px;
+    overflow: auto;
+}  
   
 .oppfor.admi .fori:nth-child(3) {
     grid-row: span 12;
