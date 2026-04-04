@@ -1035,5 +1035,156 @@ height: 100%;
     border-radius: 10px;
 }
   
-
+.f-linky {
+    position: absolute;
+    right: 44px;
+    top: 146px;
+    width: 48%;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin: 10px;
+    align-items: stretch;
+    gap: 10px;
+}
+  
+.f-linky a {
+    font-size: 1em;
+    font-weight: 800;
+    color: var(--color-3);
+    background: var(--color-5);
+    padding: 7px;
+    border-radius: 5px;
+    flex: 1 1 calc(0% - 0px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  
+.opp-cf {
+    position: absolute;
+    top: 45px;
+    right: 0;
+    width: 6.5%;
+    height: 40%;
+    margin: 10px;
+    border-radius: 0.38em;
+    overflow: hidden;
+    z-index: 99;
+    background: red;
+} 
+  
+.opp-cf dl.icon[style*="cleido"] {
+    width: -webkit-fill-available;
+    height: -webkit-fill-available;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+    justify-content: flex-start;
+}
+  
+.opp-cf dl.icon[style*="cleido"]::before{
+    content: '\f00c';
+    font-family: 'Font Awesome 7 Free';
+    font-weight: 900;
+    font-size: 0.7em;
+    color: var(--color-3);
+    background: var(--color-1);
+    height: 25px;
+    padding: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    outline: 1px solid var(--color-3);
+}
+  
+.opp-cf dl.icon[style*="cleido"]::after {
+    content: 'Foro Leido';
+    font-family: var(--cuerpo1);
+    font-weight: 800;
+    font-size: 0.5em;
+    color: var(--color-3);
+    background: var(--color-1);
+    width: 55%;
+    height: 88px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    outline: 1px solid var(--color-3);
+    margin: 0px;
+    padding: inherit;
+    line-height: 1em;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+}
+  
+.opp-cf dl.icon[style*="fleido"] {
+    width: fit-content;
+    height: -webkit-fill-available;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+  
+.opp-cf dl.icon[style*="fleido"]::before,
+.opp-cf dl.icon[style*="fleido"]::before  {
+    content: '\f00c';
+    font-family: 'Font Awesome 7 Free';
+    font-weight: 900;
+    font-size: 0.7em;
+    color: var(--color-3);
+    background: var(--color-1);
+    height: 25px;
+    padding: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    outline: 1px solid var(--color-3);
+}
+  
+.opp-cf dl.icon[style*="fleido"]::after, 
+.opp-cf dl.icon[style*="fleido"]::after  {
+    content: 'Foro Leido';
+    font-family: var(--cuerpo1);
+    font-weight: 800;
+    font-size: 0.7em;
+    color: var(--color-3);
+    background: var(--color-1);
+    width: 100%;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    outline: 1px solid var(--color-3);
+    margin: 0px 1px 0 10px;
+    padding: 1px 7px 0px 7px;
+    line-height: 1em;
+}    
+  
+.typ {
+    position: absolute;
+    top: 175px;
+    right: 0;
+    background: gray;
+    margin: 10px;
+    width: 6.5%;
+    height: 36%;
+}  
+  
+.ultima {
+    position: absolute;
+    top: 230px;
+    right: 44px;
+    background: var(--color-5);
+    margin: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 17.5%;
+    width: 48%;
+}
 </style>
