@@ -208,21 +208,20 @@ background-image: var(--zarp);
 background-image: var(--admi);
 }    
 /*FIN DE TITULOS*/
-.oppfor{
+.oppfor {
     background: var(--color-5);
     padding: 10px;
     width: -webkit-fill-available;
-    height: -webkit-fill-available;
+    height: 100%;
     position: relative;
     overflow: hidden;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(4, 80px); 
+    grid-auto-rows: minmax(303px, 1fr);
     gap: 0.75rem;
     margin: 0 0 10px 0;
     border-radius: 6px;
 }
-  
   
 .oppfor.admi {
     background: var(--color-5);
@@ -393,6 +392,8 @@ background-image: var(--admi);
     display: flex;
     align-items: end;
     transition: transform 400ms ease;
+    justify-content: flex-end;
+    flex-flow: row;
 }
 
 .oppfor.admi .fori:nth-child(1) .dscont .ftile a, .oppfor.admi .fori:nth-child(2) .dscont .ftile a {
@@ -540,6 +541,7 @@ background-image: var(--admi);
 .oppfor.admi .fori:nth-child(1) .dscont .descripy {
     position: absolute;
     top: 207px;
+    left: 0;
     width: 45%;
     height: 32%;
     background: var(--color-5);
@@ -630,10 +632,11 @@ display: flex;
   
 .oppfor.admi .fori:nth-child(2) .dscont .ftile {
     position: absolute;
-    width: 100%;
+    width: 45%;
     display: flex;
-    align-items: end;
+    align-items: flex-start;
     transition: transform 400ms ease;
+    justify-content: flex-start;
 }
 
   
@@ -699,7 +702,6 @@ display: flex;
     line-height: 1.5em;
     hyphens: auto;
     text-align: justify;
-    padding: 5px 10px 0 10px;
 }  
   
 .oppfor.admi .fori:nth-child(2) .dscont .f-linky {
@@ -950,35 +952,88 @@ position: absolute;
 width: 100%; 
 height: 100%;
   }  
+ 
   
-
-
+.ftile {
+    z-index: 99;
+    position: absolute;
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-flow: column;
+}
+  
 .ftile a {
-  transition: transform 0.4s ease;
+    transition: transform 0.4s ease;
+    background: var(--color-3);
+    color: var(--color-1);
+    padding: 5px 10px 5px 10px;
+    font-size: 1em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: var(--titulos);
+    margin: 10px 10px 8px 10px;
+    border-radius: 0.28em;
+    text-decoration: none;
+    z-index: 99;
 }  
-.dscp {}
+
   
-.ftile {}
+.f-img{
+    position: absolute;
+    top: 0;
+    width: 40%;
+    height: 303px;
+    object-fit: cover;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0 12px var(--color-3);
+}  
   
-.ftile a {}
+.d-im {
+    object-fit: cover;
+    width: 211px;
+    height: 303px;
+    background-size: cover;
+    background-position: unset;
+    background-repeat: no-repeat;
+    transition: transform 400ms cubic-bezier(0.22, 1, 0.36, 1);
+}  
   
-.descripy {}
+.descripy {
+    position: absolute;
+    top: 0;
+    right: 44px;
+    width: 48%;
+    margin: 10px;
+    background: var(--color-5);
+    padding: 10px;
+    border-radius: 10px;
+    overflow: auto;
+    height: 45%;
+}
   
-.descripy p {}  
+.descripy p {
+    font-size: 0.9em;
+    hyphens: auto;
+    text-align: justify;
+    color: var(--color-6);
+    line-height: 1.5em;
+} 
   
-.f-linky {}
+
   
-.opp-cf {}
+.oppava {
+    position: absolute;
+    bottom: 0;
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    margin: 10px;
+    border-radius: 10px;
+}
   
-.typ {}
-  
-.topics {}  
-.posts {} 
-.oppava {}
-.davip {}
-.ultima {}
-.culti {}  
-.ultima p {}
-.ultima a {}
-ultima strong {}  
+
 </style>
