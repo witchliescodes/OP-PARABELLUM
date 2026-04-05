@@ -317,23 +317,46 @@ background-image: var(--admi);
 /*CAT BIENVE*/
 .oppfor.bien .fori:nth-child(1) {
     grid-column: 1 / 3;
-    grid-row: 1 / 4;
+    grid-row: 1 / 3;
 }
+  
+.oppfor.bien .fori:nth-child(1) .ftile {
+    z-index: 99;
+    width: 100%;
+}  
+
+.oppfor.bien .fori:nth-child(1) .f-img {
+    width: 100%;
+    height: 264px;
+    max-width: 480px;
+}
+  
+.oppfor.bien .fori:nth-child(1) .typ{
+    z-index: 99;
+}  
+  
+.oppfor.bien .fori:nth-child(1) .ultima {
+    z-index: 99;
+    top: 102px;
+    width: 74%;
+    bottom: 0;
+    height: 50px;
+} 
+  
+.oppfor.bien .fori:nth-child(1) .d-im {
+    width: 100%;
+}  
 
 .oppfor.bien .fori:nth-child(2) {
     grid-column: 3 / 5;
-    grid-row: span 4;
+    grid-row: span 5;
 }
 .oppfor.bien .fori:nth-child(3) {
     grid-column: 1;
-    grid-row: span 4;
+    grid-row: span 3;
 }
 .oppfor.bien .fori:nth-child(4) {
     grid-column: 2;
-    grid-row: span 4;
-}
-.oppfor.bien .fori:nth-child(5) {
-    grid-column: 3 / 5;
     grid-row: span 3;
 }
   
@@ -392,7 +415,7 @@ background-image: var(--admi);
     display: flex;
     align-items: end;
     transition: transform 400ms ease;
-    justify-content: flex-end;
+    justify-content: flex-start;
     flex-flow: row;
 }
 
@@ -410,10 +433,6 @@ background-image: var(--admi);
     z-index: 99;
 } 
   
-.oppfor.admi .fori:nth-child(1) .dscont:hover .ftile a, .oppfor.admi .fori:nth-child(2) .dscont:hover .ftile a  { 
-  transform: translateY(-3px);
-}  
-  
 .oppfor.admi .fori:nth-child(1) .dscont .f-img {
     width: 100%;
     height: 170px;
@@ -424,25 +443,10 @@ background-image: var(--admi);
     box-shadow: 0 11px 10px var(--tcolor6);
 }
   
-.oppfor.admi .fori:nth-child(1) .dscont .f-img::after, .oppfor.admi .fori:nth-child(2) .dscont .f-img::after  {
-    background: var(--tcolor6);
-    content: "";
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-}
   
 .oppfor.admi .fori:nth-child(1) .dscont .d-im {
     width: 100%;
     height: 170px;
-    background-size: cover;
-    background-position: unset;
-    background-repeat: no-repeat;
-   transition: transform 400ms cubic-bezier(0.22, 1, 0.36, 1);
-}
-  
-.oppfor.admi .fori:nth-child(1) .dscont .f-img:hover .d-im {
-  transform: scale(1.05);
 }
   
   
@@ -504,71 +508,75 @@ background-image: var(--admi);
   
 .oppfor.admi .fori:nth-child(1) .dscont .ultima {
     position: absolute;
-    top: 162px;
+    top: 152px;
+    right: 0px;
+    margin: 0;
     width: 100%;
     display: flex;
     background: var(--color-3);
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
+    border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
     align-items: center;
     justify-content: space-between;
     font-size: 0.9em;
-    padding: 6px 10px 0 10px;
-    height: 34px;
+    padding: 18px 10px 0 10px;
+    height: 50px;
     z-index: 1;
 }
   
 .oppfor.admi .fori:nth-child(1) .dscont .ultima .culti a {
     color: var(--color-1);
-    font-size: 0.7em;
+    font-size: 0.8em;
+    width: stretch;
+    line-height: 1.2em;
+    max-width: 100px;
 }
   
 .oppfor.admi .fori:nth-child(1) .dscont .ultima p {
     display: flex;
-    margin: 0;
+    margin: 0 0 0 8vw;
     font-size: 1em;
-    color: var(--color-1);
-}
-  
-.oppfor.admi .fori:nth-child(1) .dscont .ultima p .last-post-icon, .oppfor.admi .fori:nth-child(1) .dscont .ultima p img  { display: none;}  
-
-.oppfor.admi .fori:nth-child(1) .dscont .ultima strong {
-    margin: 0 0 0 10px;
-    color: var(--color-6);
+    left: 0;
+    position: relative;
+    width: 100%;
 }
   
   
 .oppfor.admi .fori:nth-child(1) .dscont .descripy {
     position: absolute;
-    top: 207px;
+    top: 202px;
     left: 0;
     width: 45%;
     height: 32%;
     background: var(--color-5);
     overflow: auto;
-    margin: 0 10px 0 10px;
-    padding: 5px 5px 10px 10px;
+    margin: 10px;
+    padding: 4px 8px;
     border-radius: 10px;
 }
   
 .oppfor.admi .fori:nth-child(1) .dscont .descripy p {
     color: var(--color-6);
     font-size: 0.9em;
-    LINE-HEIGHT: 1.5em;
+    line-height: 1.5em;
     text-align: justify;
     hyphens: auto;
-}  
+    margin: 0;
+}
   
   
-.oppfor.admi .fori:nth-child(1) .dscont .oppava  {
+.oppfor.admi .fori:nth-child(1) .dscont .oppava {
     position: absolute;
-    top: 254px;
+    top: 239px;
     left: 248px;
     width: 50px;
-    height: 50px;
+    height: 65px;
     overflow: hidden;
     border-radius: 10px;
     margin: 10px;
+    z-index: 99;
 }
   
 .oppfor.admi .fori:nth-child(1) .dscont .oppava img {
@@ -579,17 +587,18 @@ background-image: var(--admi);
   
 .oppfor.admi .fori:nth-child(1) .dscont .typ {
     position: absolute;
-    top: 264px;
+    top: 239px;
     left: 308px;
     display: flex;
     background: var(--color-1);
-    height: 50px;
+    height: 65px;
     width: 38%;
-    margin: 0 10px;
+    margin: 10px;
     align-items: center;
     justify-content: space-around;
     border-radius: 0.38em;
-    color: var(--color-7);
+    flex-flow: row;
+    color: var(--color-3);
 }
   
 .oppfor.admi .fori:nth-child(1) .dscont .typ i {
@@ -598,28 +607,37 @@ background-image: var(--admi);
 
 .oppfor.admi .fori:nth-child(1) .dscont .f-linky {
     position: absolute;
-    top: 197px;
-    left: 248px;
+    top: 202px;
+    right: 0;
     margin: 10px;
-    background: var(--color-1);
-    padding: 10px;
+    background: transparent;
     width: 49%;
     border-radius: 0.28em;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: nowrap;
+    gap: 10px;
 }
   
 .oppfor.admi .fori:nth-child(1) .dscont .f-linky a {
     color: var(--color-3);
     font-weight: 800;
-    margin: 0 5px;
-    font-size: 1.2em;
+    font-size: 1em;
+    padding: 5px;
+    border-radius: 5px;
+    flex: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-5);
 }
   
-.oppfor.admi .fori:nth-child(1) .dscont .topics,  .oppfor.admi .fori:nth-child(1) .dscont .posts {
-display: flex;
+.oppfor.admi .fori:nth-child(1) .dscont .topics, .oppfor.admi .fori:nth-child(1) .dscont .posts {
+    display: flex;
     align-items: center;
+    flex-flow: row;
+    color: var(--color-3);
 }
   
 .oppfor.admi .fori:nth-child(1) .dscont .topics p, .oppfor.admi .fori:nth-child(1) .dscont .posts p {
@@ -654,15 +672,8 @@ display: flex;
 .oppfor.admi .fori:nth-child(2) .dscont .d-im {
     width: 100%;
     height: 325px;
-    background-size: cover;
-    background-position: unset;
-    background-repeat: no-repeat;
-    transition: transform 400ms cubic-bezier(0.22, 1, 0.36, 1);
 }
   
-.oppfor.admi .fori:nth-child(2) .dscont .f-img:hover .d-im {
-  transform: scale(1.05);
-}
   
 .oppfor.admi .fori:nth-child(2) .dscont .oppava {
     position: absolute;
@@ -746,22 +757,12 @@ display: flex;
     flex-wrap: wrap;
     font-size: 0.6em;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: flex-start;
 }
   
 .oppfor.admi .fori:nth-child(2) .dscont .ultima .culti a{
-    margin: 6px 10px 0 0px;
-}  
-  
-.oppfor.admi .fori:nth-child(2) .dscont .ultima .culti dfn {
-    margin: 6px 10px 0 0px;
-}  
-
-.oppfor.admi .fori:nth-child(2) .dscont .ultima .culti p {
-    display: flex;
-    flex-flow: row-reverse;
-    margin: 0 11px 7px 0px;
-}  
+margin: 0px 5px 0 0px;
+}   
    
 .oppfor.admi .fori:nth-child(2) .dscont .typ {
     position: absolute;
@@ -776,7 +777,8 @@ display: flex;
     display: flex;
     align-items: center;
     justify-content: space-around;
-}  
+    flex-flow: row;
+}
   
 .oppfor.admi .fori:nth-child(2) .dscont .typ .topics, 
 .oppfor.admi .fori:nth-child(2) .dscont .typ .posts {
@@ -786,17 +788,14 @@ display: flex;
     font-size: 0.8em;
     align-items: center;
     justify-content: center;
+    flex-flow: row;
 }  
   
 .oppfor.admi .fori:nth-child(2) .dscont .typ .topics p, 
 .oppfor.admi .fori:nth-child(2) .dscont .typ .posts p  {
-    margin: 0 10px;
+    margin: 0 5px;
 }  
-  
-.oppfor.admi .fori:nth-child(2) .dscont .typ .topics i, 
-.oppfor.admi .fori:nth-child(2) .dscont .typ .posts i {
-    color: var(--color-3);
-}  
+   
   
 .oppfor.admi .fori:nth-child(2) .dscont .opp-cf {
     position: absolute;
@@ -811,7 +810,7 @@ display: flex;
 }
   
 .oppfor.admi .fori:nth-child(2) .dscont .opp-cf dl.icon[style*="fleido"] {
-    width: auto;
+    width: stretch;
     height: -webkit-fill-available;
     margin: 0 0px 0 1px;
     display: flex;
@@ -819,7 +818,8 @@ display: flex;
 }  
   
 .oppfor.admi .fori:nth-child(3) {
-    grid-row: span 12;
+    grid-row: span 1;
+    grid-column: span 2;
 }
   
 .oppfor.admi .fori:nth-child(3) .dscont .ftile {
@@ -827,7 +827,7 @@ display: flex;
     width: 45%;
     height: 100%;
     display: flex;
-    align-items: end;
+    align-items: flex-start;
     transition: transform 400ms ease;
     z-index: 99;
 }
@@ -850,7 +850,7 @@ display: flex;
   
 .oppfor.admi .fori:nth-child(3) .dscont .f-img {
     width: 45%;
-    height: 232px;
+    height: 100px;
     position: relative;
     overflow: hidden;
     border-radius: 10px;
@@ -861,7 +861,8 @@ display: flex;
    
 .oppfor.admi .fori:nth-child(3) .dscont .d-im {
     width: 100%;
-    height: 233px;
+    height: 100px;
+    min-width: 480px;
     background-size: cover;
     background-position: unset;
     background-repeat: no-repeat;
@@ -871,19 +872,20 @@ display: flex;
 .oppfor.admi .fori:nth-child(3) .dscont .f-img:hover .d-im {
   transform: scale(1.05);
 }  
+  
 .oppfor.admi .fori:nth-child(3) .dscont .descripy {
     position: absolute;
     z-index: 99;
     background: var(--color-5);
     padding: 10px;
     top: 0;
-    width: 30%;
+    width: 25%;
     margin: 10px;
-    right: 112px;
+    right: 300px;
     overflow: auto;
-    height: 58%;
+    height: 80%;
     border-radius: 10px;
-} 
+}
   
 .oppfor.admi .fori:nth-child(3) .dscont .descripy p {
     font-size: 0.9em;
@@ -896,32 +898,90 @@ display: flex;
 .oppfor.admi .fori:nth-child(3) .dscont .f-linky {
     position: absolute;
     top: 0;
-    right: 76px;
-    height: 92%;
+    right: 45px;
+    height: 36%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 10px 0 10px 0;
-    flex-flow: column;
+    margin: 10px;
+    gap: 5px;
+    width: 23%;
+    flex-flow: row;
+}
+  
+.oppfor.admi .fori:nth-child(3) .dscont .opp-cf {
+    position: absolute;
+    top: 0px;
+    right: 587px;
+    width: 14.7%;
+    max-height: 40%;
+    margin: 10px;
+    border-radius: 0.38em;
+    overflow: hidden;
+    z-index: 99;
+    background: transparent;
+    display: flex;
+    align-items: flex-start;
+  } 
+  
+.oppfor.admi .fori:nth-child(3) .dscont .ultima {
+    position: absolute;
+    top: 45px;
+    right: 0px;
+    background: var(--color-5);
+    margin: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 35%;
+    width: 27.2%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
 }  
   
-.oppfor.admi .fori:nth-child(4) {
-    grid-row: span 12;
-}
-  
-/*CAT ROL*/  
-.oppfor .fori:nth-child(1) {
-
-}
-.oppfor .fori:nth-child(2) {
-
-}
-.oppfor .fori:nth-child(3) {
-  
-}
-.oppfor .fori:nth-child(4) {
-  
+.oppfor.admi .fori:nth-child(3) .dscont .culti {
+    width: 100%;
+    height: -webkit-fill-available;
+    color: var(--color-6);
+    font-size: 0.6em;
+    font-family: var(--cuerpo1);
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 10px 0 10px;
 }  
+  
+.oppfor.admi .fori:nth-child(3) .dscont .typ {
+    position: absolute;
+    top: 0px;
+    right: 45px;
+    background: var(--color-5);
+    margin: 10px;
+    width: 23%;
+    height: 36%;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: row;
+}
+  
+.oppfor.admi .fori:nth-child(3) .dscont .typ .topics, 
+.oppfor.admi .fori:nth-child(3) .dscont .typ .posts {
+    flex-flow: row;
+}  
+  
+.oppfor.admi .fori:nth-child(3) .dscont .typ .topics p, 
+.oppfor.admi .fori:nth-child(3) .dscont .typ .posts p {
+    margin: 0 5px;
+    font-size: 0.8em;
+    color: var(--color-3);
+}  
+  
+.oppfor.admi .fori:nth-child(3) .opp-cf dl.icon[style*="fleido"] {
+  width: stretch;
+  }
+  
   
 /*IMAGENES DE SUBFOROS*/ 
 .admi.fori .f-img:nth-child(1) {
@@ -970,36 +1030,53 @@ height: 100%;
     background: var(--color-3);
     color: var(--color-1);
     padding: 5px 10px 5px 10px;
-    font-size: 1em;
+    font-size: 0.8em;
     text-transform: uppercase;
     letter-spacing: 1px;
     font-family: var(--titulos);
     margin: 10px 10px 8px 10px;
     border-radius: 0.28em;
-    text-decoration: none;
+    text-decoration: none!important;
     z-index: 99;
 }  
-
   
-.f-img{
-    position: absolute;
+.dscont:hover .ftile a {
+    transform: translateY(-3px);
+}
+  
+.f-img {
+    position: relative;
     top: 0;
     width: 40%;
     height: 303px;
     object-fit: cover;
     overflow: hidden;
     border-radius: 10px;
-    box-shadow: 0 0 12px var(--color-3);
+     z-index: 9;
+    box-shadow: 0 11px 10px var(--tcolor6);
+
+}  
+  
+.dscont .f-img::after,
+.dscont .f-img::after  {
+    background: var(--tcolor6);
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
 }  
   
 .d-im {
-    object-fit: cover;
     width: 211px;
     height: 303px;
     background-size: cover;
     background-position: unset;
     background-repeat: no-repeat;
     transition: transform 400ms cubic-bezier(0.22, 1, 0.36, 1);
+}  
+  
+.dscont:hover .d-im {
+  transform: scale(1.05);
 }  
   
 .descripy {
@@ -1033,6 +1110,7 @@ height: 100%;
     overflow: hidden;
     margin: 10px;
     border-radius: 10px;
+  z-index: 99;
 }
   
 .f-linky {
@@ -1060,6 +1138,11 @@ height: 100%;
     align-items: center;
     justify-content: center;
 }
+  
+.f-linky a:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
+}  
   
 .opp-cf {
     position: absolute;
@@ -1209,13 +1292,13 @@ height: 100%;
   
 .topics p, .posts p{
     margin: 0;
-    font-size: 0.7em;
-    color: var(--color-6);
+    font-size: 0.8em;
+    color: var(--color-3);
 }  
   
 .topics dfn, .posts dfn {
     font-size: 0.7em;
-    color: var(--color-6);
+    color: var(--color-3);
 }  
   
 .ultima {
@@ -1231,13 +1314,15 @@ height: 100%;
 }
   
 .culti {
-    width: -webkit-fill-available;
+    width: 100%;
     height: -webkit-fill-available;
     margin: 10px;
     color: var(--color-6);
     font-size: 0.6em;
     font-family: var(--cuerpo1);
-}  
+    display: flex;
+    align-items: center;
+}
   
 .culti a:nth-child(1) {
     margin: 0 7px 0 0px;
@@ -1259,4 +1344,5 @@ height: 100%;
 }  
   
 .last-post-icon { display: none!important;}  
+.ultima p img  { display: none;}    
 </style>
