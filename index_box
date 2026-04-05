@@ -337,16 +337,24 @@ background-image: var(--admi);
   
 .oppfor.bien .fori:nth-child(1) .ultima {
     z-index: 99;
-    top: 102px;
+    top: 112px;
     width: 74%;
     bottom: 0;
-    height: 50px;
-} 
+    height: 40px;
+    display: flex;
+    align-items: center;
+}
   
 .oppfor.bien .fori:nth-child(1) .d-im {
     width: 100%;
 }  
 
+  
+.oppfor.bien .fori:nth-child(1) .oppava {
+    width: 40px;
+    height: 40px;
+}  
+  
 .oppfor.bien .fori:nth-child(2) {
     grid-column: 3 / 5;
     grid-row: span 5;
@@ -809,6 +817,8 @@ margin: 0px 5px 0 0px;
     z-index: 99;
 }
   
+  
+  
 .oppfor.admi .fori:nth-child(2) .dscont .opp-cf dl.icon[style*="fleido"] {
     width: stretch;
     height: -webkit-fill-available;
@@ -923,6 +933,18 @@ margin: 0px 5px 0 0px;
     display: flex;
     align-items: flex-start;
   } 
+  
+.oppfor.admi .fori:nth-child(3) .dscont .oppava {
+    position: absolute;
+    bottom: 0;
+    left: 420px;
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    margin: 10px;
+    border-radius: 10px;
+    z-index: 99;
+}    
   
 .oppfor.admi .fori:nth-child(3) .dscont .ultima {
     position: absolute;
