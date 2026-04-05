@@ -18,7 +18,7 @@
   --pcom: url('https://i.pinimg.com/1200x/16/bd/24/16bd24dfd18a1af3bd035a7d3d1708a7.jpg');  
   --paku: url('https://i.pinimg.com/1200x/16/bd/24/16bd24dfd18a1af3bd035a7d3d1708a7.jpg');  
 /*ZARPEMOS*/
-  --
+
 }
 
 :root .claro{
@@ -71,6 +71,7 @@
 --zarp: url('https://images2.imgbox.com/7c/ad/dMbkVEns_o.png');  
 --admi: url('https://images2.imgbox.com/97/25/43zVrQPy_o.png');  
 --mare: url('https://images2.imgbox.com/bd/ad/2JasDQGx_o.png');  
+--offf: url('https://images2.imgbox.com/2f/86/4Ty9NoOK_o.png');  
 }
 
 :root .oscuro  {
@@ -123,6 +124,7 @@
 --zarp: url('https://images2.imgbox.com/fd/d1/ZE5GrvVD_o.png'); 
 --admi: url('https://images2.imgbox.com/61/6e/k8wBlUXM_o.png');    
 --mare: url('https://images2.imgbox.com/88/e0/L0Ojnrlu_o.png');    
+--offf: url('https://images2.imgbox.com/59/52/Eo1tplOx_o.png');    
 }
 
 .modal {
