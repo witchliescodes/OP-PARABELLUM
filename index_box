@@ -32,9 +32,7 @@
           {catrow.forumrow.FORUM_NAME}
         </a>
       </div>
-
       {catrow.forumrow.FORUM_DESC}
-
       <div class="opp-cf">
         <dl class="icon" style="background:url({catrow.forumrow.FORUM_FOLDER_IMG});"></dl>
       </div>
@@ -114,7 +112,12 @@
 <!-- END switch_on_index -->
 <style>
 /*CATEGORIAS Y SUBFOROS*/
-
+.dscont {
+position: relative;
+width: 100%; 
+height: 100%;
+  }  
+  
 .cateopp {
     margin: 25px 0 0 0;
     width: -webkit-fill-available;
@@ -186,28 +189,24 @@
     border-radius: 10px;
 }
     
-  
 /*Titulos personalizados*/  
 .titlecate h2 {
 background-image: var(--mare);
-}  
-  
+}    
 .titlecate.bien h2 {
 background-image: var(--bien);
-}
-  
+} 
 .titlecate.pers h2 {
 background-image: var(--crea);
 }  
-  
 .titlecate.zarp h2 {
 background-image: var(--zarp);
 }  
-  
 .titlecate.admi h2 {
 background-image: var(--admi);
 }    
 /*FIN DE TITULOS*/
+  
 .oppfor {
     background: var(--color-5);
     padding: 10px;
@@ -329,6 +328,7 @@ background-image: var(--admi);
     width: 100%;
     height: 264px;
     max-width: 480px;
+    object-fit: cover;
 }
   
 .oppfor.bien .fori:nth-child(1) .typ{
@@ -337,26 +337,102 @@ background-image: var(--admi);
   
 .oppfor.bien .fori:nth-child(1) .ultima {
     z-index: 99;
-    top: 112px;
-    width: 74%;
+    top: 183px;
+    left: 60px;
+    width: 65%;
     bottom: 0;
-    height: 40px;
+    height: 61px;
     display: flex;
     align-items: center;
 }
   
+.oppfor.bien .fori:nth-child(1) .culti {
+    width: 100%;
+    height: -webkit-fill-available;
+    margin: 10px;
+    color: var(--color-6);
+    font-size: 0.6em;
+    font-family: var(--cuerpo1);
+    display: flex;
+    align-items: flex-start;
+    flex-flow: column;
+}  
+  
 .oppfor.bien .fori:nth-child(1) .d-im {
     width: 100%;
 }  
-
   
 .oppfor.bien .fori:nth-child(1) .oppava {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 60px;
+}
+  
+.oppfor.bien .fori:nth-child(1) .dscont .descripy {
+    position: absolute;
+    top: 0px;
+    left: 161px;
+    width: 44%;
+    height: 48%;
+    opacity: 0;
+    transition: 0.3s ease;
+    z-index: 99;
+}
+  
+.oppfor.bien .fori:nth-child(1) .dscont .f-linky {
+    position: absolute;
+    opacity: 0;
+    transition: 0.3s;
+    z-index: 999;
+    width: 7%;
+    top: 0;
+}
+  
+.oppfor.bien .fori:nth-child(1) .dscont .f-linky a  {
+    font-size: 1em;
+    font-weight: 800;
+    color: var(--color-3);
+    background: var(--color-5);
+    padding: 7px;
+    border-radius: 5px;
+    flex: 1 1 calc(0% - 0px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  
+.oppfor.bien .fori:nth-child(1):hover .descripy {
+  opacity: 1;
+}
+ 
+.oppfor.bien .fori:nth-child(1):hover .f-linky {
+  opacity: 1;
+}  
+   
+.oppfor.bien .fori:nth-child(1) .opp-cf {
+    top: 42px;
+    left: 0;
+    width: stretch;
+    max-height: 100%;
+}
+  
+.oppfor.bien .fori:nth-child(1) .typ {
+    position: absolute;
+    top: 45px;
+    right: 0;
+    background: var(--color-5);
+    margin: 10px;
+    width: 7%;
+    height: 75%;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
 }  
   
+  
 .oppfor.bien .fori:nth-child(2) {
-    grid-column: 0 / 5;
+    grid-column: 3 / 5;
     grid-row: 1 / 4;
 }
   
@@ -643,14 +719,16 @@ background-image: var(--admi);
     background: var(--color-5);
 }
   
-.oppfor.admi .fori:nth-child(1) .dscont .topics, .oppfor.admi .fori:nth-child(1) .dscont .posts {
+.oppfor.admi .fori:nth-child(1) .dscont .topics,
+.oppfor.admi .fori:nth-child(1) .dscont .posts {
     display: flex;
     align-items: center;
     flex-flow: row;
     color: var(--color-3);
 }
   
-.oppfor.admi .fori:nth-child(1) .dscont .topics p, .oppfor.admi .fori:nth-child(1) .dscont .posts p {
+.oppfor.admi .fori:nth-child(1) .dscont .topics p,
+.oppfor.admi .fori:nth-child(1) .dscont .posts p {
     margin: 0 5px;
 }  
   
@@ -818,7 +896,6 @@ margin: 0px 5px 0 0px;
     overflow: hidden;
     z-index: 99;
 }
-  
   
   
 .oppfor.admi .fori:nth-child(2) .dscont .opp-cf dl.icon[style*="fleido"] {
@@ -1030,12 +1107,6 @@ margin: 0px 5px 0 0px;
     font-family: var(--titulos);
     font-size: 0.7em;
 }
-  
-.dscont {
-position: absolute;
-width: 100%; 
-height: 100%;
-  }  
  
   
 .ftile {
