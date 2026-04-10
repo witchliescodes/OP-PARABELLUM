@@ -331,15 +331,13 @@ background-image: var(--admi);
     object-fit: cover;
 }
   
-.oppfor.bien .fori:nth-child(1) .typ{
-    z-index: 99;
-}  
-  
+
 .oppfor.bien .fori:nth-child(1) .ultima {
     z-index: 99;
     top: 183px;
     left: 60px;
-    width: 65%;
+    right: 0;
+    width: stretch;
     bottom: 0;
     height: 61px;
     display: flex;
@@ -369,23 +367,32 @@ background-image: var(--admi);
   
 .oppfor.bien .fori:nth-child(1) .dscont .descripy {
     position: absolute;
-    top: 0px;
-    left: 161px;
-    width: 44%;
-    height: 48%;
-    opacity: 0;
-    transition: 0.3s ease;
+    top: 9vh;
+    left: 0px;
+    width: 34.9vw;
+    height: 9.3vh;
     z-index: 99;
 }
   
 .oppfor.bien .fori:nth-child(1) .dscont .f-linky {
     position: absolute;
-    opacity: 0;
-    transition: 0.3s;
-    z-index: 999;
-    width: 7%;
-    top: 0;
+    z-index: 99;
+    width: -webkit-fill-available;
+    top: 45px;
 }
+  
+.oppfor.bien .fori:nth-child(1) .descripy,
+.oppfor.bien .fori:nth-child(1) .f-linky {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+}
+
+.oppfor.bien .fori:nth-child(1) .dscont:hover .descripy,
+.oppfor.bien .fori:nth-child(1) .dscont:hover .f-linky {
+  opacity: 1;
+  transform: translateY(0);
+}  
   
 .oppfor.bien .fori:nth-child(1) .dscont .f-linky a  {
     font-size: 1em;
@@ -409,9 +416,9 @@ background-image: var(--admi);
 }  
    
 .oppfor.bien .fori:nth-child(1) .opp-cf {
-    top: 42px;
-    left: 0;
-    width: stretch;
+    top: 0px;
+    right: 4vw;
+    width: auto;
     max-height: 100%;
 }
   
@@ -421,14 +428,15 @@ background-image: var(--admi);
     right: 0;
     background: var(--color-5);
     margin: 10px;
-    width: 7%;
-    height: 75%;
+    width: 3vw;
+    height: 13.7vh;
     border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-flow: column;
-}  
+    z-index: 99;
+} 
   
   
 .oppfor.bien .fori:nth-child(2) {
@@ -437,12 +445,12 @@ background-image: var(--admi);
 }
   
 .oppfor.bien .fori:nth-child(3) {
-    grid-column: 1 / 1;
+    grid-column: 1 / 4;
     grid-row: 4 / 7;
 }
   
 .oppfor.bien .fori:nth-child(4) {
-    grid-column: 2 / 5;
+    grid-column: 4 / 4;
     grid-row: 4 / 7;
 }
   
@@ -504,8 +512,10 @@ background-image: var(--admi);
     justify-content: flex-start;
     flex-flow: row;
 }
-
-.oppfor.admi .fori:nth-child(1) .dscont .ftile a, .oppfor.admi .fori:nth-child(2) .dscont .ftile a {
+  /*
+.oppfor.admi .fori:nth-child(1) .dscont .ftile a,
+.oppfor.admi .fori:nth-child(2) .dscont .ftile a,
+.oppfor.admi .fori:nth-child(3) .dscont .ftile a {
     background: var(--color-3);
     color: var(--color-1);
     padding: 5px 10px 5px 10px;
@@ -517,7 +527,8 @@ background-image: var(--admi);
     border-radius: 0.28em;
     text-decoration: none;
     z-index: 99;
-} 
+    max-height: 35px;
+  } */
   
 .oppfor.admi .fori:nth-child(1) .dscont .f-img {
     width: 100%;
@@ -921,20 +932,6 @@ margin: 0px 5px 0 0px;
     z-index: 99;
 }
   
-.oppfor.admi .fori:nth-child(3) .dscont .ftile a {
-    transition: transform 0.4s ease;
-    background: var(--color-3);
-    color: var(--color-1);
-    padding: 5px 10px 5px 10px;
-    font-size: 1em;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-family: var(--titulos);
-    margin: 10px 10px 8px 10px;
-    border-radius: 0.28em;
-    text-decoration: none;
-    z-index: 99;
-}  
 
   
 .oppfor.admi .fori:nth-child(3) .dscont .f-img {
@@ -1133,6 +1130,7 @@ margin: 0px 5px 0 0px;
     border-radius: 0.28em;
     text-decoration: none!important;
     z-index: 99;
+    max-height: 35px;
 }  
   
 .dscont:hover .ftile a {
@@ -1317,23 +1315,23 @@ margin: 0px 5px 0 0px;
 }
   
 .opp-cf dl.icon[style*="fleido"] {
-    width: fit-content;
-    height: -webkit-fill-available;
+    width: -webkit-fill-available;
+    height: 100%;
     margin: 0;
     display: flex;
     align-items: center;
 }
   
 .opp-cf dl.icon[style*="fleido"]::before,
-.opp-cf dl.icon[style*="fleido"]::before  {
+.opp-cf dl.icon[style*="fleido"]::before {
     content: '\f00c';
     font-family: 'Font Awesome 7 Free';
     font-weight: 900;
     font-size: 0.7em;
     color: var(--color-3);
     background: var(--color-1);
-    height: 25px;
-    padding: 7px;
+    height: 35px;
+    padding: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1341,8 +1339,8 @@ margin: 0px 5px 0 0px;
     outline: 1px solid var(--color-3);
 }
   
-.opp-cf dl.icon[style*="fleido"]::after, 
-.opp-cf dl.icon[style*="fleido"]::after  {
+.opp-cf dl.icon[style*="fleido"]::after,
+.opp-cf dl.icon[style*="fleido"]::after {
     content: 'Foro Leido';
     font-family: var(--cuerpo1);
     font-weight: 800;
@@ -1350,16 +1348,16 @@ margin: 0px 5px 0 0px;
     color: var(--color-3);
     background: var(--color-1);
     width: 100%;
-    height: 25px;
+    height: 35px;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 5px;
     outline: 1px solid var(--color-3);
     margin: 0px 1px 0 10px;
-    padding: 1px 7px 0px 7px;
+    padding: 1px 10px 0px 10px;
     line-height: 1em;
-}    
+} 
   
 .typ {
     position: absolute;
