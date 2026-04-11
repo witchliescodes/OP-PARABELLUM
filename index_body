@@ -1,0 +1,561 @@
+{JAVASCRIPT}
+<!-- BEGIN switch_user_logged_in --><p class="right rightside">{LAST_VISIT_DATE}</p><!-- END switch_user_logged_in -->
+<p>{CURRENT_TIME}</p>
+{CAT_NAME}
+<br class="clear" />
+
+<!-- BEGIN switch_user_login_form_header -->
+<div class="panel">
+	<div class="inner"><span class="corners-top"><span></span></span>
+		<form action="{S_LOGIN_ACTION}" method="post" name="form_login">
+			<div class="user_login_form center">
+				<label>{L_USERNAME} : <input class="post" type="text" size="10" name="username" /></label>&nbsp;
+				<label>{L_PASSWORD} : <input class="post" type="password" size="10" name="password" /></label>&nbsp;
+				<label>{L_AUTO_LOGIN} : <input class="radio" type="checkbox" name="autologin" {AUTOLOGIN_CHECKED} /></label>&nbsp;
+				{S_HIDDEN_FIELDS}<input class="mainoption button1" type="submit" name="login" value="{L_LOGIN}" />
+
+                <!-- BEGIN switch_social_login -->
+                <div class="social_btn">
+                    <!-- BEGIN fb_connect -->
+                    <div class="fb-login-button"></div>
+                    <!-- END fb_connect -->
+                    <!-- BEGIN topicit_connect -->
+                    <div class="ti-connect"></div>
+                    <!-- END topicit_connect -->
+                </div>
+                <!-- END switch_social_login -->
+			</div>
+		</form>
+	<span class="corners-bottom"><span></span></span></div>
+</div>
+<!-- END switch_user_login_form_header -->
+
+<!-- BEGIN message_admin_index -->
+	<div class="panel introduction">
+		<div class="inner"><span class="corners-top"><span></span></span>
+	<!-- BEGIN message_admin_titre -->
+		<div class="h3">{message_admin_index.message_admin_titre.MES_TITRE}</div>
+	<!-- END message_admin_titre -->
+
+	<!-- BEGIN message_admin_txt -->
+		<div class="mes-txt">{message_admin_index.message_admin_txt.MES_TXT}</div>
+	<!-- END message_admin_txt -->
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+<!-- END message_admin_index -->
+
+{CHATBOX_TOP}
+{BOARD_INDEX}
+
+<!-- BEGIN disable_viewonline -->
+
+
+<div class="op-est">
+  <div class="fopb-est">
+    <h1>Estadisticas</h1>
+    <div class="opbsta">
+      <p>En linea</p>
+      <p>Ocultos</p>
+      <p>Invitados</p>
+    </div>
+  </div>
+  <div class="sopb-est">
+    <div class="op-aest">
+      <div class="contec">
+          <i class="fi fi-rr-eye"></i>
+          <p>Ahora</p>
+      </div>
+      conectados ahora
+    </div>
+    <div class="op-nest">
+      <div class="concuaoch">
+      <i class="fi fi-rr-eye"></i>
+          <p>Hace 48 horas</p>
+      </div>
+      Estuvieron hace 48 horas
+    </div>
+    <div class="op-grups">
+    <div class="congroup">
+       <i class="fi fi-rr-eye"></i>
+       <p>Grupos</p>
+    </div>  
+      grupos aquí
+    </div>
+  </div>
+  <div class="op-barsta">
+    <div class="op-bariner">
+      <div class="tiest">
+        <h1>Estados <i class="fi fi-rr-badge-check"></i></h1>
+      <div class="stop">
+        <p>Mensajes</p>
+        <p>Usuarios</p>
+      </div>
+      </div>
+      <div class="backstas">
+        <div class="stalinky">
+          links
+        </div>
+        <div class="opbinsa">
+        <div class="instas">
+            <h1>WELCOME</h1>
+            <span>Nombre Mc nombre</span>
+        </div>
+        <div class="avaulti">
+          avatar del ultimo 
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>             
+
+	<!-- BEGIN switch_viewonline_link -->
+	<div class="h3"><a href="{U_VIEWONLINE}" rel="nofollow">{L_WHO_IS_ONLINE}</a></div>
+	<!-- END switch_viewonline_link -->
+
+	<!-- BEGIN switch_viewonline_nolink -->
+	<div class="h3">{L_WHO_IS_ONLINE}</div>
+	<!-- END switch_viewonline_nolink -->
+
+<img src="{L_ONLINE_IMG}" id="i_whosonline" alt="{L_WHO_IS_ONLINE}" class="img-whois" loading="lazy" />
+<p>{TOTAL_USERS_ONLINE}<br />
+{RECORD_USERS}
+
+<br />
+{LOGGED_IN_USER_LIST}
+
+{L_ONLINE_USERS}
+{L_CONNECTED_MEMBERS}<br />
+{L_WHOSBIRTHDAY_TODAY}{L_WHOSBIRTHDAY_WEEK}
+
+<br />
+<!-- BEGIN switch_group_legend -->
+<em>{LEGEND}&nbsp;:&nbsp;{GROUP_LEGEND}</em>
+<!-- END switch_group_legend -->
+
+</p>
+<div class="clear"></div>
+
+	<!-- BEGIN switch_statistics_link -->
+	<div class="h3"><a href="{U_STATISTICS}" rel="nofollow">{L_STATISTICS}</a></div>
+	<!-- END switch_statistics_link -->
+
+	<!-- BEGIN switch_statistics_nolink -->
+	<div class="h3">{L_STATISTICS}</div>
+	<!-- END switch_statistics_nolink -->
+
+<p class="page-bottom">
+{TOTAL_POSTS}
+</p>
+<p class="page-bottom">
+{TOTAL_USERS}
+</p>
+<p class="page-bottom">
+{NEWEST_USER}
+</p>
+	<!-- BEGIN switch_chatbox_activate -->
+	<div class="h3"><a href="{S_JOIN_CHAT}" target="ChatBox">{CHATBOX_NAME}</a></div>
+	<div class="page-bottom">
+	{TOTAL_CHATTERS_ONLINE}&nbsp;:&nbsp;
+	{CHATTERS_LIST}<br />
+	</div>
+		<!-- BEGIN switch_chatbox_popup -->
+		<div id="chatbox_popup"></div>
+		<script type="text/javascript">
+		insertChatBoxPopup('{disable_viewonline.switch_chatbox_activate.switch_chatbox_popup.U_FRAME_CHATBOX}', '{L_CLICK_TO_JOIN_CHAT}');
+		</script>
+		<!-- END switch_chatbox_popup -->
+	<!-- END switch_chatbox_activate -->
+<!-- END disable_viewonline -->
+
+{CHATBOX_BOTTOM}
+
+<!-- BEGIN switch_user_login_form_footer -->
+<div class="panel">
+	<div class="inner"><span class="corners-top"><span></span></span>
+		<form action="{S_LOGIN_ACTION}" method="post" name="form_login">
+			<div class="user_login_form center">
+				<label>{L_USERNAME} : <input class="post" type="text" size="10" name="username" /></label>&nbsp;
+				<label>{L_PASSWORD} : <input class="post" type="password" size="10" name="password" /></label>&nbsp;
+				<label>{L_AUTO_LOGIN} : <input class="radio" type="checkbox" name="autologin" {AUTOLOGIN_CHECKED} /></label>&nbsp;
+				{S_HIDDEN_FIELDS}<input class="mainoption button1" type="submit" name="login" value="{L_LOGIN}" />
+
+                <!-- BEGIN switch_social_login -->
+                <div class="social_btn">
+                    <!-- BEGIN fb_connect -->
+                    <div class="fb-login-button"></div>
+                    <!-- END fb_connect -->
+                    <!-- BEGIN topicit_connect -->
+                    <div class="ti-connect"></div>
+                    <!-- END topicit_connect -->
+                </div>
+                <!-- END switch_social_login -->
+			</div>
+		</form>
+	<span class="corners-bottom"><span></span></span></div>
+</div>
+<!-- END switch_user_login_form_footer -->
+
+<br style="clear:both" />
+
+<!-- BEGIN switch_legend -->
+<ul id="picture_legend">
+	<li><img src="{FORUM_NEW_IMG}" alt="{L_NEW_POSTS}" loading="lazy"/>{L_NEW_POSTS}</li>
+	<li><img src="{FORUM_IMG}" alt="{L_NO_NEW_POSTS}" loading="lazy"/>{L_NO_NEW_POSTS}</li>
+	<li><img src="{FORUM_LOCKED_IMG}" alt="{L_FORUM_LOCKED}" loading="lazy"/>{L_FORUM_LOCKED}</li>
+</ul>
+<!-- END switch_legend -->
+
+{AUTO_DST}
+<style>
+.op-est {
+    margin: 20px 0 0 0;
+    background: var(--color-1);
+    color: var(--color-6);
+    border-radius: 0.38em;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(4, 100px);
+    gap: 0.75rem;
+    width: -webkit-fill-available;
+    height: -webkit-fill-available;
+    overflow: hidden; 
+    
+}
+
+.fopb-est {
+    background: var(--color-3);
+    border-radius: 0.19em;
+    display: flex;
+    grid-column: 1 / 4;
+    grid-row: 1 / 3;
+    margin: 10px 10px 0 10px;
+    position: relative;
+    overflow: visible;
+    background-image: var(--stas);
+    max-width: 1070px;
+    max-height: 202px;
+    flex-flow: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.fopb-est::before {
+    content: "";
+    position: absolute;
+    top: 5.1rem;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    border-bottom-right-radius: 10px;
+    box-shadow: 5px 4px 0px var(--color-1);
+}
+
+.fopb-est::after {
+    content: "";
+    position: absolute;
+    top: 19.3vh;
+    right: calc(100% - 66.5%);
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    border-bottom-right-radius: 10px;
+    box-shadow: 5px 4px 0px var(--color-1);
+    z-index: 99;
+}
+
+.fopb-est h1 {
+    font-family: var(--titulos);
+    margin: 0 2vw 11vh 0vw;
+    font-size: 2.5em;
+    text-transform: uppercase;
+    color: var(--color-3);
+}
+
+.opbsta {
+    width: -webkit-fill-available;
+    display: flex;
+    margin: 10px;
+    align-items: end;
+    justify-content: flex-start;
+    height: -webkit-fill-available;
+}
+
+.opbsta p {
+    margin: 0;
+    padding: 1px 10px;
+    background: var(--color-2);
+    border-radius: 10px;
+    min-width: 121px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 1vw;
+    color: var(--color-7);
+    font-size: 0.9em;
+    line-height: 1.5em;
+    font-weight: 500;
+    font-family: var(--cuerpo1);
+}
+
+.sopb-est {
+    grid-column: 1 / 3;
+    grid-row: 3 / 13;
+    background: var(--color-5);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(2, 100px);
+    gap: 0.75rem;
+    margin: 0 0px 10px 10px;
+    width: -webkit-fill-available;
+    height: auto;
+    border-radius: 0.38rem;
+}
+
+.op-aest {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+    background: var(--color-5);
+}
+
+.op-aest::before {
+    content: "";
+    background: transparent;
+    position: absolute;
+    padding: 10px;
+    left: calc(38% - 23.9%);
+    height: 10px;
+    border-top-left-radius: 0.7rem;
+    display: block;
+    width: 10px;
+    box-shadow: 0px -10px 0 var(--color-1);
+}
+
+.contec {
+    width: 30%;
+    height: 40%;
+    background: var(--color-1);
+    border-bottom-right-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    float: left;
+    color: var(--color-3);
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    font-family: var(--cuerpo1);
+    margin: 0 10px 0 0px;
+}
+
+.contec i {
+    font-size: 1.5em;
+    line-height: 1em;
+    margin: 10px 0 0 0;
+}
+
+.op-nest {
+    grid-column: 1 / 3;
+    grid-row: 3 / 13;
+    background: var(--color-5);
+}
+
+.concuaoch {
+    background: var(--color-1);
+    float: left;
+    display: flex;
+    padding: 5px 10px 5px 10px;
+    align-items: center;
+    justify-content: space-between;
+    width: calc(100% - 75%);
+    margin: 0 10px 0 0;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    color: var(--color-3);
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 0.9em;
+}
+
+.concuaoch i {
+    margin: 0;
+}
+
+.op-grups {
+    grid-column: 2 / 3;
+    grid-row: 1 / 3;
+    background: transparent;
+    overflow: hidden;
+}
+
+.congroup {
+    width: calc(100% - 88%);
+    height: 75%;
+    background: var(--color-1);
+    border-bottom-right-radius: 0.38em;
+    border-bottom-left-radius: 0.38em;
+    float: left;
+    margin: 0 10px 0 0px;
+    color: var(--color-3);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.congroup p {
+    transform: rotate(-90deg);
+    margin: 27px 0 32px 0;
+    font-size: 1em;
+    font-weight: 800;
+    font-family: var(--cuerpo1);
+    text-transform: uppercase;
+}
+
+.congroup i {
+    margin: 21px 0 0 0;
+}
+
+.op-barsta {
+    grid-column: 3 / 4;
+    grid-row: 2 / 13;
+    width: -webkit-fill-available;
+    height: -webkit-fill-available;
+    margin: 0;
+    background: var(--color-1);
+    padding-top: 0.75rem;
+    padding-right: 0.75rem;
+    padding-bottom: 0.75rem;
+    padding-left: 0;
+    position: relative;
+}
+
+.op-bariner {
+    box-sizing: border-box;
+    border-radius: 0.3em;
+    background-color: var(--color-5);
+    height: 100%;
+    padding: 10px;
+    display: flex;
+    align-items: flex-start;
+    flex-flow: column;
+    justify-content: space-between;
+}
+
+.op-bariner::before {
+    content: "";
+    position: absolute;
+    left: -12px;
+    width: 0.75rem;
+    top: 0rem;
+    bottom: -0.75rem;
+    background: var(--color-1);
+    border-top-left-radius: 0.58rem;
+}
+
+.tiest {
+    width: -webkit-fill-available;
+    height: -webkit-fill-available;
+}
+
+.tiest h1 {
+    width: -webkit-fill-available;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    font-family: var(--titulos);
+    color: var(--color-3);
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+
+.stop {
+    width: -webkit-fill-available;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0 0 0;
+}
+
+.stop p {
+    background: var(--color-3);
+    border-radius: 10px;
+    padding: 5px 10px;
+    color: var(--color-5);
+    min-width: 155px;
+}
+
+.backstas {
+    width: -webkit-fill-available;
+    height: -webkit-fill-available;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-flow: column;
+}
+
+.stalinky {
+    width: -webkit-fill-available;
+    display: flex;
+    align-items: center;
+    justidfy-content: space-between;
+    background: var(--color-1);
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 1.2em;
+}
+
+.opbinsa {
+    width: -webkit-fill-available;
+    height: -webkit-fill-available;
+    display: flex;
+    align-items: center;
+}
+
+.instas {
+    width: auto;
+    height: -webkit-fill-available;
+    background: var(--color-1);
+    margin: 10px 10px 0 0;
+    border-radius: 5px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.instas span {
+    background: var(--color-3);
+    color: var(--color-5);
+    padding: 5px 10px;
+    width: max-content;
+    border-radius: 0.38em;
+    font-size: 0.9em;
+    margin: 10px;
+}
+
+.instas h1 {
+    font-size: 1.5em;
+    margin: 0;
+    line-height: 1.5em;
+    font-weight: 800;
+    font-family: var(--titulos);
+    color: var(--color-3);
+}
+
+.avaulti {
+    max-width: 300px;
+    width: 150px;
+    height: -webkit-fill-available;
+    background: var(--color-2);
+    margin: 10px 0 0 0;
+    border-radius: 0.38rem;
+}
+</style>
