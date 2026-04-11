@@ -52,7 +52,9 @@
 
 <div class="op-est">
   <div class="fopb-est">
-    <h1>Estadisticas</h1>
+    <!-- BEGIN switch_viewonline_link -->
+    <a href="{U_VIEWONLINE}"><h1>Estadisticas</h1></a>
+    <!-- END switch_viewonline_link -->
     <div class="opbsta">
       <p>En linea</p>
       <p>Ocultos</p>
@@ -109,9 +111,6 @@
   </div>
 </div>             
 
-	<!-- BEGIN switch_viewonline_link -->
-	<div class="h3"><a href="{U_VIEWONLINE}" rel="nofollow">{L_WHO_IS_ONLINE}</a></div>
-	<!-- END switch_viewonline_link -->
 
 	<!-- BEGIN switch_viewonline_nolink -->
 	<div class="h3">{L_WHO_IS_ONLINE}</div>
@@ -243,7 +242,7 @@
 .fopb-est::before {
     content: "";
     position: absolute;
-    top: 5.1rem;
+    top: calc(100% - 59%);
     right: 0;
     width: 20px;
     height: 20px;
