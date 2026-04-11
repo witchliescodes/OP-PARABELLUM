@@ -254,8 +254,8 @@
 .fopb-est::after {
     content: "";
     position: absolute;
-    top: 19.3vh;
-    right: calc(100% - 66.5%);
+    top: calc(100% - 9%);
+    right: calc(100% - 64.5%);
     width: 20px;
     height: 20px;
     background: transparent;
