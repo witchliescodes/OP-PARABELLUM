@@ -7,22 +7,20 @@
       </div>
     </div>
     <div class="tripart">
-<div class="tripm mensajes">
-  Mensajes: <span class="valor"></span>
-</div>
-
-<div class="tripm registro">
-  Registro: <span class="valor"></span>
-</div>
-
-<div class="tripm ultima">
-  {LAST_VISIT_DATE}
-</div>
-      <div class="tripm estado">
+	<div class="tripm mensajes">
+ 	 Mensajes <span class="valor"></span>
+	</div>
+	<div class="tripm registro">
+  	Registro <span class="valor"></span>
+	</div>
+	<div class="tripm ultima">
+  	{LAST_VISIT_DATE}
+	</div>
+        <div class="tripm estado">
       	<!-- BEGIN switch_show_status -->
 	{USER_ONLINE}
 	<!-- END switch_show_status -->
-      </div>
+        </div>
     </div>
 
 </div>
