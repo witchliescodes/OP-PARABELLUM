@@ -26,10 +26,9 @@
 </div>
 <div class="secd">
   <div class="secava">
-    avatar 
-    <div class="avpb">
-    <div class="perfilavatar">{AVATAR_IMG}</div>  
-    </div>
+    <div class="perfilavatar">{AVATAR_IMG}
+      <div class="pb">aqui el pb que usa el ava</div>  
+      </div>  
   </div>
   <div class="secdos">
     <div class="facgrup">
@@ -229,6 +228,11 @@
     padding: 10px;
     margin: 10px;
     border-radius: 0.18em;
+    width: max-content;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
   
 .frname i {
@@ -252,6 +256,9 @@
     font-size: 1em;
     line-height: 1.5em;
     font-family: var(--cuerpo1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
   
 .tripm.on {
@@ -266,8 +273,11 @@
 
 .secd {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    align-items: flex-start;
+    justify-content: flex-start;
     width: -webkit-fill-available;
+    margin: 0 10px 0 10px;
+    background: var(--color-5);
+    border-radius: 0.18em;
 }
 </style>
