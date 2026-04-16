@@ -18,7 +18,7 @@
 <div class="tripm ultima">
   {LAST_VISIT_DATE}
 </div>
-      <div class="tripm on">
+      <div class="tripm estado">
       	<!-- BEGIN switch_show_status -->
 	{USER_ONLINE}
 	<!-- END switch_show_status -->
@@ -259,6 +259,11 @@
 .tripm.on {
     background: var(--bs-success-border-subtle);
     border: 1px solid var(--bs-form-valid-color);
+}
+  
+.tripm.off  {
+    background: var(--bs-danger-border-subtle);
+    border: 1px solid var(--bs-danger-text-emphasis);
 }
 
 .secd {
