@@ -1,0 +1,1 @@
+Esta es la skin del foro OP Parabellum, el cual cuenta con sistema de subida de nivel semi automatico, tienda semi automatica, rangos semi automaticos, barras de stats, cronología en perfil, tablón con pestañas, afiliados, estadisticas, subforos diferentes por categoría cambio de tema diurno y nocturno, switcheroo, notificaciones y mensajería editadas
