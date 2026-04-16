@@ -1,0 +1,86 @@
+document.addEventListener("DOMContentLoaded", function() {
+
+  function obtenerCampo(nombre) {
+    const labels = document.querySelectorAll("dt");
+
+    for (let label of labels) {
+      if (label.textContent.includes(nombre)) {
+        const valor = label.nextElementSibling
+          ?.querySelector(".field_uneditable")?.textContent;
+
+        return valor?.trim() || "0";
+      }
+    }
+
+    return "0";
+  }
+
+  function calcularNivel(pa) {
+    return Math.min(12, Math.floor((pa - 1) / 5) + 1);
+  }
+
+  // Toma de datos
+  const pa = parseInt(obtenerCampo("PA"));
+  const pp = obtenerCampo("PP");
+  const pr = obtenerCampo("PR");
+  const mensajes = obtenerCampo("Mensajes");
+  const registro = obtenerCampo("Fecha de inscripción");
+
+  const nivel = calcularNivel(pa);
+
+  // Inyección de stats
+  document.querySelector(".PAcampo").textContent = pa;
+  document.querySelector(".PPcampo").textContent = pp;
+  document.querySelector(".PRcampo").textContent = pr;
+  document.querySelector(".bellvl").textContent = nivel;
+
+  // Inyección de datos
+  document.querySelector(".mensajes .valor").textContent = mensajes;
+  document.querySelector(".registro .valor").textContent = registro;
+
+  // Estado On OFF
+setTimeout(() => {
+  const el = document.querySelector(".estado");
+
+  if (el) {
+    const texto = el.textContent.toLowerCase();
+
+    if (texto.includes("en línea") || texto.includes("en linea")) {
+      el.classList.add("on");
+      el.classList.remove("off");
+    } else if (texto.includes("fuera de línea") || texto.includes("fuera de linea")) {
+      el.classList.add("off");
+      el.classList.remove("on");
+    }
+  }
+}, 500);
+	
+//Formato de fecha
+const ultimaEl = document.querySelector(".ultima");
+
+if (ultimaEl) {
+  let texto = ultimaEl.textContent;
+
+  texto = texto.split(":").slice(1).join(":").trim();
+
+  const [fechaParte, hora] = texto.split(" - ");
+
+  const partes = fechaParte.split(" ");
+  const dia = partes[1];
+  const mesTexto = partes[2];
+  const año = partes[3];
+
+  const meses = {
+    Ene: "01", Feb: "02", Mar: "03", Abr: "04",
+    May: "05", Jun: "06", Jul: "07", Ago: "08",
+    Sep: "09", Oct: "10", Nov: "11", Dic: "12"
+  };
+
+  const mes = meses[mesTexto] || "01";
+
+  const nuevaFecha = `${dia}/${mes}/${año} | ${hora}`;
+
+  ultimaEl.innerHTML = `Última visita: ${dia}/${mes}/${año} <span class="hora">${hora}</span>`;
+}
+	
+});
