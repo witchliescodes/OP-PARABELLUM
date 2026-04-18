@@ -8,79 +8,214 @@ document.addEventListener("DOMContentLoaded", function() {
         const valor = label.nextElementSibling
           ?.querySelector(".field_uneditable")?.textContent;
 
-        return valor?.trim() || "0";
+        return valor?.trim() || "-";
       }
     }
 
-    return "0";
+    return "-";
+  }
+
+  // =========================
+  // CONSERVAR TEXTO + AGREGAR VALOR
+  // =========================
+  function ponerTexto(selector, valor) {
+    const el = document.querySelector(selector);
+
+    if (el) {
+      const titulo = el.textContent.trim();
+      el.innerHTML = `${titulo} <span>${valor}</span>`;
+    }
   }
 
   function calcularNivel(pa) {
     return Math.min(12, Math.floor((pa - 1) / 5) + 1);
   }
 
-  // Toma de datos
-  const pa = parseInt(obtenerCampo("PA"));
-  const pp = obtenerCampo("PP");
-  const pr = obtenerCampo("PR");
+  function rangoMarina(rep, pp) {
+    if (rep >= 1000 && pp >= 120) return "Almirante de Flota";
+    if (rep >= 700 && pp >= 100) return "Almirante";
+    if (rep >= 450 && pp >= 80) return "Vice-Almirante";
+    if (rep >= 300 && pp >= 60) return "Contra-Almirante";
+    if (rep >= 200 && pp >= 50) return "Comodoro";
+    if (rep >= 120 && pp >= 40) return "Capitán";
+    if (rep >= 80) return "Teniente";
+    if (rep >= 40) return "Cabo";
+    return "Recluta";
+  }
+
+  // =========================
+  // TOMA DE DATOS
+  // =========================
+  const pa  = parseInt(obtenerCampo("PA")) || 0;
+  const pp  = parseInt(obtenerCampo("PP")) || 0;
+  const pr  = parseInt(obtenerCampo("PR")) || 0;
+  const rep = parseInt(obtenerCampo("REP")) || 0;
+
   const mensajes = obtenerCampo("Mensajes");
   const registro = obtenerCampo("Fecha de inscripción");
 
+  // CAMPOS GENERALES
+  const edad     = obtenerCampo("Edad");
+  const altura   = obtenerCampo("Altura");
+  const raza     = obtenerCampo("Raza");
+  const isla     = obtenerCampo("Isla");
+  const berries  = obtenerCampo("Berries");
+  const akuma    = obtenerCampo("Akuma");
+  const pb    = obtenerCampo("PB");	
+
   const nivel = calcularNivel(pa);
 
-  // Inyección de stats
-  document.querySelector(".PAcampo").textContent = pa;
-  document.querySelector(".PPcampo").textContent = pp;
-  document.querySelector(".PRcampo").textContent = pr;
-  document.querySelector(".bellvl").textContent = nivel;
+  // =========================
+  // INYECCIÓN STATS
+  // =========================
+  ponerTexto(".PAcampo", pa);
+  ponerTexto(".PPcampo", pp);
+  ponerTexto(".PRcampo", pr);
+  ponerTexto(".REPcampo", rep);
+  ponerTexto(".bellvl", nivel);
 
-  // Inyección de datos
-  document.querySelector(".mensajes .valor").textContent = mensajes;
-  document.querySelector(".registro .valor").textContent = registro;
+  // =========================
+  // DATOS SUPERIORES
+  // =========================
+  ponerTexto(".mensajes .valor", mensajes);
+  ponerTexto(".registro .valor", registro);
 
-  // Estado On OFF
-setTimeout(() => {
-  const el = document.querySelector(".estado");
+  // =========================
+  // DATOS GENERALES
+  // =========================
+  ponerTexto(".pedad", edad);
+  ponerTexto(".palt", altura);
+  ponerTexto(".praza", raza);
+  ponerTexto(".pisl", isla);
+  ponerTexto(".pberr", berries);
+  ponerTexto(".paku", akuma);
+  ponerTexto(".pb", pb);	
 
-  if (el) {
-    const texto = el.textContent.toLowerCase();
+  // =========================
+  // ESTADO ONLINE / OFFLINE
+  // =========================
+  setTimeout(() => {
+    const el = document.querySelector(".estado");
 
-    if (texto.includes("en línea") || texto.includes("en linea")) {
-      el.classList.add("on");
-      el.classList.remove("off");
-    } else if (texto.includes("fuera de línea") || texto.includes("fuera de linea")) {
-      el.classList.add("off");
-      el.classList.remove("on");
+    if (el) {
+      const texto = el.textContent.toLowerCase();
+
+      if (texto.includes("en línea") || texto.includes("en linea")) {
+        el.classList.add("on");
+        el.classList.remove("off");
+        el.innerHTML = `<i class="fi fi-rr-wifi"></i> En línea`;
+      } else {
+        el.classList.add("off");
+        el.classList.remove("on");
+        el.innerHTML = `<i class="fi fi-rr-wifi-slash"></i> Fuera de línea`;
+      }
+    }
+  }, 500);
+
+  // =========================
+  // FORMATO ÚLTIMA VISITA
+  // =========================
+  const ultimaEl = document.querySelector(".ultima");
+
+  if (ultimaEl) {
+    let texto = ultimaEl.textContent;
+
+    texto = texto.split(":").slice(1).join(":").trim();
+
+    const [fechaParte, hora] = texto.split(" - ");
+
+    if (fechaParte && hora) {
+      const partes = fechaParte.split(" ");
+
+      const dia = partes[1];
+      const mesTexto = partes[2];
+      const año = partes[3];
+
+      const meses = {
+        Ene: "01", Feb: "02", Mar: "03", Abr: "04",
+        May: "05", Jun: "06", Jul: "07", Ago: "08",
+        Sep: "09", Oct: "10", Nov: "11", Dic: "12"
+      };
+
+      const mes = meses[mesTexto] || "01";
+
+      ultimaEl.textContent = `Última visita: ${dia}/${mes}/${año} | ${hora}`;
     }
   }
-}, 500);
-	
-//Formato de fecha
-const ultimaEl = document.querySelector(".ultima");
 
-if (ultimaEl) {
-  let texto = ultimaEl.textContent;
+  // =========================
+  // DETECTAR GRUPO
+  // =========================
+  let grupo = "";
 
-  texto = texto.split(":").slice(1).join(":").trim();
+  const grupos = document.querySelectorAll('[id^="g"][id$="-name"]');
 
-  const [fechaParte, hora] = texto.split(" - ");
+  for (let el of grupos) {
+    const id = el.id;
 
-  const partes = fechaParte.split(" ");
-  const dia = partes[1];
-  const mesTexto = partes[2];
-  const año = partes[3];
+    if (id !== "g1-name" && id !== "g2-name") {
+      grupo = id;
+      break;
+    }
+  }
 
-  const meses = {
-    Ene: "01", Feb: "02", Mar: "03", Abr: "04",
-    May: "05", Jun: "06", Jul: "07", Ago: "08",
-    Sep: "09", Oct: "10", Nov: "11", Dic: "12"
-  };
+  // =========================
+  // RANGO + FACCIÓN
+  // =========================
+  let rango = "Sin rango";
+  let nombreGrupo = "Sin grupo";
+  let icono = `<i class="fi fi-rr-user"></i>`;
 
-  const mes = meses[mesTexto] || "01";
+  if (grupo === "g4-name") {
+    nombreGrupo = "Armada Marina";
+    icono = `<i class="fi fi-rr-anchor"></i>`;
+    rango = rangoMarina(rep, pp);
+  }
 
-  const nuevaFecha = `${dia}/${mes}/${año} | ${hora}`;
+  else if (grupo === "g3-name") {
+    nombreGrupo = "Piratas";
+    icono = `<i class="fi fi-rr-skull"></i>`;
+    rango = "Pirata";
+  }
 
-  ultimaEl.innerHTML = `Última visita: ${dia}/${mes}/${año} <span class="hora">${hora}</span>`;
-}
-	
+  else if (grupo === "g5-name") {
+    nombreGrupo = "Cazarrecompensas";
+    icono = `<i class="fi fi-rr-target"></i>`;
+    rango = "Cazarrecompensas";
+  }
+
+  else if (grupo === "g6-name") {
+    nombreGrupo = "Revolucionarios";
+    icono = `<i class="fi fi-rr-fist-raised"></i>`;
+    rango = "Revolucionario";
+  }
+
+  else if (grupo === "g7-name") {
+    nombreGrupo = "Gobierno Mundial";
+    icono = `<i class="fi fi-rr-building"></i>`;
+    rango = "Agente";
+  }
+
+  else if (grupo === "g8-name") {
+    nombreGrupo = "Civil";
+    icono = `<i class="fi fi-rr-home"></i>`;
+    rango = "Civil";
+  }
+
+  else if (grupo === "g9-name") {
+    nombreGrupo = "Nuevo Usuario";
+    icono = `<i class="fi fi-rr-user-add"></i>`;
+    rango = "Aspirante";
+  }
+
+  const fac = document.querySelector(".facgrup");
+
+  if (fac) {
+    fac.innerHTML = `
+      <div class="iconofac">${icono}</div>
+      <div class="nombrefac">${nombreGrupo}</div>
+      <div class="rangofaccion">${rango}</div>
+    `;
+  }
+
 });
