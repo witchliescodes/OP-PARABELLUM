@@ -28,9 +28,6 @@
   <div class="secava">
     <div class="perfilavatar">{AVATAR_IMG}
       </div>  
-    <div class="pb">
-      <dfn>PB</dfn>
-    </div>  
   </div>
   <div class="secdos">
     <div class="facgrup">
@@ -51,25 +48,26 @@
     <div class="rangofaccion"></div>
     </div>
     <div class="datgen">
-      <h1>Datos generales</h1>
+      <h1>Datos generales <i class="fi fi-rr-list"></i></h1>
       <div class="tdatge">
         <div class="pedad"><dfn>Edad</dfn></div>
         <div class="praza"><dfn>Raza</dfn></div>
         <div class="palt"><dfn>Altura</dfn></div>
         <div class="pisl"><dfn>Isla Natal</dfn></div>
         <div class="pberr"><dfn>Berrys</dfn></div>
-        <div class="paku"><dfn>Akuma no mi<dfn></div>
+        <div class="paku"><dfn>Akuma no mi</dfn></div>
+        <div class="pb"><dfn>PB</dfn></div>    
       </div>
     </div>
   </div>
   <div class="sectres">
-  <div class="music">musica</div>
+    <div class="fra">
+      <dfn>Frase <i class="fi fi-rr-message-quote"></i></dfn>
+    </div>   
   <div class="fralink">
-    <div class="fra">frase</div>
-    <div class="pflink">
-    		Links
-    </div>
+    <div class="pflink">Links</div>
   </div>
+      <div class="music">musica</div>
   </div>
 </div>
 <div class="sect">
@@ -310,6 +308,8 @@ opacity:0;
     margin: 0 10px 0 10px;
     background: transparent;
     border-radius: 0.18em;
+    overflow: hidden;
+    height: 560px;
 }
   
 .secava {
@@ -324,17 +324,35 @@ opacity:0;
     border-radius: 0.18em;
 }
   
-.pb {
-    margin: 10px 0 0;
-    background: var(--color-1);
-    border-radius: 0.18em;
-    box-shadow: 0px 0px 1px var(--color-3);
-}  
-  
 .secdos{
     width:100%;
     margin:0 10px;
+    overflow:hidden;
     height:100%;
+
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+.secdos > .datgen {
+    flex: 1;
+    min-height: 0;
+    overflow: auto;
+    background: transparent;
+}
+  
+.datgen h1 {
+    font-size: 1em;
+    font-family: var(--titulos);
+    text-transform: uppercase;
+    background: var(--color-5);
+    padding: 10px;
+    color: var(--color-3);
+    margin: 0 0 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .facgrup{
@@ -382,18 +400,43 @@ opacity:0;
 .rangofaccion{
     grid-column:2;
     grid-row:2;
-
     font-size:.95em;
     font-style:italic;
     font-family:var(--cuerpo1);
     font-weight:500;
-
     opacity:.85;
     align-self:start;
 }
   
+.tdatge{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+.tdatge > div{
+    background: var(--color-5);
+    padding: 8px 10px;
+    border-radius:.18em;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+  
 .sectres {
-    width: -webkit-fill-available;
-    height: -webkit-fill-available;
+    height:100%;
+
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}  
+  
+.fra {
+    width:100%;
+    overflow:hidden;
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+    margin: 0 0 10px 0;
 }  
 </style>
