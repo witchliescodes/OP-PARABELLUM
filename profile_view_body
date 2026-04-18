@@ -27,19 +27,37 @@
 <div class="secd">
   <div class="secava">
     <div class="perfilavatar">{AVATAR_IMG}
-      <div class="pb">aqui el pb que usa el ava</div>  
       </div>  
+    <div class="pb">PB</div>  
   </div>
   <div class="secdos">
     <div class="facgrup">
-      <!-- BEGIN group_details -->
-	<div id="{switch_groups_list.group_details.GROUP_ID}-name"><a href="{switch_groups_list.group_details.U_GROUP}" >{switch_groups_list.group_details.L_GROUP_NAME}</a></div>
-<!-- END group_details -->
-      
-    <dt>{L_RANK}:</dt><dd><strong>{POSTER_RANK}</strong></dd>
+      <div class="facci">
+        <!-- BEGIN switch_groups_list -->
+				<!-- BEGIN group_details -->
+				<div id="{switch_groups_list.group_details.GROUP_ID}-name"><a href="{switch_groups_list.group_details.U_GROUP}" >{switch_groups_list.group_details.L_GROUP_NAME}</a></div>
+				<!-- END group_details -->
+		<!-- END switch_groups_list -->
+        <script>
+        $(document).ready(function(){
+  $('.facci').each(function(){
+      $(this).find('a:gt(0)').hide();
+  });
+});
+        </script>
+      </div>
+    <div class="rangofaccion"></div>
     </div>
-    <div class="datgen">Datos generales
-      <div class="tdatge">todos los datos </div>
+    <div class="datgen">
+      <h1>Datos generales</h1>
+      <div class="tdatge">
+        <div class="pedad">Edad</div>
+        <div class="praza">Raza</div>
+        <div class="palt">Altura</div>
+        <div class="pisl">Isla Natal</div>
+        <div class="pberr">Berrys</div>
+        <div class="paku">Akuma no mi</div>
+      </div>
     </div>
   </div>
   <div class="sectres">
@@ -84,12 +102,19 @@
 
 <!-- base de datos oculta -->
 <div style="display:none;">
-  <!-- BEGIN profile_field -->
-    <dl>
-      <dt>{profile_field.LABEL}</dt>
-      <dd>{profile_field.CONTENT}</dd>
-    </dl>
-  <!-- END profile_field -->
+
+<!-- BEGIN profile_field -->
+<dl class="ajax-profil_parent left-box details">
+
+    <dt>{profile_field.LABEL}</dt>
+
+    <dd>
+        {profile_field.CONTENT}
+    </dd>
+
+</dl>
+<!-- END profile_field -->
+
 </div>
 
 
@@ -277,7 +302,92 @@
     justify-content: flex-start;
     width: -webkit-fill-available;
     margin: 0 10px 0 10px;
-    background: var(--color-5);
+    background: transparent;
     border-radius: 0.18em;
 }
+  
+.secava {
+    padding: 10px;
+    border: 1px solid var(--color-3);
+    border-radius: 0.38em;
+    background: var(--color-5);
+}
+  
+.secd .perfilavatar {
+    overflow: hidden;
+    border-radius: 0.18em;
+}
+  
+.pb {
+    margin: 10px 0 0;
+    background: var(--color-1);
+    border-radius: 0.18em;
+    box-shadow: 0px 0px 1px var(--color-3);
+}  
+  
+.secdos{
+    width:100%;
+    margin:0 10px;
+    height:100%;
+}
+
+.facgrup{
+    background:var(--color-5);
+    padding:14px;
+    border-radius:.45em;
+
+    display:grid;
+    grid-template-columns:54px 1fr;
+    grid-template-rows:auto auto;
+    gap:4px 12px;
+
+    min-height:100px;
+    align-items:center;
+}
+
+.iconofac {
+    grid-column: 1;
+    grid-row: 1 / 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-3);
+    border-radius: .35em;
+    font-size: 1.7em;
+    color: var(--color-1);
+    height: 50px;
+}
+
+.nombrefac{
+    grid-column:2;
+    grid-row:1;
+
+    font-size:1.15em;
+    font-family:var(--titulos);
+    text-transform:uppercase;
+    letter-spacing:.08em;
+    font-weight:700;
+    color:var(--color-3);
+
+    border-bottom:1px solid var(--color-3);
+    padding-bottom:4px;
+}
+
+.rangofaccion{
+    grid-column:2;
+    grid-row:2;
+
+    font-size:.95em;
+    font-style:italic;
+    font-family:var(--cuerpo1);
+    font-weight:500;
+
+    opacity:.85;
+    align-self:start;
+}
+  
+.sectres {
+    width: -webkit-fill-available;
+    height: -webkit-fill-available;
+}  
 </style>
