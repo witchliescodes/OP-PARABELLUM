@@ -66,7 +66,7 @@
       <span class="valor"></span>
     </div>   
   <div class="fralink">
-    <div class="pflink"><h1>Contacto y Links</h1>
+      <h1>Contacto y Links</h1>
       <div class="blinnky">
         	<!-- BEGIN contact_field -->
 		<dl id="field_id{contact_field.ID}">
@@ -83,10 +83,11 @@
 				<!-- END profil_type_user_posts -->
           	</div>
 		<!-- END profile_field -->
-      </div>
     </div>
   </div>
-    <div class="music"><dfn>Playlist</dfn> <span class="valor"></span></div>
+    <div class="music">
+      <dfn>Mi Playlist <i class="game-icon game-icon-music-spell"></i></dfn>
+      <span class="valor"></span></div>
   </div>
 </div>
 <div class="sect">
@@ -455,18 +456,99 @@ opacity:0;
     display: flex;
     align-items: center;
     flex-flow: column;
-    background: var(--color-5);
-    padding: 10px;
+    background: transparent;
     width: stretch;
 }
   
+.fra dfn {
+    width: -webkit-fill-available;
+    height: auto;
+    padding: 10px;
+    background: var(--color-5);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 0.38em;
+    text-transform: uppercase;
+    font-style: normal;
+    font-family: var(--titulos);
+    letter-spacing: 0.1em;
+    color: var(--color-3);
+    line-height: 1em;
+}
+  
+.fra span {
+    background: var(--color-5);
+    margin: 10px 0 0;
+    padding: 10px;
+    border-radius: 0.38em;
+    font-size: 1em;
+    line-height: 1.5em;
+    text-align: justify;
+    font-style: normal;
+    color: var(--color-6);
+}  
+  
+.fralink {
+    width: -webkit-fill-available;
+    height: auto;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+}  
+  
+.fralink h1{
+    background: var(--color-5);
+    padding: 10px;
+    border-radius: 0.38em;
+    font-size: 1em;
+    width: -webkit-fill-available;
+    font-family: var(--titulos);
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--color-3);
+    letter-spacing: 1px;
+}  
+  
 .blinnky {
     width: -webkit-fill-available;
+    height: auto;
+    background: var(--color-5);
+    padding: 10px;
     display: flex;
+    align-items: center;
+      border-radius: 0.38em;
 }
   
 /*Playlist*/
-.radio-progress{
+.music {
+    height: -webkit-fill-available;
+    width: -webkit-fill-available;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-flow: column;
+}
+  
+.music dfn {
+    width: -webkit-fill-available;
+    justify-content: space-between;
+    display: flex;
+    height: auto;
+    padding: 10px;
+    background: var(--color-5);
+    border-radius: 0.38em;
+    font-size: 1em;
+    font-family: var(--titulos);
+    font-style: normal;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--color-3);
+}  
+  
+  .radio-progress{
   width:100%;
   height:8px;
   background:#3b2a1d;   /* fondo café oscuro */
