@@ -66,9 +66,36 @@
       <span class="valor"></span>
     </div>   
   <div class="fralink">
-    <div class="pflink"><dfn>Contacto y Links</dfn> <span class="valor"></span></div>
+    <div class="pflink"><h1>Contacto y Links</h1>
+      <div class="blinnky">
+        <div class="bcontact">
+        	<!-- BEGIN contact_field -->
+		<dl id="field_id{contact_field.ID}">
+			{contact_field.LABEL}
+                  {contact_field.CONTENT}
+		</dl>
+		<!-- END contact_field -->
+        </div>
+      		<!-- BEGIN switch_dhow_mp -->
+		 {PRIVATE_MSG}
+		<!-- END switch_dhow_mp -->
+      </div>
+      <div class="menpos">
+    		<!-- BEGIN profile_field -->
+		<div id="field_id{profile_field.ID}">
+                  <!-- BEGIN profil_type_user_posts --> 
+				<!-- BEGIN links -->
+				<a rel="nofollow" href="/st/{PUSERNAME}">{L_SEARCH_USER_POSTS} :</a>
+				<a rel="nofollow" href="/sta/{PUSERNAME}">{L_TOPICS}</a>
+				<a rel="nofollow" href="/spa/{PUSERNAME}">{L_POSTS}</a>
+				<!-- END links -->
+				<!-- END profil_type_user_posts -->
+          	</div>
+		<!-- END profile_field -->
+      </div>
+    </div>
   </div>
-    <div class="music"><dfn>Mi playlist</dfn> <span class="valor"></span></div>
+    <div class="music"><dfn>Playlist</dfn> <span class="valor"></span></div>
   </div>
 </div>
 <div class="sect">
@@ -441,4 +468,7 @@ opacity:0;
     padding: 10px;
     width: stretch;
 }
+  
+/*Playlist*/
+  
 </style>
