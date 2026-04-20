@@ -548,6 +548,26 @@ opacity:0;
     color: var(--color-3);
 }  
   
+.radio-retro {
+    margin: 10px 0 0 0;
+    padding: 10px;
+    background: var(--color-5);
+    border-radius: 0.38em;
+    display: flex;
+    min-width: 200px;
+    flex-flow: column;
+    width: 250px;
+}  
+  
+.radio-cover {
+    overflow: hidden;
+    height: 80px;
+    width: 230px;
+    object-fit: cover;
+    border-radius: 0.18em;
+    background: var(--color-3);
+}  
+  
   .radio-progress{
   width:100%;
   height:8px;
