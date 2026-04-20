@@ -568,6 +568,74 @@ opacity:0;
     background: var(--color-3);
 }  
   
+.radio-title {
+    background: var(--color-3);
+    width: -webkit-fill-available;
+    padding: 10px;
+    line-height: 1em;
+    font-size: 0.5em;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin: 0 0 0px 0px;
+    position: relative;
+    top: -10px;
+}  
+  
+.radio-volume{
+position:relative;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+.vol-btn{
+background:none;
+border:none;
+color:#fff;
+font-size:20px;
+cursor:pointer;
+}
+
+.vol-popup{
+position:absolute;
+bottom:38px;
+left:50%;
+transform:translateX(-50%);
+width:42px;
+height:125px;
+background:rgba(0,0,0,.9);
+border-radius:12px;
+display:flex;
+align-items:center;
+justify-content:center;
+padding:10px;
+
+opacity:0;
+pointer-events:none;
+transition:.25s;
+}
+
+.vol-popup.activo{
+opacity:1;
+pointer-events:auto;
+}
+
+.volumen{
+-webkit-appearance: slider-vertical;
+width:8px;
+height:90px;
+cursor:pointer;
+}
+
+/* slider vertical */
+.volumen{
+-webkit-appearance: slider-vertical;
+appearance:none;
+width:8px;
+height:90px;
+cursor:pointer;
+}  
+  
   .radio-progress{
   width:100%;
   height:8px;
