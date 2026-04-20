@@ -557,7 +557,7 @@ opacity:0;
     min-width: 200px;
     flex-flow: column;
     width: 250px;
-}  
+}
   
 .radio-cover {
     overflow: hidden;
@@ -566,6 +566,14 @@ opacity:0;
     object-fit: cover;
     border-radius: 0.18em;
     background: var(--color-3);
+    display: flex;
+    align-items: end;
+} 
+  
+.cover-img {
+    position: absolute;
+    border-top-left-radius: 0.18em;
+    border-top-right-radius: 0.18em;
 }  
   
 .radio-title {
@@ -608,19 +616,82 @@ width:30px;
 height:110px;
 }
   
-  .radio-progress{
-  width:100%;
-  height:8px;
-  background:#3b2a1d;   /* fondo café oscuro */
-  border-radius:20px;
-  overflow:hidden;
+/* CONTENEDOR */
+.radio-progress {
+    width: 100%;
+    height: 8px;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    background: var(--tcolor3);
+    box-shadow: inset 0 0 8px rgba(255, 255, 255, .05), 0 0 6px rgba(0, 0, 0, .35);
+    margin: 10px;
 }
 
+/* BARRA ACTIVA */
 .radio-progress .bar{
-  height:100%;
-  width:0%;
-  background:#ffd54a !important;   /* amarillo visible */
-  border-radius:20px;
-  transition:width .25s linear;
+height:100%;
+width:0%;
+border-radius:20px;
+position:relative;
+transition:width .25s linear;
+
+background:linear-gradient(
+90deg,
+#00f0ff,
+#00ffae,
+#8cff00,
+#00ffae,
+#00f0ff
+);
+
+background-size:300% 100%;
+
+animation:
+flowBar 3s linear infinite,
+pulseGlow 1.8s ease-in-out infinite;
+}
+
+/* BRILLO QUE CORRE */
+.radio-progress .bar::after{
+content:"";
+position:absolute;
+top:0;
+left:-40px;
+width:40px;
+height:100%;
+background:linear-gradient(
+90deg,
+transparent,
+rgba(255,255,255,.8),
+transparent
+);
+transform:skewX(-25deg);
+animation:shineRun 1.6s linear infinite;
+}
+
+/* ANIMACIONES */
+
+@keyframes flowBar{
+0%{background-position:0% 0;}
+100%{background-position:300% 0;}
+}
+
+@keyframes shineRun{
+0%{left:-40px;}
+100%{left:110%;}
+}
+
+@keyframes pulseGlow{
+0%,100%{
+box-shadow:
+0 0 8px rgba(0,255,180,.35),
+0 0 14px rgba(0,255,180,.25);
+}
+50%{
+box-shadow:
+0 0 14px rgba(0,255,180,.65),
+0 0 28px rgba(0,255,180,.45);
+}
 }
 </style>
