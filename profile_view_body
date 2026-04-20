@@ -583,58 +583,30 @@ opacity:0;
   
 .radio-volume{
 position:relative;
-display:flex;
-align-items:center;
-justify-content:center;
-}
-
-.vol-btn{
-background:none;
-border:none;
-color:#fff;
-font-size:20px;
-cursor:pointer;
 }
 
 .vol-popup{
 position:absolute;
-bottom:38px;
+bottom:45px;
 left:50%;
 transform:translateX(-50%);
-width:42px;
-height:125px;
-background:rgba(0,0,0,.9);
-border-radius:12px;
-display:flex;
-align-items:center;
+width:40px;
+height:130px;
+display:none;
 justify-content:center;
+align-items:center;
 padding:10px;
-
-opacity:0;
-pointer-events:none;
-transition:.25s;
-}
-
-.vol-popup.activo{
-opacity:1;
-pointer-events:auto;
+border-radius:12px;
+background:rgba(0,0,0,.85);
+z-index:999;
 }
 
 .volumen{
 -webkit-appearance: slider-vertical;
-width:8px;
-height:90px;
-cursor:pointer;
+appearance: slider-vertical;
+width:30px;
+height:110px;
 }
-
-/* slider vertical */
-.volumen{
--webkit-appearance: slider-vertical;
-appearance:none;
-width:8px;
-height:90px;
-cursor:pointer;
-}  
   
   .radio-progress{
   width:100%;
