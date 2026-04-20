@@ -16,14 +16,17 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 
   // =========================
-  // CONSERVAR TEXTO + AGREGAR VALOR
+  // FIX: INYECCIÓN SEGURA (NO ROMPE <dfn>)
   // =========================
   function ponerTexto(selector, valor) {
     const el = document.querySelector(selector);
 
-    if (el) {
-      const titulo = el.textContent.trim();
-      el.innerHTML = `${titulo} <span>${valor}</span>`;
+    if (!el) return;
+
+    const span = el.querySelector(".valor");
+
+    if (span) {
+      span.textContent = valor ?? "-";
     }
   }
 
@@ -50,11 +53,8 @@ document.addEventListener("DOMContentLoaded", function() {
   const pp  = parseInt(obtenerCampo("PP")) || 0;
   const pr  = parseInt(obtenerCampo("PR")) || 0;
   const rep = parseInt(obtenerCampo("REP")) || 0;
-
   const mensajes = obtenerCampo("Mensajes");
   const registro = obtenerCampo("Fecha de inscripción");
-
-  // CAMPOS GENERALES
   const edad    = obtenerCampo("Edad");
   const altura  = obtenerCampo("Altura");
   const raza    = obtenerCampo("Raza");
@@ -62,8 +62,9 @@ document.addEventListener("DOMContentLoaded", function() {
   const berries = obtenerCampo("Berries");
   const akuma   = obtenerCampo("Akuma");
   const pb      = obtenerCampo("PB");
-  const frase   = obtenerCampo("Frase");	
-
+  const frase   = obtenerCampo("Frase");
+  const playlist = obtenerCampo("Playlist");	
+	
   const nivel = calcularNivel(pa);
 
   // =========================
@@ -76,13 +77,13 @@ document.addEventListener("DOMContentLoaded", function() {
   ponerTexto(".bellvl", nivel);
 
   // =========================
-  // DATOS SUPERIORES
+  // SUPERIORES
   // =========================
-  ponerTexto(".mensajes .valor", mensajes);
-  ponerTexto(".registro .valor", registro);
+  ponerTexto(".mensajes", mensajes);
+  ponerTexto(".registro", registro);
 
   // =========================
-  // DATOS GENERALES
+  // GENERALES (FIX APLICADO)
   // =========================
   ponerTexto(".pedad", edad);
   ponerTexto(".palt", altura);
@@ -91,7 +92,8 @@ document.addEventListener("DOMContentLoaded", function() {
   ponerTexto(".pberr", berries);
   ponerTexto(".paku", akuma);
   ponerTexto(".pb", pb);
-  ponerTexto(".fra", frase);	
+  ponerTexto(".fra", frase);
+  ponerTexto(".musica", playlist);	
 
   // =========================
   // ESTADO ONLINE / OFFLINE
@@ -115,7 +117,7 @@ document.addEventListener("DOMContentLoaded", function() {
   }, 500);
 
   // =========================
-  // FORMATO ÚLTIMA VISITA
+  // ÚLTIMA VISITA
   // =========================
   const ultimaEl = document.querySelector(".ultima");
 
@@ -146,7 +148,7 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 
   // =========================
-  // DETECTAR GRUPO
+  // GRUPOS
   // =========================
   let grupo = "";
 
@@ -154,65 +156,61 @@ document.addEventListener("DOMContentLoaded", function() {
 
   for (let el of grupos) {
     const id = el.id;
-
     if (id !== "g1-name") {
       grupo = id;
       break;
     }
   }
 
-  // =========================
-  // RANGO + FACCIÓN
-  // =========================
   let rango = "Sin rango";
   let nombreGrupo = "Sin grupo";
-  let icono = `<i class="fi fi-rr-user"></i>`;
+  let icono = `<i class="game-icon game-icon-ghost"></i>`;
 
   if (grupo === "g2-name") {
     nombreGrupo = "Staff";
-    icono = `<i class="fi fi-rr-crown"></i>`;
+    icono = `<i class="game-icon game-icon-laurel-crown"></i>`;
     rango = "Administrador";
   }
 
   else if (grupo === "g4-name") {
     nombreGrupo = "Armada Marina";
-    icono = `<i class="fi fi-rr-anchor"></i>`;
+    icono = `<i class="game-icon game-icon-ship-wheel"></i>`;
     rango = rangoMarina(rep, pp);
   }
 
   else if (grupo === "g3-name") {
     nombreGrupo = "Piratas";
-    icono = `<i class="fi fi-rr-skull"></i>`;
+    icono = `<i class="game-icon game-icon-crowned-skull"></i>`;
     rango = "Pirata";
   }
 
   else if (grupo === "g5-name") {
     nombreGrupo = "Cazarrecompensas";
-    icono = `<i class="fi fi-rr-target"></i>`;
+    icono = `<i class="game-icon game-icon-pocket-bow"></i>`;
     rango = "Cazarrecompensas";
   }
 
   else if (grupo === "g6-name") {
     nombreGrupo = "Revolucionarios";
-    icono = `<i class="fi fi-rr-fist-raised"></i>`;
+    icono = `<i class="game-icon game-icon-fire-punch"></i>`;
     rango = "Revolucionario";
   }
 
   else if (grupo === "g7-name") {
     nombreGrupo = "Gobierno Mundial";
-    icono = `<i class="fi fi-rr-building"></i>`;
+    icono = `<i class="game-icon game-icon-anchor"></i>`;
     rango = "Agente";
   }
 
   else if (grupo === "g8-name") {
     nombreGrupo = "Civil";
-    icono = `<i class="fi fi-rr-home"></i>`;
+    icono = `<i class="game-icon game-icon-vine-flower"></i>`;
     rango = "Civil";
   }
 
   else if (grupo === "g9-name") {
     nombreGrupo = "Nuevo Usuario";
-    icono = `<i class="fi fi-rr-user-add"></i>`;
+    icono = `<i class="game-icon game-icon-new-born"></i>`;
     rango = "Aspirante";
   }
 
