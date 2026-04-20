@@ -279,8 +279,11 @@ document.addEventListener("DOMContentLoaded", function() {
       <div class="rangofaccion">${rango}</div>
     `;
   }
-// =========================
-// RADIO RETRO POR PERFIL
+
+	// =========================
+// RADIO RETRO PRO YOUTUBE
+// (CORREGIDO + BARRA FUNCIONAL)
+// Reemplaza TODO tu bloque crearRadioRetro()
 // =========================
 
 function crearRadioRetro() {
@@ -289,92 +292,303 @@ function crearRadioRetro() {
   if (!contenedor) return;
 
   let contenido = contenedor.innerHTML.trim();
-
   if (!contenido || contenido === "-") return;
 
-  // Convertir <br> a líneas
+  // -------------------------
+  // LIMPIAR LINEAS
+  // -------------------------
   let lineas = contenido
     .replace(/<br\s*\/?>/gi, "\n")
     .split("\n")
-    .map(l => l.trim())
-    .filter(l => l.length > 0)
-    .slice(0, 3); // máximo 3 canciones
+    .map(x => x.trim())
+    .filter(x => x.length > 0)
+    .slice(0, 20);
 
-  // Parsear canciones
+  // -------------------------
+  // SACAR ID YOUTUBE
+  // -------------------------
+function sacarID(url) {
+  try {
+    let limpio = url.trim();
+
+    if (limpio.includes("watch?v=")) {
+      return limpio.split("v=")[1].split("&")[0];
+    }
+
+    if (limpio.includes("youtu.be/")) {
+      return limpio.split("youtu.be/")[1].split("?")[0];
+    }
+
+    if (limpio.includes("/embed/")) {
+      return limpio.split("/embed/")[1].split("?")[0];
+    }
+
+    return "";
+  } catch(e){
+    return "";
+  }
+}
+
+  // -------------------------
+  // CREAR PLAYLIST
+  // -------------------------
   let lista = lineas.map((linea, i) => {
 
     let partes = linea.split("|");
 
+    let tituloUsuario = partes[0]?.trim() || "";
+    let url = partes[1]?.trim() || partes[0]?.trim();
+
     return {
-      titulo: partes[0]?.trim() || `Track ${i+1}`,
-      url: partes[1]?.trim() || partes[0]?.trim()
+      tituloUsuario,
+      id: sacarID(url)
     };
 
-  }).filter(c => c.url);
+  }).filter(x => x.id);
 
   if (!lista.length) return;
 
-  // Limpiar contenido original
+  // -------------------------
+  // LIMPIAR CONTENEDOR
+  // -------------------------
   contenedor.innerHTML = "";
 
-  // Crear radio
+  // -------------------------
+  // HTML PLAYER
+  // -------------------------
   const radio = document.createElement("div");
   radio.className = "radio-retro";
 
   radio.innerHTML = `
-    <div class="radio-screen">ON AIR ●</div>
-    <div class="radio-title">${lista[0].titulo}</div>
+    <div class="radio-title">Cargando...</div>
+
     <div class="radio-controls">
-      <button class="play">▶</button>
-      <button class="next">⏭</button>
+      <button class="play"><i class="fi fi-rr-play"></i></button>
+      <button class="next"><i class="fi fi-rr-angle-right"></i></button>
+	  <div class="radio-volume">
+   <span><i class="fi fi-rr-volume"></i></span>
+   <input type="range" class="volumen" min="0" max="100" value="100">
+</div>
     </div>
-    <audio preload="none"></audio>
+
+    <div class="radio-progress">
+      <div class="bar"></div>
+    </div>
+
+    <div id="yt-player" style="display:none;"></div>
   `;
 
   contenedor.appendChild(radio);
 
-  const audio = radio.querySelector("audio");
-  const titulo = radio.querySelector(".radio-title");
+  const titulo  = radio.querySelector(".radio-title");
   const playBtn = radio.querySelector(".play");
   const nextBtn = radio.querySelector(".next");
+  const barra   = radio.querySelector(".bar");
+  const volumen = radio.querySelector(".volumen");	
 
   let actual = 0;
+  let player = null;
+  let sonando = false;
+  let intervalo = null;
+	
+  volumen.addEventListener("input", function () {
+  if (player) {
+    player.setVolume(this.value);
+  }
+});
+	
+  // -------------------------
+  // CARGAR API
+  // -------------------------
+  function cargarAPI() {
 
-  function cargar(i) {
-    audio.src = lista[i].url;
-    titulo.textContent = lista[i].titulo;
+    if (window.YT && window.YT.Player) {
+      iniciarPlayer();
+      return;
+    }
+
+    let tag = document.createElement("script");
+    tag.src = "https://www.youtube.com/iframe_api";
+    document.head.appendChild(tag);
+
+    window.onYouTubeIframeAPIReady = iniciarPlayer;
   }
 
-  cargar(0);
+// ==========================
+// INICIAR PLAYER
+// ==========================
+function iniciarPlayer() {
 
-  playBtn.onclick = function() {
-    if (audio.paused) {
-      audio.play();
-      playBtn.textContent = "⏸";
+  player = new YT.Player("yt-player", {
+    height: "0",
+    width: "0",
+    videoId: lista[0].id,
+
+    playerVars: {
+      autoplay: 0,
+      controls: 0,
+      rel: 0
+    },
+
+    events: {
+
+onReady: function () {
+  player.setVolume(volumen.value);
+  actualizarTitulo();
+},
+
+      onStateChange: function (e) {
+//reproducir
+if (e.data === YT.PlayerState.PLAYING) {
+  sonando = true;
+
+  playBtn.innerHTML = `<i class="fi fi-rr-pause"></i>`;
+
+  player.setVolume(volumen.value);
+
+  iniciarBarra();
+  actualizarTitulo();
+}
+//pausado
+if (e.data === YT.PlayerState.PAUSED) {
+  sonando = false;
+
+  playBtn.innerHTML = `<i class="fi fi-rr-play"></i>`;
+
+  detenerBarra();
+}
+
+        // sin musica
+        if (e.data === YT.PlayerState.ENDED) {
+          siguiente();
+        }
+      }
+    }
+  });
+}
+
+  // -------------------------
+  // TITULO REAL
+  // -------------------------
+  function actualizarTitulo() {
+
+    setTimeout(() => {
+
+      try {
+
+        let data = player.getVideoData();
+        let nombre = data.title?.trim();
+
+        if (nombre) {
+          titulo.textContent = nombre;
+        } else {
+          titulo.textContent =
+            lista[actual].tituloUsuario || "Unknown Track";
+        }
+
+      } catch(e) {
+
+        titulo.textContent =
+          lista[actual].tituloUsuario || "Unknown Track";
+
+      }
+
+    }, 500);
+  }
+
+  // -------------------------
+  // CARGAR TRACK
+  // -------------------------
+function cargar(i) {
+
+  actual = i;
+
+  titulo.textContent = "Cargando...";
+  barra.style.width = "0%";
+
+  player.loadVideoById({
+    videoId: lista[i].id,
+    startSeconds: 0
+  });
+
+  setTimeout(() => {
+    player.playVideo();
+  }, 400);
+}
+
+  // -------------------------
+  // SIGUIENTE
+  // -------------------------
+  function siguiente() {
+
+    actual++;
+
+    if (actual >= lista.length) actual = 0;
+
+    cargar(actual);
+  }
+
+  // -------------------------
+  // PLAY / PAUSE
+  // -------------------------
+  playBtn.onclick = function () {
+
+    if (!player) return;
+
+    if (!sonando) {
+      player.playVideo();
     } else {
-      audio.pause();
-      playBtn.textContent = "▶";
+      player.pauseVideo();
     }
   };
 
-  nextBtn.onclick = function() {
-    actual++;
-    if (actual >= lista.length) actual = 0;
-    cargar(actual);
-    audio.play();
-    playBtn.textContent = "⏸";
+  nextBtn.onclick = function () {
+    if (!player) return;
+    siguiente();
   };
 
-  audio.onended = function() {
-    actual++;
-    if (actual >= lista.length) actual = 0;
-    cargar(actual);
-    audio.play();
-  };
+  // -------------------------
+  // BARRA PROGRESO
+  // -------------------------
+  function iniciarBarra() {
 
+    detenerBarra();
+
+    intervalo = setInterval(() => {
+
+      if (!player) return;
+
+      try {
+
+        let actualTime = player.getCurrentTime();
+        let totalTime  = player.getDuration();
+
+        if (totalTime > 0) {
+
+          let porcentaje =
+            (actualTime / totalTime) * 100;
+
+          barra.style.width =
+            porcentaje + "%";
+        }
+
+      } catch(e){}
+
+    }, 250);
+  }
+
+  function detenerBarra() {
+    clearInterval(intervalo);
+  }
+
+  // -------------------------
+  // INICIAR TODO
+  // -------------------------
+  cargarAPI();
 }
 
 // Ejecutar
 crearRadioRetro();
+
 
 });
