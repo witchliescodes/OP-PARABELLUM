@@ -68,26 +68,17 @@
   <div class="fralink">
     <div class="pflink"><h1>Contacto y Links</h1>
       <div class="blinnky">
-        <div class="bcontact">
         	<!-- BEGIN contact_field -->
 		<dl id="field_id{contact_field.ID}">
-			{contact_field.LABEL}
                   {contact_field.CONTENT}
 		</dl>
 		<!-- END contact_field -->
-        </div>
-      		<!-- BEGIN switch_dhow_mp -->
-		 {PRIVATE_MSG}
-		<!-- END switch_dhow_mp -->
-      </div>
-      <div class="menpos">
-    		<!-- BEGIN profile_field -->
+            		<!-- BEGIN profile_field -->
 		<div id="field_id{profile_field.ID}">
                   <!-- BEGIN profil_type_user_posts --> 
 				<!-- BEGIN links -->
-				<a rel="nofollow" href="/st/{PUSERNAME}">{L_SEARCH_USER_POSTS} :</a>
-				<a rel="nofollow" href="/sta/{PUSERNAME}">{L_TOPICS}</a>
-				<a rel="nofollow" href="/spa/{PUSERNAME}">{L_POSTS}</a>
+				<a rel="nofollow" href="/sta/{PUSERNAME}"><i class="fi fi-rr-browser"></i></a>
+				<a rel="nofollow" href="/spa/{PUSERNAME}"><i class="fi fi-rr-document"></i></a>
 				<!-- END links -->
 				<!-- END profil_type_user_posts -->
           	</div>
@@ -469,6 +460,20 @@ opacity:0;
     width: stretch;
 }
   
-/*Playlist*/
+.blinnky {
+    width: -webkit-fill-available;
+    display: flex;
+}
   
+/*Playlist*/
+ .radio-progress{
+  height:10px;
+  background:#3a2a18;
+  border:1px solid #8b5a2b;
+}
+
+.bar{
+  background:linear-gradient(90deg,#ffd700,#ff9900);
+  box-shadow:0 0 8px #ffcc00;
+} 
 </style>
