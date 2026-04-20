@@ -8,10 +8,10 @@
     </div>
     <div class="tripart">
 	<div class="tripm mensajes">
- 	 Mensajes <span class="valor"></span>
+          <dfn>Mensajes</dfn> <span class="valor"></span>
 	</div>
 	<div class="tripm registro">
-  	Registro <span class="valor"></span>
+          <dfn>Registro</dfn> <span class="valor"></span>
 	</div>
 	<div class="tripm ultima">
   	{LAST_VISIT_DATE}
@@ -50,52 +50,53 @@
     <div class="datgen">
       <h1>Datos generales <i class="fi fi-rr-list"></i></h1>
       <div class="tdatge">
-        <div class="pedad"><dfn>Edad</dfn></div>
-        <div class="praza"><dfn>Raza</dfn></div>
-        <div class="palt"><dfn>Altura</dfn></div>
-        <div class="pisl"><dfn>Isla Natal</dfn></div>
-        <div class="pberr"><dfn>Berrys</dfn></div>
-        <div class="paku"><dfn>Akuma no mi</dfn></div>
-        <div class="pb"><dfn>PB</dfn></div>    
+        <div class="pedad"><dfn>Edad</dfn> <span class="valor"></span></div>
+        <div class="praza"><dfn>Raza</dfn> <span class="valor"></span></div>
+        <div class="palt"><dfn>Altura</dfn> <span class="valor"></span></div>
+        <div class="pisl"><dfn>Isla Natal</dfn> <span class="valor"></span></div>
+        <div class="pberr"><dfn>Berrys</dfn> <span class="valor"></span></div>
+        <div class="paku"><dfn>Akuma no mi</dfn> <span class="valor"></span></div>
+        <div class="pb"><dfn>PB</dfn> <span class="valor"></span></div>    
       </div>
     </div>
   </div>
   <div class="sectres">
     <div class="fra">
       <dfn>Frase <i class="fi fi-rr-message-quote"></i></dfn>
+      <span class="valor"></span>
     </div>   
   <div class="fralink">
-    <div class="pflink">Links</div>
+    <div class="pflink"><dfn>Contacto y Links</dfn> <span class="valor"></span></div>
   </div>
-      <div class="music">musica</div>
+    <div class="music"><dfn>Mi playlist</dfn> <span class="valor"></span></div>
   </div>
 </div>
 <div class="sect">
   <div class="belpart">
     <h1>Datos Belicos</h1>
-    <div class="bellvl">nivel</div>
+    <div class="bellvl">nivel <span class="valor"></span></div>
   </div>
   <div class="pponter">
-    <div class="PAcampo">PA</div>
-    <div class="PPcampo">PP</div>
-    <div class="PRcampo">PR</div>
-    <div class="REPcampo">REP</div>
+    <div class="PAcampo">PA <span class="valor"></span></div>
+    <div class="PPcampo">PP <span class="valor"></span></div>
+    <div class="PRcampo">PR <span class="valor"></span></div>
+    <div class="REPcampo">REP <span class="valor"></span></div>
   </div>
   <div class="atrbar">
-    <div class="atr">Vida</div>
-    <div class="atr">Energía</div>
-    <div class="atr">Fuerza</div>
-    <div class="atr">Resistencia</div>
-    <div class="atr">Velocidad</div>
-    <div class="atr">Inteligencia</div>
+    <div class="atr">Vida <span class="valor"></span></div>
+    <div class="atr">Energía <span class="valor"></span></div>
+    <div class="atr">Fuerza <span class="valor"></span></div>
+    <div class="atr">Resistencia <span class="valor"></span></div>
+    <div class="atr">Velocidad <span class="valor"></span></div>
+    <div class="atr">Inteligencia <span class="valor"></span></div>
   </div>
 </div>
 <div class="secc">
-  <div class="objsecc">Objetos</div>
-  <div class="seccup">Cuponera</div>
+  <div class="objsecc">Objetos <span class="valor"></span></div>
+  <div class="seccup">Cuponera <span class="valor"></span></div>
 </div>
 <div class="seco">
-  <div class="cronos">cronología</div>
+  <div class="cronos">cronología <span class="valor"></span></div>
 </div>
 </div>
 
