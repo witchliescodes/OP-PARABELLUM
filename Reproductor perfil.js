@@ -86,9 +86,14 @@ radio.innerHTML = `
 
 <div class="radio-cover">
 <img class="cover-img" src="">
+
+<div class="radio-progress">
+<div class="bar"></div>
+</div>
 </div>
 
 <div class="radio-title">Cargando...</div>
+
 
 <div class="radio-controls">
 
@@ -121,12 +126,8 @@ orient="vertical">
 </div>
 
 </div>
-
 </div>
 
-<div class="radio-progress">
-<div class="bar"></div>
-</div>
 
 <div id="yt-player" style="display:none;"></div>
 
