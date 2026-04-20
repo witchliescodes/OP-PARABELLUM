@@ -106,12 +106,18 @@ radio.innerHTML = `
 
 <div class="radio-volume">
 
-<button class="vol-btn">
+<button type="button" class="vol-btn">
 <i class="fi fi-rr-volume"></i>
 </button>
 
 <div class="vol-popup">
-<input type="range" class="volumen" min="0" max="100" value="100">
+<input
+type="range"
+class="volumen"
+min="0"
+max="100"
+value="100"
+orient="vertical">
 </div>
 
 </div>
@@ -149,36 +155,69 @@ let intervalo = null;
 
 
 // ---------------------
-// POPUP VOLUMEN
+// SISTEMA VOLUMEN
 // ---------------------
-volBtn.onclick = function(e){
-e.stopPropagation();
-volPopup.classList.toggle("activo");
-};
 
-volPopup.onclick = function(e){
-e.stopPropagation();
-};
+let popupAbierto = false;
 
+
+// abrir / cerrar
+volBtn.addEventListener("click", function(e){
+
+e.preventDefault();
+e.stopPropagation();
+
+popupAbierto = !popupAbierto;
+
+if(popupAbierto){
+volPopup.style.display = "flex";
+}else{
+volPopup.style.display = "none";
+}
+
+});
+
+
+// click dentro popup
+volPopup.addEventListener("click", function(e){
+e.stopPropagation();
+});
+
+
+// cerrar afuera
 document.addEventListener("click", function(){
-volPopup.classList.remove("activo");
+
+popupAbierto = false;
+volPopup.style.display = "none";
+
 });
 
 
-// ---------------------
-// VOLUMEN
-// ---------------------
-volumen.addEventListener("input", function () {
-if (!player) return;
+// volumen real
+function aplicarVolumen(){
 
-player.setVolume(Number(volumen.value));
-});
+if(!player) return;
 
-volumen.addEventListener("change", function () {
-if (!player) return;
+let valor = parseInt(volumen.value) || 0;
 
-player.setVolume(Number(volumen.value));
-});
+player.setVolume(valor);
+
+if(valor <= 0){
+player.mute();
+}else{
+player.unMute();
+}
+
+}
+
+
+// mover barra
+volumen.addEventListener("input", aplicarVolumen);
+volumen.addEventListener("change", aplicarVolumen);
+
+
+// oculto al inicio
+volPopup.style.display = "none";
 
 // ---------------------
 // API YOUTUBE
