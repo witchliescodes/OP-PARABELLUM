@@ -1,14 +1,27 @@
 document.addEventListener("DOMContentLoaded", function() {
 
+  function limpiarNombreCampo(texto) {
+    return texto
+      .replace(":", "")
+      .replace(/\s+/g, " ")
+      .trim()
+      .toLowerCase();
+  }
+
   function obtenerCampo(nombre) {
     const labels = document.querySelectorAll("dt");
+    const buscado = limpiarNombreCampo(nombre);
 
     for (let label of labels) {
-      if (label.textContent.includes(nombre)) {
-        const valor = label.nextElementSibling
-          ?.querySelector(".field_uneditable")?.textContent;
 
-        return valor?.trim() || "-";
+      const texto = limpiarNombreCampo(label.textContent);
+
+      if (texto === buscado) {
+
+        const valor = label.nextElementSibling
+          ?.querySelector(".field_uneditable");
+
+        return valor?.textContent.trim() || "-";
       }
     }
 
@@ -16,17 +29,57 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 
   // =========================
-  // FIX: INYECCIÓN SEGURA (NO ROMPE <dfn>)
+  // PARA CAMPOS HTML / TEXTAREA
+  // =========================
+  function obtenerCampoHTML(nombre) {
+    const labels = document.querySelectorAll("dt");
+    const buscado = limpiarNombreCampo(nombre);
+
+    for (let label of labels) {
+
+      const texto = limpiarNombreCampo(label.textContent);
+
+      if (texto === buscado) {
+
+        const dd = label.nextElementSibling;
+        if (!dd) return "-";
+
+        const campo = dd.querySelector(".field_uneditable");
+
+        return campo
+          ? campo.innerHTML.trim().replace(/"/g, "")
+          : "-";
+      }
+    }
+
+    return "-";
+  }
+
+  // =========================
+  // TEXTO NORMAL
   // =========================
   function ponerTexto(selector, valor) {
     const el = document.querySelector(selector);
-
     if (!el) return;
 
     const span = el.querySelector(".valor");
 
     if (span) {
       span.textContent = valor ?? "-";
+    }
+  }
+
+  // =========================
+  // HTML
+  // =========================
+  function ponerHTML(selector, valor) {
+    const el = document.querySelector(selector);
+    if (!el) return;
+
+    const span = el.querySelector(".valor");
+
+    if (span) {
+      span.innerHTML = valor ?? "-";
     }
   }
 
@@ -53,18 +106,20 @@ document.addEventListener("DOMContentLoaded", function() {
   const pp  = parseInt(obtenerCampo("PP")) || 0;
   const pr  = parseInt(obtenerCampo("PR")) || 0;
   const rep = parseInt(obtenerCampo("REP")) || 0;
+
   const mensajes = obtenerCampo("Mensajes");
   const registro = obtenerCampo("Fecha de inscripción");
-  const edad    = obtenerCampo("Edad");
-  const altura  = obtenerCampo("Altura");
-  const raza    = obtenerCampo("Raza");
-  const isla    = obtenerCampo("Isla");
-  const berries = obtenerCampo("Berries");
-  const akuma   = obtenerCampo("Akuma");
-  const pb      = obtenerCampo("PB");
-  const frase   = obtenerCampo("Frase");
-  const playlist = obtenerCampo("Playlist");	
-	
+  const edad     = obtenerCampo("Edad");
+  const altura   = obtenerCampo("Altura");
+  const raza     = obtenerCampo("Raza");
+  const isla     = obtenerCampo("Isla");
+  const berries  = obtenerCampo("Berries");
+  const akuma    = obtenerCampo("Akuma");
+  const pb       = obtenerCampo("PB");
+
+  const frase    = obtenerCampoHTML("Frase");
+  const playlist = obtenerCampoHTML("Playlist");
+
   const nivel = calcularNivel(pa);
 
   // =========================
@@ -83,7 +138,7 @@ document.addEventListener("DOMContentLoaded", function() {
   ponerTexto(".registro", registro);
 
   // =========================
-  // GENERALES (FIX APLICADO)
+  // GENERALES
   // =========================
   ponerTexto(".pedad", edad);
   ponerTexto(".palt", altura);
@@ -92,8 +147,9 @@ document.addEventListener("DOMContentLoaded", function() {
   ponerTexto(".pberr", berries);
   ponerTexto(".paku", akuma);
   ponerTexto(".pb", pb);
-  ponerTexto(".fra", frase);
-  ponerTexto(".musica", playlist);	
+
+  ponerHTML(".fra", frase);
+  ponerHTML(".music", playlist);
 
   // =========================
   // ESTADO ONLINE / OFFLINE
@@ -223,5 +279,102 @@ document.addEventListener("DOMContentLoaded", function() {
       <div class="rangofaccion">${rango}</div>
     `;
   }
+// =========================
+// RADIO RETRO POR PERFIL
+// =========================
+
+function crearRadioRetro() {
+
+  const contenedor = document.querySelector(".music .valor");
+  if (!contenedor) return;
+
+  let contenido = contenedor.innerHTML.trim();
+
+  if (!contenido || contenido === "-") return;
+
+  // Convertir <br> a líneas
+  let lineas = contenido
+    .replace(/<br\s*\/?>/gi, "\n")
+    .split("\n")
+    .map(l => l.trim())
+    .filter(l => l.length > 0)
+    .slice(0, 3); // máximo 3 canciones
+
+  // Parsear canciones
+  let lista = lineas.map((linea, i) => {
+
+    let partes = linea.split("|");
+
+    return {
+      titulo: partes[0]?.trim() || `Track ${i+1}`,
+      url: partes[1]?.trim() || partes[0]?.trim()
+    };
+
+  }).filter(c => c.url);
+
+  if (!lista.length) return;
+
+  // Limpiar contenido original
+  contenedor.innerHTML = "";
+
+  // Crear radio
+  const radio = document.createElement("div");
+  radio.className = "radio-retro";
+
+  radio.innerHTML = `
+    <div class="radio-screen">ON AIR ●</div>
+    <div class="radio-title">${lista[0].titulo}</div>
+    <div class="radio-controls">
+      <button class="play">▶</button>
+      <button class="next">⏭</button>
+    </div>
+    <audio preload="none"></audio>
+  `;
+
+  contenedor.appendChild(radio);
+
+  const audio = radio.querySelector("audio");
+  const titulo = radio.querySelector(".radio-title");
+  const playBtn = radio.querySelector(".play");
+  const nextBtn = radio.querySelector(".next");
+
+  let actual = 0;
+
+  function cargar(i) {
+    audio.src = lista[i].url;
+    titulo.textContent = lista[i].titulo;
+  }
+
+  cargar(0);
+
+  playBtn.onclick = function() {
+    if (audio.paused) {
+      audio.play();
+      playBtn.textContent = "⏸";
+    } else {
+      audio.pause();
+      playBtn.textContent = "▶";
+    }
+  };
+
+  nextBtn.onclick = function() {
+    actual++;
+    if (actual >= lista.length) actual = 0;
+    cargar(actual);
+    audio.play();
+    playBtn.textContent = "⏸";
+  };
+
+  audio.onended = function() {
+    actual++;
+    if (actual >= lista.length) actual = 0;
+    cargar(actual);
+    audio.play();
+  };
+
+}
+
+// Ejecutar
+crearRadioRetro();
 
 });
