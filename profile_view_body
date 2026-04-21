@@ -50,13 +50,13 @@
     <div class="datgen">
       <h1>Datos generales <i class="fi fi-rr-list"></i></h1>
       <div class="tdatge">
-        <div class="pedad"><dfn>Edad</dfn> <span class="valor"></span></div>
-        <div class="praza"><dfn>Raza</dfn> <span class="valor"></span></div>
-        <div class="palt"><dfn>Altura</dfn> <span class="valor"></span></div>
-        <div class="pisl"><dfn>Isla Natal</dfn> <span class="valor"></span></div>
-        <div class="pberr"><dfn>Berrys</dfn> <span class="valor"></span></div>
-        <div class="paku"><dfn>Akuma no mi</dfn> <span class="valor"></span></div>
-        <div class="pb"><dfn>PB</dfn> <span class="valor"></span></div>    
+        <div class="pedad"><dfn><i class="game-icon game-icon-ages"></i>Edad</dfn> <span class="valor"></span></div>
+        <div class="praza"><dfn><i class="game-icon game-icon-angel-wings"></i>Raza</dfn> <span class="valor"></span></div>
+        <div class="palt"><dfn><i class="game-icon game-icon-body-height"></i>Altura</dfn> <span class="valor"></span></div>
+        <div class="pisl"><dfn><i class="game-icon game-icon-island"></i>Isla Natal</dfn> <span class="valor"></span></div>
+        <div class="pberr"><dfn><i class="game-icon game-icon-ages"></i>Berrys</dfn> <span class="valor"></span></div>
+        <div class="paku"><dfn><i class="game-icon game-icon-raspberry"></i>Akuma no mi</dfn> <span class="valor"></span></div>
+        <div class="pb"><dfn><i class="game-icon game-icon-drama-masks"></i>PB</dfn> <span class="valor"></span></div>    
       </div>
     </div>
   </div>
@@ -92,7 +92,7 @@
 </div>
 <div class="sect">
   <div class="belpart">
-    <h1>Datos Belicos</h1>
+    <h1><i class="game-icon game-icon-sword-spin"></i>Puntos y atributos</h1>
     <div class="bellvl">nivel <span class="valor"></span></div>
   </div>
   <div class="pponter">
@@ -102,17 +102,33 @@
     <div class="REPcampo">REP <span class="valor"></span></div>
   </div>
   <div class="atrbar">
-    <div class="atr">Vida <span class="valor"></span></div>
-    <div class="atr">Energía <span class="valor"></span></div>
-    <div class="atr">Fuerza <span class="valor"></span></div>
-    <div class="atr">Resistencia <span class="valor"></span></div>
-    <div class="atr">Velocidad <span class="valor"></span></div>
-    <div class="atr">Inteligencia <span class="valor"></span></div>
+    <div class="atr">
+      <dfn><i class="game-icon game-icon-sword-spin"></i> Vida</dfn>
+      <span class="valor"></span></div>
+    <div class="atr">
+       <dfn><i class="game-icon game-icon-sword-spin"></i> Energía </dfn>
+      <span class="valor"></span></div>
+    <div class="atr">
+      <dfn><i class="game-icon game-icon-sword-spin"></i>Fuerza </dfn>
+      <span class="valor"></span></div>
+    <div class="atr">
+      <dfn><i class="game-icon game-icon-sword-spin"></i>Resistencia </dfn>
+      <span class="valor"></span></div>
+    <div class="atr">
+      <dfn><i class="game-icon game-icon-sword-spin"></i>Velocidad </dfn>
+      <span class="valor"></span></div>
+    <div class="atr">
+      <dfn><i class="game-icon game-icon-sword-spin"></i>Inteligencia </dfn>
+      <span class="valor"></span></div>
   </div>
 </div>
 <div class="secc">
-  <div class="objsecc">Objetos <span class="valor"></span></div>
-  <div class="seccup">Cuponera <span class="valor"></span></div>
+  <div class="objsecc">
+    <dfn><i class="game-icon game-icon-sword-spin"></i>Objetos </dfn>
+    <span class="valor"></span></div>
+  <div class="seccup">
+    <dfn><i class="game-icon game-icon-sword-spin"></i>Cuponera </dfn>
+    <span class="valor"></span></div>
 </div>
 <div class="seco">
   <div class="cronos">cronología <span class="valor"></span></div>
@@ -428,28 +444,49 @@ opacity:0;
     align-self:start;
 }
   
-.tdatge{
-    display:flex;
-    flex-direction:column;
-    gap:10px;
+.tdatge {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
-.tdatge > div{
+.tdatge > div {
     background: var(--color-5);
     padding: 8px 10px;
-    border-radius:.18em;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
+    border-radius: .18em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
   
-.sectres {
-    height:100%;
-
-    display:flex;
-    flex-direction:column;
-    gap:10px;
+.tdatge dfn {
+    color: var(--color-3);
+    font-size: 0.9em;
+    font-style: normal;
+    letter-spacing: 1px;
+    font-weight: 400;
+    font-family: var(--cuerpo1);
+    text-transform: uppercase;
+    width: -webkit-fill-available;
+    display: flex;
+}
+  
+.tdatge dfn i {
+    margin: 0px 10px 0 0;
+    font-size: 1.1em;
+    line-height: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }  
+  
+.sectres {
+    height: 522px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+}
   
 .fra {
     overflow: hidden;
@@ -482,12 +519,12 @@ opacity:0;
     margin: 10px 0 0;
     padding: 10px;
     border-radius: 0.38em;
-    font-size: 1em;
+    font-size: 0.9em;
     line-height: 1.5em;
     text-align: justify;
     font-style: normal;
     color: var(--color-6);
-}  
+}
   
 .fralink {
     width: -webkit-fill-available;
@@ -523,13 +560,14 @@ opacity:0;
   
 /*Playlist*/
 .music {
-    height: -webkit-fill-available;
+    height: 223px;
     width: -webkit-fill-available;
     background: transparent;
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-flow: column;
+    border-radius: 10px;
 }
   
 .music dfn {
@@ -548,33 +586,45 @@ opacity:0;
     color: var(--color-3);
 }  
   
+.music span {
+    height: 183px;
+    border-radius: 10px;
+}  
+  
 .radio-retro {
+    height: 166px;
     margin: 10px 0 0 0;
-    padding: 10px;
     background: var(--color-5);
     border-radius: 0.38em;
     display: flex;
     min-width: 200px;
     flex-flow: column;
+    align-items: center;
     width: 250px;
+    padding: 10px;
+    justify-content: space-between;
 }
   
 .radio-cover {
     overflow: hidden;
-    height: 80px;
+    height: 75px;
     width: 230px;
     object-fit: cover;
-    border-radius: 0.18em;
     background: var(--color-3);
     display: flex;
     align-items: end;
-} 
-  
-.cover-img {
-    position: absolute;
+    position: relative;
     border-top-left-radius: 0.18em;
     border-top-right-radius: 0.18em;
-}  
+}
+  
+.cover-img {
+    border-top-left-radius: 0.18em;
+    border-top-right-radius: 0.18em;
+    width: 230px;
+    height: 75px;
+    object-fit: cover;
+} 
   
 .radio-title {
     background: var(--color-3);
@@ -584,9 +634,24 @@ opacity:0;
     font-size: 0.5em;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
-    margin: 0 0 0px 0px;
     position: relative;
-    top: -10px;
+}  
+  
+.radio-controls {
+    display: flex;
+    margin: 13px 5px 7px;
+    align-items: center;
+    justify-content: space-between;
+    width: -webkit-fill-available;
+}
+  
+.radio-controls button{
+    padding: 4px;
+    background: transparent;
+    color: var(--color-3);
+    border: 1px solid var(--color-3);
+    border-radius: 6px;
+    font-size: 12px;
 }  
   
 .radio-volume{
@@ -615,18 +680,24 @@ appearance: slider-vertical;
 width:30px;
 height:110px;
 }
-  
-/* CONTENEDOR */
-.radio-progress {
-    width: 100%;
-    height: 8px;
-    border-radius: 20px;
-    overflow: hidden;
-    position: relative;
-    background: var(--tcolor3);
-    box-shadow: inset 0 0 8px rgba(255, 255, 255, .05), 0 0 6px rgba(0, 0, 0, .35);
-    margin: 10px;
+ 
+
+/* BARRA ACTIVA */
+.radio-progress{
+width: stretch;
+height: 8px;
+margin: 10px;
+border-radius: 20px;
+overflow: hidden;
+position: absolute;
+
+background:var(--tcolor6);
+
+box-shadow:
+inset 0 0 8px rgba(255,255,255,.04),
+0 0 8px rgba(0,0,0,.28);
 }
+
 
 /* BARRA ACTIVA */
 .radio-progress .bar{
@@ -638,60 +709,108 @@ transition:width .25s linear;
 
 background:linear-gradient(
 90deg,
-#00f0ff,
-#00ffae,
-#8cff00,
-#00ffae,
-#00f0ff
+var(--color-2),
+var(--color-3),
+var(--color-1),
+var(--color-3),
+var(--color-2)
 );
 
 background-size:300% 100%;
 
 animation:
-flowBar 3s linear infinite,
-pulseGlow 1.8s ease-in-out infinite;
+flowBar 4s linear infinite,
+pulseGlow 2s ease-in-out infinite;
 }
 
-/* BRILLO QUE CORRE */
+
+/* DESTELLO */
 .radio-progress .bar::after{
 content:"";
 position:absolute;
 top:0;
-left:-40px;
-width:40px;
+left:-45px;
+width:45px;
 height:100%;
+
 background:linear-gradient(
 90deg,
 transparent,
-rgba(255,255,255,.8),
+var(--tcolor5),
 transparent
 );
+
 transform:skewX(-25deg);
-animation:shineRun 1.6s linear infinite;
+
+animation:shineRun 1.8s linear infinite;
 }
 
-/* ANIMACIONES */
+
+/* =========================
+   ANIMACIONES
+   ========================= */
 
 @keyframes flowBar{
-0%{background-position:0% 0;}
-100%{background-position:300% 0;}
+0%{
+background-position:0% 0;
+}
+100%{
+background-position:300% 0;
+}
 }
 
 @keyframes shineRun{
-0%{left:-40px;}
-100%{left:110%;}
+0%{
+left:-45px;
+}
+100%{
+left:110%;
+}
 }
 
 @keyframes pulseGlow{
+
 0%,100%{
 box-shadow:
-0 0 8px rgba(0,255,180,.35),
-0 0 14px rgba(0,255,180,.25);
+0 0 6px var(--tcolor3),
+0 0 12px var(--tcolor6);
 }
+
 50%{
 box-shadow:
-0 0 14px rgba(0,255,180,.65),
-0 0 28px rgba(0,255,180,.45);
+0 0 10px var(--color-2),
+0 0 20px var(--color-3),
+0 0 28px var(--tcolor3);
 }
+
 }
+  
+.sect {
+    width: -webkit-fill-available;
+    height: -webkit-fill-available;
+    background: var(--color-5);
+    margin: 10px;
+    border-radius: 0.38em;
+    padding: 10px;
+}  
+  
+.belpart{
+    width: -webkit-fill-available;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}  
+  
+.belpart h1 {
+    background: var(--color-3);
+    border-radius: 0.38em;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    min-width: 500px;
+    color: var(--color-5);
+    font-family: var(--titulos);
+    text-transform: uppercase;
+}  
 </style>
