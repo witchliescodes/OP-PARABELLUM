@@ -26,7 +26,7 @@
 </div>
 <div class="secd">
   <div class="secava">
-    <div class="perfilavatar">{AVATAR_IMG}
+    <div class="perfilavatar" title="300 x 500" data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip">{AVATAR_IMG}
       </div>  
   </div>
   <div class="secdos">
@@ -66,7 +66,7 @@
       <span class="valor"></span>
     </div>   
   <div class="fralink">
-      <h1>Contacto y Links</h1>
+      <h1>Contacto y Links <i class="fi fi-rr-link"></i></h1>
       <div class="blinnky">
         	<!-- BEGIN contact_field -->
 		<dl id="field_id{contact_field.ID}">
@@ -77,15 +77,15 @@
 		<div id="field_id{profile_field.ID}">
                   <!-- BEGIN profil_type_user_posts --> 
 				<!-- BEGIN links -->
-				<a rel="nofollow" href="/sta/{PUSERNAME}"><i class="fi fi-rr-browser"></i></a>
-				<a rel="nofollow" href="/spa/{PUSERNAME}"><i class="fi fi-rr-document"></i></a>
+				<a rel="nofollow" href="/sta/{PUSERNAME}" title="Temas" data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip"><i class="fi fi-rr-browser"></i></a>
+				<a rel="nofollow" href="/spa/{PUSERNAME}" title="Mensajes" data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip"><i class="fi fi-rr-document"></i></a>
 				<!-- END links -->
 				<!-- END profil_type_user_posts -->
           	</div>
 		<!-- END profile_field -->
     </div>
   </div>
-    <div class="music">
+    <div class="music" title="Puedes colocar aquí el listado de canciones que representan a tu personaje, puedes incluir hasta 20 canciones." data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip">
       <dfn>Mi Playlist <i class="game-icon game-icon-music-spell"></i></dfn>
       <span class="valor"></span></div>
   </div>
@@ -93,13 +93,13 @@
 <div class="sect">
   <div class="belpart">
     <h1><i class="game-icon game-icon-sword-spin"></i>Puntos y atributos</h1>
-    <div class="bellvl">nivel <span class="valor"></span></div>
+    <div class="bellvl">Nivel <span class="valor"></span></div>
   </div>
   <div class="pponter">
-    <div class="PAcampo">PA <span class="valor"></span></div>
-    <div class="PPcampo">PP <span class="valor"></span></div>
-    <div class="PRcampo">PR <span class="valor"></span></div>
-    <div class="REPcampo">REP <span class="valor"></span></div>
+    <div class="PAcampo" title="Puntos de Atributos" data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip">PA <span class="valor"></span></div>
+    <div class="PPcampo" title="Puntos de poder" data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip">PP <span class="valor"></span></div>
+    <div class="PRcampo" title="Puntos de rol" data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip">PR <span class="valor"></span></div>
+    <div class="REPcampo" title="Reputación" data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip">REP <span class="valor"></span></div>
   </div>
   <div class="atrbar">
     <div class="atr">
@@ -543,9 +543,11 @@ opacity:0;
     width: -webkit-fill-available;
     font-family: var(--titulos);
     text-transform: uppercase;
-    text-align: center;
     color: var(--color-3);
     letter-spacing: 1px;
+   display: flex; 
+  align-items: center; 
+  justify-content: space-between;
 }  
   
 .blinnky {
@@ -555,8 +557,36 @@ opacity:0;
     padding: 10px;
     display: flex;
     align-items: center;
-      border-radius: 0.38em;
+    justify-content: center;
+    border-radius: 0.38em;
 }
+  
+  
+.blinnky > div, .blinnky > li, #field_id, #field_id-10, #field_id22  {
+    display: flex;
+    width: auto !important;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    max-height: 40px;
+    margin: 0px;
+}
+
+.blinnky > *:nth-child(2){
+    display:none !important;
+}  
+  
+.blinnky a {
+    background: transparent;
+    color: var(--color-3);
+    width: -webkit-fill-available;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.18em;
+    margin: 0 14px;
+}
+
   
 /*Playlist*/
 .music {
@@ -788,29 +818,74 @@ box-shadow:
 .sect {
     width: -webkit-fill-available;
     height: -webkit-fill-available;
-    background: var(--color-5);
-    margin: 10px;
-    border-radius: 0.38em;
+    background: transparent;
     padding: 10px;
-}  
+}
   
-.belpart{
+.belpart {
     width: -webkit-fill-available;
     display: flex;
     align-items: center;
     justify-content: space-between;
-}  
+    background: var(--color-3);
+    padding: 10px;
+    border-radius: 0.38em;
+    margin: 0 0 10px 0;
+}
   
 .belpart h1 {
-    background: var(--color-3);
+    background: var(--color-1);
     border-radius: 0.38em;
     padding: 10px;
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    min-width: 500px;
-    color: var(--color-5);
+    justify-content: flex-start;
+    min-width: auto;
+    color: var(--color-6);
     font-family: var(--titulos);
     text-transform: uppercase;
+    font-size: 1.5em;
+    margin: 0;
+}
+  
+.belpart h1 i{
+    margin: 0 10px 0 0px;
+    color: var(--color-3);
 }  
+  
+.bellvl {
+    background: var(--color-1);
+    padding: 5px 10px;
+    border-radius: 0.18em;
+    font-size: 1.5em;
+    font-family: var(--titulos);
+    justify-content: space-between;
+    display: flex;
+    min-width: 200px;
+}  
+  
+.pponter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--color-5);
+    padding: 10px;
+    border-radius: 0.38em;
+}  
+  
+
+.pponter .PAcampo, .pponter .PPcampo, .pponter .PRcampo, .pponter .REPcampo {
+    background: var(--color-3);
+    padding: 5px 10px;
+    min-width: 200px;
+    width: auto;
+    border-radius: 0.18em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--color-6);
+    font-size: 1em;
+    line-height: 1.5em;
+    font-family: var(--cuerpo1);
+} 
 </style>
