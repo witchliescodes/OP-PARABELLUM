@@ -31,7 +31,7 @@ title:'Perfil del personaje',
 'data-bs-toggle':'tooltip',
 'data-bs-custom-class':'custom-tooltip'
 })
-.html('<em class="fas fa-user"></em>');
+.html('<i class="fas fa-user"></i>');
 	
 $('img[src*="contact_pm"]').parent()
 .attr({
@@ -39,7 +39,7 @@ title:'Mensaje Privado',
 'data-bs-toggle':'tooltip',
 'data-bs-custom-class':'custom-tooltip'
 })
-.html('<em class="game-icon game-icon-envelope"></em>');
+.html('<i class="game-icon game-icon-envelope"></i>');
 	
 $('img[src*="https://2img.net/images2.imgbox.com/64/db/MjYGVDud_o.png"]').parent()
 .attr({
@@ -47,7 +47,7 @@ title:'Expediente de Personaje',
 'data-bs-toggle':'tooltip',
 'data-bs-custom-class':'custom-tooltip'
 })
-.html('<em class="game-icon game-icon-bookmarklet"></em>');
+.html('<i class="game-icon game-icon-bookmarklet"></i>');
 
 $('img[src*="https://images2.imgbox.com/01/0a/Q5wtTsfJ_o.png"]').parent()
 .attr({
@@ -55,7 +55,7 @@ title:'Hoja de personaje',
 'data-bs-toggle':'tooltip',
 'data-bs-custom-class':'custom-tooltip'
 })
-.html('<em class="game-icon game-icon-crossed-axes"></em>');
+.html('<i class="game-icon game-icon-crossed-axes"></i>');
 	
 document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach(function(el){
 new bootstrap.Tooltip(el);
