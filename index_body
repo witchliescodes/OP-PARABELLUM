@@ -67,21 +67,23 @@
           <i class="fi fi-rr-eye"></i>
           <p>Ahora</p>
       </div>
-      conectados ahora
+      {LOGGED_IN_USER_LIST}
     </div>
     <div class="op-nest">
       <div class="concuaoch">
       <i class="fi fi-rr-eye"></i>
           <p>Hace 48 horas</p>
       </div>
-      Estuvieron hace 48 horas
+      {L_CONNECTED_MEMBERS}
     </div>
     <div class="op-grups">
     <div class="congroup">
        <i class="fi fi-rr-eye"></i>
        <p>Grupos</p>
     </div>  
-      grupos aquí
+     <!-- BEGIN switch_group_legend -->
+<em>{LEGEND} {GROUP_LEGEND}</em>
+<!-- END switch_group_legend -->
     </div>
   </div>
   <div class="op-barsta">
@@ -89,85 +91,32 @@
       <div class="tiest">
         <h1>Estados <i class="fi fi-rr-badge-check"></i></h1>
       <div class="stop">
-        <p>Mensajes</p>
-        <p>Usuarios</p>
+        <p>Mensajes {TOTAL_POSTS}</p>
+        <p>Usuarios {TOTAL_USERS}</p>
       </div>
       </div>
       <div class="backstas">
         <div class="stalinky">
           links
         </div>
-        <div class="opbinsa">
-        <div class="instas">
-            <h1>WELCOME</h1>
-            <span>Nombre Mc nombre</span>
-        </div>
-        <div class="avaulti">
-          avatar del ultimo 
-        </div>
-        </div>
+<div class="opbinsa">
+  <div class="instas">
+    <h1>WELCOME</h1>
+    <div class="newestext">{NEWEST_USER}</div>
+  </div>
+  <div id="avaulti">
+  </div>
+</div>
+              
       </div>
     </div>
   </div>
 </div>             
 
 
-	<!-- BEGIN switch_viewonline_nolink -->
-	<div class="h3">{L_WHO_IS_ONLINE}</div>
-	<!-- END switch_viewonline_nolink -->
-
-<img src="{L_ONLINE_IMG}" id="i_whosonline" alt="{L_WHO_IS_ONLINE}" class="img-whois" loading="lazy" />
-<p>{TOTAL_USERS_ONLINE}<br />
-{RECORD_USERS}
-
-<br />
-{LOGGED_IN_USER_LIST}
-
-{L_ONLINE_USERS}
-{L_CONNECTED_MEMBERS}<br />
-{L_WHOSBIRTHDAY_TODAY}{L_WHOSBIRTHDAY_WEEK}
-
-<br />
-<!-- BEGIN switch_group_legend -->
-<em>{LEGEND}&nbsp;:&nbsp;{GROUP_LEGEND}</em>
-<!-- END switch_group_legend -->
-
-</p>
-<div class="clear"></div>
-
-	<!-- BEGIN switch_statistics_link -->
-	<div class="h3"><a href="{U_STATISTICS}" rel="nofollow">{L_STATISTICS}</a></div>
-	<!-- END switch_statistics_link -->
-
-	<!-- BEGIN switch_statistics_nolink -->
-	<div class="h3">{L_STATISTICS}</div>
-	<!-- END switch_statistics_nolink -->
-
-<p class="page-bottom">
-{TOTAL_POSTS}
-</p>
-<p class="page-bottom">
-{TOTAL_USERS}
-</p>
-<p class="page-bottom">
-{NEWEST_USER}
-</p>
-	<!-- BEGIN switch_chatbox_activate -->
-	<div class="h3"><a href="{S_JOIN_CHAT}" target="ChatBox">{CHATBOX_NAME}</a></div>
-	<div class="page-bottom">
-	{TOTAL_CHATTERS_ONLINE}&nbsp;:&nbsp;
-	{CHATTERS_LIST}<br />
-	</div>
-		<!-- BEGIN switch_chatbox_popup -->
-		<div id="chatbox_popup"></div>
-		<script type="text/javascript">
-		insertChatBoxPopup('{disable_viewonline.switch_chatbox_activate.switch_chatbox_popup.U_FRAME_CHATBOX}', '{L_CLICK_TO_JOIN_CHAT}');
-		</script>
-		<!-- END switch_chatbox_popup -->
-	<!-- END switch_chatbox_activate -->
+	
 <!-- END disable_viewonline -->
 
-{CHATBOX_BOTTOM}
 
 <!-- BEGIN switch_user_login_form_footer -->
 <div class="panel">
@@ -195,15 +144,7 @@
 </div>
 <!-- END switch_user_login_form_footer -->
 
-<br style="clear:both" />
 
-<!-- BEGIN switch_legend -->
-<ul id="picture_legend">
-	<li><img src="{FORUM_NEW_IMG}" alt="{L_NEW_POSTS}" loading="lazy"/>{L_NEW_POSTS}</li>
-	<li><img src="{FORUM_IMG}" alt="{L_NO_NEW_POSTS}" loading="lazy"/>{L_NO_NEW_POSTS}</li>
-	<li><img src="{FORUM_LOCKED_IMG}" alt="{L_FORUM_LOCKED}" loading="lazy"/>{L_FORUM_LOCKED}</li>
-</ul>
-<!-- END switch_legend -->
 
 {AUTO_DST}
 <style>
@@ -549,12 +490,21 @@
     color: var(--color-3);
 }
 
-.avaulti {
+#avaulti {
     max-width: 300px;
     width: 150px;
-    height: -webkit-fill-available;
+    height: 150px;
     background: var(--color-2);
     margin: 10px 0 0 0;
+    overflow: hidden;
     border-radius: 0.38rem;
 }
+  
+#avaulti img {
+    max-width: 300px;
+    max-height: 500px;
+    object-fit: cover;
+    width: 78px;
+    height: 150px;
+}  
 </style>
