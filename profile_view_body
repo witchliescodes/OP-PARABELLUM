@@ -1062,4 +1062,11 @@ box-shadow:
     margin: 0 10px;
     padding: 10px;
 }  
+  
+.objsecc {
+    width: stretch;
+    display: flex;
+    flex-flow: column;
+    height: auto;
+}
 </style>
