@@ -135,7 +135,11 @@
   <div class="cronos">cronología <span class="valor"></span></div>
 </div>
 </div>
-
+		<!-- BEGIN switch_auth_user -->
+		<dl class="left-box details" style="width: 80%;margin-top:10px;margin-bottom:10px">
+			<dt>{L_ADMINISTRATE_USER}:</dt><dd><strong>{ADMINISTRATE_USER}{BAN_USER}</strong></dd>
+		</dl>
+		<!-- END switch_auth_user -->
 <!--CAMPOS OCULTOS -->
 <div id="camposreales">
 
@@ -145,7 +149,14 @@
     <dd>{profile_field.CONTENT}</dd>
 </dl>
 <!-- END profile_field -->
-
+  
+<!-- BEGIN switch_awards -->
+		<div class="awards_block_simple_wrapper" style="float: left; width: 100%;">
+			<div class="h3">{switch_awards.L_AWARDS}</div>
+			<div class="awards_block_simple">{switch_awards.AWARDS_LIST}</div>
+		</div>
+<!-- END switch_awards -->
+  
 </div>
 <!-- FIN CAMPOS OCULTOS-->
 
@@ -335,7 +346,18 @@ opacity:0;
 .tripm.off  {
     background: var(--bs-danger-border-subtle);
     border: 1px solid var(--bs-danger-text-emphasis);
-}
+}  
+  
+.oscuro .tripm.off {
+    background: var(--bs-danger-text-emphasis);
+    border: 1px solid var(--color-3);
+}  
+  
+.oscuro .tripm.on {
+    background: var(--bs-form-valid-color);
+    border: 1px solid var(--bs-success);
+}  
+  
 
 .secd {
     display: flex;
@@ -490,10 +512,10 @@ opacity:0;
 }  
   
 .sectres {
-    height: 522px;
+    height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
     gap: 10px;
 }
   
@@ -504,6 +526,7 @@ opacity:0;
     flex-flow: column;
     background: transparent;
     width: stretch;
+    height: stretch;
 }
   
 .fra dfn {
@@ -521,6 +544,7 @@ opacity:0;
     letter-spacing: 0.1em;
     color: var(--color-3);
     line-height: 1em;
+    font-size: 1.2em;
 }
   
 .fra span {
@@ -528,11 +552,13 @@ opacity:0;
     margin: 10px 0 0;
     padding: 10px;
     border-radius: 0.38em;
-    font-size: 0.9em;
+    font-size: 1em;
     line-height: 1.5em;
     text-align: justify;
     font-style: normal;
     color: var(--color-6);
+    overflow: auto;
+    height: stretch;
 }
   
 .fralink {
@@ -585,36 +611,58 @@ opacity:0;
     display:none !important;
 }  
   
-.blinnky a {
-    background: transparent;
-    width: -webkit-fill-available;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 0.18em;
-    margin: 7px 14px;
+.blinnky a{
+    background:transparent;
+    width:-webkit-fill-available;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:0.18em;
+    margin:7px 14px;
+    transition:all 300ms ease;
+    position:relative;
 }
 
-.blinnky a i, .blinnky a em  {
-    color: var(--color-3);
-    font-size: 1.2em;
+.blinnky a i{
+    color:var(--color-3);
+    font-size:1.2em;
+    transition:all 300ms ease;
 }
-  
-  
+
+/* línea decorativa */
+.blinnky a::after{
+    content:"";
+    position:absolute;
+    bottom:-5px;
+    left:50%;
+    transform:translateX(-50%);
+    width:0%;
+    height:1px;
+    background:var(--color-2);
+    opacity:.8;
+    transition:all 300ms ease;
+}
+
+/* hover */
 .blinnky a:hover{
-    transform: translateY(-4px); 
-    background: transparent;
-    box-shadow: 0 8px 18px var(--tcolor3);
+    transform:translateY(-4px);
 }
 
-.blinnky a:hover i, .blinnky a:hover em{
+.blinnky a:hover i{
     transform:scale(1.15);
-}  
-  
+    color:var(--color-2);
+    text-shadow:
+        0 0 6px color-mix(in srgb, var(--color-2) 45%, transparent),
+        0 0 12px color-mix(in srgb, var(--color-2) 20%, transparent);
+}
+
+.blinnky a:hover::after{
+    width:70%;
+}
   
 /*Playlist*/
 .music {
-    height: 223px;
+    height: stretch;
     width: -webkit-fill-available;
     background: transparent;
     display: flex;
@@ -641,12 +689,7 @@ opacity:0;
 }  
   
 .music span {
-    height: 183px;
-    border-radius: 10px;
-}  
-  
-.radio-retro {
-    height: 166px;
+    height: stretch;
     margin: 10px 0 0 0;
     background: var(--color-5);
     border-radius: 0.38em;
@@ -654,15 +697,21 @@ opacity:0;
     min-width: 200px;
     flex-flow: column;
     align-items: center;
-    width: 250px;
+    width: stretch;
     padding: 10px;
     justify-content: space-between;
+    min-height: 170px;
+}
+  
+.radio-retro {
+    width: 100%;
+    height: 100%;
 }
   
 .radio-cover {
     overflow: hidden;
     height: 75px;
-    width: 230px;
+    width: -webkit-fill-available;
     object-fit: cover;
     background: var(--color-3);
     display: flex;
@@ -673,23 +722,25 @@ opacity:0;
 }
   
 .cover-img {
-    border-top-left-radius: 0.18em;
-    border-top-right-radius: 0.18em;
-    width: 230px;
+    border-top-left-radius: 0.38em;
+    border-top-right-radius: 0.38em;
+    width: 236px;
     height: 75px;
     object-fit: cover;
-} 
+}
   
 .radio-title {
     background: var(--color-3);
     width: -webkit-fill-available;
     padding: 10px;
     line-height: 1em;
-    font-size: 0.5em;
+    font-size: 0.55em;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     position: relative;
-}  
+    color: var(--color-1);
+    margin: 0 0px 10px 0;
+}
   
 .radio-controls {
     display: flex;
@@ -699,14 +750,14 @@ opacity:0;
     width: -webkit-fill-available;
 }
   
-.radio-controls button{
-    padding: 4px;
+.radio-controls button {
+    padding: 10px;
     background: transparent;
     color: var(--color-3);
     border: 1px solid var(--color-3);
     border-radius: 6px;
     font-size: 12px;
-}  
+} 
   
 .radio-volume{
 position:relative;
@@ -839,6 +890,7 @@ box-shadow:
 
 }
   
+  /*PARTE BELICA*/  
 .sect {
     width: -webkit-fill-available;
     height: -webkit-fill-available;
@@ -851,7 +903,7 @@ box-shadow:
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: var(--color-3);
+    background: var(--color-5);
     padding: 10px;
     border-radius: 0.38em;
     margin: 0 0 10px 0;
@@ -865,10 +917,10 @@ box-shadow:
     align-items: center;
     justify-content: flex-start;
     min-width: auto;
-    color: var(--color-6);
+    color: var(--color-3);
     font-family: var(--titulos);
     text-transform: uppercase;
-    font-size: 1.5em;
+    font-size: 2em;
     margin: 0;
 }
   
@@ -879,14 +931,15 @@ box-shadow:
   
 .bellvl {
     background: var(--color-1);
-    padding: 5px 10px;
+    padding: 10px;
     border-radius: 0.18em;
     font-size: 1.5em;
     font-family: var(--titulos);
     justify-content: space-between;
     display: flex;
     min-width: 200px;
-}  
+    color: var(--color-3);
+}
   
 .pponter {
     display: flex;
