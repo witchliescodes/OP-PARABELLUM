@@ -56,6 +56,7 @@
         <div class="pisl"><dfn><i class="game-icon game-icon-island"></i>Isla Natal</dfn> <span class="valor"></span></div>
         <div class="pberr"><dfn><i class="game-icon game-icon-ages"></i>Berrys</dfn> <span class="valor"></span></div>
         <div class="paku"><dfn><i class="game-icon game-icon-raspberry"></i>Akuma no mi</dfn> <span class="valor"></span></div>
+        <div class="pwant"><dfn><i class="game-icon game-icon-wanted-reward"></i>Wanted</dfn> <span class="valor"></span></div>
         <div class="pb"><dfn><i class="game-icon game-icon-drama-masks"></i>PB</dfn> <span class="valor"></span></div>    
       </div>
     </div>
@@ -103,22 +104,22 @@
   </div>
   <div class="atrbar">
     <div class="atr vida">
-      <dfn><i class="game-icon game-icon-sword-spin"></i> Vida</dfn>
+      <dfn><i class="game-icon game-icon-heart-plus"></i> Vida</dfn>
       <span class="valor"></span></div>
     <div class="atr energia">
-       <dfn><i class="game-icon game-icon-sword-spin"></i> Energía </dfn>
+       <dfn><i class="fi fi-rr-bolt"></i> Energía</dfn>
       <span class="valor"></span></div>
     <div class="atr fuerza">
-      <dfn><i class="game-icon game-icon-sword-spin"></i>Fuerza </dfn>
+      <dfn><i class="fi fi-rr-heart-health-muscle"></i> Fuerza </dfn>
       <span class="valor"></span></div>
     <div class="atr resistencia">
-      <dfn><i class="game-icon game-icon-sword-spin"></i>Resistencia </dfn>
+      <dfn><i class="game-icon game-icon-chest-armor"></i> Resistencia </dfn>
       <span class="valor"></span></div>
     <div class="atr velocidad">
-      <dfn><i class="game-icon game-icon-sword-spin"></i>Velocidad </dfn>
+      <dfn><i class="game-icon game-icon-running-ninja"></i> Velocidad </dfn>
       <span class="valor"></span></div>
     <div class="atr inteligencia">
-      <dfn><i class="game-icon game-icon-sword-spin"></i>Inteligencia </dfn>
+      <dfn><i class="game-icon game-icon-brain"></i> Inteligencia </dfn>
       <span class="valor"></span></div>
   </div>
 </div>
@@ -452,7 +453,7 @@ opacity:0;
 
 .tdatge > div {
     background: var(--color-5);
-    padding: 8px 10px;
+    padding: 5px 10px;
     border-radius: .18em;
     display: flex;
     justify-content: space-between;
@@ -461,7 +462,7 @@ opacity:0;
   
 .tdatge dfn {
     color: var(--color-3);
-    font-size: 0.9em;
+    font-size: 0.8em;
     font-style: normal;
     letter-spacing: 1px;
     font-weight: 600;
@@ -478,6 +479,17 @@ opacity:0;
     display: flex;
     align-items: center;
     justify-content: center;
+}  
+  
+.tdatge .valor {
+    width: -webkit-fill-available;
+    line-height: 1.5em;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 1em;
+    font-family: var(--cuerpo1);
+    letter-spacing: 1px;
 }  
   
 .sectres {
@@ -819,7 +831,7 @@ box-shadow:
     width: -webkit-fill-available;
     height: -webkit-fill-available;
     background: transparent;
-    padding: 10px;
+    margin: 0 10px;
 }
   
 .belpart {
@@ -872,10 +884,9 @@ box-shadow:
     padding: 10px;
     border-radius: 0.38em;
 }  
-  
 
 .pponter .PAcampo, .pponter .PPcampo, .pponter .PRcampo, .pponter .REPcampo {
-    background: var(--color-3);
+    background: var(--color-1);
     padding: 5px 10px;
     min-width: 200px;
     width: auto;
@@ -887,7 +898,8 @@ box-shadow:
     font-size: 1em;
     line-height: 1.5em;
     font-family: var(--cuerpo1);
-} 
+    border: 1px solid var(--color-3);
+}
   
 .atrbar {
     width: -webkit-fill-available;
@@ -907,24 +919,39 @@ box-shadow:
     margin-bottom:10px;
 }
 
-.atr dfn{
-    font-style:normal;
-    font-size:11px;
-    text-transform:uppercase;
-    letter-spacing:1px;
-    color:#f5f5f5;
+.atr dfn {
+    font-style: normal;
+    font-size: 0.8em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--color-3);
+    font-family: var(--titulos);
+    display: flex;
+    align-items: center; 
+    justify-content: flex-start; 
 }
+  
+.atr dfn i {
+    color: var(--color-3);
+    margin: 0 5px 0 0px;
+    border-radius: 0.18em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.5em;
+    font-size: 1.5em;
+}  
 
-.atr .valor{
-    display:block;
-    width:100%;
-    height:10px;
-    background:#1f1f1f;
-    border-radius:20px;
-    position:relative;
-    overflow:hidden;
-    font-size:0;
-    color:transparent;
+.atr .valor {
+    display: block;
+    width: 100%;
+    height: 20px;
+    background: var(--color-1);
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    font-size: 0;
+    color: transparent;
 }
 
 .atr .valor::before{
@@ -939,11 +966,20 @@ box-shadow:
     transition:.5s ease;
 }
 
-.atr .num{
-    font-size:11px;
-    font-weight:700;
-    color:#fff;
-    text-align:right;
+.atr .num {
+    font-size: 0.8em;
+    font-weight: 700;
+    color: var(--color-3);
+    font-family: var(--cuerpo1);
+    text-align: right;
+    background: var(--color-1);
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.38em;
+    border: 1px solid var(--color-3);
+    line-height: 1.5em;
 }
 
 @keyframes fillBar{
@@ -951,5 +987,14 @@ box-shadow:
     to{width:var(--width);}
 }  
   
-  
+  /*OBJETOS Y CUPONES*/
+.secc {
+    width: -webkit-fill-available;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--color-5);
+    margin: 0 10px;
+    padding: 10px;
+}  
 </style>
