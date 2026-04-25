@@ -58,10 +58,35 @@ if(rep >= 50) return "Billion";
 
 return " Million";
 	
-}		
+}
 	
+function rangoPiratas(wanted){
+
+if(wanted >= 3000000000) return "Rey Pirata";
+if(wanted >= 2000000000) return "Yonko";
+if(wanted >= 1000000000) return "Comandante";
+if(wanted >= 500000000) return "Calamidad";
+if(wanted >= 100000000) return "Supernova";
+if(wanted >= 50000000) return "Pirata Destacado";
+if(wanted >= 15000000) return "Pirata";
+if(wanted >= 5000000) return "Criminal";
+if(wanted >= 100000) return "Bandido";
+
+return "Novato";
+
+}	
 	
-const {pa,pp,rep} = window.perfilDatos;
+function rangoCiviles(rep, berries){
+
+if(rep >= 200 && berries >= 1200000000000) return "Noble";
+if(rep >= 200) return "Celebridad";
+
+return "Ciudadano";
+
+}
+	
+const {pa,pp,rep,wanted,berries} = window.perfilDatos;
+	
 
 document.querySelector(".bellvl .valor").textContent =
 calcularNivel(pa);
@@ -97,7 +122,7 @@ icono=`<i class="game-icon game-icon-ship-wheel"></i>`;
 
 else if(grupo==="g3-name"){
 nombreGrupo="Piratas";
-rango="Pirata";
+rango=rangoPiratas(wanted);
 icono=`<i class="game-icon game-icon-crowned-skull"></i>`;
 }
 	
@@ -118,6 +143,12 @@ nombreGrupo="Cazarrecompensas";
 rango=rangoCazadores(rep,pp);
 icono=`<i class="game-icon game-icon-crowned-skull"></i>`;
 }	
+
+else if(grupo==="g7-name"){
+nombreGrupo="Civiles";
+rango=rangoCiviles(rep, berries);
+icono=`<i class="game-icon game-icon-crowned-skull"></i>`;
+}
 
 const fac = document.querySelector(".facgrup");
 
