@@ -84,35 +84,47 @@ const pa = parseInt(obtenerCampo("PA")) || 0;
 const pp = parseInt(obtenerCampo("PP")) || 0;
 const pr = parseInt(obtenerCampo("PR")) || 0;
 const rep = parseInt(obtenerCampo("REP")) || 0;
+const berries = parseInt(obtenerCampo("Berries").replace(/\D/g,"")) || 0;
+const wanted = parseInt(obtenerCampo("Wanted").replace(/\D/g,"")) || 0;
 
 window.perfilDatos = {
-pa, pp, pr, rep
+   pa,
+   pp,
+   pr,
+   rep,
+   berries,
+   wanted
 };
 
-ponerTexto(".PAcampo", pa);
-ponerTexto(".PPcampo", pp);
-ponerTexto(".PRcampo", pr);
-ponerTexto(".REPcampo", rep);
+ponerHTML(".PAcampo", pa);
+ponerHTML(".PPcampo", pp);
+ponerHTML(".PRcampo", pr);
+ponerHTML(".REPcampo", rep);
 
-ponerTexto(".mensajes", obtenerCampo("Mensajes"));
-ponerTexto(".registro", obtenerCampo("Fecha de inscripción"));
+ponerHTML(".mensajes", obtenerCampo("Mensajes"));
+ponerHTML(".registro", obtenerCampo("Fecha de inscripción"));
 
-ponerTexto(".pedad", obtenerCampo("Edad"));
-ponerTexto(".palt", obtenerCampo("Altura"));
-ponerTexto(".praza", obtenerCampo("Raza"));
-ponerTexto(".pisl", obtenerCampo("Isla"));
-ponerTexto(".pberr", obtenerCampo("Berries"));
-ponerTexto(".paku", obtenerCampo("Akuma"));
-ponerTexto(".pb", obtenerCampo("PB"));
-
+ponerHTML(".pedad", obtenerCampo("Edad"));
+ponerHTML(".palt", obtenerCampo("Altura"));
+ponerHTML(".praza", obtenerCampo("Raza"));
+ponerHTML(".pisl", obtenerCampo("Isla"));
+ponerHTML(".pberr", obtenerCampo("Berries"));
+ponerHTML(".pwant", obtenerCampo("Wanted"));
+ponerHTML(".paku", obtenerCampo("Akuma"));	
+ponerHTML(".pb", obtenerCampo("PB"));
 ponerHTML(".fra", obtenerCampoHTML("Frase"));
 ponerHTML(".music", obtenerCampoHTML("Playlist"));
+	
 ponerHTML(".vida", obtenerCampoHTML("Vida"));	
 ponerHTML(".energia", obtenerCampoHTML("Energía"));		
 ponerHTML(".fuerza", obtenerCampoHTML("Fuerza"));		
 ponerHTML(".resistencia", obtenerCampoHTML("Resistencia"));	
 ponerHTML(".velocidad", obtenerCampoHTML("Velocidad"));		
 ponerHTML(".inteligencia", obtenerCampoHTML("Inteligencia"));	
+	
+ponerHTML(".cronos", obtenerCampoHTML("Cronologia"));	
+
+	
 	
 // INVENTARIO Y CUPONERA
 setTimeout(() => {
