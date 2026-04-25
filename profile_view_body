@@ -132,7 +132,9 @@
     <span class="valor"></span></div>
 </div>
 <div class="seco">
-  <div class="cronos">cronología <span class="valor"></span></div>
+  <div class="cronos">
+    <dfn><i class="game-icon game-icon-extra-time"></i> Cronología</dfn>
+    <span class="valor"></span></div>
 </div>
 </div>
 		<!-- BEGIN switch_auth_user -->
