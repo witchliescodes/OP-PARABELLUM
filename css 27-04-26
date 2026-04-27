@@ -1286,7 +1286,7 @@ banner {
     max-width: 1200px;
     margin: -380px auto 100px;
     background-color: var(--color-4);
-    padding: 310px 55px 0;
+    padding: 310px 55px 55px;
     border-radius: 20px;
     position: relative;
     z-index: 1;
@@ -2483,4 +2483,3 @@ background-image: var(--staff1);
     justify-content: left;
     gap: 10px;
 }
-
