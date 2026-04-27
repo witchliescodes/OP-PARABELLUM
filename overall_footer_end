@@ -28,14 +28,18 @@
 						</div>
 					</div>
                                   <div class="admpp">{ADMIN_LINK}</div>
-					
+                                                
 				</div>
 				{PROTECT_FOOTER}
 			</div>
 		</div>
-	</div>
+	</div> 
 </div>
-
+  
+  
+    a ver como sale aquí los afiliados      
+  
+  
 <!-- BEGIN switch_facebook_login -->
 <div id="fb-root"></div>
 <script type="text/javascript">
