@@ -36,8 +36,68 @@
 	</div> 
 </div>
   
-  
-    a ver como sale aquí los afiliados      
+<!-- PERFILES -->
+<div class="opp-perf">
+<div class="secu">
+    <div class="u-fr">
+      <div class="frna">nombre</div>
+      <div class="frest">estatus</div>
+    </div>
+    <div class="tripart">
+      <div class="tripm">mensajes</div>
+      <div class="tripins">fecha de inscripción</div>
+      <div class="trpult">ultima conexión</div>
+    </div>
+
+</div>
+<div class="secd">
+  <div class="secava">
+    avatar 
+    <div class="avpb">PB</div>
+  </div>
+  <div class="secdos">
+    <div class="facgrup">facción y rango </div>
+    <div class="datgen">Datos generales
+      <div class="tdatge">todos los datos </div>
+    </div>
+  </div>
+  <div class="sectres">
+  <div class="music">musica</div>
+  <div class="fralink">
+    <div class="fra">frase</div>
+    <div class="pflink">Links</div>
+  </div>
+  </div>
+</div>
+<div class="sect">
+  <div class="belpart">
+    <h1>Datos Belicos</h1>
+    <div class="bellvl">nivel</div>
+  </div>
+  <div class="pponter">
+    <div class="PAcampo">PA</div>
+    <div class="PPcampo">PP</div>
+    <div class="PRcampo">PR</div>
+    <div class="REPcampo">REP</div>
+  </div>
+  <div class="atrbar">
+    <div class="atr">Vida</div>
+    <div class="atr">Energía</div>
+    <div class="atr">Fuerza</div>
+    <div class="atr">Resistencia</div>
+    <div class="atr">Velocidad</div>
+    <div class="atr">Inteligencia</div>
+  </div>
+</div>
+<div class="secc">
+  <div class="objsecc">Objetos</div>
+  <div class="seccup">Cuponera</div>
+</div>
+<div class="seco">
+  <div class="cronos">cronología</div>
+</div>
+</div>
+<!-- FIN DE PERFIL -->
   
   
 <!-- BEGIN switch_facebook_login -->
