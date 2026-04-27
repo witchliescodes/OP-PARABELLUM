@@ -235,6 +235,9 @@
 <body id="phpbb" class="claro">
 <div id="preloader">
   <div class="loader-box">
+    <span class="ship-wheel">
+      <i class="game-icon game-icon-ship-wheel"></i>
+    </span>
 
     <p class="loader-text">Reuniendo a la tripulación...</p>
 
@@ -242,10 +245,10 @@
       <div class="loader-progress"></div>
 
       <div class="loader-ship">
-        <span class="ship-icon"><i class="game-icon game-icon-iron-hulled-warship"></i></span>
-        <span class="ship-wheel"><i class="game-icon game-icon-iron-ship-wheel"></i></span>
+        <span class="ship-icon">
+          <i class="game-icon game-icon-iron-hulled-warship"></i>
+        </span>
       </div>
-
     </div>
 
   </div>
