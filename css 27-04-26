@@ -300,12 +300,6 @@ body.claro, body.oscuro {
   pointer-events: none;
 }
 
-/* CONTENEDOR */
-.loader-box {
-  text-align: center;
-  width: 220px;
-}
-
 /* GIF */
 .loader-gif {
   width: 120px;
@@ -330,14 +324,14 @@ body.claro, body.oscuro {
     border-radius: 10px;
     overflow: visible;
 }
-.loader-progress {
-  width: 0%;
-  height: 100%;
-  background: linear-gradient(90deg, #ffb703, #fb8500);
-  border-radius: 10px;
-  transition: width 0.3s ease;
-}
 
+.loader-progress {
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(90deg, var(--color-2), var(--color-3));
+    border-radius: 10px;
+    transition: width 0.3s ease;
+}
 /* CONTENEDOR */
 .loader-box {
   text-align: center;
@@ -345,7 +339,7 @@ body.claro, body.oscuro {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px; 
+  gap: 25px; 
 }
 
 .ship-wheel {
@@ -368,11 +362,11 @@ body.claro, body.oscuro {
 }
 
 .loader-ship {
-  position: absolute;
-  top: -18px;
-  left: 0%;
-  transform: translateX(-50%);
-  transition: left 0.3s ease;
+    position: absolute;
+    top: -30px;
+    left: 0%;
+    transform: translateX(-50%);
+    transition: left 0.3s ease;
 }
 
 .ship-icon {
