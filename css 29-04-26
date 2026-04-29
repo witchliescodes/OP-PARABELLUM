@@ -52,6 +52,7 @@
 --fondobase: url('https://images2.imgbox.com/60/a2/EZorbTlR_o.png');
 --fondo1: url('https://images2.imgbox.com/be/39/wRwzX2Zd_o.png');
 /*Banner*/
+--manga0: url('https://images2.imgbox.com/65/c7/unTt0y7K_o.png');  
 --manga1: url('https://images2.imgbox.com/66/c8/ElFgF1BY_o.png');
 --pj1: url('https://images2.imgbox.com/25/77/pbZjrle6_o.png');
 --manga2: url('https://images2.imgbox.com/de/eb/AcPVlysX_o.png');
@@ -107,8 +108,9 @@
 --fondobase: url('https://images2.imgbox.com/fd/59/jveyvmMq_o.jpg');
 --fondo1: url('https://images2.imgbox.com/a2/65/ChE531pF_o.png');
 /*Banner*/
+--manga0: url('https://images2.imgbox.com/8f/87/qh4XnIgV_o.png');
 --manga1: url('https://images2.imgbox.com/00/58/7YH9HoLh_o.png');
---pj1: url('https://images2.imgbox.com/a8/05/vmZpi8cU_o.png');
+--pj1: url('https://images2.imgbox.com/02/b9/uewVZlFn_o.png');
 --manga2: url('https://images2.imgbox.com/de/eb/AcPVlysX_o.png');
 --manga3: url('https://images2.imgbox.com/3b/45/dxCdG65Q_o.png');
 /*Tablón de anuncios*/
@@ -1255,11 +1257,11 @@ banner {
   height:100%;
 }
 
-.claro .manga1 {
-    content: var(--manga1);
-    opacity: 0.3;
-    position: absolute;
-    width: 100%;
+.claro .manga2 {
+    content: var(--pj1);
+    transform: translate(217px, 0px);
+    object-fit: contain;
+    width: inherit;
 }
 
 .claro .manga2 {
@@ -1297,9 +1299,10 @@ banner {
 
 .oscuro .manga2 {
     content: var(--pj1);
-    width: 120%;
-    height: 109%;
-    position: absolute;
+    object-fit: contain;
+    transform: translate(104px, 75px);
+    width: inherit;
+    height: 130%;
 }
 
 .oscuro .manga3 {
