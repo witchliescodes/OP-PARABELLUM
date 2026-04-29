@@ -1259,14 +1259,9 @@ banner {
 
 .claro .manga2 {
     content: var(--pj1);
-    transform: translate(217px, 0px);
+    transform: translate(0px, 0px);
     object-fit: contain;
     width: inherit;
-}
-
-.claro .manga2 {
-    content: var(--pj1);
-    transform: translate(217px, 0px);
 }
 
 .claro .manga3 {
