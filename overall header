@@ -239,7 +239,7 @@
       <i class="game-icon game-icon-ship-wheel"></i>
     </span>
 
-    <p class="loader-text">Reuniendo a la tripulación...</p>
+    <p class="loader-text"></p>
 
     <div class="loader-bar">
       <div class="loader-progress"></div>
@@ -433,6 +433,7 @@
 <banner>
   <img class="parfon"></img>
   <div class="imagba">
+    <img class="manga0" />
     <img class="manga1" />
     <img class="manga2" />
     <img class="manga3" />
