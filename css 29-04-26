@@ -52,7 +52,7 @@
 --fondobase: url('https://images2.imgbox.com/60/a2/EZorbTlR_o.png');
 --fondo1: url('https://images2.imgbox.com/be/39/wRwzX2Zd_o.png');
 /*Banner*/
---manga0: url('https://images2.imgbox.com/65/c7/unTt0y7K_o.png');  
+--manga0: url('https://images2.imgbox.com/bc/0a/nPoVNVqN_o.png');  
 --manga1: url('https://images2.imgbox.com/66/c8/ElFgF1BY_o.png');
 --pj1: url('https://images2.imgbox.com/25/77/pbZjrle6_o.png');
 --manga2: url('https://images2.imgbox.com/de/eb/AcPVlysX_o.png');
@@ -83,32 +83,32 @@
 
 :root .oscuro  {
   /* Mi Paleta */
-    --color-1: #0b0e11;
-    --color-2: #0c4542;
-    --color-3: #d76060;
-    --color-4: #f8fcfb;
-    --color-5: #14191f;
-    --color-6: #c5cccc;
-    --color-7: #390909;
+--color-1: #0b0e11;
+--color-2: #0c4542;
+--color-3: #d76060;
+--color-4: #f8fcfb;
+--color-5: #14191f;
+--color-6: #c5cccc;
+--color-7: #612b2b;
   /*Transparencias*/
-  --tcolor3: #d760603d;
-  --tcolor4: #0c4542a1;
-  --tcolor5: #2e141457;
-  --tcolor6: #2e141461;
-    /*DEGRADADOS*/
-  --deg3: linear-gradient(145deg, #291213, #14191f);
-  --deg2: linear-gradient(145deg, #d76060, #0c4542);
-  --deg1: linear-gradient(145deg, #14191f, #291213);
-  /* Fuentes */
+--tcolor3: #d760603d;
+--tcolor4: #0c4542a1;
+--tcolor5: #2e141457;
+--tcolor6: #2e141461;
+/*DEGRADADOS*/
+--deg3: linear-gradient(145deg, #291213, #14191f);
+--deg2: linear-gradient(145deg, #d76060, #0c4542);
+--deg1: linear-gradient(145deg, #14191f, #291213);
+/* Fuentes */
 --titulos: 'Poppins';
 --cuerpo1: 'Open Sans';
 --subtil: 'Cormorant Garamond';  
 /*Imagenes*/
 /*Fondos*/
---fondobase: url('https://images2.imgbox.com/fd/59/jveyvmMq_o.jpg');
+--fondobase: url('https://images2.imgbox.com/60/a2/EZorbTlR_o.png');
 --fondo1: url('https://images2.imgbox.com/a2/65/ChE531pF_o.png');
 /*Banner*/
---manga0: url('https://images2.imgbox.com/8f/87/qh4XnIgV_o.png');
+--manga0: url('https://images2.imgbox.com/df/ac/pOHqEJNn_o.png');
 --manga1: url('https://images2.imgbox.com/00/58/7YH9HoLh_o.png');
 --pj1: url('https://images2.imgbox.com/02/b9/uewVZlFn_o.png');
 --manga2: url('https://images2.imgbox.com/de/eb/AcPVlysX_o.png');
@@ -657,19 +657,19 @@ body.claro, body.oscuro {
         transform: rotate(0deg);
     }
     5% {
-        transform: rotate(12deg); /* Un pequeño balanceo a la derecha */
+        transform: rotate(12deg);
     }
     10% {
-        transform: rotate(-8deg); /* Luego a la izquierda, pero un poco menos */
+        transform: rotate(-8deg); 
     }
     15% {
-        transform: rotate(4deg);  /* Otro pequeño ajuste */
+        transform: rotate(4deg);  
     }
     20% {
-        transform: rotate(0deg);  /* Vuelve a su posición original */
+        transform: rotate(0deg); 
     }
     100% {
-        transform: rotate(0deg);  /* Se queda quieto hasta que el ciclo se repite */
+        transform: rotate(0deg);  
     }
 }
 .oppmensaj { display: none;}
@@ -1203,7 +1203,7 @@ display: flex !important;
 
 banner {
     background-color: var(--color-3);
-  width: min(90%, 1100px);
+    width: min(90%, 1100px);
     height: 600px;
     display: flex;
     top: -97px;
@@ -1213,27 +1213,15 @@ banner {
     z-index: 99 !important;
 }
 
-.claro banner .parfon {
-    background-image: var(--fondobase);
-    width: 206%;
-    height: inherit;
-    background-size: 175%;
-    background-position: 0% 31%;
-    opacity: 0.2;
-    mix-blend-mode: difference;
-    position: absolute;
-}
-
- .oscuro banner .parfon {
+banner .parfon {
     background-image: var(--fondobase);
     width: 100%;
     height: inherit;
-    background-size: 112%;
-    background-position: 0% 74%;
+    object-fit: cover;
+    background-size: 100%;
     opacity: 0.2;
-    mix-blend-mode: hard-light;
+    mix-blend-mode: difference;
     position: absolute;
-    transform: rotateX(-180deg);
 }
 
 
@@ -1254,48 +1242,60 @@ banner {
   transform:translateZ(0);
   position:absolute;
   bottom:0;
-  height:100%;
 }
+
+.manga0 {
+    content: var(--manga0);
+    object-fit: cover;
+    transform: translate(0vw, 0vh);
+    width: stretch;
+    height: min-content;
+}
+
+.claro .manga1 {
+    content: var(--manga1);
+    opacity: 0.2;
+    mix-blend-mode: hue;
+    width: 100%;
+}
+
 
 .claro .manga2 {
     content: var(--pj1);
-    transform: translate(0px, 0px);
+    transform: translate(0vw, 0vh);
     object-fit: contain;
     width: inherit;
+    height: 110%;
 }
 
 .claro .manga3 {
     content: var(--manga2);
     mix-blend-mode: soft-light;
-    position: absolute;
-    width: 120%;
-    top: -326px;
-    left: -130px;
-    opacity: 0.8;
+    width: 100%;
+    opacity: 0.6;
+    transform: translate(0vw, -42vh);
 }
+
+
 .claro .manga4 {
     content: var(--manga3);
-    mix-blend-mode: multiply;
-    width: 170%;
+    mix-blend-mode: darken;
+    width: 100%;
     opacity: 0.2;
-    height: 178%;
-    top: -48%;
-    left: -19%;
-    transform: scaleX(-1);
 }
 
 .oscuro .manga1 {
     content: var(--manga1);
-    opacity: 0.5;
+    opacity: 0.2;
     z-index: 4;
-    mix-blend-mode: soft-light;
-      width: 100%;
+    mix-blend-mode: hue;
+    width: 100%;
 }
 
 .oscuro .manga2 {
     content: var(--pj1);
     object-fit: contain;
-    transform: translate(104px, 75px);
+    transform: translate(4vw, 8vh);
     width: inherit;
     height: 130%;
 }
@@ -1303,20 +1303,34 @@ banner {
 .oscuro .manga3 {
     content: var(--manga2);
     z-index: 3;
-    width: 140%;
-    position: absolute;
-    left: -263px;
-    top: -311px;
+    width: 100%;
+    opacity: 0.6;
     mix-blend-mode: soft-light;
+    transform: translate(0vw, -34vh);
 }
 
 .oscuro .manga4 {
     content: var(--manga3);
     z-index: 4;
-    mix-blend-mode: hue;
     opacity: 0.2;
     width: 100%;
 }
+
+
+banner .manga2,
+banner .manga3 {
+  transition: transform 400ms ease-in-out;
+  will-change: transform;
+}
+
+banner:hover .manga2 {
+  transform: translateX(-1vw);
+}
+
+banner:hover .manga3 {
+  transform: translateY(2vh);
+}
+
 
 .partitle {
     position: absolute;
@@ -1337,11 +1351,11 @@ banner {
 }
 
 .oscuro .partitle h1 {
-    color: var(--color-5);
+    color: var(--color-4);
     font-weight: 900;
     font-size: 6em;
     margin: 10px;
-    text-shadow: 0 0 15px var(--color-4);
+    text-shadow: 0 0 15px var(--color-3);
 }
 
 #page-body {
@@ -1369,7 +1383,7 @@ banner {
 /*TABLON DE ANUNCIOS*/
 
 .paranun {
-    background-color: var(--color-1);
+    background-color: var(--color-5);
     color: var(--color-6);
     padding: 20px;
     border-radius: 10px;
@@ -1427,7 +1441,7 @@ banner {
 
 .ladoa h3 {
     float: left;
-    background-color: var(--color-4);
+    background-color: var(--color-1);
     font-size: 1.1em;
     letter-spacing: 0px;
     text-transform: uppercase;
@@ -1472,7 +1486,7 @@ banner {
     align-items: center;
     justify-content: space-between;
     border-radius: 5px;
-    background: var(--color-4);
+    background: var(--color-1);
 }
 
 .likospicos {
@@ -1501,6 +1515,7 @@ banner {
 .linku em {
   display: inline-flex;
   align-items: center;
+  font-size: 1.2em;
   justify-content: center;
   transition: transform 200ms ease, box-shadow 200ms ease;
 }
@@ -1526,7 +1541,7 @@ banner {
     font-size: 1em;
     margin: 0 0px 10px 0px;
     position: relative;
-    background: var(--color-4);
+    background: var(--color-1);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -1567,7 +1582,7 @@ banner {
 
 #sinscroll {
     margin: 10px 10px 0 0px;
-    background: var(--color-4);
+    background: var(--color-1);
     padding: 10px;
     border-radius: 10px;
     height: 100px;
@@ -1739,8 +1754,15 @@ transform: scaleX(1);
     box-shadow: 0px 0px 10px var(--color-3);
 }
 
+.claro .oppstaf__label {
+    color: var(--color-1);
+}
+
+.oscuro .oppstaf__label {
+    color: var(--color-6);
+}
+
 .oppstaf__label {
-    color: var(--color-5);
     font-family: var(--titulos);
     text-shadow: 0 1px 4px rgba(0, 0, 0, 0.35);
     display: flex;
@@ -1941,6 +1963,8 @@ background-image: var(--staff6);
     text-shadow: 1px 1px 0 var(--color-7), -1px 1px 0 var(--color-7), 1px -1px 0 var(--color-7), -1px -1px 0 var(--color-7);
 }
 
+.oscuro .stcar h3 { text-shadow: 1px 1px 0 var(--color-3), -1px 1px 0 var(--color-3), 1px -1px 0 var(--color-3), -1px -1px 0 var(--color-3);}
+
 .stcar span {
     font-size: 0.8em;
     line-height: 1.4em;
@@ -1966,6 +1990,7 @@ background-image: var(--staff6);
 
 .oscuro .stcar span {
     color: var(--color-4);
+    text-shadow: 1px 1px 0 var(--color-1), -1px 1px 0 var(--color-1), 1px -1px 0 var(--color-1), -1px -1px 0 var(--color-1);
 }
 
 .stcon {
