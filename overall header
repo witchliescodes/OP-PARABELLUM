@@ -446,8 +446,8 @@
                   
 <div id="wrap">
 
-<!--botones izquierda -->  
-
+<!-- botones izquierda -->  
+<div class="pboiz-wrap">
   <div class="pboiz">
    <button class="side-btn scroll-btn" onclick="window.scrollTo({top:0,behavior:'smooth'})">
     <i class="fi fi-rr-angle-circle-up"></i>
@@ -460,6 +460,7 @@
   </button>
 
   </div>  
+</div>  
   
 <!--TABLON DE ANUNCIOS -->  
 <div class="paranun">
