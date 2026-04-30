@@ -25,7 +25,7 @@
 --herman4: url('https://images2.imgbox.com/46/d2/FkWZoBND_o.png');    
 }
 
-:root .claro{
+:root.claro{
   /* Mi Paleta */
   --color-1: #dddde2;
   --color-2: #6f9bd3;
@@ -81,7 +81,7 @@
 --stas: url('https://images2.imgbox.com/36/62/CwShBOub_o.png');  
 }
 
-:root .oscuro  {
+:root.oscuro  {
   /* Mi Paleta */
 --color-1: #0b0e11;
 --color-2: #0c4542;
@@ -620,11 +620,11 @@ body.claro, body.oscuro {
 
 /*NUEVOS MENSAJES PRIVADOS*/
 
-.oscruro .oppmsj[data-new-mps] {
+.oscruro.oppmsj[data-new-mps] {
     filter: drop-shadow(0px 0px 6px var(--color-2));
     position: relative;
 }
-.claro .oppmsj[data-new-mps] {
+.claro.oppmsj[data-new-mps] {
     filter: drop-shadow(0px 0px 2px var(--color-3));
     position: relative;
 }
@@ -750,7 +750,7 @@ body.claro, body.oscuro {
 }
 
 .parahead navbar.scroll-fixed .f-nvpar a, .parahead navbar.scroll-fixed .f-nvpar button {
-    color: var(--color-5)!important;
+    color: var(--color-3);
 }
 
 
@@ -1515,7 +1515,7 @@ banner:hover .manga3 {
 .linku em {
   display: inline-flex;
   align-items: center;
-  font-size: 1.2em;
+  font-size: 1.5em;
   justify-content: center;
   transition: transform 200ms ease, box-shadow 200ms ease;
 }
