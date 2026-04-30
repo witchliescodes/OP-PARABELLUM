@@ -269,28 +269,64 @@ body.claro, body.oscuro {
 }
 
 /*botones izquierda*/
-
-.pboiz-wrap{
-    position:absolute;
-    right:18px;
-    top:0;
-    bottom:0;
-    width:52px;
-    pointer-events:none;
+.pboiz-wrap {
+    position: absolute;
+    right: 13px;
+    top: 0;
+    bottom: 0;
+    width: 30px;
+    pointer-events: none;
+    padding-bottom: 71px;
 }
 
-.pboiz{
-    position:sticky;
-    top:calc(100vh - 190px);
+.pboiz {
+    position: sticky;
+    top: calc(100vh - 145px);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    pointer-events: auto;
+}
 
+.pboiz button{
+    border:none;
+    background:var(--color-5);
+    padding:10px;
     display:flex;
-    flex-direction:column;
-    gap:12px;
-
-    pointer-events:auto;
+    align-items:center;
+    justify-content:center;
+    border-radius:.18em;
+    color:var(--color-3);
+    cursor:pointer;
+    transition:
+      transform 300ms ease,
+      background 300ms ease,
+      box-shadow 300ms ease,
+      color 300ms ease;
 }
 
+.pboiz button:hover{
+    background: var(--color-5);
+    transform:translateY(-2px);
+}
 
+.pboiz button:active{
+    transform:translateY(1px) scale(.96);
+    background:var(--color-3);
+    color: #fff;
+    box-shadow:0 2px 4px var(--tcolor3) inset;
+}
+
+.pbdisc {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-5);
+    padding: 10px;
+    font-size: 1em;
+    border-radius: 0.18em;
+    color: var(--color-3);
+}
 
 /*barra 1 de navegación*/
 .parahead {
@@ -302,12 +338,12 @@ body.claro, body.oscuro {
     padding: clamp(20px, 5vw, 50px);
     border-radius: 20px;
     position: relative;
-    box-shadow: 1px 1px 30px var(--color-3);
+    box-shadow: 0px 0px 15px var(--tcolor3);
 }
 
 .oscuro .parahead, .oscuro #wrap {
     background-color: var(--color-1);
-    box-shadow: 1px 1px 15px var(--color-1);
+    box-shadow: 0px 0px 15px var(--tcolor6);
 }
 /*MEMBRANA DE CARGA*/
 #preloader {
@@ -327,13 +363,11 @@ body.claro, body.oscuro {
  pointer-events: none;
 }
 
-/* GIF */
 .loader-gif {
   width: 120px;
   margin-bottom: 15px;
 }
 
-/* TEXTO */
 .loader-text {
   font-size: 14px;
   margin-bottom: 10px;
@@ -342,7 +376,6 @@ body.claro, body.oscuro {
   letter-spacing: 1px;
 }
 
-/* BARRA */
 .loader-bar {
     position: relative;
     width: 100%;
@@ -359,7 +392,7 @@ body.claro, body.oscuro {
     border-radius: 10px;
     transition: width 0.3s ease;
 }
-/* CONTENEDOR */
+
 .loader-box {
   text-align: center;
   width: 220px;
@@ -1404,8 +1437,8 @@ banner:hover .manga3 {
     border-radius: 20px;
     position: relative;
     z-index: 1;
-    box-shadow: 1px 1px 30px var(--color-3);
     color: var(--color-1);
+   box-shadow: 0px 0px 15px var(--tcolor3);
 }
 
 .oscuro #wrap {
