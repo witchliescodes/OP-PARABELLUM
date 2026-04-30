@@ -223,15 +223,9 @@ html, body {
 }
 
 a:link {
-    color: var(--color-7);
+    color: var(--color-3);
     text-decoration: none;
     transition: all 300ms ease-in-out;
-}
-
-a:visited {
-  color: var(--color-2);
-font-weight: 600;
-      text-decoration: none;
 }
 
 a:hover {
@@ -299,12 +293,13 @@ body.claro, body.oscuro {
     align-items: center;
     justify-content: center;
     z-index: 999;
-    transition: opacity .5s ease;
+    transition: opacity .45s ease, visibility .45s ease;
 }
 
 #preloader.hidden {
-  opacity: 0;
-  pointer-events: none;
+ opacity: 0;
+ visibility: hidden;
+ pointer-events: none;
 }
 
 /* GIF */
@@ -401,9 +396,9 @@ body.claro, body.oscuro {
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-    background-color: var(--color-2, var(--color-1)) !important;
+    background-color: var(--color-5);
     border-radius: 5px !important;
-    box-shadow: 0 4px 12px var(--color-2) !important;
+    box-shadow: 0 4px 12px var(--color-1) !important;
     transition: all 0.3s ease !important;
     text-decoration: none;
 }
@@ -412,9 +407,14 @@ body.claro, body.oscuro {
     content: "\f0f3" !important;
     font-family: "FontAwesome" !important;
     font-size: 1em !important;
-    color: var(--color-5) !important;
+    color: var(--color-3) !important;
     line-height: 1 !important;
     margin: 0 10px 0 4px;
+  transition: all 300ms
+}
+
+#fa_notifications:hover::before {
+    color: var(--color-5) !important;
 }
 
 
@@ -427,7 +427,6 @@ body.claro, body.oscuro {
 
 #fa_toolbar #fa_right #fa_notifications.unread #notif_unread {
     display: inline;
-    background: var(--color-3);
     padding: 1px;
     width: 20px;
     height: 20px;
@@ -435,7 +434,8 @@ body.claro, body.oscuro {
     align-items: center;
     justify-content: center;
     border-radius: 3px;
-    font-size: 0.8em;
+    font-size: 1em;
+    color: var(--color-3);
 }
 
 
@@ -1511,7 +1511,7 @@ banner:hover .manga3 {
     font-weight: 700;
     letter-spacing: -2px;
     font-size: 1.2em;
-    color: var(--color-3);
+    color: var(--color-2);
 }
 
 .linku  {
@@ -1526,6 +1526,7 @@ banner:hover .manga3 {
   font-size: 1.5em;
   justify-content: center;
   transition: transform 200ms ease, box-shadow 200ms ease;
+  color: var(--color-3);
 }
 
 .linku em:hover {
@@ -1863,6 +1864,7 @@ transform: scaleX(1);
     color: var(--color-5);
     hyphens: auto;
     margin: 10px;
+    font-weight: 600;
 }
 
 .oppmodal1 .modal-title {
