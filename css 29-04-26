@@ -145,7 +145,10 @@
     margin: 20px 0 0 0;
 }
 
-/*#main-content .inner { display: none;}*/
+@font-face {
+  font-family: "game-icons";
+  font-display: block;
+}
 
 @font-face {
     font-family: 'Cormorant Garamond';
@@ -160,6 +163,8 @@
     src: url('https://dl.dropbox.com/scl/fi/fo3u5mp48i3s9gmh26h8s/OpenSans-VariableFont_wdth-wght.ttf?rlkey=w0lu3xqf25p5i8is1w8rbokvl&st=a4oc4sty&dl=1') 
     format('truetype');
 }
+
+
 
 body::-webkit-scrollbar { background-color:var(--color-1);width:19px;height:19px; }
 body::-webkit-scrollbar-thumb { border:solid 9px var(--color-1);background-color:var(--color-3); }
