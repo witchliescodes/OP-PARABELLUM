@@ -10,7 +10,6 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <link rel="stylesheet" href="https://nagoshiashumari.github.io/Rpg-Awesome/stylesheets/rpg-awesome.min.css" />
   <link href="https://dl.dropbox.com/s/thpzqkqhf1pzqnx/game-icons.css" rel="stylesheet"/>
-  <link rel="preload" href="https://dl.dropbox.com/s/9zoe2raly7s7bwn/game-icons.woff" as="font" type="font/woff" crossorigin />
   <link href="https://solar-icons.gitlab.io/i/icons.css" rel="stylesheet" crossorigin />
   <script src="https://unpkg.com/akar-icons-fonts"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"/>
@@ -443,9 +442,26 @@
   </div>
 </banner>    
                   
- <div class="naviga"> <a class="pnav" href="{U_INDEX}"><span>{L_INDEX}</span></a>{NAV_CAT_DESC}</div>                           
-			<div id="wrap">
-   
+ <div class="naviga"> <a class="pnav" href="{U_INDEX}"><span>{L_INDEX}</span></a>{NAV_CAT_DESC}</div>        
+                  
+<div id="wrap">
+
+<!--botones izquierda -->  
+
+  <div class="pboiz">
+   <button class="side-btn scroll-btn" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+    <i class="fi fi-rr-angle-circle-up"></i>
+  </button>
+    <a href="" class="pbdisc">
+    <i class="fa-brands fa-discord"></i>
+    </a>
+    <button class="side-btn scroll-btn" onclick="window.scrollTo({top:document.body.scrollHeight,behavior:'smooth'})">
+    <i class="fi fi-rr-angle-circle-down"></i>
+  </button>
+
+  </div>  
+  
+<!--TABLON DE ANUNCIOS -->  
 <div class="paranun">
 <div class="pestanas-contenedor">
 <!--  Pestaña 1: Ambientación -->                         
