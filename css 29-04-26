@@ -173,13 +173,13 @@ body.oscuro::-webkit-scrollbar { background-color:var(--color-1);width:19px;heig
 body.oscuro::-webkit-scrollbar-thumb { border:solid 9px var(--color-1);background-color:var(--color-3); }
 
 /*CUSTOM SCROLL BAR*/
-/* Works on Firefox */
+/* Firefox */
 * {
     scrollbar-width: thin;
     scrollbar-color: var(--color-3) var(--color-1);
 }
 
-/* Works on Chrome, Edge, and Safari */
+/* Chrome, Edge, y Safari */
 *::-webkit-scrollbar {
   width: 10px;
 }
@@ -268,6 +268,31 @@ body.claro, body.oscuro {
     width: 0px;
 }
 
+/*botones izquierda*/
+
+.pboiz-wrap{
+    position:absolute;
+    right:18px;
+    top:0;
+    bottom:0;
+    width:52px;
+    pointer-events:none;
+}
+
+.pboiz{
+    position:sticky;
+    top:calc(100vh - 190px);
+
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+
+    pointer-events:auto;
+}
+
+
+
+/*barra 1 de navegación*/
 .parahead {
     width: 100%;
     max-width: 1200px;
