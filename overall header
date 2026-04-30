@@ -468,23 +468,44 @@
 <div class="pcre-wrap">
   <div class="pcred">
     <button class="side-btn credito" id="btn-creditos">
-      © Pumpkin Codes
+      © Pumpkin codes
     </button>
   </div>
 </div>
 
+<!-- MODAL PREMIUM -->
 <div class="c-modal" id="creditos-modal">
-  <div class="c-modal-box">
-
-    <button class="cerrar-modal" id="cerrar-creditos">✕</button>
-
-    <h2>Créditos</h2>
-
-    <p>Diseño base: Pumpkin</p>
-    <p>Edición: Pumpkin</p>
-    <p>Imagenes: </p>
-    <p>Versión del skin: 1.0</p>
-
+  <div class="c-box">
+    <button class="c-close" id="cerrar-creditos">✕</button>
+    <div class="c-header">
+      <h2>CRÉDITOS</h2>
+      <span>Parabellum Theme v3.0</span>
+    </div>
+    <div class="c-tabs">
+      <button class="tab-btn active" data-tab="tab1">Equipo</button>
+      <button class="tab-btn" data-tab="tab2">Recursos</button>
+      <button class="tab-btn" data-tab="tab3">Notas</button>
+    </div>
+    <div class="c-content">
+      <div class="tab-panel active" id="tab1">
+        <p><strong>Diseño base:</strong> Pumpkin</p>
+        <p><strong>Edición:</strong> Yane</p>
+        <p><strong>UI / CSS:</strong> Personalizado</p>
+        <p><strong>Concepto:</strong> One Piece Forum Skin</p>
+      </div>
+      <div class="tab-panel" id="tab2">
+        <p>Fonts: Google Fonts</p>
+        <p>Icons: FontAwesome + Flaticon</p>
+        <p>Renders: One Piece Fan Art</p>
+        <p>Framework: Vanilla CSS / JS</p>
+      </div>
+      <div class="tab-panel" id="tab3">
+        <p>Versión 3.0 completa.</p>
+        <p>Optimización visual mejorada.</p>
+        <p>Modo claro / oscuro dinámico.</p>
+        <p>Loader premium actualizado.</p>
+      </div>
+    </div>
   </div>
 </div>
   
