@@ -338,7 +338,8 @@
   
 <div class="conteneur_minwidth_IE">
 	<div class="conteneur_layout_IE">
-		<div class="conteneur_container_IE">           
+		<div class="conteneur_container_IE">     
+                  
                  <header class="parahead">
 <navbar>
     <div class="f-nvpar">
@@ -452,7 +453,7 @@
    <button class="side-btn scroll-btn" onclick="window.scrollTo({top:0,behavior:'smooth'})">
     <i class="fi fi-rr-angle-circle-up"></i>
   </button>
-    <a href="" class="pbdisc">
+    <a href="/" class="pbdisc">
     <i class="fa-brands fa-discord"></i>
     </a>
     <button class="side-btn scroll-btn" onclick="window.scrollTo({top:document.body.scrollHeight,behavior:'smooth'})">
@@ -460,7 +461,32 @@
   </button>
 
   </div>  
-</div>  
+</div> 
+  
+<!-- Botón creditos -->  
+  
+<div class="pcre-wrap">
+  <div class="pcred">
+    <button class="side-btn credito" id="btn-creditos">
+      © Pumpkin Codes
+    </button>
+  </div>
+</div>
+
+<div class="c-modal" id="creditos-modal">
+  <div class="c-modal-box">
+
+    <button class="cerrar-modal" id="cerrar-creditos">✕</button>
+
+    <h2>Créditos</h2>
+
+    <p>Diseño base: Pumpkin</p>
+    <p>Edición: Yane</p>
+    <p>Imagenes</p>
+    <p>Versión del skin: 1.0</p>
+
+  </div>
+</div>
   
 <!--TABLON DE ANUNCIOS -->  
 <div class="paranun">
