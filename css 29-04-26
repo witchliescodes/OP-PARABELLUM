@@ -767,16 +767,18 @@ body.claro, body.oscuro {
 
 .multismultis {
     position: absolute;
-    top: 150px;
+    top: 100px;
     right: 0px;
     left: auto;
     width: min(95vw, 500px);
-     max-width: calc(100vw - 20px);
-       box-sizing: border-box;
-    background: var(--color-4);
+    max-width: calc(100vw - 20px);
+    box-sizing: border-box;
+    background: var(--color-1);
     border: 1px solid var(--color-3);
+    box-shadow: 0px 0px 10px var(--color-1);
     border-radius: 15px;
     padding: 15px;
+    height: auto;
     z-index: 999;
     display: block;
     visibility: hidden;
@@ -827,7 +829,7 @@ body.claro, body.oscuro {
 .switcheroo__squircle {
     width: 150px;
     height: stretch;
-    background: var(--color-1);
+    background: var(--color-5);
     border-radius: 7px;
     padding: 10px;
     overflow: hidden;
@@ -861,7 +863,7 @@ body.claro, body.oscuro {
     overflow: hidden;
     border-radius: 10px;
     cursor: pointer;
-    box-shadow: 0 0 6px var(--color-2);
+    box-shadow: 0 0 6px var(--color-5);
 }
 
 .switcheroo__avatar img {
@@ -874,7 +876,7 @@ body.claro, body.oscuro {
 }
 
 .switcheroo__squircle.active .switcheroo__avatar {
-    box-shadow: 0 0 10px var(--color-3);
+    box-shadow: 0 0 10px var(--bs-success-text-emphasis);
 }
 
 
@@ -885,14 +887,14 @@ body.claro, body.oscuro {
     right: 0px;
     margin: 0;
     cursor: pointer;
-    background: var(--color-2);
+    background: var(--color-5);
     width: 25px;
     height: 25px;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 6px;
-    color: var(--color-4);
+    color: var(--color-3);
 }
 
 .switcheroo__popper {
@@ -906,21 +908,22 @@ body.claro, body.oscuro {
     height: 100%;
     box-sizing: border-box;
     font-size: 0.5em;
-    color: var(--color-4);
+    color: var(--color-3);
     font-family: var(--cuerpo1);
     line-height: 1em;
     text-align: center;
-    background: var(--color-2);
+    background: var(--color-5);
     padding: 5px 10px;
     border-radius: 5px;
     text-transform: uppercase;
     font-weight: 600;
-    box-shadow: 0 0 10px var(--color-2);
+    box-shadow: 0 0 10px var(--color-1);
 }
 
 .switcheroo__squircle.active .switcheroo__delete, .switcheroo__squircle.active .switcheroo__popper-text {
-    background-color: var(--color-3);
-    box-shadow: 0 0 7px var(--color-3);
+    background-color: var(--bs-success);
+    box-shadow: 0 0 7px green;
+    color: var(--color-4);
     border: none;
 }
 
@@ -938,7 +941,7 @@ body.claro, body.oscuro {
 }
 
 .parahead navbar.scroll-fixed .switcheroo i, .parahead navbar.scroll-fixed .s-navpar .modo-oscuro {
-    color: var(--color-5);
+    color: var(--color-3);
 
 }
 
