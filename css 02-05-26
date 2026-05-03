@@ -382,6 +382,16 @@ body.claro, body.oscuro {
     height: calc(100% - 30%);
     overflow: hidden;
     position: relative;
+    display: flex;
+    flex-flow: column;
+}
+
+.c-content {
+    display: flex;
+    align-items: flex-start;
+    flex-flow: column;
+    justify-content: space-between;
+    height: 100%;
 }
 
 .c-box.show .c-box{
