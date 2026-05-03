@@ -455,6 +455,11 @@ body.claro, body.oscuro {
     flex-flow: row-reverse;
 }
 
+.cpmp b {
+    font-size: 3em;
+    color: var(--color-6);
+}
+
 .pumpc {
     background-image: var(--pumpkin);
     transform-origin: center;
