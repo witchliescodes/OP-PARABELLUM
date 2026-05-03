@@ -394,6 +394,25 @@ body.claro, body.oscuro {
     height: 100%;
 }
 
+.c-pas2 {
+    width: -webkit-fill-available;
+    height: auto;
+    display: flex;
+    flex-flow: column;
+}
+
+.c-pas2 p {
+    margin: 0 0 10px 0;
+    font-size: 0.7em;
+    background: var(--color-5);
+    padding: 10px;
+    text-align: center;
+    font-weight: 600;
+    font-family: var(--cuerpo1);
+    border-radius: 0.18em;
+    line-height: 1.5em;
+}
+
 .c-box.show .c-box{
     transform:translateY(0);
 }
@@ -495,12 +514,6 @@ body.claro, body.oscuro {
     background-color: var(--color-5);
 }
 
-element.style {
-    margin: 0 0 0 10px;
-    font-weight: 600;
-    font-family: var(--titulos);
-    color: var(--color-3);
-}
 
 .c-modal.show .pumpc {
     animation: laugh 0.6s ease;
