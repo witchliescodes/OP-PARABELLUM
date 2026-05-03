@@ -79,6 +79,8 @@
 --offf: url('https://images2.imgbox.com/2f/86/4Ty9NoOK_o.png');  
 /*ESTADISTICA*/
 --stas: url('https://images2.imgbox.com/36/62/CwShBOub_o.png');  
+/*CREDITOS*/
+--pumpkin: url('https://images2.imgbox.com/f2/04/eSGtxMSg_o.png');
 }
 
 :root.oscuro  {
@@ -135,6 +137,8 @@
 --offf: url('https://images2.imgbox.com/59/52/Eo1tplOx_o.png');    
 /*ESTADISTICAS*/ 
 --stas: url('https://images2.imgbox.com/e3/8e/i9YuSd77_o.png');
+/*CREDITOS*/
+--pumpkin: url('https://images2.imgbox.com/87/26/YYnW1DxS_o.png');  
 }
 
 .modal {
