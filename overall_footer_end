@@ -381,6 +381,8 @@
       <button class="tab-btn" data-tab="tab3">Sistema</button>
     </div>
     <div class="c-content">
+      
+      <div class="c-pas1">
       <div class="tab-panel active" id="tab1">
         <p><strong>Pertenencia y contenido:</strong> El contenido del foro en su totalidad pertenece al staff de OP Parabelum, cualquier consideración de plagio será reportado de las maneras pertinentes.</p>
         <p><strong>Imagenes:</strong>Las imagenes pertenecen a sus respectivos autores, el credito les corresponde a ellos. Si se avista una imagen qeu no sea de uso público, por favor contactar con la administración para hacer lois respectivos cambios. </p> 
@@ -404,9 +406,15 @@
         <p>Sistema de perfil automatizado por  Pumpkin Codes</p>
         <p>Sistema de tienda automatica por Pumpkin Code.</p>
       </div>
+      </div>
+      
+      <div class="c-pas2">
+      <div class="cpmp"><div class="pumpc"></div><b>Skin realizada por <h2>Pumpkin codes.</h2></b></div>
+      <p>La inspiración siempre podrás encontrarla, pero no plagies el contenido ajeno. Si se detecta algún plagio en contenido o diseño y sistemas, serán tomadas las medidas pertinentes.</p> 
+      </div>
+      
     </div>
-     <div class="cpmp"><div class="pumpc"></div><b>Skin realizada por <h2>Pumpkin codes.</h2></b></div>
-    <p>La inspiración siempre podrás encontrarla, pero no plagies el contenido ajeno. Si se detecta algún plagio en contenido o diseño y sistemas, serán tomadas las medidas pertinentes.</p>  
+      
   </div>
 </div>  
 <!-- FIN MODAL CREDITOS-->  
