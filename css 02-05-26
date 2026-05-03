@@ -362,6 +362,7 @@ body.claro, body.oscuro {
     pointer-events: none;
     transition: .3s ease;
     z-index: 99999!important;
+   isolation: isolate;
 }
 
 .c-modal.show{
@@ -380,6 +381,14 @@ body.claro, body.oscuro {
 
 .c-modal.show .c-modal-box{
     transform:translateY(0);
+}
+
+.c-box {
+    width: calc(100% - 35%);
+    background: var(--color-1);
+    border-radius: 0.38em;
+    padding: 10px;
+    height: calc(100% - 30%);
 }
 
 /*barra 1 de navegación*/
