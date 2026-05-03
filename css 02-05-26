@@ -367,6 +367,7 @@ body.claro, body.oscuro {
     transition: .3s ease;
     z-index: 99999!important;
    isolation: isolate;
+  color: var(--color-6);
 }
 
 .c-modal.show{
