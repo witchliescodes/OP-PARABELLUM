@@ -442,6 +442,29 @@ body.claro, body.oscuro {
     color: var(--color-6);
 }
 
+/*imagen de credito*/
+
+.pumpc {
+    background-image: var(--pumpkin);
+    transform-origin: center;
+  width: 100px;
+  height: 100px;
+}
+
+
+.c-modal.show .pumpc {
+    animation: laugh 0.6s ease;
+}
+
+@keyframes laugh {
+    0%   { transform: translateY(0) scale(1); }
+    20%  { transform: translateY(-4px) scale(1.05); }
+    40%  { transform: translateY(3px) scale(0.97); }
+    60%  { transform: translateY(-2px) scale(1.03); }
+    80%  { transform: translateY(1px) scale(0.99); }
+    100% { transform: translateY(0) scale(1); }
+}
+
 /*barra 1 de navegación*/
 .parahead {
     width: 100%;
