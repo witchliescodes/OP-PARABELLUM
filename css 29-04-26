@@ -276,7 +276,7 @@ body.claro, body.oscuro {
     bottom: 0;
     width: 30px;
     pointer-events: none;
-    padding-bottom: 71px;
+    padding-bottom: 73px;
 }
 
 .pboiz {
@@ -295,7 +295,8 @@ body.claro, body.oscuro {
     display:flex;
     align-items:center;
     justify-content:center;
-    border-radius:.18em;
+    border-radius: .18em;
+    font-size: 1em;
     color:var(--color-3);
     cursor:pointer;
     transition:
@@ -332,12 +333,12 @@ body.claro, body.oscuro {
 
 .pcre-wrap{
     position: absolute;
-    left: 13px;
+    left: 12px;
     top: 0;
     bottom: 0;
     width: 30px;
     pointer-events: none;
-    padding-bottom: 71px;
+    padding-bottom: 73px;
 }
 
 .pcred {
