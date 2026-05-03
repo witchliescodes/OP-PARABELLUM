@@ -470,9 +470,12 @@ body.claro, body.oscuro {
     cursor: pointer;
     opacity: .6;
     transition: .2s;
+    color: var(--color-6);
+    transition: all 300ms; 
 }
 
 .tab-btn.active {
+    color: var(--color-3);
     opacity: 1;
     border-bottom: 2px solid var(--color-3);
 }
@@ -505,6 +508,11 @@ body.claro, body.oscuro {
     border-bottom-left-radius: 0.38em;
     opacity: 0.2;
     color: var(--color-6);
+    transition: all 300ms;
+}
+
+.c-close:hover {
+  opacity: 1;
 }
 
 /*imagen de credito*/
