@@ -451,23 +451,40 @@ body.claro, body.oscuro {
 .cpmp {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    flex-flow: row-reverse;
 }
 
 .cpmp b {
-    font-size: 3em;
+    font-size: 2em;
     color: var(--color-6);
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    font-family: var(--titulos);
+}
+
+.cpmp b h2{
+    margin: 0 0 0 10px;
+    font-weight: 600;
+    font-family: var(--titulos);
+    color: var(--color-3);
 }
 
 .pumpc {
     background-image: var(--pumpkin);
     transform-origin: center;
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
     background-size: contain;
     background-repeat: no-repeat;
     border-radius: 10px;
+    background-color: var(--color-5);
+}
+
+element.style {
+    margin: 0 0 0 10px;
+    font-weight: 600;
+    font-family: var(--titulos);
+    color: var(--color-3);
 }
 
 .c-modal.show .pumpc {
