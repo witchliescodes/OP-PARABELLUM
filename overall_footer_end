@@ -376,33 +376,37 @@
     <button class="c-close" id="cerrar-creditos">✕</button>
     <div class="c-header">
       <h2>CRÉDITOS</h2>
-      <span>Parabellum Theme v3.0</span>
-    </div>
-    <div class="c-tabs">
-      <button class="tab-btn active" data-tab="tab1">Equipo</button>
-      <button class="tab-btn" data-tab="tab2">Recursos</button>
-      <button class="tab-btn" data-tab="tab3">Notas</button>
+      <button class="tab-btn active" data-tab="tab1">Diseño</button>
+      <button class="tab-btn" data-tab="tab2">Contenido</button>
+      <button class="tab-btn" data-tab="tab3">Sistema</button>
     </div>
     <div class="c-content">
       <div class="tab-panel active" id="tab1">
-        <p><strong>Diseño base:</strong> Pumpkin</p>
-        <p><strong>Edición:</strong> Yane</p>
-        <p><strong>UI / CSS:</strong> Personalizado</p>
-        <p><strong>Concepto:</strong> One Piece Forum Skin</p>
+        <p><strong>Diseño:</strong>Hecho por Pumpkin codes.</p>
+        <p><strong>Pertenencia y contenido:</strong> El contenido del foro en su totalidad pertenece al staff de OP Parabelum, cualquier consideración de plagio será reportado de las maneras pertinentes.</p>
+        <p><strong>Imagenes:</strong>Las imagenes pertenecen a sus respectivos autores, el credito les corresponde a ellos. Si se avista una imagen qeu no sea de uso público, por favor contactar con la administración para hacer lois respectivos cambios. </p> 
+        <p><strong>Concepto:</strong> El concepto de este foro es sobre la Obra de Eichiro Oda, "One Piece", hecho exclusivamente para One Piece Parabellum y su Lore/Sistemas.</p>
       </div>
       <div class="tab-panel" id="tab2">
-        <p>Fonts: Google Fonts</p>
-        <p>Icons: FontAwesome + Flaticon</p>
-        <p>Renders: One Piece Fan Art</p>
-        <p>Framework: Vanilla CSS / JS</p>
+        <p>Las imagenes fueron tomadas de los siguientes sitios y artistas:</p>
+        <p><a href="/">Pagina 1</a></p>
+        <p><a href="/">Pagina 2</a></p>
+        <p><a href="/">Autor 1</a></p>
+        <p><a href="/">Autor 2</a></p>
+        <p><a href="/">Referencia 1</a></p>
+        <p><a href="/">Referencia 2</a></p>
+        <p><a href="/">Referencia 3</a></p>
       </div>
       <div class="tab-panel" id="tab3">
-        <p>Versión 3.0 completa.</p>
-        <p>Optimización visual mejorada.</p>
-        <p>Modo claro / oscuro dinámico.</p>
-        <p>Loader premium actualizado.</p>
+        <p>Los sistemas que contiene el foro son los siguientes:</p>
+	<p>Cambio de tema, claro/oscuro codificiado y realizado por Pumpkin codes.</p>
+        <p>Switcheroo realizado por Monomer.</p>
+        <p>Aumento y disminución del tamaño de letra codificado y realizado por Pumpkin codes.</p>
+        <p>Sistema de perfil automatizado por  Pumpkin Codes</p>
+        <p>Sistema de tienda automatica por Pumpkin Code.</p>
       </div>
     </div>
+    <p>La inspiración siempre podrás encontrarla, pero no plagies el contenido ajeno. Si se detecta algún plagio en contenido o diseño y sistemas, serán tomadas las medidas pertinentes.</p>  
   </div>
 </div>  
 <!-- FIN MODAL CREDITOS-->  
