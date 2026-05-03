@@ -464,13 +464,13 @@
   
 <div class="pcre-wrap">
   <div class="pcred">
-    <button class="side-btn credito" id="btn-creditos" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" title="Creditos">
-     <i class="fi fi-rs-pumpkin-alt"></i>
-    </button>
-  </div>
- <a href="/" class="pbdisc" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" title="Discord">
+    <a href="/" class="pbdisc" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" title="Discord">
     <i class="fa-brands fa-discord"></i>
     </a>
+    <button class="side-btn credito" id="btn-creditos" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" title="Creditos">
+     <i class="fi fi-rr-pumpkin-alt"></i>
+    </button>
+  </div>
 </div>
 
 <!-- MODAL PREMIUM -->
