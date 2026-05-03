@@ -450,13 +450,10 @@
 <!-- botones izquierda -->  
 <div class="pboiz-wrap">
   <div class="pboiz">
-   <button class="side-btn scroll-btn" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+   <button class="side-btn scroll-btn" onclick="window.scrollTo({top:0,behavior:'smooth'})" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" title="Subir">
     <i class="fi fi-rr-angle-circle-up"></i>
   </button>
-    <a href="/" class="pbdisc">
-    <i class="fa-brands fa-discord"></i>
-    </a>
-    <button class="side-btn scroll-btn" onclick="window.scrollTo({top:document.body.scrollHeight,behavior:'smooth'})">
+    <button class="side-btn scroll-btn" onclick="window.scrollTo({top:document.body.scrollHeight,behavior:'smooth'})" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" title="Bajar">
     <i class="fi fi-rr-angle-circle-down"></i>
   </button>
 
@@ -467,10 +464,13 @@
   
 <div class="pcre-wrap">
   <div class="pcred">
-    <button class="side-btn credito" id="btn-creditos">
-      © creditos
+    <button class="side-btn credito" id="btn-creditos" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" title="Creditos">
+     <i class="fi fi-rs-pumpkin-alt"></i>
     </button>
   </div>
+ <a href="/" class="pbdisc" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" title="Discord">
+    <i class="fa-brands fa-discord"></i>
+    </a>
 </div>
 
 <!-- MODAL PREMIUM -->
