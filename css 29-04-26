@@ -281,7 +281,7 @@ body.claro, body.oscuro {
 
 .pboiz {
     position: sticky;
-    top: calc(100vh - 145px);
+    top: calc(100vh - 95px);
     display: flex;
     flex-direction: column;
     gap: 12px;
@@ -326,6 +326,57 @@ body.claro, body.oscuro {
     font-size: 1em;
     border-radius: 0.18em;
     color: var(--color-3);
+}
+
+/*Botón derecha*/
+
+.pcre-wrap{
+    position: absolute;
+    left: 13px;
+    top: 0;
+    bottom: 0;
+    width: 30px;
+    pointer-events: none;
+    padding-bottom: 71px;
+}
+
+.pcred {
+    position: sticky;
+    top: calc(100vh - 95px);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    pointer-events: auto;
+}
+
+.c-modal{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.45);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    opacity:0;
+    pointer-events:none;
+    transition:.3s ease;
+}
+
+.c-modal.show{
+    opacity:1;
+    pointer-events:auto;
+}
+
+.c-modal-box{
+    width:420px;
+    padding:28px;
+    border-radius:18px;
+    background:var(--color-2);
+    transform:translateY(20px);
+    transition:.3s ease;
+}
+
+.c-modal.show .c-modal-box{
+    transform:translateY(0);
 }
 
 /*barra 1 de navegación*/
