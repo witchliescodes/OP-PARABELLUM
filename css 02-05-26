@@ -430,6 +430,18 @@ body.claro, body.oscuro {
     line-height: 1.5em;
 }
 
+.c-close {
+    position: absolute;
+    right: 0;
+    border: none;
+    background: var(--bs-red);
+    padding: 10px;
+    top: 0;
+    border-bottom-left-radius: 0.38em;
+    opacity: 0.2;
+    color: var(--color-6);
+}
+
 /*barra 1 de navegación*/
 .parahead {
     width: 100%;
