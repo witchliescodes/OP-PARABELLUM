@@ -288,7 +288,7 @@ body.claro, body.oscuro {
     pointer-events: auto;
 }
 
-.pboiz button{
+.pboiz button, .pcred button, .pbdisc {
     border:none;
     background:var(--color-5);
     padding:10px;
@@ -305,15 +305,15 @@ body.claro, body.oscuro {
       color 300ms ease;
 }
 
-.pboiz button:hover{
+.pboiz button:hover, .pcred button:hover, .pbdisc:hover {
     background: var(--color-5);
     transform:translateY(-2px);
 }
 
-.pboiz button:active{
+.pboiz button:active, .pcred button:active, .pbdisc:active{
     transform:translateY(1px) scale(.96);
     background:var(--color-3);
-    color: #fff;
+    color: var(--color-2);
     box-shadow:0 2px 4px var(--tcolor3) inset;
 }
 
@@ -349,16 +349,18 @@ body.claro, body.oscuro {
     pointer-events: auto;
 }
 
-.c-modal{
-    position:fixed;
-    inset:0;
-    background:rgba(0,0,0,.45);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    opacity:0;
-    pointer-events:none;
-    transition:.3s ease;
+
+.c-modal {
+    position: fixed;
+    inset: 0;
+    background: var(--tcolor4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: .3s ease;
+    z-index: 99999!important;
 }
 
 .c-modal.show{
