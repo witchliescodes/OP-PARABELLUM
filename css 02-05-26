@@ -80,7 +80,7 @@
 /*ESTADISTICA*/
 --stas: url('https://images2.imgbox.com/36/62/CwShBOub_o.png');  
 /*CREDITOS*/
---pumpkin: url('https://images2.imgbox.com/f2/04/eSGtxMSg_o.png');
+--pumpkin: url('https://images2.imgbox.com/ae/2b/078rco5U_o.png');
 }
 
 :root.oscuro  {
@@ -138,7 +138,7 @@
 /*ESTADISTICAS*/ 
 --stas: url('https://images2.imgbox.com/e3/8e/i9YuSd77_o.png');
 /*CREDITOS*/
---pumpkin: url('https://images2.imgbox.com/87/26/YYnW1DxS_o.png');  
+--pumpkin: url('https://images2.imgbox.com/6a/12/udDHXQWo_o.png');  
 }
 
 .modal {
@@ -448,13 +448,22 @@ body.claro, body.oscuro {
 
 /*imagen de credito*/
 
+.cpmp {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-flow: row-reverse;
+}
+
 .pumpc {
     background-image: var(--pumpkin);
     transform-origin: center;
-  width: 100px;
-  height: 100px;
+    width: 80px;
+    height: 80px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 10px;
 }
-
 
 .c-modal.show .pumpc {
     animation: laugh 0.6s ease;
