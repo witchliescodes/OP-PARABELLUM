@@ -55,7 +55,8 @@
 }
   
 .n-s, .mrpgt {
-  display: flex;
+    display: flex;
+    max-height: 40px;
 }
 
 .n-tem {
@@ -135,4 +136,30 @@
 .button2 {
   display: none;
 }
+  
+.mark-l {
+    background: var(--color-5);
+    margin: 0 10px 0 0;
+    padding: 10px;
+    border-radius: 0.18em;
+    display: flex;
+    align-items: center;
+} 
+  
+.mark-l a {
+    font-size: 1em;
+    color: var(--color-3);
+    font-weight: 500;
+}  
+  
+.mark-l a:hover, .pgt a:hover {none;}  
+  
+.pgt {
+    background: var(--color-5);
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-3);
+}  
 </style>  
