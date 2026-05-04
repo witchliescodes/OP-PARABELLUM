@@ -152,7 +152,7 @@
     font-weight: 500;
 }  
   
-.mark-l a:hover, .pgt a:hover {none;}  
+.mark-l a:hover, .pgt a:hover { display: none;}  
   
 .pgt {
     background: var(--color-5);
