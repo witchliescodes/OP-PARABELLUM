@@ -2,17 +2,33 @@
   <div class="n-tem">
     <a href="{U_POST_NEW_TOPIC}" accesskey="n" rel="nofollow"><i class="fi fi-rr-edit-alt"></i> Nuevo tema</a>
   </div>
+  
   <div class="search-p">
-  	<div class="search-box">
-		<form method="get" id="forum-search" action="{S_SEARCHBOX_ACTION}">
-		<fieldset>
-			<input class="inputbox search tiny" type="text" name="search_keywords" id="search_keywords" size="20" value="{L_SEARCH}" onclick="if (this.value == '{L_SEARCH}') this.value = '';" onblur="if (this.value == '') this.value = '{L_SEARCH}';" />
-			&nbsp;<input class="button2" type="submit" value="{L_SEARCH}" />
-			<input type="hidden" value="{SEARCH_WHERE}" name="search_where" />
-		</fieldset>
-		</form>
-	</div>
+  <div class="search-box">
+    <form method="get" id="forum-search" action="{S_SEARCHBOX_ACTION}">
+      <fieldset class="search-field">
+        
+        <i class="fi fi-rr-audit search-icon"></i>
+
+        <input class="inputbox search tiny" 
+          type="text" 
+          name="search_keywords" 
+          id="search_keywords" 
+          size="20" 
+          value="{L_SEARCH}"
+          onclick="if (this.value == '{L_SEARCH}') this.value = '';"
+          onblur="if (this.value == '') this.value = '{L_SEARCH}';" 
+        />
+
+        <input class="button2" type="submit" value="{L_SEARCH}" />
+
+        <input type="hidden" value="{SEARCH_WHERE}" name="search_where" />
+
+      </fieldset>
+    </form>
   </div>
+</div>
+  
   <div class="mark-l">
   <a href="{U_MARK_READ}">{L_MARK_TOPICS_READ}</a>
   </div>
@@ -22,3 +38,14 @@
 </div>
 
 {TOPICS_LIST_BOX}
+
+<style>
+.forumb {
+    background: var(--color-5);
+    border-radius: 0.38em;
+    display: flex;
+    padding: 10px;
+    margin: 0 0 20px 0;
+}  
+  
+</style>  
