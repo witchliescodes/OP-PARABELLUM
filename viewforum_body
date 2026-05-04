@@ -1,10 +1,10 @@
 <div class="forumb">
+<div class="n-s">  
   <div class="n-tem">
     <a href="{U_POST_NEW_TOPIC}" accesskey="n" rel="nofollow"><i class="fi fi-rr-edit-alt"></i> Nuevo tema</a>
   </div>
   
-  <div class="search-p">
-  <div class="search-box">
+<div class="search-p">
     <form method="get" id="forum-search" action="{S_SEARCHBOX_ACTION}">
       <fieldset class="search-field">
         
@@ -26,26 +26,113 @@
 
       </fieldset>
     </form>
-  </div>
 </div>
+  </div>
   
+  
+<div class="mrpgt">  
   <div class="mark-l">
-  <a href="{U_MARK_READ}">{L_MARK_TOPICS_READ}</a>
+  <a href="{U_MARK_READ}">Marcar todo como leido</a>
   </div>
   <div class="pgt">
   {PAGINATION}
   </div>
+</div>  
+  
 </div>
 
 {TOPICS_LIST_BOX}
 
 <style>
 .forumb {
-    background: var(--color-5);
+    background: var(--color-1);
     border-radius: 0.38em;
     display: flex;
     padding: 10px;
     margin: 0 0 20px 0;
+    align-items: center;
+    justify-content: space-between;
+}
+  
+.n-s, .mrpgt {
+  display: flex;
+}
+
+.n-tem {
+    background: var(--color-3);
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    min-width: 150px;
+    border-radius: 0.18em;
+    max-height: 40px;
+    transition: background 400ms;
 }  
   
+.n-tem a {
+    font-size: 1em;
+    color: var(--color-4);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: -webkit-fill-available;
+    font-family: var(--cuerpo1);
+    text-transform: uppercase;
+    font-weight: 500;
+}  
+  
+.n-tem:hover {
+  background: var(--color-2);
+  color: var(--color-5);
+}  
+  
+.search-p {
+  margin: 0 0 0 10px;
+  background: transparent;
+}
+
+.search-field {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: var(--color-5);
+    border-radius: 0.18em;
+    padding: 10px;
+    transition: all 0.3s ease;
+    width: 180px;
+    max-height: 40px;
+}
+
+.search-field:focus-within {
+  box-shadow: 0 0 0 2px var(--tcolor2), 0 5px 10px var(--tcolor2);
+  transform: translateY(-1px);
+}
+
+.search-icon {
+    font-size: 1em;
+    margin-right: 8px;
+    transition: 300ms;
+    color: var(--color-3);
+}
+
+.search-field:focus-within .search-icon {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+#search_keywords {
+    border: none;
+    background: transparent;
+    outline: none;
+    color: var(--color-3);
+    font-size: 0.8em;
+    width: auto;
+    font-family: var(--cuerpo1);
+    text-transform: uppercase;
+}
+
+.button2 {
+  display: none;
+}
 </style>  
