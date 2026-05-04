@@ -3,8 +3,8 @@
 
 <!-- BEGIN header_table -->  
 <div class="tlist-a">
+<i class="fi fi-rr-megaphone-sound-waves"></i>   
 <h1>
-<i class="fi fi-rr-megaphone-sound-waves"></i> 
 {topics_list_box.row.L_TITLE}
 </h1>
 </div>
@@ -13,8 +13,8 @@
 <!-- BEGIN topic -->    
 <!-- BEGIN table_sticky -->  
 <div class="tlist-t">
+<i class="fi fi-rr-file-edit"></i>   
 <h1>
-<i class="fi fi-rr-file-edit"></i> 
 {topics_list_box.row.topic.table_sticky.L_TITLE}
 </h1>
 </div>
@@ -79,3 +79,38 @@
 
 <!-- END row -->
 <!-- END topics_list_box -->
+
+<style>
+.tlist-a, .tlist-t {
+    background: var(--color-5);
+    padding: 10px;
+    border-radius: 0.38em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--color-3);
+    flex-flow: row-reverse;
+    font-family: var(--titulos);
+    margin: 0 0 20px 0;
+    font-size: 2em;
+}
+  
+.tlist-a i, .tlist-t i {
+  margin: 10px;
+  transition: all 0.3s ease;
+}
+  
+.tlist-a:hover i,
+.tlist-t:hover i {
+  transform: translateY(-4px);
+}
+
+.tlist-a:hover i:active,
+.tlist-t:hover i:active {
+  transform: translateY(0);
+}
+  
+.tlist-a h1, .tlist-t h1{
+  margin: 0;
+}  
+</style>  
