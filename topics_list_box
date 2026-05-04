@@ -1,3 +1,42 @@
-<!-- BEGIN header_row -->
-		<strong>{topics_list_box.row.L_TITLE}</strong>
-<!-- END header_row -->
+<!-- BEGIN topics_list_box -->
+<!-- BEGIN row -->
+
+<div class="tlist-op">
+  
+<!-- BEGIN header_table -->  
+  
+  
+  <div class="tlist-a">
+    <h1>
+	<ul class="topiclist topics">
+			<li class="header">
+				<dl class="icon">
+					<dt>
+						<!-- BEGIN multi_selection -->
+						<input onclick="check_uncheck_all_{topics_list_box.row.header_table.BOX_ID}();" type="checkbox" name="all_mark_{topics_list_box.row.header_table.BOX_ID}" value="0" />
+						<!-- END multi_selection -->
+						{topics_list_box.row.L_TITLE}
+					</dt>
+					<dd class="posts">{topics_list_box.row.L_REPLIES}</dd>
+					<dd class="views">{topics_list_box.row.L_VIEWS}</dd>
+					<dd class="lastpost"><span>{topics_list_box.row.L_LASTPOST}</span></dd>
+				</dl>
+			</li>
+		</ul>
+    </h1>
+  </div>
+<!-- END header_table -->
+  
+  
+  listado de anuncios
+  
+  <div class="tlist-t">
+    <h1>Temas</h1>
+  </div>
+  
+listado de temas
+  
+</div>
+
+<!-- END row -->
+<!-- END topics_list_box -->
