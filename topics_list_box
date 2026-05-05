@@ -141,9 +141,9 @@
 }
   
 .tema:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 18px rgba(0,0,0,0.2);
-}  
+    transform: translateY(-2px);
+    box-shadow: 0 5px 0px var(--tcolor3);
+} 
   
 .satus {
   width: 40px;
