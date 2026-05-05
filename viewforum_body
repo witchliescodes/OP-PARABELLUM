@@ -45,7 +45,7 @@
 
 <style>
 .forumb {
-  background: var(--color-1);
+  background: var(--color-5);
   border-radius: 0.38em;
   display: grid;
   grid-template-columns: 1fr auto; 
@@ -99,7 +99,7 @@
     position: relative;
     display: flex;
     align-items: center;
-    background: var(--color-5);
+    background: var(--color-1);
     border-radius: 0.18em;
     padding: 10px;
     transition: all 0.3s ease;
@@ -140,7 +140,7 @@
 }
   
 .mark-l {
-    background: var(--color-5);
+    background: var(--color-1);
     margin: 0 10px 0 0;
     padding: 10px;
     border-radius: 0.18em;
@@ -157,11 +157,12 @@
 .mark-l a:hover, .pgt a:hover { letter-spacing: 0px;}  
   
 .pgt {
-    background: var(--color-5);
+    background: var(--color-1);
     padding: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
     color: var(--color-3);
-}  
+    border-radius: 0.18em;
+} 
 </style>  
