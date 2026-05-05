@@ -157,7 +157,7 @@
     flex-flow: column;
 }
   
-.topictitle {
+.toptt .topictitle {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -218,27 +218,7 @@
     font-size: 0.7em;
 } 
   
-/*Status de aviso*/  
-.nuevo {
-  --icon: url('https://cdn.jsdelivr.net/gh/witchliescodes/ui-icons@main/icons/agregar-documento.svg');
-  }
-.leido {
-  --icon: url('https://cdn.jsdelivr.net/gh/witchliescodes/ui-icons@main/icons/desplazarse-viejo.svg');
-}
-.hot {
-  --icon: url('https://cdn.jsdelivr.net/gh/witchliescodes/ui-icons@main/icons/llama-de-fuego-curvada%20(1).svg');
-  }
-.cerrado {
-  --icon: url('https://cdn.jsdelivr.net/gh/witchliescodes/ui-icons@main/icons/cerrar.svg');
-  }
-.nota {
-  --icon: url('https://cdn.jsdelivr.net/gh/witchliescodes/ui-icons@main/icons/clip-vertical.svg');
-  }
-.anuncio {
-  --icon: url('https://cdn.jsdelivr.net/gh/witchliescodes/ui-icons@main/icons/megafono.svg');
-  
-  }    
-  
+/*Status de aviso*/    
 .satus {
   width: 50px;
   height: -webkit-fill-available;
@@ -247,13 +227,15 @@
   place-items: center;
   background: var(--color-1);
   border-radius: 0.18em;
+  --icon-size: 30px;
+  --grad: linear-gradient(135deg, var(--color-2), var(--color-3));
 }
 
 .satus::after {
   content: "";
-  width: 20px;
-  height: 20px;
-  background: currentColor;
+  width: var(--icon-size);
+  height: var(--icon-size);
+  background: var(--grad);
   -webkit-mask: var(--icon) center / contain no-repeat;
   mask: var(--icon) center / contain no-repeat;
   opacity: 1;
@@ -261,8 +243,29 @@
     outline: 1px solid red;
 }
   
-  
-.nuevo { color: #ff4d6d; }
-.hot { color: orange; }
-.cerrado { color: #444; }  
+.satus.nuevo {
+  --icon: url('https://cdn.jsdelivr.net/gh/witchliescodes/ui-icons@main/icons/agregar-documento.svg');
+  --grad: linear-gradient(135deg, var(--color-2), var(--bs-success));
+  }
+.satus.leido {
+  --icon: url('https://cdn.jsdelivr.net/gh/witchliescodes/ui-icons@main/icons/desplazarse-viejo.svg');
+   --grad: linear-gradient(135deg, var(--color-2), var(--color-1));
+}
+.satus.hot {
+    --icon: url(https://cdn.jsdelivr.net/gh/witchliescodes/ui-icons@main/icons/llama-de-fuego-curvada%20(1).svg);
+    --grad: linear-gradient(135deg, var(--color-2), var(--bs-orange));
+}
+.satus.cerrado {
+  --icon: url('https://cdn.jsdelivr.net/gh/witchliescodes/ui-icons@main/icons/cerrar.svg');
+   --grad: linear-gradient(135deg, var(--color-2), var(--bs-red));
+  }
+.satus.nota {
+    --icon: url(https://cdn.jsdelivr.net/gh/witchliescodes/ui-icons@main/icons/clip-vertical.svg);
+    --grad: linear-gradient(135deg, var(--color-2), var(--bs-danger-border-subtle));
+}
+.satus.anuncio {
+    --icon: url(https://cdn.jsdelivr.net/gh/witchliescodes/ui-icons@main/icons/megafono.svg);
+    --grad: linear-gradient(135deg, var(--color-2), var(--color-7));
+}  
+
 </style>  
