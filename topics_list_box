@@ -46,14 +46,13 @@
 <span>
 {topics_list_box.row.LAST_POST_AUTHOR}
 <dfn>{topics_list_box.row.LAST_POST_TIME}</dfn>
-</span>  
-</div>
-  
+</span>
 {topics_list_box.row.GOTO_PAGE_NEW}
-<span class="span-tab">{topics_list_box.row.L_BY} <strong>{topics_list_box.row.TOPIC_AUTHOR}</strong></span>
+
 <!-- BEGIN nav_tree -->
 {topics_list_box.row.TOPIC_NAV_TREE_NEW}
-<!-- END nav_tree -->
+<!-- END nav_tree -->  
+</div>
 </div>
  
 <div class="pyv">  
@@ -75,6 +74,7 @@
 <!-- END switch_description -->
 </div>    
 </div>
+  
 <!-- END topic -->  
   
 
@@ -137,6 +137,7 @@
   border-radius: 0.38em;
   overflow: hidden;
   transition: all 0.25s ease;
+  color: var(--color-6);
 }
   
 .tema:hover {
