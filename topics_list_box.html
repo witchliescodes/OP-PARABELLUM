@@ -219,17 +219,6 @@
 } 
   
 /*Status de aviso*/  
-  
-.satus {
-    width: 50px;
-    height: -webkit-fill-available;
-    position: relative;
-    display: grid;
-    place-items: center;
-    background: var(--color-1);
-}
-  
-/*anuncio*/
 .nuevo {
   --new: url('https://cdn.jsdelivr.net/gh/witchliescodes/ui-icons/refs/heads/main/icons/agregar-documento.svg');
   }
@@ -248,8 +237,24 @@
 .anuncio {
   --anuncio: url('https://cdn.jsdelivr.net/gh/witchliescodes/ui-icons/refs/heads/main/icons/megafono.svg');
   
-  }  
+  }    
   
+.satus {
+    width: 50px;
+    height: -webkit-fill-available;
+    position: relative;
+    display: grid;
+    place-items: center;
+    background: var(--color-1);
+    border-radius: 0.18em;
+}
+  
+.cerrado.tem {
+  background-color: red; 
+  background-image: var(--cerrar);
+  background-size: cover; 
+  width: inherit; 
+  }  
   
   
 </style>  
