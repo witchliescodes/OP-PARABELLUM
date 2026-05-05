@@ -1,4 +1,4 @@
-<div class="topics-wrapper">
+<div class="topili">
 
 <!-- BEGIN topics_list_box -->
 <!-- BEGIN row -->
@@ -55,19 +55,12 @@
 {topics_list_box.row.TOPIC_NAV_TREE_NEW}
 <!-- END nav_tree -->
 </div>
+ 
+<div class="pyv">  
+<div class="posts">{topics_list_box.row.REPLIES} <dfn><i class="fi fi-rr-auto-reply"></i></dfn></div>
+<div class="views">{topics_list_box.row.VIEWS} <dfn><i class="fi fi-rr-eye"></i></dfn></div>
+</div>  
   
-<div class="posts">
-  {topics_list_box.row.REPLIES} 
-  <dfn>
-<i class="fi fi-rr-auto-reply"></i>
-  </dfn>
-</div>
-<div class="views">
-  {topics_list_box.row.VIEWS} 
-  <dfn>
-<i class="fi fi-rr-eye"></i>
-  </dfn>
-</div>
 <div class="lastpost">
 <!-- BEGIN avatar -->
 <div class="avalist">{topics_list_box.row.topic.avatar.LAST_POST_AVATAR}</div>
@@ -92,7 +85,7 @@
 </div>  
   
 <style>
-.topics-wrapper {
+.topili {
   display: grid;
   gap: 14px; 
 }  
@@ -132,7 +125,12 @@
 .tema {
   background: var(--color-5);
   display: grid;
-  grid-template-columns: 40px 1fr 60px 60px 60px;
+  grid-template-columns: 
+    40px          /* status */
+    minmax(200px, 2fr)  /* contenido */
+    70px          /* posts */
+    70px          /* views */
+    50px;         /* avatar */
   align-items: center;
   gap: 10px;
   padding: 10px;
@@ -158,13 +156,29 @@
   flex-direction: column;
   gap: 5px;
 }
+  
+.topictitle {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}  
 
 .posts, .views {
   text-align: center;
 }
 
 .lastpost {
-  display: flex;
-  justify-content: center;
+    display: flex;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    overflow: hidden;
+} 
+  
+.descp {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 200px;
 }  
 </style>  
