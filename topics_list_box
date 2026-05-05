@@ -123,21 +123,16 @@
 }  
   
 .tema {
-  background: var(--color-5);
-  display: grid;
-  grid-template-columns: 
-    40px          /* status */
-    minmax(200px, 2fr)  /* contenido */
-    70px          /* posts */
-    70px          /* views */
-    50px;         /* avatar */
-  align-items: center;
-  gap: 10px;
-  padding: 10px;
-  border-radius: 0.38em;
-  overflow: hidden;
-  transition: all 0.25s ease;
-  color: var(--color-6);
+    background: var(--color-5);
+    display: grid;
+    grid-template-columns: 40px minmax(200px, 2fr) 70px 80px 200px;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 0.38em;
+    overflow: hidden;
+    transition: all 0.25s ease;
+    color: var(--color-6);
 }
   
 .tema:hover {
