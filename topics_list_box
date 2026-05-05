@@ -68,12 +68,23 @@
 <!-- BEGIN multi_selection -->
 <input onclick="javascript:check_uncheck_main_{topics_list_box.row.BOX_ID}();" type="checkbox" name="{topics_list_box.FIELDNAME}[]{topics_list_box.row.BOX_ID}" value="{topics_list_box.row.FID}" {topics_list_box.row.L_SELECT} />
 <!-- END multi_selection -->
-<div class="descp">
+  
+<div class="desul">  
+<div class="descp">  
 <!-- BEGIN switch_description -->
 {topics_list_box.row.topic.switch_description.TOPIC_DESCRIPTION}
-<!-- END switch_description -->
+<!-- END switch_description -->  
 </div>    
+<div class="ultem">
+<span>{topics_list_box.row.LAST_POST_AUTHOR}
+<dfn>{L_LASTPOST}</dfn>
+{topics_list_box.row.LAST_POST_IMG}
+{topics_list_box.row.LAST_POST_TIME}
+</span>
 </div>
+</div>  
+
+  </div>
   
 <!-- END topic -->  
   
