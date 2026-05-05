@@ -69,13 +69,12 @@
 <input onclick="javascript:check_uncheck_main_{topics_list_box.row.BOX_ID}();" type="checkbox" name="{topics_list_box.FIELDNAME}[]{topics_list_box.row.BOX_ID}" value="{topics_list_box.row.FID}" {topics_list_box.row.L_SELECT} />
 <!-- END multi_selection -->
   
-<div class="desul">  
 <div class="descp">  
 <!-- BEGIN switch_description -->
 {topics_list_box.row.topic.switch_description.TOPIC_DESCRIPTION}
 <!-- END switch_description -->  
 </div>    
-</div>  
+
 
   </div>
   
@@ -129,7 +128,7 @@
 .tema {
     background: var(--color-5);
     display: grid;
-    grid-template-columns: 50px minmax(200px, 2fr) 100px 80px 300px;
+    grid-template-columns: 50px minmax(200px, 2fr) 100px 80px 230px;
     align-items: center;
     gap: 10px;
     padding: 10px;
@@ -202,7 +201,7 @@
 }
   
 .descp {
-    max-height: 40px;
+    height: -webkit-fill-available;
     overflow-y: auto;
     white-space: normal;
     line-height: 1.3;
