@@ -76,11 +76,9 @@
 <!-- END switch_description -->  
 </div>    
 <div class="ultem">
-<span>{topics_list_box.row.LAST_POST_AUTHOR}
-<dfn>{L_LASTPOST}</dfn>
-{topics_list_box.row.LAST_POST_IMG}
-{topics_list_box.row.LAST_POST_TIME}
-</span>
+<dfn>Ult. mensaje por</dfn>  
+<span>{topics_list_box.row.LAST_POST_AUTHOR}</span>
+<p>{topics_list_box.row.LAST_POST_TIME}</p>  
 </div>
 </div>  
 
@@ -136,7 +134,7 @@
 .tema {
     background: var(--color-5);
     display: grid;
-    grid-template-columns: 40px minmax(200px, 2fr) 70px 80px 200px;
+    grid-template-columns: 40px minmax(200px, 2fr) 70px 80px 300px;
     align-items: center;
     gap: 10px;
     padding: 10px;
@@ -186,6 +184,6 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  max-width: 200px;
+  max-width: 300px;
 }  
 </style>  
