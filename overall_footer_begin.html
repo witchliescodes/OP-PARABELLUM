@@ -1,0 +1,240 @@
+<!-- BEGIN html_validation -->
+<div>
+	<div>
+		<div>
+			<div>
+				<div>
+					<div>
+						<div>
+							<div>
+<!-- END html_validation -->
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="{ID_RIGHT}">
+					<!-- BEGIN giefmod_index2 -->
+					{giefmod_index2.MODVAR}
+					<!-- BEGIN saut -->
+					<div style="height:{SPACE_ROW}px"></div>
+					<!-- END saut -->
+					<!-- END giefmod_index2 -->
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+{FOOTER_WIDGETS}
+<div id="page-footer">
+	<div class="navbar">
+		<div class="inner">
+			<span class="corners-top"><span></span></span>
+			<ul class="linklist clearfix">
+				<li class="footer-home">
+					<a class="icon-home" href="{U_INDEX}" accesskey="h">{L_HOME}</a>
+				</li>
+				<li class="rightside">
+<!-- BEGIN html_validation -->
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+<!-- END html_validation -->
+<style>
+/**RESPONSIVE COMPLETO**/
+@media (max-width: 1024px) {
+  .conteneur_container_IE {
+    width: 100%;
+    max-width: 100%;
+    padding-inline: 10px;
+    box-sizing: border-box;
+  }
+
+  .parahead {
+    width: 100%;
+    max-width: 100%;
+    margin: 40px auto 0;
+    padding: clamp(20px, 5vw, 50px);
+    min-height: 250px;
+    box-sizing: border-box;
+  }
+  
+
+#wrap {
+        width: 100%;
+        max-width: 100%;
+        margin: -490px auto;
+        padding: 430px 48px;
+        min-height: auto;
+        box-sizing: border-box;
+    }
+  
+  .parahead banner {
+    width: 100%;
+    max-width: 100%;
+  }
+
+ .multismultis {
+    width: min(96vw, 500px);
+    max-width: calc(100vw - 20px);
+    right: 10px;
+  }
+
+  .dropdown-menu {
+    --dropdown-offset-y: clamp(16px, 6vw, 40px);
+    width: 100%;
+    max-width: 100% !important;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .dropdown-menu.show {
+
+    width: 4500px;
+  }
+
+  .puspj, .puadmin, .puenlaces {
+    width: 100%;
+    margin: 0;
+    padding: 0 0 10px 0;
+    border-right: none;
+    border-bottom: 1px solid var(--color-3);
+  }
+
+  .puspj h4, .puadmin h4, .puenlaces h4 {
+    padding: 0 0 10px 0;
+  }
+
+/*banner*/
+  
+.claro .manga1 {
+    content: var(--manga1);
+    opacity: 0.3;
+    position: absolute;
+}
+
+.claro .manga2 {
+    content: var(--pj1);
+    width: 100%;
+    height: 107%;
+    transform: translateY(22px);
+}
+.claro .manga3 {
+    content: var(--manga2);
+    mix-blend-mode: soft-light;
+    position: absolute;
+    width: 120%;
+    top: -326px;
+    left: -130px;
+    opacity: 0.8;
+}
+.claro .manga4 {
+    content: var(--manga3);
+    mix-blend-mode: multiply;
+    width: 170%;
+    opacity: 0.2;
+    height: 178%;
+    top: -48%;
+    left: -19%;
+    transform: scaleX(-1);
+}
+
+.oscuro .manga1 {
+    content: var(--manga1);
+    opacity: 0.5;
+    z-index: 4;
+    mix-blend-mode: soft-light;
+}
+.oscuro .manga2 {
+    content: var(--pj1);
+    width: 120%;
+    height: 109%;
+    position: absolute;
+}
+.oscuro .manga3 {
+    content: var(--manga2);
+    z-index: 3;
+    width: 140%;
+    position: absolute;
+    left: -200px;
+    top: -311px;
+    mix-blend-mode: soft-light;
+}
+.oscuro .manga4 {
+    content: var(--manga3);
+    z-index: 4;
+    mix-blend-mode: hue;
+    opacity: 0.2;
+}
+
+/*TABLON DE ANUNCIOS*/
+ .paranun h1 {
+    font-size: 2rem;
+  }
+  
+  .labels button {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+
+  
+#sinscroll {
+    width: 47%;
+}
+  
+  .linky p {
+    font-size: 1.1em;
+}
+
+}
+
+@media (min-width: 1025px) {
+    .paranun {
+        padding: 20px;
+        border-radius: 10px;
+        margin: 35px 0 0 0;
+        width: -webkit-fill-available;
+        height: 650px;
+        position: relative;
+        overflow: hidden;
+    }
+
+.pestanas-contenedor {
+    position: relative;
+    height: -webkit-fill-available;
+}
+
+    .labels {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        width: 100px;
+        position: absolute;
+        z-index: 10;
+        align-items: center;
+        flex-flow: column;
+        margin: -147px 0 0 975px;
+    }
+
+  .labels button {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--color-2) !important;
+    color: var(--color-5);
+    font-size: 1em;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+    
+}
+  
+</style>  
