@@ -149,12 +149,6 @@
     box-shadow: 0 5px 0px var(--tcolor3);
 } 
   
-.satus {
-  width: 40px;
-  height: 40px;
-  background-size: cover;
-  border-radius: 8px;
-}
 
 .topic {
   display: flex;
@@ -228,4 +222,76 @@
     background: var(--color-1);
     font-size: 0.7em;
 } 
+  
+/*Status de aviso*/  
+  
+.satus {
+  width: 40px;
+  height: 40px;
+  background-size: cover;
+  border-radius: 8px;
+}  
+  
+.satus::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  border-radius: 50%;
+  background: #2b2b2b;
+
+  transition: 0.3s ease;
+}
+ 
+.satus:hover::before {
+  transform: scale(1.1);
+}  
+  
+/* nuevo → llamativo */
+.satus.nuevo::before {
+  background: #ff4d6d;
+  box-shadow: 0 0 12px #ff4d6d88;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 #ff4d6d66; }
+  70% { box-shadow: 0 0 0 10px transparent; }
+  100% { box-shadow: 0 0 0 0 transparent; }
+}
+  
+  
+/* leído → neutro */
+.satus.leido::before {
+  background: #555;
+}
+  
+/* hot → glow extra */
+.satus.hot::before {
+  box-shadow: 0 0 14px orange;
+}
+
+/* cerrado → apagado */
+.satus.cerrado::before {
+  background: #1a1a1a;
+  opacity: 0.6;
+}
+  
+.satus::after {
+  position: absolute;
+  font-size: 14px;
+  color: white;
+}
+
+/* fijo */
+.satus.fijo::after {
+  content: "📌";
+}
+
+/* anuncio */
+.satus.anuncio::after {
+  content: "!";
+  font-weight: bold;
+}  
+  
 </style>  
