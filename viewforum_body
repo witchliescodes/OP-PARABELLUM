@@ -45,13 +45,15 @@
 
 <style>
 .forumb {
-    background: var(--color-1);
-    border-radius: 0.38em;
-    display: flex;
-    padding: 10px;
-    margin: 0 0 20px 0;
-    align-items: center;
-    justify-content: space-between;
+  background: var(--color-1);
+  border-radius: 0.38em;
+  display: grid;
+  grid-template-columns: 1fr auto; 
+  align-items: center;
+  padding: 10px;
+  margin: 0 0 20px 0;
+  gap: 10px;
+  width: 100%;
 }
   
 .n-s, .mrpgt {
