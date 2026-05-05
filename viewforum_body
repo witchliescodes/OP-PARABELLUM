@@ -108,7 +108,7 @@
 }
 
 .search-field:focus-within {
-  box-shadow: 0 0 0 2px var(--tcolor2), 0 5px 10px var(--tcolor2);
+  box-shadow: 0 0 0 2px var(--tcolor3), 0 0px 5px var(--tcolor3);
   transform: translateY(-1px);
 }
 
