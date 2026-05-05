@@ -1,3 +1,5 @@
+<div class="topics-wrapper">
+
 <!-- BEGIN topics_list_box -->
 <!-- BEGIN row -->
 
@@ -87,7 +89,14 @@
 <!-- END row -->
 <!-- END topics_list_box -->
 
+</div>  
+  
 <style>
+.topics-wrapper {
+  display: grid;
+  gap: 14px; 
+}  
+  
 .tlist-a, .tlist-t {
     background: var(--color-5);
     padding: 10px;
@@ -98,7 +107,6 @@
     color: var(--color-3);
     flex-flow: row-reverse;
     font-family: var(--titulos);
-    margin: 0 0 20px 0;
     font-size: 2em;
 }
   
@@ -119,5 +127,44 @@
   
 .tlist-a h1, .tlist-t h1{
   margin: 0;
+}  
+  
+.tema {
+  background: var(--color-5);
+  display: grid;
+  grid-template-columns: 40px 1fr 60px 60px 60px;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 0.38em;
+  overflow: hidden;
+  transition: all 0.25s ease;
+}
+  
+.tema:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.2);
+}  
+  
+.satus {
+  width: 40px;
+  height: 40px;
+  background-size: cover;
+  border-radius: 8px;
+}
+
+.topic {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.posts, .views {
+  text-align: center;
+}
+
+.lastpost {
+  display: flex;
+  justify-content: center;
 }  
 </style>  
