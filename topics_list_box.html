@@ -220,41 +220,49 @@
   
 /*Status de aviso*/  
 .nuevo {
-  --new: url('https://cdn.jsdelivr.net/gh/witchliescodes/ui-icons/refs/heads/main/icons/agregar-documento.svg');
+  --icon: url('https://cdn.jsdelivr.net/gh/witchliescodes/ui-icons@main/icons/agregar-documento.svg');
   }
 .leido {
-  --tema: url('https://cdn.jsdelivr.net/gh/witchliescodes/ui-icons/refs/heads/main/icons/desplazarse-viejo.svg');
+  --icon: url('https://cdn.jsdelivr.net/gh/witchliescodes/ui-icons@main/icons/desplazarse-viejo.svg');
 }
 .hot {
-  --popu: url('https://cdn.jsdelivr.net/gh/witchliescodes/ui-icons/refs/heads/main/icons/llama-de-fuego-curvada%20(1).svg');
+  --icon: url('https://cdn.jsdelivr.net/gh/witchliescodes/ui-icons@main/icons/llama-de-fuego-curvada%20(1).svg');
   }
 .cerrado {
-  --cerrar: url('https://cdn.jsdelivr.net/gh/witchliescodes/ui-icons/refs/heads/main/icons/cerrar.svg');
+  --icon: url('https://cdn.jsdelivr.net/gh/witchliescodes/ui-icons@main/icons/cerrar.svg');
   }
 .nota {
-  --nota: url('https://cdn.jsdelivr.net/gh/witchliescodes/ui-icons/refs/heads/main/icons/clip-vertical.svg');
+  --icon: url('https://cdn.jsdelivr.net/gh/witchliescodes/ui-icons@main/icons/clip-vertical.svg');
   }
 .anuncio {
-  --anuncio: url('https://cdn.jsdelivr.net/gh/witchliescodes/ui-icons/refs/heads/main/icons/megafono.svg');
+  --icon: url('https://cdn.jsdelivr.net/gh/witchliescodes/ui-icons@main/icons/megafono.svg');
   
   }    
   
 .satus {
-    width: 50px;
-    height: -webkit-fill-available;
-    position: relative;
-    display: grid;
-    place-items: center;
-    background: var(--color-1);
-    border-radius: 0.18em;
+  width: 50px;
+  height: -webkit-fill-available;
+  position: relative;
+  display: grid;
+  place-items: center;
+  background: var(--color-1);
+  border-radius: 0.18em;
+}
+
+.satus::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background: currentColor;
+  -webkit-mask: var(--icon) center / contain no-repeat;
+  mask: var(--icon) center / contain no-repeat;
+  opacity: 1;
+  transition: 0.3s ease;
+    outline: 1px solid red;
 }
   
-.cerrado.tem {
-  background-color: red; 
-  background-image: var(--cerrar);
-  background-size: cover; 
-  width: inherit; 
-  }  
   
-  
+.nuevo { color: #ff4d6d; }
+.hot { color: orange; }
+.cerrado { color: #444; }  
 </style>  
