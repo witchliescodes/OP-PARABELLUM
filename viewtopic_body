@@ -106,17 +106,12 @@ showHiddenMessage = function(id)
     </div>
     <div class="ban-d">
       <div class="p-dat">
-        <div class="pr-raz"><dfn><i class="game-icon game-icon-angel-wings"></i>Raza</dfn>  <span class="valor"></span></div>
-        <div class="pr-alt"><dfn><i class="game-icon game-icon-body-height"></i>Altura</dfn>  <span class="valor"></span></div>
-        <div class="pr-aku"><dfn><i class="game-icon game-icon-raspberry"></i>Akuma</dfn>  <span class="valor"></span></div>
-        <div class="pr-vid"><dfn><i class="game-icon game-icon-heart-plus"></i>Vida</dfn>  <span class="valor"></span></div>
+        <div class="pr-raz"><dfn><i class="game-icon game-icon-angel-wings"></i>Raza</dfn> <span class="valor"></span></div>
+        <div class="pr-alt"><dfn><i class="game-icon game-icon-body-height"></i>Altura</dfn> <span class="valor"></span></div>
+        <div class="pr-aku"><dfn><i class="game-icon game-icon-raspberry"></i>Akuma</dfn> <span class="valor"></span></div>
+        <div class="pr-vid"><dfn><i class="game-icon game-icon-heart-plus"></i>Vida</dfn> <span class="valor"></span></div>
         <div class="pr-ene"><dfn><i class="fi fi-rr-bolt"></i>Energía</dfn>  <span class="valor"></span></div>
-      </div>
-      <div class="p-p">
-        <a href="{postrow.displayed.POST_URL}">
-   	 <i class="fi fi-rr-link"></i>
-          Permanent Link
-  	</a>
+        <div class="p-p"><dfn><a href="{postrow.displayed.POST_URL}"> <i class="fi fi-rr-link"></i>Permanent Link</a></dfn></div>
       </div>
     </div>
   </div>
