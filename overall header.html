@@ -586,7 +586,21 @@ Ice cream danish gummi bears powder cotton candy donut. Bear claw biscuit muffin
     </div>
     <div class="mebus">busquedas</div>
   </div>
-  <div class="lowp">sabías que</div>
+  <div class="lowp">
+  <div class="sabias-wrap">
+
+  <button class="sabias-btn prev">
+    <i class="fi fi-rr-angle-left"></i>
+  </button>
+
+  <div class="sabias-slider"></div>
+
+  <button class="sabias-btn next">
+    <i class="fi fi-rr-angle-right"></i>
+  </button>
+
+</div>
+  </div>
 </div>
 <!-- Pestaña 3: Últimos Temas-->                       
 <div class="paradiv pestana" id="pestana3">
@@ -1490,8 +1504,8 @@ background-image: var(--staff1);
 }
 
 .cpd {
-    width: 30%;
-    height: 183%;
+    width: 34%;
+    height: 203%;
     position: relative;
     flex-shrink: 0;
 }
@@ -1506,8 +1520,78 @@ background-image: var(--staff1);
     position: relative;
     top: 0;
 }
+  
+/*Sabias qué*/  
 
+.sabias-wrap {
+  flex-shrink: 0;
+}
 
+.sabias-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.sabias-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  min-width: 0;
+}
+
+.sabias-title {
+  font-family: var(--titulos);
+  font-size: 1.1em;
+  color: var(--color-3);
+}
+
+.sabias-texto {
+  font-size: 0.85em;
+  line-height: 1.5;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+
+  overflow: hidden;
+}
+
+.sabias-btn {
+  width: 34px;
+  height: 34px;
+
+  border: 0;
+  border-radius: 0.3em;
+
+  background: var(--color-1);
+  color: var(--color-3);
+
+  cursor: pointer;
+  transition: all 250ms ease;
+
+  flex-shrink: 0;
+}
+
+.sabias-btn:hover {
+  transform: translateY(-2px);
+  background: var(--color-2);
+}
+
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateX(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+  
+  
 /* Labels con flechas (SIEMPRE VISIBLES) */
 .labels {
     display: flex;
