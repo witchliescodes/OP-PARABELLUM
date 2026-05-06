@@ -183,7 +183,7 @@ showHiddenMessage = function(id)
     height: auto;
     padding: 10px;
     border-radius: 0.38em;
-    background: var(--color-1);
+    background: var(--color-5);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -197,7 +197,7 @@ showHiddenMessage = function(id)
 }
   
 .reypost a {
-    background: var(--color-5);
+    background: var(--color-1);
     padding: 10px;
     color: var(--color-3);
     display: flex;
@@ -218,7 +218,7 @@ showHiddenMessage = function(id)
   
 .ppag {
     padding: 10px;
-    background: var(--color-5);
+    background: var(--color-1);
     border-radius: 0.18em;
     opacity: 0.8;
     color: var(--color-3);
@@ -227,7 +227,7 @@ showHiddenMessage = function(id)
 .bopp-t {
     padding: 10px;
     border-radius: 0.38em;
-    background: var(--color-1);
+    background: var(--color-5);
     width: -webkit-fill-available;
     display: flex;
     align-items: center;
@@ -246,7 +246,7 @@ showHiddenMessage = function(id)
 }
   
 .bopp-t a i {
-    background: var(--color-5);
+    background: var(--color-1);
     padding: 10px;
     border-radius: 0.18em;
     display: flex;
@@ -258,7 +258,7 @@ showHiddenMessage = function(id)
     width: -webkit-fill-available;
     min-width: 0;
     height: unset;
-    background: var(--color-5);
+    background: var(--color-1);
     padding: 10px;
     margin: 0;
     display: flex;
@@ -327,5 +327,39 @@ showHiddenMessage = function(id)
   transform: translateY(-2px);
   background: var(--color-3);
   color: var(--color-5);
+}  
+  
+.p-dat {
+    width: -webkit-fill-available;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background: var(--color-5);
+    border-radius: 0.18em;
+    gap: 10px;
+}
+  
+.p-dat > div {
+    background: var(--color-1);
+    padding: 5px 10px;
+    height: auto;
+    color: var(--color-3);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    border-radius: 0.18em;
+    border: 1px solid var(--color-3);
+    width: stretch;
+}
+  
+.p-dat > div dfn {
+    font-style: normal;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-weight: 700;
 }  
 </style>  
