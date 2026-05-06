@@ -1,0 +1,119 @@
+<!-- POST DE ROL BY PUMPKIN CODES-->
+<div class="wrap-top">
+<div class="bopp-res">
+
+  <div class="reypost">
+    		<!-- BEGIN switch_user_authreply -->
+		<a href="{U_POST_REPLY_TOPIC}"><i class="fi fi-rr-reply-all"></i> Responder</a>
+		<!-- END switch_user_authreply -->
+		<!-- BEGIN switch_user_authpost -->
+		<a href="{U_POST_NEW_TOPIC}" rel="nofollow"><i class="fi fi-rr-document-writer"></i> Nuevo tema</a>
+		<!-- END switch_user_authpost -->
+  </div>	
+  <div class="ppag">
+    <!-- BEGIN topicpagination -->
+	{PAGINATION}
+    <!-- END topicpagination -->
+  </div>
+</div>
+
+<div class="bopp-t">
+  <a href="{TOPIC_URL}"><i class="game-icon game-icon-ship-wheel"></i>{TOPIC_TITLE}</a>
+</div>
+</div>
+
+<div class="bopost">
+  <div class="oppbyd">
+    <div class="ban-p">banner</div>
+    <div class="ban-d">
+      <div class="p-dat">datos</div>
+      <div class="p-p">permanent link</div>
+    </div>
+  </div>
+  <div class="oppost">
+    <div class="rol-p">post de rol </div>
+    <div class="profile-p">
+      <div class="status">status</div>
+      <div class="p-ava">avatar</div>
+      <div class="p-rang">rango</div>
+      <div class="p-conta">
+      contacto
+        <button>botón de inventario</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+.wrap-top {
+    display: flex;
+    flex-flow: column;
+    gap: 10px;
+    width: -webkit-fill-available;
+    min-width: 0px;
+} 
+  
+.bopp-res {
+    width: -webkit-fill-available;
+    height: auto;
+    padding: 10px;
+    border-radius: 0.38em;
+    background: var(--color-1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 0;
+}  
+
+.reypost {
+    display: flex;
+    width: auto;
+    gap: 10px;
+}
+  
+.reypost a {
+    background: var(--color-5);
+    padding: 10px;
+    color: var(--color-3);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 0;
+    font-weight: 600;
+    border-radius: 0.18em;
+    gap: 10px;
+    transition: all 400ms;
+}
+  
+.reypost a:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 1px 12px var(--tcolor3);
+    border-color: var(--color-3);
+}
+  
+.ppag {
+    padding: 10px;
+    background: var(--color-5);
+    border-radius: 0.18em;
+    opacity: 0.8;
+    color: var(--color-3);
+}  
+  
+.bopp-t {
+    padding: 10px;
+    border-radius: 0.38em;
+    background: var(--color-1);
+    width: -webkit-fill-available;
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+  
+.bopp-t a {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: var(--titulos);
+    color: var(--color-3);
+}
+</style>  
