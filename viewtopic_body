@@ -104,7 +104,6 @@
     border-radius: 0.38em;
     background: var(--color-1);
     width: -webkit-fill-available;
-    min-height: 100px;
     display: flex;
     align-items: center;
     gap: 10px;
@@ -115,5 +114,18 @@
     letter-spacing: 1px;
     font-family: var(--titulos);
     color: var(--color-3);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.5em;
 }
+  
+.bopp-t a i {
+    background: var(--color-5);
+    padding: 10px;
+    border-radius: 0.18em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}  
 </style>  
