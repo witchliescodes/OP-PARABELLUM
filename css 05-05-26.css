@@ -1805,11 +1805,11 @@ banner:hover .manga3 {
 }
 
 .busqueda-avatar {
-  min-width: 50px;
-  width: 50px;
-  height: 50px;
-  overflow: hidden;
-  flex-shrink: 0;
+    min-width: 50px;
+    width: 50px;
+    height: auto;
+    overflow: hidden;
+    flex-shrink: 0;
 }
 
 .busqueda-avatar img {
@@ -1827,14 +1827,16 @@ banner:hover .manga3 {
 }
 
 .busqueda-titulo a {
-  font-size: 0.8em;
-  text-decoration: none;
-  color: var(--color-3);
-
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
+    font-weight: bold;
+    font-size: 0.5em;
+    text-decoration: none;
+    color: var(--color-3);
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    font-family: var(--cuerpo1);
+    line-height: 1.5em;
 }
 
 .busqueda-meta {
