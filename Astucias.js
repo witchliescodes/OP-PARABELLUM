@@ -1,90 +1,131 @@
-$(document).ready(function(){
-// Estas dos líneas borrarán las frases de fecha y hora actual y tu última visita en todas las páginas.
+$(function () {
+
+  // =========================
+  // Limpiar cosas que no ocupamos
+  // =========================
+
   $('#main-content > p:contains("Fecha y hora actual")').remove();
   $('#main-content > p:contains("Tu última visita fue")').remove();
-		
-// Esta línea borrará el links de la barra de navegación que no usaremos
+
   $('a.mainmenu[href*="/calendar"]').parent().remove();
-   $('a.mainmenu[href*="/images"]').parent().remove();
-   $('a.mainmenu[href*="/faq"]').parent().remove();
+  $('a.mainmenu[href*="/images"]').parent().remove();
+  $('a.mainmenu[href*="/faq"]').parent().remove();
 
-// Esta línea le dará una clase al body cuando el que lo visita sea un invitado.
-$('a.mainmenu[href*="/register"]').parents('body').addClass('bodyinvi');
-	
-// Reemplazar imagenes de botones
-// vigilar subforos y temas	
-$('a[href*="?watch=topic"]').attr('title', 'Vigilar tema').html('<em class="fas fa-eye"></em>');
-$('a[href*="?unwatch=topic"]').attr('title', 'Dejar de vigilar tema').html('<em class="fas fa-eye-slash"></em>');
-$('a[href*="?watch=forum"]').attr('title', 'Vigilar subforo').html('<em class="fas fa-eye"></em>');
-$('a[href*="?unwatch=forum"]').attr('title', 'Dejar de vigilar subforo').html('<em class="fas fa-eye-slash"></em>');
+  // Invitado detectado por existencia del botón register
+  if ($('a.mainmenu[href*="/register"]').length) {
+    $('body').addClass('bodyinvi');
+  }
 
-// Edición de temas
-$('a[href*="&mode=quote"]').attr('title', 'Citar mensaje').html('<em class="fas fa-quote-left"></em>');
-$('a[href*="&mode=edit"]:not("p.copyright a")').attr('title', 'Editar mensaje').html('<em class="fas fa-cogs"></em>');
-$('a[href*="&mode=delete"]').attr('title', 'Borrar mensaje').html('<em class="fas fa-times"></em>');
-$('a[href*="?mode=ip"]').attr('title', 'Ver IP').html('<em class="fas fa-exclamation-triangle"></em>');
+  // =========================
+  // visto o no visto en temas
+  // =========================
 
-// Botones 	
-$('img[src*="user_profile"]').parent()
-.attr({
-title:'Perfil del personaje',
-'data-bs-toggle':'tooltip',
-'data-bs-custom-class':'custom-tooltip'
-})
-.html('<i class="fas fa-user"></i>');
-	
-$('img[src*="contact_pm"]').parent()
-.attr({
-title:'Mensaje Privado',
-'data-bs-toggle':'tooltip',
-'data-bs-custom-class':'custom-tooltip'
-})
-.html('<i class="game-icon game-icon-envelope"></i>');
-	
-$('img[src*="https://2img.net/images2.imgbox.com/64/db/MjYGVDud_o.png"]').parent()
-.attr({
-title:'Expediente de Personaje',
-'data-bs-toggle':'tooltip',
-'data-bs-custom-class':'custom-tooltip'
-})
-.html('<i class="game-icon game-icon-bookmarklet"></i>');
+  $('a[href*="?watch=topic"]').html('<em class="fas fa-eye"></em>').attr('title', 'Vigilar tema');
+  $('a[href*="?unwatch=topic"]').html('<em class="fas fa-eye-slash"></em>').attr('title', 'Dejar de vigilar tema');
+  $('a[href*="?watch=forum"]').html('<em class="fas fa-eye"></em>').attr('title', 'Vigilar subforo');
+  $('a[href*="?unwatch=forum"]').html('<em class="fas fa-eye-slash"></em>').attr('title', 'Dejar de vigilar subforo');
 
-$('img[src*="https://images2.imgbox.com/01/0a/Q5wtTsfJ_o.png"]').parent()
-.attr({
-title:'Hoja de personaje',
-'data-bs-toggle':'tooltip',
-'data-bs-custom-class':'custom-tooltip'
-})
-.html('<i class="game-icon game-icon-crossed-axes"></i>');
-	
-document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach(function(el){
-new bootstrap.Tooltip(el);
+  // =========================
+  // Iconos del perfil, posts, topic list con tooltip
+  // =========================
+
+const btns = [
+  {
+    selector: 'a[href*="&mode=quote"]',
+    icon: '<i class="fi fi-rr-square-quote"></i>',
+    title: 'Citar mensaje',
+    isLink: true
+  },
+  {
+    selector: 'a[href*="&mode=edit"]',
+    icon: '<i class="fi fi-rr-edit"></i>',
+    title: 'Editar mensaje',
+    isLink: true
+  },
+  {
+    selector: 'a[href*="&mode=delete"]',
+    icon: '<i class="fi fi-rr-trash-xmark"></i>',
+    title: 'Borrar mensaje',
+    isLink: true
+  },	
+  {
+    selector: 'a[href*="?mode=ip"]',
+    icon: '<i class="fi fi-rr-ip-address"></i>',
+    title: 'Ver IP',
+    isLink: true
+  },	
+  {
+    selector: 'img[src*="user_profile"]',
+    icon: '<i class="fas fa-user"></i>',
+    title: 'Perfil del personaje'
+  },
+  {
+    selector: 'img[src*="contact_pm"]',
+    icon: '<i class="game-icon game-icon-envelope"></i>',
+    title: 'Mensaje Privado'
+  },
+  {
+    selector: 'img[src*="MjYGVDud_o.png"]',
+    icon: '<i class="game-icon game-icon-bookmarklet"></i>',
+    title: 'Expediente de Personaje'
+  },
+  {
+    selector: 'img[src*="Q5wtTsfJ_o.png"]',
+    icon: '<i class="game-icon game-icon-crossed-axes"></i>',
+    title: 'Hoja de personaje'
+  }
+];
+
+btns.forEach(b => {
+
+  const el = b.isLink
+    ? $(b.selector)
+    : $(b.selector).parent();
+
+  el.attr({
+      title: b.title,
+      'data-bs-toggle': 'tooltip',
+      'data-bs-custom-class': 'custom-tooltip'
+    })
+    .html(b.icon);
+
 });
-	
-// Botones de Moderacion
 
+  if (window.bootstrap) {
+    document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach(el => {
+      new bootstrap.Tooltip(el);
+    });
+  }
 
+  // =========================
+  // MOVER COSAS EN EL DOM
+  // =========================
 
-	
-// Mover cosas
-$('.admpp').appendTo('.panela ');	// boton de la administración
-$(".opp-mtopi").appendTo("#opp-ltop");	// ultimos temas en tablón de anuncios
-$(".likospicos").appendTo(".prikos"); // pasar links de utilidad a tablón
-$(".est-links").appendTo(".stalinky");
+  $('.admpp').appendTo('.panela');
+  $(".opp-mtopi").appendTo("#opp-ltop");
+  $(".likospicos").appendTo(".prikos");
+  $(".est-links").appendTo(".stalinky");
+
 });
 
-// Esta función borrará algunas partes de la toolbar que no necesitamos.
-$(window).load(function () { 
-  $('#fa_left, #fa_search, #fa_share').remove();   
-	
-//Contador de subforos
-document.querySelectorAll('.oppfor').forEach((categoria) => {
-  categoria.querySelectorAll('.fori').forEach((fila, indice) => {
-    const numero = fila.querySelector('.numc');
-    if (numero) {
-      numero.textContent = indice + 1;
-    }
+// =========================
+// Contador de subforos y borrado final
+// =========================
+
+$(window).on('load', function () {
+
+  $('#fa_left, #fa_search, #fa_share').remove();
+
+  // Contador de subforos optimizado
+  document.querySelectorAll('.oppfor').forEach(categoria => {
+
+    const filas = categoria.querySelectorAll('.fori');
+
+    filas.forEach((fila, index) => {
+      const num = fila.querySelector('.numc');
+      if (num) num.textContent = index + 1;
+    });
+
   });
-});
-	
+
 });
