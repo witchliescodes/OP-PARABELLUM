@@ -54,6 +54,7 @@ showHiddenMessage = function(id)
 
 <!-- POST DE ROL BY PUMPKIN CODES -->
 
+<div class="wrap-todo">
 <div class="wrap-top">
   <!-- CONTROLES -->
   <div class="bopp-res">
@@ -89,7 +90,7 @@ showHiddenMessage = function(id)
 
 <!-- BEGIN postrow -->
 <!-- BEGIN displayed -->  
-<div id="p{postrow.displayed.U_POST_ID}" class="bopost post-{postrow.displayed.ROW_COUNT} post--{postrow.displayed.U_POST_ID} {postrow.displayed.GROUP}">
+<div id="p{postrow.displayed.U_POST_ID}" class="bopost post post-{postrow.displayed.ROW_COUNT} post--{postrow.displayed.U_POST_ID} {postrow.displayed.GROUP}">
 <div class="postbody"> 
   <div class="oppbyd">
     <div class="ban-p">
@@ -106,11 +107,11 @@ showHiddenMessage = function(id)
     </div>
     <div class="ban-d">
       <div class="p-dat">
-        <div class="pr-raz"></div>
-        <div class="pr-alt"></div>
-        <div class="pr-aku"></div>
-        <div class="pr-vid"></div>
-        <div class="pr-ene"></div>
+        <div class="pr-raz"><dfn><i class="game-icon game-icon-angel-wings"></i>Raza</dfn>  <span class="valor"></span></div>
+        <div class="pr-alt"><dfn><i class="game-icon game-icon-body-height"></i>Altura</dfn>  <span class="valor"></span></div>
+        <div class="pr-aku"><dfn><i class="game-icon game-icon-raspberry"></i>Akuma</dfn>  <span class="valor"></span></div>
+        <div class="pr-vid"><dfn><i class="game-icon game-icon-heart-plus"></i>Vida</dfn>  <span class="valor"></span></div>
+        <div class="pr-ene"><dfn><i class="fi fi-rr-bolt"></i>Energía</dfn>  <span class="valor"></span></div>
       </div>
       <div class="p-p">
         <a href="{postrow.displayed.POST_URL}">
@@ -166,8 +167,15 @@ showHiddenMessage = function(id)
 </div>
 <!-- END displayed -->
 <!-- END postrow -->
+</div>
 
 <style>
+.wrap-todo {
+    display: flex;
+    flex-flow: column;
+    gap: 10px;
+}
+  
 .wrap-top {
     display: flex;
     flex-flow: column;
@@ -251,4 +259,27 @@ showHiddenMessage = function(id)
     align-items: center;
     justify-content: center;
 }  
+  
+.bopost {
+    width: -webkit-fill-available;
+    min-width: 0;
+    height: unset;
+    background: var(--color-5);
+    padding: 10px;
+    margin: 0;
+    display: flex;
+    flex-flow: column;
+    gap: 12px;
+    border-radius: 0.38em;
+}
+  
+.bopost .postbody {
+    position: relative;
+    width: -webkit-fill-available;
+    height: -webkit-fill-available;
+    overflow: hidden;
+    display: flex;
+    flex-flow: column;
+    gap: 10px;
+}
 </style>  
