@@ -315,4 +315,22 @@ showHiddenMessage = function(id)
     padding: 10px;
     gap: 10px;
 }
+  
+.profile-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  background: var(--color-5);
+  border-radius: 0.3em;
+  color: var(--color-3);
+  transition: 300ms ease;
+}
+
+.profile-icons a:hover {
+  transform: translateY(-2px);
+  background: var(--color-3);
+  color: var(--color-5);
+}  
 </style>  
