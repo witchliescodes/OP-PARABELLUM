@@ -94,15 +94,14 @@ showHiddenMessage = function(id)
 <div class="postbody"> 
   <div class="oppbyd">
     <div class="ban-p">
-      <div class="pr-ban"></div>
-      <div class="profile-icons">
-					<li>{postrow.displayed.THANK_IMG}</li>
-					<li>{postrow.displayed.MULTIQUOTE_IMG}</li>
-					<li>{postrow.displayed.QUOTE_IMG}</li>
-					<li>{postrow.displayed.EDIT_IMG}</li>
-					<li>{postrow.displayed.DELETE_IMG}</li>
-					<li>{postrow.displayed.IP_IMG}</li>
-					<li>{postrow.displayed.REPORT_IMG_NEW}</li>
+      <div class="pr-ban">
+            <div class="profile-icons">
+		{postrow.displayed.QUOTE_IMG}
+		{postrow.displayed.EDIT_IMG}
+		{postrow.displayed.DELETE_IMG}
+		{postrow.displayed.IP_IMG}
+		{postrow.displayed.REPORT_IMG_NEW}
+      </div>
       </div>
     </div>
     <div class="ban-d">
@@ -307,4 +306,13 @@ showHiddenMessage = function(id)
     height: 200px;
     object-fit: cover;
 }  
+  
+.profile-icons {
+    position: absolute;
+    display: flex;
+    list-style: none;
+    right: 0;
+    padding: 10px;
+    gap: 10px;
+}
 </style>  
