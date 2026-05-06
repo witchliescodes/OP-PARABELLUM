@@ -282,4 +282,29 @@ showHiddenMessage = function(id)
     flex-flow: column;
     gap: 10px;
 }
+  
+.oppbyd  {
+    width: -webkit-fill-available;
+    height: -webkit-fill-available;
+    display: flex;
+    flex-flow: column;
+    gap: 10px;
+}
+  
+.ban-p {
+    position: relative;
+}  
+  
+.ban-p {
+    width: -webkit-fill-available;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 0.18em;
+} 
+  
+.ban-p img {
+    width: 1067px;
+    height: 200px;
+    object-fit: cover;
+}  
 </style>  
