@@ -88,8 +88,15 @@ return "Ciudadano";
 const {pa,pp,rep,wanted,berries} = window.perfilDatos;
 	
 
-document.querySelector(".bellvl .valor").textContent =
+const nivelEl =
+document.querySelector(".bellvl .valor");
+
+if(nivelEl){
+
+nivelEl.textContent =
 calcularNivel(pa);
+
+}
 
 
 // GRUPOS
