@@ -95,6 +95,7 @@ showHiddenMessage = function(id)
   <div class="oppbyd">
     <div class="ban-p">
       <div class="pr-ban">
+            <div class="status">{postrow.displayed.ONLINE_IMG_NEW}</div>
             <div class="profile-icons">
 		{postrow.displayed.QUOTE_IMG}
 		{postrow.displayed.EDIT_IMG}
@@ -124,7 +125,7 @@ showHiddenMessage = function(id)
       <!-- END switch_signature -->
     </div>
     <div class="profile-p">
-      <div class="status">{postrow.displayed.ONLINE_IMG_NEW}</div>
+      <div class="wraperava">
       <div class="p-ava">
        {postrow.displayed.POSTER_AVATAR}
       </div>
@@ -138,8 +139,9 @@ showHiddenMessage = function(id)
         <!-- BEGIN contact_field --> 
         {postrow.displayed.contact_field.CONTENT}
         <!-- END contact_field -->
-        <button>botón de inventario</button>
+        <button><i class="fi fi-rr-backpack"></i></button>
       </div>
+    </div>
     </div>
   </div>
   </div> 
@@ -270,8 +272,6 @@ showHiddenMessage = function(id)
 .bopost .postbody {
     position: relative;
     width: -webkit-fill-available;
-    height: -webkit-fill-available;
-    overflow: hidden;
     display: flex;
     flex-flow: column;
     gap: 10px;
@@ -279,7 +279,6 @@ showHiddenMessage = function(id)
   
 .oppbyd  {
     width: -webkit-fill-available;
-    height: -webkit-fill-available;
     display: flex;
     flex-flow: column;
     gap: 10px;
@@ -301,6 +300,43 @@ showHiddenMessage = function(id)
     height: 200px;
     object-fit: cover;
 }  
+
+.status {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 5px 10px;
+    background: transparent;
+    color: var(--color-6);
+    margin: 10px;
+    max-height: 35px;
+    max-width: 200px;
+    width: 150px;
+    border-radius: 0.18em;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: flex-start;
+    transition: 300ms ease;
+}
+  
+.status.on {
+    background: var(--bs-success-border-subtle);
+    opacity: 0.8;
+}
+  
+.status.off {
+  background: var(--bs-danger-border-subtle);
+  opacity: 0.4;
+}
+  
+.status.on i {
+    color: var(--bs-success);
+}
+
+.status.off i {
+    color: var(--bs-danger-text-emphasis);
+} 
   
 .profile-icons {
     position: absolute;
@@ -385,14 +421,13 @@ showHiddenMessage = function(id)
   
 .oppost {
     color: var(--color-6);
-    width: -webkit-fill-available;
-    height: -webkit-fill-available;
+    width: 100%;
     position: relative;
     display: grid;
     grid-template-columns: 1fr 320px;
     gap: 10px;
-    align-items: start;
-} 
+    align-items: stretch;
+}
   
 .rol-p {
     background: var(--color-5);
@@ -408,6 +443,23 @@ showHiddenMessage = function(id)
   
 .profile-p {
     background: var(--color-5);
-    height: -webkit-fill-available;
-}  
+
+
+    align-self: start;
+
+    height: fit-content;
+
+    padding: 10px;
+
+    border-radius: 0.18em;
+}
+  
+.wraperava {
+    position: sticky;
+    top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
 </style>  
