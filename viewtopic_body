@@ -388,5 +388,26 @@ showHiddenMessage = function(id)
     width: -webkit-fill-available;
     height: -webkit-fill-available;
     position: relative;
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 10px;
+    align-items: start;
 } 
+  
+.rol-p {
+    background: var(--color-5);
+    padding: 30px;
+    hyphens: auto;
+    text-align: justify;
+    font-size: 1em;
+    line-height: 1.5em;
+    font-family: var(--cuerpo1);
+    border-radius: 0.18em;
+    height: stretch;
+}
+  
+.profile-p {
+    background: var(--color-5);
+    height: -webkit-fill-available;
+}  
 </style>  
