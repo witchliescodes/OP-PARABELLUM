@@ -124,25 +124,34 @@ showHiddenMessage = function(id)
       <div class="signature_div" id="sig{postrow.displayed.U_POST_ID}">{postrow.displayed.SIGNATURE_NEW}</div>
       <!-- END switch_signature -->
     </div>
+ <div class="profile-shell">   
+   <div class="profile-bg"></div>
     <div class="profile-p">
       <div class="wraperava">
-      <div class="p-ava">
-       {postrow.displayed.POSTER_AVATAR}
+      <div class="p-ava"> 
+        {postrow.displayed.POSTER_AVATAR}
+      </div>
+      <div class="p-name">
+        <h1>{postrow.displayed.POSTER_NAME}</h1>
+       <div class="p-rang">
+         <p>{postrow.displayed.POSTER_RANK_NEW}</p>
+        </div>    
       </div>
       <div class="p-date">
- 	 {postrow.displayed.POST_DATE_NEW}
+ 	 <i class="fi fi-rr-hourglass-end"></i> {postrow.displayed.POST_DATE_NEW}
       </div>
-      <div class="p-name">{postrow.displayed.POSTER_NAME}</div>
-      <div class="p-rang">{postrow.displayed.POSTER_RANK_NEW}</div>
       <div class="p-conta">
        {postrow.displayed.PROFILE_IMG} {postrow.displayed.PM_IMG} {postrow.displayed.EMAIL_IMG}
         <!-- BEGIN contact_field --> 
         {postrow.displayed.contact_field.CONTENT}
         <!-- END contact_field -->
-        <button><i class="fi fi-rr-backpack"></i></button>
+        <button class="inv-btn">
+  	<i class="fi fi-rr-backpack"></i>
+	</button>
       </div>
     </div>
     </div>
+  </div>
   </div>
   </div> 
   
@@ -156,10 +165,30 @@ showHiddenMessage = function(id)
       {postrow.displayed.profile_field.CONTENT}
     </span>
   </div>
-  <!-- END profile_field -->
+  <!-- END profile_field -->   
 </div>
-  
-  
+<!-- Modal de inventarios-->
+<div class="inv-modal">
+
+  <div class="inv-box">
+
+    <button class="inv-close">
+      <i class="fi fi-rr-cross-small"></i>
+    </button>
+
+    <div class="inv-title">
+      Inventario
+    </div>
+
+    <div class="inv-items"></div>
+
+  </div>
+
+</div> 
+<div class="awards-wrap" style="display:none;">
+  {postrow.displayed.AWARDS}
+</div>  
+ <!-- FIn Modal de inventarios--> 
 </div>
 <!-- END displayed -->
 <!-- END postrow -->
@@ -307,7 +336,7 @@ showHiddenMessage = function(id)
     left: 0;
     padding: 5px 10px;
     background: transparent;
-    color: var(--color-6);
+    color: var(--color-7);
     margin: 10px;
     max-height: 35px;
     max-width: 200px;
@@ -441,25 +470,223 @@ showHiddenMessage = function(id)
     height: stretch;
 }
   
+.profile-shell {
+    position: relative;
+}
+
+
+.profile-bg {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    border-radius: 0.4em;
+    background: var(--tcolor5);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    isolation: isolate;
+    z-index: 0;
+}
+  
+  .profile-bg::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+    linear-gradient(180deg, color-mix(in srgb, var(--group-main) 40%, transparent), transparent 70%);
+    z-index: -2;
+}
+
 .profile-p {
-    background: var(--color-5);
-
-
+    position: sticky;
+    top: 95px;
     align-self: start;
-
     height: fit-content;
-
-    padding: 10px;
-
     border-radius: 0.18em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
 }
   
 .wraperava {
-    position: sticky;
-    top: 20px;
     display: flex;
     flex-direction: column;
     gap: 10px;
     width: 100%;
 }
+  
+.p-ava {
+    border-radius: 0.18em;
+    overflow: hidden;
+}
+  
+.p-name {
+    display: flex;
+    background: var(--color-5);
+    padding: 10px;
+    flex-flow: column;
+    gap: 10px;
+    border-radius: 0.18em;
+}
+  
+.p-name h1 {
+    border-bottom: 1px solid var(--color-3);
+    margin: 0;
+    font-size: 1.2em;
+    text-align: end;
+    text-transform: uppercase;
+    font-family: var(--titulos);
+    line-height: 1.5em;
+}
+  
+.p-rang {
+    background: var(--tcolor3);
+    padding: 5px 10px;
+    border-radius: 0.18em;
+    display: flex;
+}  
+  
+.p-rang p{
+    margin: 0;
+    font-size: 1em;
+    font-family: var(--cuerpo1);
+}  
+  
+.p-date {
+    background: var(--color-5);
+    padding: 5px 10px;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    border-radius: 0.18em;
+    color: var(--color-3);
+}
+  
+.p-conta {
+    display: flex;
+    gap: 10px;
+    width: -webkit-fill-available;
+    align-items: center;
+}    
+  
+.p-conta a[href*="mode=email"] {
+    display: none;
+}  
+  
+.p-conta a, .p-conta:visited {
+    color: var(--color-3);
+    background: var(--color-5);
+    padding: 10px;
+    border-radius: 0.18em;
+    border: 1px solid var(--tcolor3);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1em;
+}
+  
+/* Modal  inventario*/
+  
+.inv-modal {
+    position: fixed;
+
+    inset: 0;
+
+    background:
+      rgba(0,0,0,0.6);
+
+    backdrop-filter: blur(6px);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: 300ms;
+
+    z-index: 99999;
+}
+  
+.inv-modal.active {
+    opacity: 1;
+    visibility: visible;
+}
+  
+.inv-box {
+    width: 500px;
+    max-width: 90vw;
+
+    padding: 20px;
+
+    border-radius: 0.4em;
+
+    background: var(--color-1);
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 15px;
+
+    position: relative;
+}  
+  
+.inv-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}  
+  
+/*COLORES POR GRUPO*/
+.bopost.post-group-2{
+   --color-2:#737373;
+   --color-3:#737373;
+   --group-main: #737373;
+   --tcolor3: #73737352;
+}  
+ 
+.bopost.post-group-3{
+   --color-2:#B23E2A;
+   --color-3:#B23E2A;
+   --group-main: #B23E2A;
+   --tcolor3: #b23e2a5c;
+}   
+
+.bopost.post-group-4{
+   --color-2:#6AB7D2;
+   --color-3:#6AB7D2;
+   --group-main: #6AB7D2;
+   --tcolor3: #6ab7d26b;
+}   
+  
+.bopost.post-group-5{
+   --color-2:#8D22BF;
+   --color-3:#8D22BF;
+   --group-main: #8D22BF;
+   --tcolor3: #b23e2a5c;
+}   
+    
+.bopost.post-group-6{
+   --color-2:#4E7A2A;
+   --color-3:#4E7A2A;
+   --group-main: #4E7A2A;
+   --tcolor3: #b23e2a5c;
+} 
+  
+.bopost.post-group-7{
+   --color-2:#CA53BA;
+   --color-3:#CA53BA;
+   --group-main: #CA53BA;
+   --tcolor3: #b23e2a5c;
+} 
+  
+.bopost.post-group-8{
+   --color-2:#C2AD47;
+   --color-3:#C2AD47;
+   --group-main: #C2AD47;
+   --tcolor3: #b23e2a5c;
+}  
 </style>  
