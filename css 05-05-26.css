@@ -146,6 +146,9 @@
 #main-content {
     margin: 20px 0 0 0;
 }
+#content-container div#main {
+    overflow: visible !important;
+}
 
 @font-face {
   font-family: "game-icons";
@@ -1840,6 +1843,17 @@ banner:hover .manga3 {
 }
 
 .busqueda-meta {
-  font-size: 0.65em;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.busqueda-autor {
+  font-size: 0.68em;
+  color: var(--color-3);
+}
+
+.busqueda-fecha {
+  font-size: 0.62em;
   opacity: 0.6;
 }
