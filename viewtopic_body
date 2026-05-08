@@ -133,9 +133,7 @@ showHiddenMessage = function(id)
       </div>
       <div class="p-name">
         <h1>{postrow.displayed.POSTER_NAME}</h1>
-       <div class="p-rang">
-         <p>{postrow.displayed.POSTER_RANK_NEW}</p>
-        </div>    
+       <div class="p-rang"></div>
       </div>
       <div class="p-date">
  	 <i class="fi fi-rr-hourglass-end"></i> {postrow.displayed.POST_DATE_NEW}
@@ -294,7 +292,6 @@ showHiddenMessage = function(id)
     margin: 0;
     display: flex;
     flex-flow: column;
-    gap: 12px;
     border-radius: 0.38em;
 }
   
@@ -540,16 +537,27 @@ showHiddenMessage = function(id)
 }
   
 .p-rang {
-    background: var(--tcolor3);
-    padding: 5px 10px;
+    background: var(--tcolor5);
+    padding: 10px;
     border-radius: 0.18em;
+    gap: 10px;
     display: flex;
-}  
+    align-items: center;
+    justify-content: flex-start;
+}
   
-.p-rang p{
-    margin: 0;
+.prang-icon{
+    color: var(--color-3);
+    font-size: 1.5em;
+}
+  
+.prang-text {
     font-size: 1em;
-    font-family: var(--cuerpo1);
+    font-family: var(--titulos);
+    letter-spacing: 1px;
+    color: var(--color-3);
+    line-height: 1.5em;
+    text-transform: uppercase;
 }  
   
 .p-date {
@@ -567,13 +575,14 @@ showHiddenMessage = function(id)
     gap: 10px;
     width: -webkit-fill-available;
     align-items: center;
+      justify-content: space-between;
 }    
   
 .p-conta a[href*="mode=email"] {
     display: none;
 }  
   
-.p-conta a, .p-conta:visited {
+.p-conta a, .p-conta a:visited, .inv-btn {
     color: var(--color-3);
     background: var(--color-5);
     padding: 10px;
@@ -585,29 +594,27 @@ showHiddenMessage = function(id)
     align-items: center;
     justify-content: center;
     font-size: 1em;
+    transition: all 300ms;
 }
+  
+.p-conta a:hover, .p-conta a:visited:hover, .inv-btn:hover {
+  background: var(--tcolor3);
+  color: var(--color-5)
+  }  
   
 /* Modal  inventario*/
   
 .inv-modal {
     position: fixed;
-
     inset: 0;
-
-    background:
-      rgba(0,0,0,0.6);
-
-    backdrop-filter: blur(6px);
-
+    background: var(--tcolor3);
+    backdrop-filter: blur(10px);
     display: flex;
     align-items: center;
     justify-content: center;
-
     opacity: 0;
     visibility: hidden;
-
     transition: 300ms;
-
     z-index: 99999;
 }
   
@@ -619,19 +626,44 @@ showHiddenMessage = function(id)
 .inv-box {
     width: 500px;
     max-width: 90vw;
-
     padding: 20px;
-
     border-radius: 0.4em;
-
-    background: var(--color-1);
-
+    background: var(--color-5);
     display: flex;
     flex-direction: column;
-
-    gap: 15px;
-
+    gap: 10px;
     position: relative;
+    border: 1px solid var(--tcolor3);
+}
+  
+button.inv-close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    border: none;
+    background: var(--color-3);
+    padding: 10px;
+    border-bottom-left-radius: .38em;
+    border-top-right-radius: 0.38em;
+    opacity: 0.6;
+    color: var(--color-6);
+    transition: all 400ms;
+}  
+  
+.inv-close:hover{
+      background: var(--bs-red);
+  }  
+  
+.inv-title {
+    background: var(--tcolor3);
+    padding: 10px;
+    font-size: 1em;
+    letter-spacing: 1px;
+    font-family: var(--titulos);
+    text-transform: uppercase;
+    color: var(--color-3);
+    border-radius: 0.18em;
+    border-bottom: 5px solid var(--color-3);
 }  
   
 .inv-items {
@@ -639,6 +671,21 @@ showHiddenMessage = function(id)
     flex-wrap: wrap;
     gap: 10px;
 }  
+  
+div.award {
+    display: inline-block;
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border: 1px solid var(--tcolor3);
+    background-image: var(--award-image);
+    border-radius: 5px;
+    background-position: center;
+    background-size: cover;
+    flex-shrink: 0;
+    scroll-snap-align: center;
+    margin: 0;
+}
   
 /*COLORES POR GRUPO*/
 .bopost.post-group-2{
@@ -666,27 +713,27 @@ showHiddenMessage = function(id)
    --color-2:#8D22BF;
    --color-3:#8D22BF;
    --group-main: #8D22BF;
-   --tcolor3: #b23e2a5c;
+   --tcolor3: #8d22bf2e;
 }   
     
 .bopost.post-group-6{
    --color-2:#4E7A2A;
    --color-3:#4E7A2A;
    --group-main: #4E7A2A;
-   --tcolor3: #b23e2a5c;
+   --tcolor3: #4e7a2a69;
 } 
   
 .bopost.post-group-7{
    --color-2:#CA53BA;
    --color-3:#CA53BA;
    --group-main: #CA53BA;
-   --tcolor3: #b23e2a5c;
+   --tcolor3: #ca53ba6b;
 } 
   
 .bopost.post-group-8{
    --color-2:#C2AD47;
    --color-3:#C2AD47;
    --group-main: #C2AD47;
-   --tcolor3: #b23e2a5c;
+   --tcolor3: #c2ad4773;
 }  
 </style>  
