@@ -186,288 +186,170 @@
     font-size: clamp(2rem, 6vw, 4rem);
   }
 
-  /* =====================================
-     HEADER
-  ===================================== */
+  /* HEADER */
 
   .multismultis{
-
-    width:
-    min(92vw, 450px);
-
+    width: min(92vw, 450px);
   }
 
   .dropdown-menu.show{
-
     width:
     min(92vw, 600px);
-
   }
 
-  /* =====================================
-     ICONOS SUPERIORES
-  ===================================== */
-
+  /* ICONOS SUPERIORES*/
   .punav{
-
     gap:12px;
-
     flex-wrap:wrap;
-
   }
 
-  /* =====================================
-     TABLÓN
-  ===================================== */
-
+  /* TABLÓN */
+  .ladoa .pambi {
+ 	 height: 335px; 
+  } 
   .labels{
-
     gap:8px;
-
   }
-
   .labels button{
-
     width:44px;
     height:44px;
-
   }
-
 }  
   
+/* IPAD / TABLET */
 
-/* =====================================
-   TABLET VERTICAL
-===================================== */
+@media (max-width: 820px){
+  #wrap{
+  margin: clamp(-90px, -8vw, -140px) auto 50px;
+  padding: clamp(90px, 12vw, 140px) 18px 24px;
+}
+  banner{
+  height: clamp(180px, 34vw, 320px);
+}
+  .punav{
+  gap: 10px;
+  flex-wrap: wrap;
+}
+  .dropdown-menu.show{
+  width: min(94vw, 520px);
+}
+  .parahead{
+  padding: 20px;
+}
+}  
+  
+/* TABLET VERTICAL */
 
 @media (max-width: 768px){
 
   #wrap{
-
-    margin:
-    clamp(-180px, -12vw, -260px)
-    auto
-    60px;
-
-    padding:
-    clamp(120px, 18vw, 220px)
-    20px
-    30px;
-
-    border-radius:14px;
-
+    margin: clamp(-180px, -12vw, -260px) auto 60px;
+    padding: clamp(120px, 18vw, 220px) 20px 30px;
+    border-radius: 14px;
   }
 
-  /* =====================================
-     TABLÓN
-  ===================================== */
-
+  /* TABLÓN */
   .paranun{
-
-    padding:15px;
-
+    padding: 15px;
   }
-
   .labels{
-
-    flex-flow:row;
-
-    top:auto;
-    bottom:15px;
-
-    right:50%;
-
-    transform:
-    translateX(50%);
-
+    flex-flow: row;
+    top: auto;
+    bottom: 15px;
+    right: 50%;
+    transform: translateX(50%);
   }
 
-  /* =====================================
-     NOTICIAS
-  ===================================== */
-
-  .pretab-an{
-
+  /* NOTICIAS */
+  .pretab-an {
     grid-template-columns:1fr;
-
   }
 
-  /* =====================================
-     MULTIS
-  ===================================== */
-
+  /* MULTIS */
   .multismultis{
-
-    left:50%;
-
-    right:auto;
-
-    transform:
-    translateX(-50%);
-
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
   }
 
-  /* =====================================
-     SWITCHEROO
-  ===================================== */
-
+  /* SWITCHEROO */
   .switcheroo__squircles{
-
-    grid-template-columns:
-    repeat(2, 1fr);
-
+    grid-template-columns: repeat(2, 1fr);
   }
-
 }
 
-/* =====================================
-   MOBILE
-===================================== */
-
+/* MOBILE */
 @media (max-width: 600px){
-
   #wrap{
-
     width:100%;
-
     margin:-100px auto 40px;
-
-    padding:
-    110px
-    14px
-    20px;
-
+    padding: 110px 14px 20px;
     border-radius:12px;
-
   }
 
-  /* =====================================
-     BANNER
-  ===================================== */
-
+  /* BANNER */
   .partitle h1{
-
-    font-size:
-    clamp(1.8rem, 9vw, 3rem);
-
+    font-size: clamp(1.8rem, 9vw, 3rem);
     text-align:center;
-
   }
-
-  /* =====================================
-     TABLÓN
-  ===================================== */
-
+  /* TABLÓN */
   .labels{
-
     position:static;
-
     transform:none;
-
     justify-content:center;
-
     margin:20px 0 0 0;
-
   }
 
   .labels button{
-
-    width:40px;
-    height:40px;
-
+    width: 40px;
+    height: 40px;
     font-size:0.9rem;
-
   }
 
-  /* =====================================
-     NOTICIAS
-  ===================================== */
-
+  /* NOTICIAS */
   .notis{
-
-    padding:14px;
-
+    padding: 14px;
   }
-
   .pretab-an{
-
     gap:10px;
-
   }
 
-  /* =====================================
-     STICKY
-  ===================================== */
-
+  /* STICKY */
   .pboiz-wrap,
   .pcre-wrap{
-
     display:none;
-
   }
 
-  /* =====================================
-     SWITCHEROO
-  ===================================== */
-
+  /* SWITCHEROO */
   .switcheroo__squircles{
-
     grid-template-columns:1fr;
-
   }
 
-  /* =====================================
-     TEXTO
-  ===================================== */
-
+  /* TEXTO */
   .linky p{
-
     font-size:1em;
-
   }
 
   #sinscroll{
-
     width:100%;
-
   }
-
 }
 
-/* =====================================
-   MOBILE PEQUEÑO
-===================================== */
+/* MOBILE PEQUEÑO */
 
 @media (max-width: 480px){
-
   #wrap{
-
-    padding:
-    90px
-    10px
-    16px;
-
+    padding: 90px 10px 16px;
   }
-
   .partitle h1{
-
-    font-size:
-    clamp(1.5rem, 10vw, 2.4rem);
-
+    font-size: clamp(1.5rem, 10vw, 2.4rem);
   }
-
   .multismultis{
-
-    width:95vw;
-
+    width: 95vw;
   }
-
   .dropdown-menu.show{
-
-    width:95vw;
-
+    width: 95vw;
   }
-
 }
   
 </style>  
