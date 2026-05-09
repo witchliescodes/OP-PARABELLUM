@@ -42,262 +42,130 @@
 </div>
 <!-- END html_validation -->
 <style>
-/* =====================================
-   RESPONSIVE GLOBAL
-===================================== */
-/* =====================================
-   LAPTOP PEQUEÑA
-===================================== */
+/* RESPONSIVE GLOBAL */
+/* LAPTOP PEQUEÑA */
 
 @media (max-width: 1400px){
-
   #wrap{
-
-    margin:
-    clamp(-220px, -14vw, -320px)
-    auto
-    80px;
-
-    padding:
-    clamp(140px, 14vw, 220px)
-    clamp(20px, 3vw, 40px)
-    40px;
-
+    margin: clamp(-220px, -14vw, -320px) auto 80px;
+    padding: clamp(140px, 14vw, 220px) clamp(20px, 3vw, 40px) 40px;
   }
-
   .parahead{
-
-    padding:
-    clamp(20px, 3vw, 40px);
-
+    padding: clamp(20px, 3vw, 40px);
   }
-
   banner{
-
-    height:
-    clamp(220px, 42vw, 500px);
-
+    height: clamp(220px, 42vw, 500px);
   }
-
   .partitle h1{
-
-    font-size:
-    clamp(2.5rem, 6vw, 5rem);
-
+    font-size: clamp(2.5rem, 6vw, 5rem);
   }
-
 }
   
   
-/* =====================================
-   LAPTOP / TABLET HORIZONTAL
-===================================== */
+/* LAPTOP / TABLET HORIZONTAL */
 
 @media (max-width: 1200px){
-
   #wrap{
-
     width: min(100%, 1200px);
-
-    margin:
-    clamp(-320px, -24vw, -490px)
-    auto
-    80px;
-
-    padding:
-    clamp(220px, 25vw, 430px)
-    clamp(20px, 4vw, 48px)
-    48px;
-
-    box-sizing:border-box;
-
+    margin: clamp(-320px, -24vw, -490px) auto 80px;
+    padding: clamp(220px, 25vw, 430px) clamp(20px, 4vw, 48px) 48px;
+    box-sizing: border-box;
   }
-
   .conteneur_container_IE{
-
     width:100%;
     max-width:100%;
-
     padding-inline:10px;
-
     box-sizing:border-box;
-
   }
-
   .parahead{
-
     width:100%;
     max-width:100%;
-
     margin:40px auto 0;
-
     padding:
     clamp(20px, 5vw, 50px);
-
     min-height:250px;
-
     box-sizing:border-box;
-
   }
-
   .parahead banner{
-
     width:100%;
     max-width:100%;
-
   }
-
-  /* =====================================
-     DROPDOWN
-  ===================================== */
-
+  /* DROPDOWN */
   .multismultis{
-
     width:min(96vw, 500px);
-
-    max-width:
-    calc(100vw - 20px);
-
+    max-width: calc(100vw - 20px);
     right:10px;
-
   }
-
   .dropdown-menu{
-
-    --dropdown-offset-y:
-    clamp(16px, 6vw, 40px);
-
+    --dropdown-offset-y: clamp(16px, 6vw, 40px);
     width:100%;
-
     max-width:100% !important;
-
     flex-direction:column;
-
     align-items:stretch;
-
     gap:10px;
-
   }
-
   .dropdown-menu.show{
-
     width:min(95vw, 700px);
-
   }
-
   .puspj,
   .puadmin,
   .puenlaces{
-
     width:100%;
-
     margin:0;
-
     padding:0 0 10px 0;
-
     border-right:none;
-
-    border-bottom:
-    1px solid var(--color-3);
-
+    border-bottom: 1px solid var(--color-3);
   }
-
   .puspj h4,
   .puadmin h4,
   .puenlaces h4{
-
     padding:0 0 10px 0;
-
   }
 
-  /* =====================================
-     BANNER
-  ===================================== */
-
+  /* BANNER */
   banner{
-
-    height:
-    clamp(260px, 60vw, 600px);
-
+    height: clamp(260px, 60vw, 600px);
   }
-
   .partitle h1{
-
-    font-size:
-    clamp(2.2rem, 8vw, 6rem);
-
+    font-size: clamp(2.2rem, 8vw, 6rem);
   }
-
-  /* =====================================
-     TABLÓN
-  ===================================== */
-
+  /* TABLÓN */
   .paranun{
-
     min-height:650px;
-
     height:auto;
-
   }
-
   .labels{
-
     position:absolute;
-
     top:20px;
     right:20px;
-
     margin:0;
-
     display:flex;
-
     flex-flow:column;
-
     gap:10px;
-
     width:auto;
-
   }
-
   .labels button{
-
     width:50px;
     height:50px;
-
   }
-
   .paranun h1{
-
     font-size:2rem;
-
   }
-
-  /* =====================================
-     NOTICIAS
-  ===================================== */
-
+  /* NOTICIAS */
   .pretab-an{
-
     grid-template-columns:
     repeat(2, minmax(0,1fr));
-
     max-height:none;
-
   }
-
 }
   
-/* =====================================
-   DESKTOP COMPACTO
-===================================== */
+/* DESKTOP COMPACTO */
 
 @media (max-width: 980px){
-
     #wrap {
         margin: clamp(-239px, -10vw, -267px) auto 60px;
         padding: clamp(110px, 12vw, 180px) 53px 30px;
     }
-
     .parahead {
         padding: clamp(16px, 3vw, 30px);
         min-height: auto;
@@ -307,11 +175,13 @@
         box-sizing: border-box;
         height: 230px;
     }
-
-  banner{
-    height: clamp(220px, 40vw, 420px);
-  }
-
+    banner {
+        height: clamp(220px, 40vw, 420px);
+        width: min(89%, 1100px);
+    }
+  .parahead navbar {
+    padding: 0.85rem clamp(1rem, 3vw, 1.5rem);
+    }
   .partitle h1{
     font-size: clamp(2rem, 6vw, 4rem);
   }
