@@ -101,14 +101,14 @@
 <!-- END switch_forum_images -->
 
 <!-- BEGIN switch_on_index -->
-<ul class="linklist">
-	<li><a href="{U_TODAY_ACTIVE}">{L_TODAY_ACTIVE}</a>&nbsp;&bull;&nbsp;</li>
-	<li><a href="{U_TODAY_POSTERS}">{L_TODAY_POSTERS}</a>&nbsp;&bull;&nbsp;</li>
-	<li class="last"><a href="{U_OVERALL_POSTERS}">{L_OVERALL_POSTERS}</a></li>
+<div class="est-links">
+	<a href="{U_TODAY_ACTIVE}" class="linku" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" title="Temas activos del día"><i class="fi fi-rr-comment"></i></a>
+	<a href="{U_TODAY_POSTERS}" class="linku" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" title="Top 20 posteadores de hoy"><i class="fi fi-rr-star"></i></a>
+	<a href="{U_OVERALL_POSTERS}" class="linku" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" title="Top 20 posteadores posteadores del foro"><i class="fi fi-rr-following"></i></a>
 	<!-- BEGIN switch_delete_cookies -->
-	<li class="rightside"><a href="{switch_on_index.switch_delete_cookies.U_DELETE_COOKIES}" rel="nofollow">{switch_on_index.switch_delete_cookies.L_DELETE_COOKIES}</a></li>
+	<a href="{switch_on_index.switch_delete_cookies.U_DELETE_COOKIES}" rel="nofollow" class="linku" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" title="Suprimir las cookies del foro"><i class="fi fi-rr-cookie-lock"></i></a>
 	<!-- END switch_delete_cookies -->
-</ul>
+</div>
 <!-- END switch_on_index -->
 <style>
 /*CATEGORIAS Y SUBFOROS*/
@@ -283,35 +283,12 @@ background-image: var(--admi);
 }  
 
 .oppfor .fori {
-    background: var(--color-4);
+    background: var(--color-1);
     border-radius: .85rem;
     overflow: hidden;
     position: relative;
 }  
   
-.oppfor.admi .fori {
-    background: var(--color-4);
-    border-radius: .85rem;
-    overflow: hidden;
-}
-
-.oppfor.bien .fori {
-    background: var(--color-4);
-    border-radius: .85rem;
-    overflow: hidden;
-}
-  
-.oppfor.pers .fori {
-    background: var(--color-4);
-    border-radius: .85rem;
-    overflow: hidden;
-}
-  
-.oppfor.zarp .fori {
-    background: var(--color-4);
-    border-radius: .85rem;
-    overflow: hidden;
-}
 
 /*CAT BIENVE*/
 .oppfor.bien .fori:nth-child(1) {
