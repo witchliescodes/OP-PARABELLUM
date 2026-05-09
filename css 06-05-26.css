@@ -94,7 +94,7 @@
   /*Transparencias*/
 --tcolor3: #d760603d;
 --tcolor4: #0c4542a1;
---tcolor5: #14191f66;
+--tcolor5: #14191f78;
 --tcolor6: #0b0e1178;
 /*DEGRADADOS*/
 --deg3: linear-gradient(145deg, #291213, #14191f);
@@ -1681,104 +1681,279 @@ banner:hover .manga3 {
 
 
 
-/*NOTICIAS AUTOMATICAS*/
+/* NOTICIAS AUTOMÁTICAS */
+
 .notis {
+
     background: var(--color-5);
     color: var(--color-6);
+
     padding: 20px;
-    margin: 20px 0 0px 0;
+    margin: 20px 0 0;
+
     border-radius: 10px;
+
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+
+    grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
     gap: 14px;
+
+    max-height: 380px;
+
+    overflow: hidden;
+
+    align-items: start;
+
+    min-width: 0;
+    min-height: 0;
+
+    box-sizing: border-box;
+
 }
+
+
+.notis > * {
+
+    min-width: 0;
+    min-height: 0;
+
+}
+
 
 .pretab-an {
-  display: contents;
+
+    display: contents;
+
 }
+
+.pretab-an > * {
+
+    min-width: 0;
+
+}
+
 
 .notis-an {
+
     border-radius: 0.18em;
-    border: 1px solid var(--color-3);
+
+    border:
+    1px solid var(--color-3);
+
     padding: 10px;
+
+    min-width: 0;
+    min-height: 0;
+
+    overflow: hidden;
+
+    box-sizing: border-box;
+
+    align-self: start;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+
+    height: fit-content;
+
 }
+
 
 .notis-an-info {
-    height: -webkit-fill-available;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+
+    min-width: 0;
+
 }
+
 
 .notis-an-tag {
-    display: flex;
+
+    display: inline-flex;
+
     align-items: center;
+
     gap: 10px;
+
     background: var(--color-1);
-    width: fit-content;
+
+    width: max-content;
+    max-width: 100%;
+
     padding: 2px 5px;
-    margin: 0 0 10px 0;
+
     border-radius: 0.18em;
+
+    overflow: hidden;
+
 }
 
-
 .tag-icon {
+
     width: 12px;
     height: 12px;
+
+    flex-shrink: 0;
+
     background: var(--grad);
-    -webkit-mask: var(--icon) center / contain no-repeat;
-    mask: var(--icon) center / contain no-repeat;
+
+    -webkit-mask:
+    var(--icon)
+    center / contain no-repeat;
+
+    mask:
+    var(--icon)
+    center / contain no-repeat;
+
 }
 
 .tipo-anuncio {
-    --icon: url(https://cdn.jsdelivr.net/gh/witchliescodes/ui-icons@main/icons/megafono.svg);
-    --grad: linear-gradient(135deg, var(--color-2), var(--color-7));
-}
-.tipo-parche {
-    --icon: url(https://cdn.jsdelivr.net/gh/witchliescodes/ui-icons@main/icons/clip-vertical.svg);
-    --grad: linear-gradient(135deg, var(--color-2), var(--bs-danger-border-subtle));
-}
-.tipo-trama, .tipo-evento, .tipo-mision {
-  --icon: url(https://cdn.jsdelivr.net/gh/witchliescodes/ui-icons@main/icons/estrella-del-calendario.svg);
-  --grad: linear-gradient(135deg, var(--color-2), var(--bs-danger-border-subtle));
+
+    --icon:
+    url(https://cdn.jsdelivr.net/gh/witchliescodes/ui-icons@main/icons/megafono.svg);
+
+    --grad:
+    linear-gradient(
+      135deg,
+      var(--color-2),
+      var(--color-7)
+    );
+
 }
 
-.tipo-mini-evento {}
-.tipo-evento-global {}
-.tipo-trama-global {}
+.tipo-parche {
+
+    --icon:
+    url(https://cdn.jsdelivr.net/gh/witchliescodes/ui-icons@main/icons/clip-vertical.svg);
+
+    --grad:
+    linear-gradient(
+      135deg,
+      var(--color-2),
+      var(--bs-danger-border-subtle)
+    );
+
+}
+
+.tipo-trama,
+.tipo-evento,
+.tipo-mision {
+
+    --icon:
+    url(https://cdn.jsdelivr.net/gh/witchliescodes/ui-icons@main/icons/estrella-del-calendario.svg);
+
+    --grad:
+    linear-gradient(
+      135deg,
+      var(--color-2),
+      var(--bs-danger-border-subtle)
+    );
+
+}
+
 
 .tag-text {
-    white-space: nowrap;
-    font-size: 0.6em;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    opacity: 0.8;
-    border-radius: 0.3em;
-    color: var(--color-3);
-    font-weight: 900;
-}
 
+    white-space: nowrap;
+
+    font-size: 0.6em;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+
+    opacity: 0.8;
+
+    border-radius: 0.3em;
+
+    color: var(--color-3);
+
+    font-weight: 900;
+
+}
 
 .notis-an-titulo {
-  font-size: 0.8em;
+
+    font-size: 0.8em;
+
     font-family: var(--cuerpo1);
+
     font-weight: 700;
-    text-align: justify;
+
     text-transform: uppercase;
+
     line-height: 1.5em;
-   display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
+
+    overflow-wrap: break-word;
+
+    min-width: 0;
+
+    display: -webkit-box;
+
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+
+    overflow: hidden;
+
 }
 
 
-.notis-an-fecha, .notis-an-desc  {
+.notis-an-fecha,
+.notis-an-desc {
+
     font-size: 0.6em;
-    text-align: justify;
-    hyphens: auto;
-    letter-spacing: 1px;
+
     line-height: 1.5em;
+
+    letter-spacing: 1px;
+
     color: var(--color-6);
+
     font-family: var(--cuerpo1);
+
     opacity: 0.5;
+
+    overflow-wrap: break-word;
+
+    min-width: 0;
+
+}
+
+/* =====================================
+   RESPONSIVE de anuncios automativos
+===================================== */
+
+@media (max-width: 900px){
+
+    .notis {
+
+        grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+        max-height: none;
+
+    }
+
+}
+
+@media (max-width: 600px){
+
+    .notis {
+
+        grid-template-columns: 1fr;
+
+        max-height: none;
+
+    }
+
 }
 
 /*BUSQUEDAS AUTOMATICAS*/
