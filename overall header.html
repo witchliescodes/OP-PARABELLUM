@@ -394,8 +394,8 @@
   		container.appendChild(span);
 		}
                </script>
-                <li class="animate__animated animate__backInDown"><a class="dropdown-item" href="/profile?mode=editprofile"><i class="bi bi-gear"></i><span> Configuración</span></a></li>
-                <li class="animate__animated animate__backInDown"><a class="dropdown-item" href="/profile?mode=editprofile&page_profil=avatars"><i class="bi bi-palette"></i><span> Cambiar Avatar</span></a></li>
+              <li class="animate__animated animate__backInDown"><a class="dropdown-item" href="/profile?mode=editprofile"><i class="bi bi-gear"></i><span> Configuración</span></a></li>
+              <li class="animate__animated animate__backInDown"><a class="dropdown-item" href="/profile?mode=editprofile&page_profil=avatars"><i class="bi bi-palette"></i><span> Cambiar Avatar</span></a></li>
               <li class="animate__animated animate__backInDown"><a class="dropdown-item" href="/profile?mode=editprofile&page_profil=signature"><i class="bi bi-camera"></i><span> Cambiar Firma</span></a></li>  
               <li class="animate__animated animate__backInDown"><a class="dropdown-item" href="/search?search_id=watchsearch"><i class="bi bi-folder2-open"></i><span> Mis temas supervisados</span></a></li>
               <li class="animate__animated animate__backInDown"><a class="dropdown-item" href="/search?search_id=topicdraftsearch"><i class="bi bi-pen"></i><span> Borradores de temas</span></a></li>
@@ -584,25 +584,34 @@ Ice cream danish gummi bears powder cotton candy donut. Bear claw biscuit muffin
     <div class="cpd">
     <div class="tpest"></div>
     </div>
+    
+    <!-- insertar automaticos -->
+            <div class="inbysab">
     <div class="mebus">busquedas</div>
     
     <!-- sabias que -->
       <div class="lowp">
+        
   <div class="sabias-wrap">
-
-  <button class="sabias-btn prev">
-    <i class="fi fi-rr-angle-left"></i>
-  </button>
-
+    
   <div class="sabias-slider"></div>
 
+  <div class="fecht">
+    <button class="sabias-btn prev">
+    <i class="fi fi-rr-angle-left"></i>
+  </button>  
+    <h4><i class="fi fi-rr-brain-question-mark"></i> ¿Sabías que...?</h4>
   <button class="sabias-btn next">
     <i class="fi fi-rr-angle-right"></i>
   </button>
+    </div>
 
 </div>
+        
   </div>
     <!-- fin sabias que-->
+              </div>
+  <!-- fin insertar automaticos--> 
   </div>
 
 </div>
@@ -725,9 +734,11 @@ sadfasdasd
 }
 
 .pestana.active {
-  display: block; /* Solo la activa se muestra */
-  opacity: 1;
-  animation: fadeIn 0.4s ease;
+    display: flex;
+    flex-flow: column;
+    gap: 12px;
+    opacity: 1;
+    animation: fadeIn 0.4s ease;
 }
 
 @keyframes fadeIn {
@@ -1342,7 +1353,7 @@ background-image: var(--staff6);
 /*SEGUNDA PESTAÑA*/
 .event {
     display: flex;
-    gap: 12px;
+    gap: 10px;
 }
    
 .eve {
@@ -1500,16 +1511,15 @@ background-image: var(--staff1);
 }
 
 .midp {
-  display: flex;         
-  gap: 12px;
-  height: 230px;
-  margin: 10px 0;
-  background: transparent; 
+    display: flex;
+    gap: 10px;
+    background: transparent;
+    position: relative;
 }
 
 .cpd {
-    width: 34%;
-    height: 203%;
+    width: 33%;
+    height: 110%;
     position: relative;
     flex-shrink: 0;
 }
@@ -1525,61 +1535,121 @@ background-image: var(--staff1);
     top: 0;
 }
   
+.inbysab {
+    height: -webkit-fill-available;
+    display: flex;
+    width: 100%;
+    flex-flow: column;
+    gap: 12px;
+}
+  
 /*Sabias qué*/  
 
 .sabias-wrap {
-  flex-shrink: 0;
+    width: 90%;
+    padding: 10px;
+    background: var(--color-1);
+    border-radius: 0.38em;
+    height: 100%;
+    flex-shrink: 0;
+    display: flex;
+    gap: 10px;
+    flex-flow: column-reverse;
 }
+  
+.sabias-slider {
+    min-width: 0;
+    overflow: hidden;
+    height: -webkit-fill-available;
+}
+  
+.sabias-item {
+    width: -webkit-fill-available;
+    gap: 10px;
+}  
 
+.sabias-avatar {
+    width: 200px;
+    height: 100px;
+    overflow: hidden;
+    object-fit: contain;
+    border-radius: 0.18em;
+}
+  
 .sabias-avatar img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+    width: 100%;
+    object-fit: cover;
 }
-
-.sabias-info {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-
-  min-width: 0;
-}
-
-.sabias-title {
-  font-family: var(--titulos);
-  font-size: 1.1em;
-  color: var(--color-3);
-}
+  
+.sabias-nombre {
+    padding: 5px 10px;
+    background: var(--color-3);
+    min-width: 0;
+    width: 40%;
+    border-radius: 0.18em;
+    font-size: 0.8em;
+    font-family: var(--titulos);
+    text-align: center;
+    color: var(--color-5);
+    line-height: 1.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    margin: 0px 10px 0px 0px;
+}  
 
 .sabias-texto {
-  font-size: 0.85em;
-  line-height: 1.5;
-
-  display: -webkit-box;
-  -webkit-line-clamp: 5;
-  -webkit-box-orient: vertical;
-
-  overflow: hidden;
+    font-size: 0.9em;
+    line-height: 1.1em;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    min-width: 0;
+    background: var(--color-5);
+    color: var(--color-6);
+    padding: 10px;
+    font-family: var(--cuerpo1);
+    width: 100%;
+    text-align: justify;
+    overflow: auto;
+    hyphens: auto;
+}
+  
+.fecht {
+    display: flex;
+    width: -webkit-fill-available;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
 }
 
 .sabias-btn {
-  width: 34px;
-  height: 34px;
-
-  border: 0;
-  border-radius: 0.3em;
-
-  background: var(--color-1);
-  color: var(--color-3);
-
-  cursor: pointer;
-  transition: all 250ms ease;
-
-  flex-shrink: 0;
+    width: 50px;
+    height: -webkit-fill-available;
+    border: 0;
+    border-radius: 0.3em;
+    background: var(--color-3);
+    color: var(--color-1);
+    cursor: pointer;
+    transition: all 250ms ease;
+    flex-shrink: 0;
 }
+  
+.fecht h4 {
+    margin: 0;
+    padding: 7px;
+    width: -webkit-fill-available;
+    background: var(--color-5);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-flow: row-reverse;
+    font-size: 1.5em;
+    color: var(--color-3);
+}  
 
 .sabias-btn:hover {
-  transform: translateY(-2px);
   background: var(--color-2);
 }
 
@@ -1642,5 +1712,375 @@ background-image: var(--staff1);
     color: var(--color-2);
     min-width: 60px;
     text-align: center;
+}
+  
+  /* =====================================
+   RESPONSIVE TABLÓN
+===================================== */
+
+/* =====================================
+   TABLET GRANDE
+===================================== */
+
+@media (max-width: 1200px){
+
+  .paranun{
+
+    height:auto;
+    min-height:650px;
+
+    overflow:hidden;
+
+  }
+
+  .labels{
+
+    right:20px;
+    top:20px;
+
+    margin:0;
+
+  }
+
+  .ladoa{
+
+    width:58%;
+
+  }
+
+  .ladob{
+
+    width:38%;
+
+    margin:0;
+
+    right:0;
+
+  }
+
+  .tabim1{
+
+    width:100%;
+    left:0;
+
+  }
+
+  .oppstaf{
+
+    width:180px;
+
+    height:180px;
+
+    margin:260px 0 0 0;
+
+  }
+
+}
+
+/* =====================================
+   TABLET
+===================================== */
+
+@media (max-width: 1024px){
+
+  .pestana.active{
+
+    flex-direction:column;
+
+  }
+
+  #pestana1{
+
+    flex-direction:column;
+
+    gap:20px;
+
+  }
+
+  .ladoa{
+
+    width:100%;
+
+    margin:0;
+
+  }
+
+  .ladoa .pambi{
+
+    column-count:1;
+
+    height:auto;
+
+    overflow:visible;
+
+  }
+
+  .plinkr{
+
+    gap:10px;
+
+  }
+
+  .linky{
+
+    width:
+    calc(50% - 5px);
+
+  }
+
+  .ladob{
+
+    position:relative;
+
+    width:100%;
+
+    margin:0;
+
+    right:auto;
+
+    height:400px;
+
+  }
+
+  .tabconi{
+
+    position:relative;
+
+    height:100%;
+
+  }
+
+  .tabim1{
+
+    width:100%;
+
+    height:100%;
+
+    top:0;
+
+    left:0;
+
+    background-size:contain;
+
+  }
+
+  .oppstaf{
+
+    position:absolute;
+
+    bottom:20px;
+
+    left:20px;
+
+    margin:0;
+
+  }
+
+  .midp{
+
+    flex-direction:column;
+
+  }
+
+  .cpd{
+
+    width:100%;
+
+    height:300px;
+
+  }
+
+  .event{
+
+    flex-wrap:wrap;
+
+  }
+
+  .eve{
+
+    width:
+    calc(50% - 5px);
+
+  }
+
+  .sabias-wrap{
+
+    width:100%;
+
+  }
+
+}
+
+/* =====================================
+   MOBILE
+===================================== */
+
+@media (max-width: 768px){
+
+  .paranun{
+
+    padding:14px;
+
+    min-height:auto;
+
+  }
+
+  .labels{
+
+    position:static;
+
+    width:100%;
+
+    flex-flow:row;
+
+    justify-content:center;
+
+    margin:20px 0 0 0;
+
+  }
+
+  .labels button{
+
+    width:40px;
+    height:40px;
+
+  }
+
+  .ladoa h3{
+
+    width:100%;
+
+    margin:0 0 10px 0;
+
+    justify-content:space-between;
+
+  }
+
+  .linky{
+
+    width:100%;
+
+  }
+
+  #sinscroll{
+
+    width:100%;
+
+    margin:0 0 10px 0;
+
+  }
+
+  .opp-mtopi{
+
+    height:auto;
+
+  }
+
+  .ladob{
+
+    height:320px;
+
+  }
+
+  .oppstaf{
+
+    width:150px;
+
+    height:150px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+  }
+
+  .eve{
+
+    width:100%;
+
+  }
+
+  .titlevent{
+
+    width:100%;
+
+    height:200px;
+
+  }
+
+  .event{
+
+    flex-direction:column;
+
+  }
+
+  .sabias-item{
+
+    flex-direction:column;
+
+  }
+
+  .sabias-avatar{
+
+    width:100%;
+
+    height:180px;
+
+  }
+
+  .sabias-texto{
+
+    max-height:220px;
+
+  }
+
+  .fecht{
+
+    flex-wrap:wrap;
+
+  }
+
+}
+
+/* =====================================
+   MOBILE PEQUEÑO
+===================================== */
+
+@media (max-width: 480px){
+
+  .paranun{
+
+    padding:10px;
+
+  }
+
+  .bienp p{
+
+    letter-spacing:4px;
+
+    font-size:0.9rem;
+
+  }
+
+  .partitle h1{
+
+    font-size:2rem;
+
+  }
+
+  .oppstaf{
+
+    width:130px;
+
+    height:130px;
+
+  }
+
+  .sabias-btn{
+
+    width:40px;
+
+  }
+
 }
 </style> 
