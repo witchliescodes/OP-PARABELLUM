@@ -1150,6 +1150,39 @@ transform: scaleX(1);
 .oppmodal1 .modal-dialog {
   max-width: 1100px!important;
 }
+  
+body.modal-open{
+overflow:auto!important;
+padding-right:0!important;
+
+}  
+  
+.modal{
+pointer-events:none;
+padding-right:0!important;
+will-change:auto!important;  
+}
+
+.modal.show{
+pointer-events:auto;
+}  
+  
+.modal:not(.show){
+visibility:hidden!important;
+opacity:0!important;
+
+}  
+  
+.modal.fade .modal-dialog{
+transform:none!important;
+transition:none!important;
+
+}
+
+.modal.show .modal-dialog{
+transform:none!important;
+}  
+ 
 
 .oppmodal1 .btn-close {
     --bs-btn-close-white-filter: invert(1) grayscale(100%) brightness(200%);
@@ -1241,7 +1274,7 @@ transform: scaleX(1);
 .pslink {
     width: 100%;
     background: var(--color-1);
-      color: var(--color-3);
+    color: var(--color-3);
     margin: 10px;
     padding: 10px;
     text-align: center;
@@ -1378,12 +1411,26 @@ background-image: var(--staff6);
     display: flex;
     align-items: center;
     justify-content: end;
+    isolation:isolate;
 }
 
 .conlipp a {
     margin: 0 0px 0 10px;
       color: var(--color-3);
 }
+  
+.stcon,
+.conlipp,
+.conlipp a{
+
+transform:translateZ(0);
+
+backface-visibility:hidden;
+
+will-change:transform;
+
+}  
+  
 
 /*SEGUNDA PESTAÑA*/
 .event {
