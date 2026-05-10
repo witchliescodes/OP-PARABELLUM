@@ -752,6 +752,17 @@ sadfasdasd
 }
 
 /* Contenedor de pestañas */
+.paradiv{
+display:grid;
+grid-template-columns:
+minmax(0,1fr)
+320px;
+gap:20px;
+height:100%;
+align-items:start;
+
+}  
+  
 .pestanas-contenedor {
     position: relative;
     height: -webkit-fill-available;
@@ -788,11 +799,9 @@ sadfasdasd
  }
 
 .ladoa {
-    width: 60%;
-    display: flex;
-    align-items: flex-start;
-    flex-flow: column;
-    margin: 0 10px 0 0px;
+min-width:0;
+width:100%;
+margin:0;
     text-align: justify;
     font-size: 1em;
     line-height: 1.2em;
@@ -1025,11 +1034,15 @@ sadfasdasd
     margin: 0 5px 0 0px;
 }
 
-.ladob {
-    width: stretch;
-    height: -webkit-fill-available;
-    overflow: hidden;
-    position: absolute;
+.ladob{
+width:100%;
+min-width:0;
+position:relative;
+display:flex;
+flex-direction:column;
+align-items:center;
+gap:16px;
+overflow:hidden;
 }
 
 .bienp {
@@ -1058,22 +1071,23 @@ sadfasdasd
     letter-spacing: 1px!important;
 }
 
-.tabconi {
-    width: 100%;
-    height: 81%;
-    position: absolute;
+.tabconi{
+position:relative;
+width:100%;
+height:auto;
+display:flex;
+justify-content:center;
+
 }
-.tabim1 {
-    background: var(--pes1);
-    width: 120%;
-    height: 118%;
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    transform: scaleX(-1);
-    position: relative;
-    top: -71px;
-    left: -30px;
+.tabim1{
+width:100%;
+max-width:340px;
+aspect-ratio:3/4;
+background-size:contain;
+background-position:center bottom;
+height:auto;
+top:auto;
+left:auto;
 }
 
 
@@ -1093,7 +1107,11 @@ transform: scaleX(1);
     position: absolute;
     width: 210px;
     height: 200px;
-    margin: 295px 0 0 10px;
+   position:absolute;
+left:50%;
+bottom:20px;
+transform:translateX(-50%);
+margin:0;
     border-radius: 8px;
     display: flex;
     align-items: center;
@@ -1748,17 +1766,11 @@ background-image: var(--staff1);
   
   
 /* Labels con flechas (SIEMPRE VISIBLES) */
-.labels {
-    display: flex;
-    gap: 10px;
-    width: 100px;
-    position: absolute;
-    z-index: 10;
-    align-items: center;
-    justify-content: space-between;
-    flex-flow: column;
-    margin: -170px 0 0px 970px;
-    height: 172px;
+.labels{
+position:absolute;
+right:20px;
+bottom:20px;
+margin:0;
 }
 
 /* Estilo de las flechas */
