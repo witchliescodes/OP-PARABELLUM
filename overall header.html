@@ -780,11 +780,12 @@ align-items:start;
 }
 
 .pestana.active {
-    display: flex;
-    flex-flow: column;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 408px;
     gap: 12px;
     opacity: 1;
     animation: fadeIn 0.4s ease;
+    align-items: start;
 }
 
 @keyframes fadeIn {
@@ -1071,23 +1072,27 @@ overflow:hidden;
     letter-spacing: 1px!important;
 }
 
-.tabconi{
-position:relative;
-width:100%;
-height:auto;
-display:flex;
-justify-content:center;
-
+.tabconi {
+    position: relative;
+    width: 126%;
+    height: auto;
+    display: flex;
+    justify-content: center;
 }
-.tabim1{
-width:100%;
-max-width:340px;
-aspect-ratio:3/4;
-background-size:contain;
-background-position:center bottom;
-height:auto;
-top:auto;
-left:auto;
+  
+.tabim1 {
+    width: 100%;
+    max-width: 454px;
+    aspect-ratio: 3 / 4;
+    background-size: contain;
+    background-position: center bottom;
+    height: auto;
+    top: -117px;
+    left: auto;
+    background-image: var(--pes1);
+    background-repeat: no-repeat;
+    transform: scaleX(-1);
+    position: relative;
 }
 
 
