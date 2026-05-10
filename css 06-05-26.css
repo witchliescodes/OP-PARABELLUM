@@ -346,7 +346,11 @@ body.claro, body.oscuro {
 }
 
 .parahead navbar.scroll-fixed .f-nvpar a, .parahead navbar.scroll-fixed .f-nvpar button {
-    color: var(--color-3);
+    color: var(--color-1);
+}
+
+.oscuro .parahead navbar.scroll-fixed .f-nvpar a, .oscuro .parahead navbar.scroll-fixed .f-nvpar button {
+    color: var(--color-6);
 }
 
 
