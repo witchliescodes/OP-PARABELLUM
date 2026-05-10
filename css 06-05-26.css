@@ -350,10 +350,8 @@ body.claro, body.oscuro {
 }
 
 .oscuro .parahead navbar.scroll-fixed .f-nvpar a, .oscuro .parahead navbar.scroll-fixed .f-nvpar button {
-    color: var(--color-6);
+    color: var(--color-5);
 }
-
-
 
 
 .s-navpar {
@@ -528,7 +526,7 @@ body.claro, body.oscuro {
 }
 
 
-.switcheroo i, .s-navpar .modo-oscuro {
+.switcheroo i, .s-navpar .modo-oscuro  {
     border: none;
     background: transparent;
     color: var(--color-3);
@@ -540,10 +538,12 @@ body.claro, body.oscuro {
     justify-content: center;
 }
 
-.parahead navbar.scroll-fixed .switcheroo i, .parahead navbar.scroll-fixed .s-navpar .modo-oscuro {
-    color: var(--color-3);
 
+.parahead navbar.scroll-fixed .switcheroo i, 
+.parahead navbar.scroll-fixed .s-navpar .modo-oscuro i {
+    color: var(--color-5);
 }
+
 
 .monomer-overlay {
     position: fixed;
@@ -1681,6 +1681,27 @@ right: 0;
 .pretab-an {
 grid-template-columns: repeat(2,minmax(0,1fr));
 }
+  
+.ladob {
+    width: stretch;
+    height: -webkit-fill-available;
+    overflow: hidden;
+    position: absolute;
+    margin: 0px 0px 0 525px;
+}  
+  
+.labels {
+    display: flex;
+    gap: 10px;
+    width: 100px;
+    position: absolute;
+    z-index: 10;
+    align-items: center;
+    justify-content: space-between;
+    flex-flow: column;
+    margin: -185px 0 0px 772px;
+    height: 172px;
+}  
 }
 
 @media (max-width:820px){
