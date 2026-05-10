@@ -787,6 +787,11 @@ align-items:start;
     animation: fadeIn 0.4s ease;
     align-items: start;
 }
+  
+#pestana2.pestana.active {
+  display: flex;
+    flex-flow: column;
+  }
 
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(10px); }
@@ -1462,22 +1467,24 @@ will-change:transform;
 .event {
     display: flex;
     gap: 10px;
-}
-   
-.eve {
-    min-width: 250px;
     width: -webkit-fill-available;
-    height: auto;
+    justify-content: space-between;
+}
+  
+.eve {
+    max-width: 400px;
+    width: stretch;
+    height: fit-content;
     background: var(--color-1);
     border-radius: 10px;
     overflow: hidden;
     position: relative;
-    border: 1px solid var(--color-3);
+    border: 1px solid var(--tcolor3);
 }
   
 .titlevent {
-    height: -webkit-fill-available;
-    width: 230px;
+    width: stretch;
+    max-height: 188px;
     background: var(--color-3);
     border-radius: 10px;
     display: flex;
@@ -1495,7 +1502,6 @@ will-change:transform;
     color: var(--color-5);
     border-radius: 10px;
     height: -webkit-fill-available;
-    width: -webkit-fill-available;
     display: flex;
     flex-flow: column;
     align-items: center;
@@ -1526,6 +1532,10 @@ will-change:transform;
     line-height: 1em;
     font-size: 0.8em;
     font-style: italic;
+    background: var(--tcolor5);
+    border-radius: 0.18em;
+    color: var(--color-4);
+    padding: 10px;
 }
 
 
@@ -1619,79 +1629,97 @@ background-image: var(--staff1);
 }
 
 .midp {
-    display: flex;
-    gap: 10px;
-    background: transparent;
+    display: grid;
+    grid-template-columns: minmax(260px, 32%) minmax(0, 1fr);
+    gap: 16px;
+    align-items: stretch;
+    width: 100%;
+    min-width: 0;
     position: relative;
+    max-height: 410px;
 }
 
 .cpd {
-    width: 33%;
-    height: 110%;
     position: relative;
-    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+    min-width: 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    overflow: hidden;
 }
 
 .tpest {
     width: 100%;
-    height: 100%;
+    max-height: 550px;
+    aspect-ratio: 3 / 5;
     background-image: var(--pes2);
     background-repeat: no-repeat;
-    background-size: cover;
-    background-position: bottom left;
+    background-size: contain;
     position: relative;
-    top: 0;
+    background-position: center top;
+    top: -29px;
 }
   
-.inbysab {
-    height: -webkit-fill-available;
-    display: flex;
-    width: 100%;
-    flex-flow: column;
-    gap: 12px;
+.inbysab{
+display:flex;
+flex-direction:column;
+gap:14px;
+width:100%;
+min-width:0;
+
 }
   
 /*Sabias qué*/  
 
 .sabias-wrap {
     width: 90%;
-    padding: 10px;
+    max-height: 178px;
+    padding: 14px;
     background: var(--color-1);
-    border-radius: 0.38em;
-    height: 100%;
-    flex-shrink: 0;
+    border-radius: .4em;
     display: flex;
-    gap: 10px;
-    flex-flow: column-reverse;
+    flex-direction: column-reverse;
+    gap: 14px;
+    min-width: 0;
+    overflow: hidden;
 }
   
 .sabias-slider {
+    width: 100%;
     min-width: 0;
     overflow: hidden;
-    height: -webkit-fill-available;
+    height: 100%;
 }
   
-.sabias-item {
-    width: -webkit-fill-available;
-    gap: 10px;
-}  
+.sabias-item{
+display:grid;
+grid-template-columns:
+160px
+minmax(0,1fr);
+gap:14px;
+align-items:start;
+width:100%;
+min-width:0;
+}
 
 .sabias-avatar {
-    width: 200px;
-    height: 100px;
+    width: 100%;
+    aspect-ratio: 7 / 10;
     overflow: hidden;
-    object-fit: contain;
-    border-radius: 0.18em;
+    border-radius: .3em;
 }
   
-.sabias-avatar img {
-    width: 100%;
-    object-fit: cover;
+.sabias-avatar img{
+width:100%;
+height:100%;
+object-fit:cover;
 }
   
 .sabias-nombre {
     padding: 5px 10px;
-    background: var(--color-3);
+    background: var(--tcolor3);
     min-width: 0;
     width: 40%;
     border-radius: 0.18em;
@@ -1709,7 +1737,7 @@ background-image: var(--staff1);
 
 .sabias-texto {
     font-size: 0.9em;
-    line-height: 1.1em;
+    line-height: 1.35em;
     display: -webkit-box;
     -webkit-line-clamp: 5;
     -webkit-box-orient: vertical;
@@ -1720,24 +1748,24 @@ background-image: var(--staff1);
     font-family: var(--cuerpo1);
     width: 100%;
     text-align: justify;
-    overflow: auto;
+    overflow: hidden;
     hyphens: auto;
 }
   
-.fecht {
-    display: flex;
-    width: -webkit-fill-available;
-    align-items: center;
-    justify-content: space-between;
-    gap: 10px;
+.fecht{
+display:grid;
+grid-template-columns:50px minmax(0,1fr) 50px;
+gap:12px;
+align-items:center;
 }
 
 .sabias-btn {
-    width: 50px;
+height:100%;
+max-height:52px;
     height: -webkit-fill-available;
     border: 0;
     border-radius: 0.3em;
-    background: var(--color-3);
+    background: var(--tcolor3);
     color: var(--color-1);
     cursor: pointer;
     transition: all 250ms ease;
@@ -1746,16 +1774,17 @@ background-image: var(--staff1);
   
 .fecht h4 {
     margin: 0;
-    padding: 7px;
+padding:10px;
     width: -webkit-fill-available;
     background: var(--color-5);
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-flow: row-reverse;
-    font-size: 1.5em;
+font-size:clamp(1rem,2vw,1.8rem);
     color: var(--color-3);
 }  
+
 
 .sabias-btn:hover {
   background: var(--color-2);
@@ -1977,7 +2006,7 @@ margin:0;
 .mebus {
   flex: 1; 
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(3,minmax(0,1fr));
   gap: 10px;
   align-content: start; 
 }
@@ -1990,7 +2019,7 @@ margin:0;
     border-radius: 0.4em;
     align-items: center;
     transition: all 400ms;
-    border: 1px solid var(--color-3);
+    border: 1px solid var(--tcolor3);
 }
 
 .busqueda-card:hover {
