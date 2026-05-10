@@ -415,7 +415,7 @@ showHiddenMessage = function(id)
     border-radius: 0.18em;
     border: 1px solid var(--color-3);
     width: stretch;
-    font-size: 0.9em;
+    font-size: 0.7em;
 }
   
 .p-dat > div dfn {
