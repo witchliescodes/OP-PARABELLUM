@@ -3,7 +3,6 @@
 <html xmlns="http://www.w3.org/1999/xhtml" dir="{S_CONTENT_DIRECTION}" id="min-width" lang="{L_LANG_HTML}"
 	  xml:lang="{L_LANG_HTML}" {NAMESPACE_FB_LIKE} {NAMESPACE_FB} {NAMESPACE_BBCODE}>
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta charset="UTF-8" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
@@ -17,14 +16,14 @@
   <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-solid-rounded/css/uicons-solid-rounded.css' />
   <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/4.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css' />
   
- <script>
+   <script>
 (function () {
   const tema = localStorage.getItem("tema") || "claro";
   document.documentElement.classList.add(tema);
 })();
 </script>
   
-  <title>{SITENAME_TITLE}{PAGE_TITLE}</title>
+	<title>{SITENAME_TITLE}{PAGE_TITLE}</title>
 	<meta http-equiv="content-type" content="text/html; charset={S_CONTENT_ENCODING}"/>
 	<meta http-equiv="content-script-type" content="text/javascript"/>
 	<meta http-equiv="content-style-type" content="text/css"/>
@@ -230,6 +229,8 @@
 </head>
 
 <body id="phpbb" class="claro">
+  
+<!-- MEMBRANA DE CARGA --> 
 <div id="preloader">
   <div class="loader-box">
     <span class="ship-wheel">
@@ -249,11 +250,9 @@
     </div>
 
   </div>
-</div>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />  
+</div>  
+<!-- FIN MEMBRANA DE CARGA -->  
   
-
- 
 <!-- BEGIN hitskin_preview -->
 <div id="hitskin_preview" style="display: block;">
 	<h1><img src="https://2img.net/i/fa/hitskin/hitskin_logo.png" alt=""/> <em>Hit</em>skin.com</h1>
@@ -335,12 +334,12 @@
 </div>
 <!-- END switch_like_popup -->
 
-  
 <div class="conteneur_minwidth_IE">
 	<div class="conteneur_layout_IE">
-		<div class="conteneur_container_IE">     
+		<div class="conteneur_container_IE">
                   
-                 <header class="parahead">
+<!-- BARRA DE NAV -->
+<header class="parahead">
 <navbar>
     <div class="f-nvpar">
              <a href="{U_INDEX}" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" title="Inicio"><i class="fi fi-sr-home"></i></a>
@@ -426,7 +425,8 @@
 <li>{GENERATED_NAV_BAR}</li>
 </ul>
 </div>       
-</header>   
+</header>                     
+<!-- FIN BARRA NAV-->            
                   
 <banner>
   <img class="parfon"></img>
@@ -441,12 +441,10 @@
     <h1>ONE PIECE</h1>
     <h1>PARABELLUM</h1>
   </div>
-</banner>    
+</banner>                   
                   
- <div class="naviga"> <a class="pnav" href="{U_INDEX}"><span>{L_INDEX}</span></a>{NAV_CAT_DESC}</div>        
                   
-<div id="wrap">
-
+			<div id="wrap">
 <!-- botones izquierda -->  
 <div class="pboiz-wrap">
   <div class="pboiz">
@@ -471,8 +469,8 @@
      <i class="fi fi-rr-pumpkin-alt"></i>
     </button>
   </div>
-</div>
- 
+</div>                          
+                          
 <!--TABLON DE ANUNCIOS -->  
 <div class="paranun">
 <div class="pestanas-contenedor">
@@ -630,18 +628,55 @@ sadfasdasd
 <em class="bi bi-arrow-right-short"> </em>                     
 </button>
 </div>
-</div>
-                          
+</div>                          
+    
 <!--Anuncios automaticos-->  
 <div class="notis">  
  <div id="pretab-an" class="pretab-an">
  </div> 
-</div>                           
+</div>                            
                           
 				<a id="top" name="top" accesskey="t"></a>
 				{JAVASCRIPT}
 
 				<div id="page-header">
+					<div class="headerbar">
+						<div class="inner"><span class="corners-top"><span></span></span>
+
+							<div id="logo-desc">
+								<a href="{U_INDEX}" id="logo"><img loading="lazy" src="{LOGO}" alt="{L_INDEX}"/></a>
+								<!-- BEGIN switch_h1 -->
+								<div id="site-title">{switch_h1.MAIN_SITENAME}</div>
+								<!-- END switch_h1 -->
+								<!-- BEGIN switch_desc -->
+								<p>{switch_desc.SITE_DESCRIPTION}</p>
+								<!-- END switch_desc -->
+							</div>
+
+							<span class="corners-bottom"><span></span></span></div>
+					</div>
+
+					<div class="navbar">
+						<div class="inner"><span class="corners-top"><span></span></span>
+
+
+
+							<!-- BEGIN switch_search_box -->
+							<div id="search-box">
+								<form method="get" action="{ACTION_SEARCH}" id="search">
+									<p class="nomargin"><input type="text" name="search_keywords" id="keywords"
+															   maxlength="128" class="inputbox search"
+															   value="{L_SEARCH}..."
+															   onclick="if (this.value == '{L_SEARCH}...') this.value = '';"
+															   onblur="if (this.value == '') this.value = '{L_SEARCH}...';"/>
+										{JS_SESSION_ID_INPUT}
+										<input class="button2" type="submit" value="{L_SEARCH}"/></p>
+								</form>
+							</div>
+							<!-- END switch_search_box -->
+
+							<span class="corners-bottom"><span></span></span></div>
+					</div>
 
 					<!-- BEGIN switch_ticker_new -->
 					<div id="fa_ticker_blockD" style="margin-top:4px;">
@@ -700,9 +735,9 @@ sadfasdasd
 										</div>
 
 										<div id="main">
-											<div id="main-content">                                                                                                                                                                     
-<style>
-/*TABLON DE ANUNCIOS*/
+										<div id="main-content">
+<style>	
+  /*TABLON DE ANUNCIOS*/
 
 .paranun {
     background-color: var(--color-5);
@@ -1714,4 +1749,326 @@ background-image: var(--staff1);
     min-width: 60px;
     text-align: center;
 }
-</style> 
+  
+
+/* NOTICIAS AUTOMÁTICAS */
+.notis {
+    background: var(--color-5);
+    color: var(--color-6);
+    padding: 20px;
+    margin: 20px 0 0;
+    border-radius: 10px;
+    overflow: hidden;
+
+}
+
+.notis > * {
+    min-width: 0;
+    min-height: 0;
+
+}
+
+
+.pretab-an {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-auto-rows: 1fr;
+    gap: 14px;
+    max-height: 380px;
+    align-items: start;
+
+}
+
+.notis-an {
+    border-radius: 0.18em;
+    border: 1px solid var(--color-3);
+    padding: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    min-width: 0;
+    align-self: start;
+    height: 100%;
+}
+
+
+.notis-an-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    min-width: 0;
+
+}
+
+
+.notis-an-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--color-1);
+    width: max-content;
+    max-width: 100%;
+    padding: 2px 5px;
+    border-radius: 0.18em;
+    overflow: hidden;
+
+}
+
+.tag-icon {
+    width: 12px;
+    height: 12px;
+    flex-shrink: 0;
+    background: var(--grad);
+    -webkit-mask: var(--icon) center / contain no-repeat;
+    mask: var(--icon) center / contain no-repeat;
+}
+
+.tipo-anuncio {
+    --icon: url(https://cdn.jsdelivr.net/gh/witchliescodes/ui-icons@main/icons/megafono.svg);
+    --grad: linear-gradient(135deg, var(--color-2), var(--color-7));
+
+}
+
+.tipo-parche {
+    --icon: url(https://cdn.jsdelivr.net/gh/witchliescodes/ui-icons@main/icons/clip-vertical.svg);
+    --grad: linear-gradient( 135deg, var(--color-2), var(--bs-danger-border-subtle));
+}
+
+.tipo-trama,
+.tipo-evento,
+.tipo-mision {
+    --icon: url(https://cdn.jsdelivr.net/gh/witchliescodes/ui-icons@main/icons/estrella-del-calendario.svg);
+    --grad: linear-gradient(135deg, var(--color-2), var(--bs-danger-border-subtle));
+}
+
+
+.tag-text {
+    white-space: nowrap;
+    font-size: 0.6em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0.8;
+    border-radius: 0.3em;
+    color: var(--color-3);
+    font-weight: 900;
+}
+
+.notis-an-titulo {
+    font-size: 0.8em;
+    font-family: var(--cuerpo1);
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1.5em;
+    overflow-wrap: break-word;
+    min-width: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+
+}
+
+
+.notis-an-fecha, .notis-an-desc {
+    font-size: 0.6em;
+    line-height: 1.5em;
+    letter-spacing: 1px;
+    color: var(--color-6);
+    font-family: var(--cuerpo1);
+    opacity: 0.5;
+    overflow-wrap: break-word;
+    min-width: 0;
+    margin: 0;
+}
+
+/* =====================================
+   RESPONSIVE de anuncios automativos
+===================================== */
+
+@media (max-width: 900px){
+    .notis {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        max-height: none;
+    }
+}
+
+@media (max-width: 600px){
+    .notis {
+        grid-template-columns: 1fr;
+        max-height: none;
+    }
+}
+
+/*BUSQUEDAS AUTOMATICAS*/
+
+.mebus {
+  flex: 1; 
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 10px;
+  align-content: start; 
+}
+
+.busqueda-card {
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    background: var(--color-1);
+    border-radius: 0.4em;
+    align-items: center;
+    transition: all 400ms;
+    border: 1px solid var(--color-3);
+}
+
+.busqueda-card:hover {
+  transform: translateY(-1px);
+}
+
+.busqueda-avatar {
+    min-width: 50px;
+    width: 50px;
+    height: auto;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.busqueda-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0.18em;
+}
+
+.busqueda-info {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+}
+
+.busqueda-titulo a {
+    font-weight: bold;
+    font-size: 0.5em;
+    text-decoration: none;
+    color: var(--color-3);
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    font-family: var(--cuerpo1);
+    line-height: 1.5em;
+}
+
+.busqueda-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.busqueda-autor {
+  font-size: 0.68em;
+  color: var(--color-3);
+}
+
+.busqueda-fecha {
+  font-size: 0.62em;
+  opacity: 0.6;
+}  
+</style>  
+<style>
+ /*MEMBRANA DE CARGA*/
+#preloader {
+    position: fixed;
+    inset: 0;
+    background: var(--color-2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    transition: opacity .45s ease, visibility .45s ease;
+}
+
+#preloader.hidden {
+ opacity: 0;
+ visibility: hidden;
+ pointer-events: none;
+}
+
+.loader-gif {
+  width: 120px;
+  margin-bottom: 15px;
+}
+
+.loader-text {
+  font-size: 14px;
+  margin-bottom: 10px;
+  color: #fff;
+  font-family: sans-serif;
+  letter-spacing: 1px;
+}
+
+.loader-bar {
+    position: relative;
+    width: 100%;
+    height: 6px;
+    background: var(--tcolor5);
+    border-radius: 10px;
+    overflow: visible;
+}
+
+.loader-progress {
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(90deg, var(--color-2), var(--color-3));
+    border-radius: 10px;
+    transition: width 0.3s ease;
+}
+
+.loader-box {
+  text-align: center;
+  width: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px; 
+}
+
+.ship-wheel {
+    font-size: 8em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: wheelTurn 2.2s ease-in-out infinite;
+}
+
+.ship-wheel i {
+  display: inline-block;
+  line-height: 1;
+}
+
+.loader-text {
+  font-size: 14px;
+  color: #fff;
+  margin: 0;
+}
+
+.loader-ship {
+    position: absolute;
+    top: -30px;
+    left: 0%;
+    transform: translateX(-50%);
+    transition: left 0.3s ease;
+}
+
+.ship-icon {
+  font-size: 18px;
+}
+
+@keyframes wheelTurn {
+  0%   { transform: rotate(-25deg); }
+  50%  { transform: rotate(25deg); }
+  100% { transform: rotate(-25deg); }
+} 
+  
+</style>  
