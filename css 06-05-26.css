@@ -246,7 +246,7 @@ body.claro, body.oscuro {
     position: relative;
     z-index: 1;
     color: var(--color-1);
-   box-shadow: 0px 0px 15px var(--tcolor3);
+    box-shadow: 0px 0px 15px var(--tcolor3);
 }
 
 .oscuro #wrap {
@@ -815,6 +815,8 @@ banner {
     overflow: hidden;
     position: relative;
     z-index: 99 !important;
+    margin-top: calc(100px - 50px);
+    margin-bottom: calc(200px - 50px);
 }
 
 banner .parfon {
@@ -1319,16 +1321,41 @@ ol, ul {
 
 /*CREDITOS*/
 
-/*botones izquierda*/
-.pboiz-wrap {
-    position: absolute;
-    right: 13px;
-    top: 0;
-    bottom: 0;
-    width: 30px;
-    pointer-events: none;
-    padding-bottom: 73px;
+/* BOTONES FLOTANTES */
+
+.pboiz-wrap,
+.pcre-wrap{
+position:fixed;
+top:94%;
+transform:translateY(-50%);
+z-index:200;
+pointer-events:none;
 }
+
+/* IZQUIERDA */
+
+.pboiz-wrap{
+left: calc(56% - min(685px, 50vw) - 55px);
+}
+
+/* DERECHA */
+
+.pcre-wrap{
+    right: calc(56% - min(685px, 50vw) - 55px);
+}
+
+/* CONTENIDO */
+
+.pboiz,
+.pcred{
+display:flex;
+flex-direction:column;
+gap:12px;
+pointer-events:auto;
+}
+
+
+
 
 .pboiz {
     position: sticky;
@@ -1381,16 +1408,6 @@ ol, ul {
 }
 
 /*Botón derecha*/
-
-.pcre-wrap{
-    position: absolute;
-    left: 12px;
-    top: 0;
-    bottom: 0;
-    width: 30px;
-    pointer-events: none;
-    padding-bottom: 73px;
-}
 
 .pcred {
     position: sticky;
@@ -1628,12 +1645,10 @@ height: clamp(320px,48vw,600px);
 .partitle h1{
 font-size: clamp(3rem,6vw,6rem);
 }
-/*.ladob {
-    margin: 0 0 0 660px;
-}  
-.labels {
-    margin: -187px 0 0px 970px;
-} */ 
+
+  #sinscroll {
+      margin: 10px 9px 0 0px!important;
+  }
 }
 
 @media (max-width:980px){
