@@ -618,20 +618,71 @@ Ice cream danish gummi bears powder cotton candy donut. Bear claw biscuit muffin
   <!-- INICIO WANTED-->
   <div class="p-want">
     <div class="p-w-t">
-      <div class="p-w-p">
-        <label>Piratas</label>
-        <label>Revolucionarios</label>
-      </div>  
+      <div class="p-w-wr">
+     <div class="p-w-p">
+  <label class="w-p"data-faccion="piratas">
+    <i class="game-icon game-icon-crowned-skull"></i>
+    Piratas
+  </label>
+  <label class="w-p" data-faccion="revolucionarios">
+    <i class="game-icon game-icon-revolt"></i>
+    Revolucionarios
+  </label>
+</div>
      <div class="w-title"> 
-      <h1>WANTED</h1>
+       <h1><i class="game-icon game-icon-wanted-reward"></i>WANTED</h1>
       <p>Usa los botones superiores para navegar a través de los wanteds de diferentes facciones</p>
     </div>
+      </div>
     </div>
     <div class="wrap-want">
     </div>
   </div>
   <!-- FIN WANTED-->
   <!-- INICIO TRIPULACIONES-->
+  <div class="pa-trp">
+    <div class="tp-lblh">
+      <h4><i class="game-icon game-icon-battleship"></i> Tripulaciones</h4>
+<div class="lbls">
+
+<label data-faccion="piratas" title="Piratas" data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip">
+<i class="game-icon game-icon-crowned-skull"></i>
+</label>
+
+
+
+<label data-faccion="marina" title="Armada Marina" data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip">
+<i class="game-icon game-icon-ship-wheel"></i>
+</label>
+
+
+
+<label data-faccion="cazadores" title="Cazarrecompensas" data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip">
+<i class="game-icon game-icon-sword-spade"></i>
+</label>
+
+
+
+<label data-faccion="gobierno" title="Gobierno Mundial" sata-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip">
+<i class="game-icon game-icon-crowned-skull"></i>
+</label>
+
+
+
+<label data-faccion="revolucion" title="Revolucionarios" data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip">
+<i class="game-icon game-icon-revolt"></i>
+</label>
+
+
+
+<label data-faccion="civiles" title="Civiles" data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip">
+<i class="game-icon game-icon-crowned-skull"></i>
+</label>
+
+</div>
+    </div>
+    <div class="a-trp"></div>
+  </div>
   <!-- FIN TRIPULACIONES-->
 </div>	                                               
 </div>
@@ -754,8 +805,6 @@ Ice cream danish gummi bears powder cotton candy donut. Bear claw biscuit muffin
 										<div id="main">
 										<div id="main-content">
 <style>	
-  /*TABLON DE ANUNCIOS*/
-
 .paranun {
     background-color: var(--color-5);
     color: var(--color-6);
@@ -764,10 +813,8 @@ Ice cream danish gummi bears powder cotton candy donut. Bear claw biscuit muffin
     margin: 35px 0 0 0;
     position: relative;
     width: -webkit-fill-available;
-    height: 650px;
-    overflow: hidden;
+    height: 650px; overflow: hidden;
 }
-
 /* Contenedor de pestañas */
 .paradiv{
 display:grid;
@@ -2000,9 +2047,6 @@ margin:0;
     margin: 0;
 }
 
-/* =====================================
-   RESPONSIVE de anuncios automativos
-===================================== */
 
 @media (max-width: 900px){
     .notis {
@@ -2017,8 +2061,6 @@ margin:0;
         max-height: none;
     }
 }
-
-/*BUSQUEDAS AUTOMATICAS*/
 
 .mebus {
   flex: 1; 
@@ -2094,99 +2136,204 @@ margin:0;
   opacity: 0.6;
 }  
 </style>  
-<style>
- /*MEMBRANA DE CARGA*/
-#preloader {
-    position: fixed;
-    inset: 0;
-    background: var(--color-2);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 999;
-    transition: opacity .45s ease, visibility .45s ease;
-}
-
-#preloader.hidden {
- opacity: 0;
- visibility: hidden;
- pointer-events: none;
-}
-
-.loader-gif {
-  width: 120px;
-  margin-bottom: 15px;
-}
-
-.loader-text {
-  font-size: 14px;
-  margin-bottom: 10px;
-  color: #fff;
-  font-family: sans-serif;
-  letter-spacing: 1px;
-}
-
-.loader-bar {
-    position: relative;
+<style>      
+/*Wanteds automaticos*/  
+.p-want {
     width: 100%;
-    height: 6px;
-    background: var(--tcolor5);
-    border-radius: 10px;
-    overflow: visible;
+    height: 74%;
+    display: flex;
+    justify-content: flex-start;
+    gap: 12px;
 }
-
-.loader-progress {
-    width: 0%;
+  
+.p-w-t {
+    max-width: 300px;
+    width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, var(--color-2), var(--color-3));
-    border-radius: 10px;
-    transition: width 0.3s ease;
-}
-
-.loader-box {
-  text-align: center;
-  width: 220px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 25px; 
-}
-
-.ship-wheel {
-    font-size: 8em;
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.18em;
     display: flex;
     align-items: center;
-    justify-content: center;
-    animation: wheelTurn 2.2s ease-in-out infinite;
+    justify-content: space-between;
+    flex-flow: column;
+    background: var(--color-1);
+    background-image: var(--want);
+    background-size: cover;
+    background-position: center;
+
 }
 
-.ship-wheel i {
-  display: inline-block;
-  line-height: 1;
-}
-
-.loader-text {
-  font-size: 14px;
-  color: #fff;
-  margin: 0;
-}
-
-.loader-ship {
+.p-w-t::before {
+    content: '';
     position: absolute;
-    top: -30px;
-    left: 0%;
-    transform: translateX(-50%);
-    transition: left 0.3s ease;
+    inset: 0;
+    background: var(--tcolor3);
+    backdrop-filter: blur(5px) saturate(140%);
+    -webkit-backdrop-filter: blur(10px) saturate(140%);
+    z-index: 1;
+    border-radius: 0.18em;
 }
-
-.ship-icon {
-  font-size: 18px;
-}
-
-@keyframes wheelTurn {
-  0%   { transform: rotate(-25deg); }
-  50%  { transform: rotate(25deg); }
-  100% { transform: rotate(-25deg); }
-} 
   
-</style>  
+.p-w-wr {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+}
+  
+.p-w-p {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+    margin: 10px;
+} 	  
+
+.p-w-p label {
+    background: var(--color-5);
+    padding: 10px;
+    border-radius: 0.38em;
+    cursor: pointer;
+    width: auto;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--color-3);
+    font-family: var(--cuerpo1);
+    text-transform: uppercase;
+    font-size: 0.8em;
+    font-weight: 900;
+}
+  
+.w-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: stretch;
+    flex-flow: column;
+    padding: 10px;
+}
+  
+.w-title h1 {
+    margin: 10px;
+    font-size: 3em;
+    color: var(--color-5);
+    display: flex;
+    gap: 10px;
+    font-family: serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    -webkit-text-stroke: 1px var(--tcolor5);
+    text-shadow: 0 2px 8px var(--tcolor3);
+    font-weight: bold;
+}  
+  
+.w-title p {
+    margin: 0;
+    font-size: 0.8em;
+    text-align: justify;
+    hyphens: auto;
+    background: var(--tcolor6);
+    padding: 10px;
+    border-radius: 0.18em;
+    color: var(--color-6);
+    font-weight: 600;
+    line-height: 1.5em;
+    font-family: var(--cuerpo1);
+}  
+  
+.wrap-want {
+    width: 100%;
+    max-height: 520px;
+    background: var(--color-1);
+    border-radius: 0.18em;
+    border: 1px solid var(--tcolor3);
+    padding: 12px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+    align-content: start;
+}
+  
+.wanted-card {
+    width: 100%;
+    min-width: 0;
+    background: var(--color-5);
+    border-radius: 0.18em;
+    overflow: hidden;
+    border: 1px solid var(--tcolor3);
+    box-sizing: border-box;
+    padding: 10px;
+}
+  
+.wanted-card a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-flow: column;
+    gap: 10px;
+    height: 100%;
+}  
+  
+.wanted-avatar {
+    width: inherit;
+    max-height: 100px;
+    overflow: hidden;
+    border-radius: 0.18em;
+}
+  
+.wanted-info {
+    display: flex;
+    flex-flow: column;
+    gap: 6px;
+    width: 100%;
+    height: 100%;
+}
+  
+.wanted-info h1 {
+    font-size: 0.5em;
+    line-height: 1.2em;
+    margin: 0;
+    background: var(--color-1);
+    padding: 5px 10px;
+    display: flex;
+    gap: 10px;
+    text-align: center;
+    justify-content: space-between;
+    text-transform: uppercase;
+    font-family: var(--titulos);
+    color: var(--color-6);
+}
+  
+.wanted-info h3 {
+    margin: 0;
+    padding: 5px 10px;
+    font-size: 0.6em;
+    background: var(--color-1);
+    border-radius: 0.18em;
+    font-family: var(--titulos);
+    font-weight: 700;
+    text-align: center;
+}
+  
+.wanted-price {
+    background: var(--color-1);
+    padding: 5px 10px;
+    font-size: 0.8em;
+    border-radius: 0.18em;
+    text-align: center;
+    color: var(--color-6);
+    font-weight: bold;
+    font-family: var(--cuerpo1);
+}  
+ </style>                                                                                  
