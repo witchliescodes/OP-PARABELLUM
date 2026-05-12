@@ -1,5 +1,23 @@
-:root {
+/*SKIN BY PUMPKIN CODES EXCLUSIVA PARA OP PARABELLUM*/
+/* CORRECTOR MEMBRANA DE CARGA (NO TOCAR)*/
+html.loading,
+html.loading body {
+  overflow: hidden !important;
+}
+
+html.loading body > *:not(#preloader) {
+  opacity: 0 !important;
+  visibility: hidden !important;
+}
+#preloader {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+/*FIN CORRECTOR MEMBRANA DE CARGA (NO TOCAR)*/
+
+/*INICIO PARTE EDITABLE*/
 /*IMAGENES DE SUBFOROS*/
+:root {
 /*ADministración*/  
   --sadm: url('https://i.pinimg.com/1200x/16/bd/24/16bd24dfd18a1af3bd035a7d3d1708a7.jpg');  
   --smod: url('https://i.pinimg.com/1200x/16/bd/24/16bd24dfd18a1af3bd035a7d3d1708a7.jpg');  
@@ -19,10 +37,10 @@
   --paku: url('https://i.pinimg.com/1200x/16/bd/24/16bd24dfd18a1af3bd035a7d3d1708a7.jpg');  
 /*ZARPEMOS*/
 /*IMAGENES DE AFILIADOS*/
---herman1: url('https://images2.imgbox.com/46/d2/FkWZoBND_o.png');  
---herman2: url('https://images2.imgbox.com/46/d2/FkWZoBND_o.png');  
---herman3: url('https://images2.imgbox.com/46/d2/FkWZoBND_o.png');  
---herman4: url('https://images2.imgbox.com/46/d2/FkWZoBND_o.png');    
+  --herman1: url('https://images2.imgbox.com/46/d2/FkWZoBND_o.png');  
+  --herman2: url('https://images2.imgbox.com/46/d2/FkWZoBND_o.png');  
+  --herman3: url('https://images2.imgbox.com/46/d2/FkWZoBND_o.png');  
+  --herman4: url('https://images2.imgbox.com/46/d2/FkWZoBND_o.png');    
 }
 
 :root.claro{
@@ -69,6 +87,8 @@
   /*PESTAÑA2*/
 --pes2: url('https://images2.imgbox.com/97/01/aIORv10q_o.png'); /*imagen pestaña 2*/
 --tevent: url('https://images2.imgbox.com/bb/d6/Zbtd40qr_o.png'); /*imagen evento*/   
+  /*PESTAÑA3*/
+--want: url('https://images2.imgbox.com/92/4a/pYaFAHOj_o.png');   
   /*CATEGORIAS*/
 --bien: url('https://images2.imgbox.com/46/9f/YrVrROQb_o.png');  
 --crea: url('https://images2.imgbox.com/d8/11/WWL6WILc_o.png');  
@@ -126,6 +146,8 @@
   /*PESTAÑA2*/
 --pes2: url('https://images2.imgbox.com/97/01/aIORv10q_o.png'); /*imagen pestaña 2*/
 --tevent: url('https://images2.imgbox.com/bb/d6/Zbtd40qr_o.png'); /*imagen evento*/  
+  /*PESTAÑA3*/
+--want: url('https://images2.imgbox.com/92/4a/pYaFAHOj_o.png');   
   /*CATEGORIAS*/
 --bien: url('https://images2.imgbox.com/5c/7c/5K2jhWS3_o.png');    
 --crea: url('https://images2.imgbox.com/94/b1/0UAE2iYz_o.png');    
