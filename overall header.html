@@ -651,37 +651,21 @@ Ice cream danish gummi bears powder cotton candy donut. Bear claw biscuit muffin
 <label data-faccion="piratas" title="Piratas" data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip">
 <i class="game-icon game-icon-crowned-skull"></i>
 </label>
-
-
-
 <label data-faccion="marina" title="Armada Marina" data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip">
 <i class="game-icon game-icon-ship-wheel"></i>
 </label>
-
-
-
 <label data-faccion="cazadores" title="Cazarrecompensas" data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip">
 <i class="game-icon game-icon-sword-spade"></i>
 </label>
-
-
-
 <label data-faccion="gobierno" title="Gobierno Mundial" sata-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip">
 <i class="game-icon game-icon-crowned-skull"></i>
 </label>
-
-
-
 <label data-faccion="revolucion" title="Revolucionarios" data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip">
 <i class="game-icon game-icon-revolt"></i>
 </label>
-
-
-
 <label data-faccion="civiles" title="Civiles" data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip">
 <i class="game-icon game-icon-crowned-skull"></i>
 </label>
-
 </div>
     </div>
     <div class="a-trp"></div>
@@ -711,44 +695,7 @@ Ice cream danish gummi bears powder cotton candy donut. Bear claw biscuit muffin
 				{JAVASCRIPT}
 
 				<div id="page-header">
-					<div class="headerbar">
-						<div class="inner"><span class="corners-top"><span></span></span>
-
-							<div id="logo-desc">
-								<a href="{U_INDEX}" id="logo"><img loading="lazy" src="{LOGO}" alt="{L_INDEX}"/></a>
-								<!-- BEGIN switch_h1 -->
-								<div id="site-title">{switch_h1.MAIN_SITENAME}</div>
-								<!-- END switch_h1 -->
-								<!-- BEGIN switch_desc -->
-								<p>{switch_desc.SITE_DESCRIPTION}</p>
-								<!-- END switch_desc -->
-							</div>
-
-							<span class="corners-bottom"><span></span></span></div>
-					</div>
-
-					<div class="navbar">
-						<div class="inner"><span class="corners-top"><span></span></span>
-
-
-
-							<!-- BEGIN switch_search_box -->
-							<div id="search-box">
-								<form method="get" action="{ACTION_SEARCH}" id="search">
-									<p class="nomargin"><input type="text" name="search_keywords" id="keywords"
-															   maxlength="128" class="inputbox search"
-															   value="{L_SEARCH}..."
-															   onclick="if (this.value == '{L_SEARCH}...') this.value = '';"
-															   onblur="if (this.value == '') this.value = '{L_SEARCH}...';"/>
-										{JS_SESSION_ID_INPUT}
-										<input class="button2" type="submit" value="{L_SEARCH}"/></p>
-								</form>
-							</div>
-							<!-- END switch_search_box -->
-
-							<span class="corners-bottom"><span></span></span></div>
-					</div>
-
+                                  
 					<!-- BEGIN switch_ticker_new -->
 					<div id="fa_ticker_blockD" style="margin-top:4px;">
 						<div class="module">
@@ -2140,20 +2087,18 @@ margin:0;
 }  
 </style>  
 <style>      
-/*Wanteds automaticos*/  
 .p-want {
     width: 100%;
-    height: 74%;
-    display: flex;
-    justify-content: flex-start;
+    min-height: 540px;
+    display: grid;
+    grid-template-columns: 300px 1fr;
     gap: 12px;
+    align-items: stretch;
 }
-  
+
 .p-w-t {
-    max-width: 300px;
     width: 100%;
-    height: 100%;
-    max-height: 450px;
+    min-height: 540px;
     position: relative;
     overflow: hidden;
     border-radius: 0.18em;
@@ -2165,6 +2110,7 @@ margin:0;
     background-image: var(--want);
     background-size: cover;
     background-position: center;
+    box-sizing: border-box;
 }
 
 .p-w-t::before {
@@ -2175,36 +2121,35 @@ margin:0;
     backdrop-filter: blur(5px) saturate(140%);
     -webkit-backdrop-filter: blur(10px) saturate(140%);
     z-index: 1;
-    border-radius: 0.18em;
+    border-radius: inherit;
 }
-  
+
 .p-w-wr {
     position: relative;
     z-index: 2;
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-flow: column;
     align-items: center;
     justify-content: space-between;
-    height: 100%;
-    width: 100%;
 }
-  
+
+
 .p-w-p {
     width: 100%;
-    height: auto;
     display: flex;
     align-items: center;
-    gap: 10px;
     justify-content: center;
+    gap: 10px;
     margin: 10px;
-} 	  
+}
 
 .p-w-p label {
     background: var(--color-5);
     padding: 10px;
     border-radius: 0.38em;
     cursor: pointer;
-    width: auto;
     display: flex;
     align-items: center;
     gap: 12px;
@@ -2213,32 +2158,41 @@ margin:0;
     text-transform: uppercase;
     font-size: 0.8em;
     font-weight: 900;
+    transition: all 300ms ease;
 }
-  
+
+.p-w-p label:hover {
+    transform: translateY(-2px);
+}
+
+
 .w-title {
+    width: 100%;
+    height: 100%;
     display: flex;
+    flex-flow: column;
     align-items: center;
     justify-content: space-between;
-    width: 100%;
-    height: stretch;
-    flex-flow: column;
     padding: 10px;
+    box-sizing: border-box;
 }
-  
+
 .w-title h1 {
     margin: 10px;
-    font-size: 3em;
-    color: var(--color-5);
     display: flex;
+    align-items: center;
     gap: 10px;
+    font-size: clamp(2em, 4vw, 3em);
+    color: var(--color-5);
     font-family: serif;
     letter-spacing: 2px;
     text-transform: uppercase;
     -webkit-text-stroke: 1px var(--tcolor5);
     text-shadow: 0 2px 8px var(--tcolor3);
     font-weight: bold;
-}  
-  
+    text-align: center;
+}
+
 .w-title p {
     margin: 0;
     font-size: 0.8em;
@@ -2251,23 +2205,26 @@ margin:0;
     font-weight: 600;
     line-height: 1.5em;
     font-family: var(--cuerpo1);
-}  
-  
+}
+
+
 .wrap-want {
     width: 100%;
-    max-height: 520px;
+    height: 540px;
+    min-height: 540px;
     background: var(--color-1);
     border-radius: 0.18em;
     border: 1px solid var(--tcolor3);
     padding: 12px;
     overflow-y: auto;
     overflow-x: hidden;
+    box-sizing: border-box;
     display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
     gap: 12px;
     align-content: start;
 }
-  
+
 .wanted-card {
     width: 100%;
     min-width: 0;
@@ -2277,66 +2234,109 @@ margin:0;
     border: 1px solid var(--tcolor3);
     box-sizing: border-box;
     padding: 10px;
+    align-self: start;
+    transition: transform 300ms ease, box-shadow 300ms ease, border-color 300ms ease;
 }
-  
+
+.wanted-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px var(--tcolor3);
+}
+
 .wanted-card a {
     display: flex;
+    flex-flow: column;
     align-items: center;
     justify-content: space-between;
-    flex-flow: column;
     gap: 10px;
     height: 100%;
-}  
-  
+    text-decoration: none;
+}
+
 .wanted-avatar {
-    width: inherit;
+    width: 100%;
     max-height: 100px;
     overflow: hidden;
     border-radius: 0.18em;
 }
-  
+
+.wanted-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
 .wanted-info {
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-flow: column;
     gap: 6px;
-    width: 100%;
-    height: 100%;
 }
-  
+
 .wanted-info h1 {
-    font-size: 0.5em;
-    line-height: 1.2em;
     margin: 0;
     background: var(--color-1);
     padding: 5px 10px;
     display: flex;
+    align-items: center;
+    justify-content: space-between;
     gap: 10px;
     text-align: center;
-    justify-content: space-between;
     text-transform: uppercase;
+    font-size: 0.5em;
+    line-height: 1.2em;
     font-family: var(--titulos);
     color: var(--color-6);
 }
-  
+
 .wanted-info h3 {
     margin: 0;
     padding: 5px 10px;
-    font-size: 0.6em;
     background: var(--color-1);
     border-radius: 0.18em;
+    text-align: center;
+    font-size: 0.6em;
     font-family: var(--titulos);
     font-weight: 700;
-    text-align: center;
 }
-  
+
 .wanted-price {
     background: var(--color-1);
     padding: 5px 10px;
-    font-size: 0.8em;
     border-radius: 0.18em;
     text-align: center;
+    font-size: 0.8em;
     color: var(--color-6);
     font-weight: bold;
     font-family: var(--cuerpo1);
-}  
+}
+
+
+@media (max-width: 1100px) {
+    .p-want {
+        grid-template-columns: 1fr;
+    }
+    .p-w-t {
+        min-height: 420px;
+    }
+    .wrap-want {
+        height: auto;
+        min-height: 420px;
+    }
+}
+
+@media (max-width: 700px) {
+    .wrap-want {
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    }
+    .w-title h1 {
+        font-size: 2em;
+    }
+    .p-w-p {
+        flex-wrap: wrap;
+    }
+}
  </style>                                                                                  
