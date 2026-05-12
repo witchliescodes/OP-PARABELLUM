@@ -534,7 +534,7 @@
     width: 94%;
     position: relative;
     display: grid;
-    grid-template-columns: 260px minmax(0, 1fr);
+    grid-template-columns: 300px minmax(0, 1fr);
     gap: 12px;
     min-height: 180px;
     padding: 12px;
@@ -542,7 +542,7 @@
     border-radius: 0.38em;
     background: linear-gradient 145deg, var(--color-1), var(--color-5));
     border: 1px solid var(--tcolor3);
-    box-shadow: 0 10px 25px var(--tcolor6);
+    box-shadow: 0 0px 10px var(--tcolor6);
     align-items: stretch;
     isolation: isolate;
 }
@@ -555,7 +555,6 @@
     opacity: .7;
     pointer-events: none;
 }
-
 .tp-lblh {
     position: relative;
     z-index: 2;
@@ -582,7 +581,6 @@
     background: radial-gradient(circle, var(--tcolor4), transparent 70%);
     opacity: .5;
 }
-
 .tp-lblh h4 {
     position: relative;
     z-index: 2;
@@ -590,15 +588,16 @@
     align-items: center;
     gap: 10px;
     margin: 0;
-    font-size: 1.4em;
+    font-size: 1.7em;
     line-height: 1.3em;
     letter-spacing: 1px;
     font-family: var(--titulos);
     text-transform: uppercase;
     color: var(--color-3);
     text-shadow: 0 2px 8px var(--tcolor3);
+    text-align: center;
 }
-
+  
 .lbls {
     position: relative;
     z-index: 2;
@@ -608,15 +607,15 @@
     gap: 10px;
     flex-wrap: wrap;
 }
-
 .lbls label {
+    cursor: pointer;
     margin: 0;
-    padding: 10px 14px;
-    min-height: 40px;
+    padding: 7px 9px;
+    min-height: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;
+    gap: 10px;
     background: linear-gradient(145deg, var(--color-1), var(--color-5));
     border: 1px solid var(--tcolor3);
     border-radius: 0.28em;
@@ -697,33 +696,35 @@
     opacity: .5;
 }
 
-
-@media (max-width: 1000px) {
-    .pa-trp {
-        grid-template-columns: 1fr;
-    }
-    .tp-lblh {
-        min-height: auto;
-    }
-    .a-trp {
-        grid-auto-columns: 160px;
-    }
-}
-
-@media (max-width: 700px) {
-    .pa-trp {
-        width: 100%;
-    }
-    .tp-lblh h4 {
-        font-size: 1.1em;
-    }
-    .lbls {
-        justify-content: center;
-    }
-    .a-trp {
-        grid-auto-columns: 140px;
-    }
-}
+.tripu-card br {
+  display: none;
+  }
+  
+.tripu-card {
+    position: relative;
+}  
+  
+.tripu-card h2 {
+    position: absolute;
+    bottom: 0px;
+    top: 75px;
+    z-index: 1;
+    background: var(--color-5);
+    padding: 10px;
+    margin: 10px;
+    font-size: 0.6em;
+    display: flex;
+    text-transform: uppercase;
+    line-height: 1.5em;
+    width: -webkit-fill-available;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--cuerpo1);
+    min-width: 0;
+    min-height: min-content;
+    border-radius: 3.18em;
+}  
 </style>
 <style>
 #preloader {
