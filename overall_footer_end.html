@@ -533,7 +533,7 @@
 .pa-trp {
     width: 94%;
     display: grid;
-    grid-template-columns: 180px minmax(0, 1fr);
+    grid-template-columns: 252px minmax(0, 1fr);
     gap: 10px;
     min-height: 150px;
     background: var(--color-1);
@@ -541,6 +541,8 @@
     border: 1px solid var(--tcolor3);
     padding: 10px;
     overflow: hidden;
+    justify-content: center;
+    align-content: center;
 }
   
 .tp-lblh {
@@ -552,6 +554,37 @@
     padding: 12px;
     min-width: 0;
 }
+  
+.tp-lblh h4{
+    display: flex;
+    gap: 10px;
+    margin: 0;
+    font-size: 1.5em;
+    line-height: 1.5em;
+    letter-spacing: 0px;
+    font-family: var(--titulos);
+    text-transform: uppercase;
+    color: var(--color-3);
+}  
+  
+.lbls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+} 
+  
+.lbls label  {
+    margin: 0;
+    padding: 10px;
+    background: var(--color-1);
+    color: var(--color-3);
+    font-size: 1.2em;
+    border-radius: 0.18em;
+    max-height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}  
   
 .a-trp {
     min-width: 0;
