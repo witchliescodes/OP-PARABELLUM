@@ -532,89 +532,200 @@
 <style>
 .pa-trp {
     width: 94%;
+    position: relative;
     display: grid;
-    grid-template-columns: 252px minmax(0, 1fr);
-    gap: 10px;
-    min-height: 150px;
-    background: var(--color-1);
-    border-radius: 0.18em;
-    border: 1px solid var(--tcolor3);
-    padding: 10px;
+    grid-template-columns: 260px minmax(0, 1fr);
+    gap: 12px;
+    min-height: 180px;
+    padding: 12px;
     overflow: hidden;
-    justify-content: center;
-    align-content: center;
+    border-radius: 0.38em;
+    background: linear-gradient 145deg, var(--color-1), var(--color-5));
+    border: 1px solid var(--tcolor3);
+    box-shadow: 0 10px 25px var(--tcolor6);
+    align-items: stretch;
+    isolation: isolate;
 }
-  
+
+.pa-trp::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at top right, var(--tcolor3), transparent 45%);
+    opacity: .7;
+    pointer-events: none;
+}
+
 .tp-lblh {
-    background: var(--color-5);
-    border-radius: 0.18em;
+    position: relative;
+    z-index: 2;
+    min-width: 0;
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    padding: 12px;
-    min-width: 0;
+    justify-content: space-between;
+    gap: 14px;
+    padding: 16px;
+    border-radius: 0.38em;
+    background: linear-gradient(145deg, var(--color-5), var(--color-1));
+    border: 1px solid var(--tcolor3);
+    overflow: hidden;
 }
-  
-.tp-lblh h4{
+
+.tp-lblh::before {
+    content: "";
+    position: absolute;
+    width: 140px;
+    height: 140px;
+    top: -70px;
+    right: -70px;
+    border-radius: 50%;
+    background: radial-gradient(circle, var(--tcolor3), transparent 70%);
+    opacity: .5;
+}
+
+.tp-lblh h4 {
+    position: relative;
+    z-index: 2;
     display: flex;
+    align-items: center;
     gap: 10px;
     margin: 0;
-    font-size: 1.5em;
-    line-height: 1.5em;
-    letter-spacing: 0px;
+    font-size: 1.4em;
+    line-height: 1.3em;
+    letter-spacing: 1px;
     font-family: var(--titulos);
     text-transform: uppercase;
     color: var(--color-3);
-}  
-  
+    text-shadow: 0 2px 8px var(--tcolor3);
+}
+
 .lbls {
+    position: relative;
+    z-index: 2;
     display: flex;
     align-items: center;
     justify-content: space-between;
-} 
-  
-.lbls label  {
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.lbls label {
     margin: 0;
-    padding: 10px;
-    background: var(--color-1);
-    color: var(--color-3);
-    font-size: 1.2em;
-    border-radius: 0.18em;
-    max-height: 40px;
+    padding: 10px 14px;
+    min-height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
-}  
-  
+    gap: 8px;
+    background: linear-gradient(145deg, var(--color-1), var(--color-5));
+    border: 1px solid var(--tcolor3);
+    border-radius: 0.28em;
+    color: var(--color-3);
+    font-size: 1em;
+    font-weight: 700;
+    font-family: var(--titulos);
+    transition: transform 300ms ease, background 300ms ease, box-shadow 300ms ease;
+    box-shadow: 0 3px 8px var(--tcolor6);
+}
+
+.lbls label:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px var(--tcolor3);
+}
+
+
 .a-trp {
+    position: relative;
     min-width: 0;
     overflow-x: auto;
     overflow-y: hidden;
     display: grid;
     grid-auto-flow: column;
-    grid-auto-columns: 160px;
-    gap: 10px;
-    padding: 10px;
-    background: var(--color-5);
-    border-radius: 0.18em;
-    align-items: start;
-}
-  
-.tripu-preview {
-    height: 100%;
-    min-height: 100px;
-    background: var(--color-1);
-    border-radius: 0.18em;
+    grid-auto-columns: 180px;
+    gap: 12px;
+    padding: 12px;
+    border-radius: 0.38em;
+    background: linear-gradient(145deg, var(--color-5), var(--color-1));
     border: 1px solid var(--tcolor3);
+    align-items: stretch;
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-3) transparent;
+}
+
+.a-trp::-webkit-scrollbar {
+    height: 6px;
+}
+
+.a-trp::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.a-trp::-webkit-scrollbar-thumb {
+    background: var(--color-3);
+    border-radius: 999px;
+}
+
+.tripu-preview {
+    position: relative;
+    min-height: 120px;
     overflow: hidden;
-    transition: 300ms ease;
+    border-radius: 0.38em;
+    background: linear-gradient(145deg, var(--color-1), var(--color-5));
+    border: 1px solid var(--tcolor3);
+    transition: transform 300ms ease, box-shadow 300ms ease, border-color 300ms ease;
+    isolation: isolate;
+}
+
+.tripu-preview::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent, var(--tcolor3));
+    opacity: 0;
+    transition: opacity 300ms ease;
+    pointer-events: none;
+}
+
+.tripu-preview:hover {
+    transform: translateY(-4px);
+    border-color: var(--color-3);
+    box-shadow: 0 10px 24px var(--tcolor3);
+}
+
+.tripu-preview:hover::before {
+    opacity: .5;
+}
+
+
+@media (max-width: 1000px) {
+    .pa-trp {
+        grid-template-columns: 1fr;
+    }
+    .tp-lblh {
+        min-height: auto;
+    }
+    .a-trp {
+        grid-auto-columns: 160px;
+    }
+}
+
+@media (max-width: 700px) {
+    .pa-trp {
+        width: 100%;
+    }
+    .tp-lblh h4 {
+        font-size: 1.1em;
+    }
+    .lbls {
+        justify-content: center;
+    }
+    .a-trp {
+        grid-auto-columns: 140px;
+    }
 }
 </style>
 <style>
-/* =========================================
-   MEMBRANA DE CARGA
-========================================= */
-
 #preloader {
     position: fixed;
     inset: 0;
