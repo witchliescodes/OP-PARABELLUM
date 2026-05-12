@@ -1,8 +1,25 @@
 /*SKIN BY PUMPKIN CODES EXCLUSIVA PARA OP PARABELLUM*/
 /* CORRECTOR MEMBRANA DE CARGA (NO TOCAR)*/
+body {
+  transition:
+    opacity .5s ease,
+    transform .5s ease;
+}
+
+html.loading body {
+  opacity: 0;
+  transform: scale(1.01);
+}
+
+html:not(.loading) body {
+  opacity: 1;
+  transform: scale(1);
+}
+
 html.loading,
 html.loading body {
   overflow: hidden !important;
+  height: 100%;
 }
 
 html.loading body > *:not(#preloader) {
@@ -13,6 +30,7 @@ html.loading body > *:not(#preloader) {
   opacity: 1 !important;
   visibility: visible !important;
 }
+
 /*FIN CORRECTOR MEMBRANA DE CARGA (NO TOCAR)*/
 
 /*INICIO PARTE EDITABLE*/
