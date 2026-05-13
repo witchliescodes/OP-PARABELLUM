@@ -26,9 +26,9 @@ html.loading #main-content {
 /*IMAGENES DE SUBFOROS*/
 :root {
 /*ADministración*/  
-  --sadm: url('https://i.pinimg.com/1200x/16/bd/24/16bd24dfd18a1af3bd035a7d3d1708a7.jpg');  
-  --smod: url('https://i.pinimg.com/1200x/16/bd/24/16bd24dfd18a1af3bd035a7d3d1708a7.jpg');  
-  --snar: url('https://i.pinimg.com/1200x/16/bd/24/16bd24dfd18a1af3bd035a7d3d1708a7.jpg');  
+  --sadm: url('https://images2.imgbox.com/65/f8/FoavmGrt_o.jpg');  
+  --smod: url('https://images2.imgbox.com/0a/e7/sksOUI68_o.jpg');  
+  --snar: url('https://images2.imgbox.com/93/a7/0rHPEDHB_o.jpg');  
   --spap: url('https://i.pinimg.com/1200x/16/bd/24/16bd24dfd18a1af3bd035a7d3d1708a7.jpg');  
 /*ADministración*/    
   --dpri: url('https://i.pinimg.com/1200x/16/bd/24/16bd24dfd18a1af3bd035a7d3d1708a7.jpg');  
@@ -43,6 +43,8 @@ html.loading #main-content {
   --pcom: url('https://i.pinimg.com/1200x/16/bd/24/16bd24dfd18a1af3bd035a7d3d1708a7.jpg');  
   --paku: url('https://i.pinimg.com/1200x/16/bd/24/16bd24dfd18a1af3bd035a7d3d1708a7.jpg');  
 /*ZARPEMOS*/
+/*OFF ROL*/  
+    --spap: url('https://i.pinimg.com/1200x/16/bd/24/16bd24dfd18a1af3bd035a7d3d1708a7.jpg');    
 /*IMAGENES DE AFILIADOS*/
   --herman1: url('https://images2.imgbox.com/46/d2/FkWZoBND_o.png');  
   --herman2: url('https://images2.imgbox.com/46/d2/FkWZoBND_o.png');  
@@ -61,9 +63,9 @@ html.loading #main-content {
   --color-7: #1d1d59;
   /*Transparencias*/
   --tcolor3: #6f70d38c;
-  --tcolor4: #1f1f3ec2;
+  --tcolor4: #6f9bd36b;
   --tcolor5: #faf8fc75;
-  --tcolor6: #1f1f3e61;
+  --tcolor6: #1f1f3ec2;
   /*DEGRADADOS*/
   --deg3: linear-gradient(145deg, #6f9bd3, #6f70d3);
   --deg2: linear-gradient(90deg, #6f9bd3, #6f70d3);
