@@ -22,9 +22,8 @@
 	<!-- BEGIN forumrow -->
 				
                           <div class="fori">
-  <div class="numc"></div>
-
   <div class="dscont">
+      <div class="numc"></div>
     <div class="dscp">
 
       <div class="ftile">
@@ -40,12 +39,12 @@
       <div class="typ">
         <div class="topics">
           <p>{catrow.forumrow.TOPICS}</p>
-          <dfn data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" title="temas"><i class="bi bi-file-text-fill"></i></dfn>
+          <dfn data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" title="temas"><i class="fi fi-rr-paper-plane"></i></dfn>
         </div>
 
         <div class="posts">
           <p>{catrow.forumrow.POSTS}</p>
-          <dfn data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" title="Respuestas"><i class="bi bi-card-text"></i></dfn>
+          <dfn data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" title="Respuestas"><i class="fi fi-rr-comment-alt"></i></dfn>
         </div>
       </div>
 
@@ -64,7 +63,7 @@
             {catrow.forumrow.LATEST_TOPIC_NAME}
           </a>
           <!-- END switch_topic_title -->
-          <dfn>Por</dfn><p>{catrow.forumrow.USER_LAST_POST}</p>
+          <dfn>El</dfn><p>{catrow.forumrow.USER_LAST_POST}</p>
         </div>
       </div>
 
@@ -111,983 +110,304 @@
 </div>
 <!-- END switch_on_index -->
 <style>
-/*CATEGORIAS Y SUBFOROS*/
-.dscont {
-position: relative;
-width: 100%; 
-height: 100%;
-  }  
-  
+/* CATEGORIAS GENERALES Y DISPLAY */
+*,
+*::before,
+*::after {
+box-sizing: border-box; min-width:0;
+}
+
+img{ max-width:100%; display:block; }
+
+.dscont,
+.fori,
+.oppfor,
+.f-img,
+.descripy,
+.f-linky,
+.typ,
+.ultima,
+.opp-cf{ min-width:0; }
+
 .cateopp {
-    margin: 25px 0 0 0;
-    width: -webkit-fill-available;
-    height: -webkit-fill-available;
+    margin: 25px 0 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    gap: 10px;
+}
+  
+.fori dfn { font-style: normal; }   
+.oppfor .fori:hover .oppava img { transform:scale(1.05);}     
+.culti p { margin: 0; display: flex; gap: 5px; font-size: 1em;}  
+  
+.fori .f-img::after{
+content:'';
+position:absolute;
+inset:0;
+background:
+linear-gradient(180deg, transparent 20%, rgba(0,0,0,.45));
+pointer-events:none;
+}
+
+  
+.fori .d-im{
+width:100%;
+height:100%;
+background-size: cover;
+background-position: center top;
+background-repeat: no-repeat;
+transition: transform .5s cubic-bezier(.22, 1, .36, 1);
+}
+
+.fori:hover .d-im{ transform:scale(1.04); }  
+
+.fori .oppava img{
+width: 100%;
+height: 100%;
+object-fit: cover;
+object-position: center top;
+transition: transform .4s ease;
+}
+
+.fori:hover .oppava img{
+transform: scale(1.05);
 }  
   
+.fori .f-linky a{
+display:flex;
+align-items:center;
+justify-content:center;
+padding: 8px;
+background:var(--color-5);
+border-radius:6px;
+font-size:.9em;
+font-weight:800;
+color:var(--color-3);
+transition: background .3s ease, transform .3s ease, color .3s ease;
+}
+
+.fori .f-linky a:hover{
+background: var(--color-3);
+color: var(--color-1);
+transform: translateY(-2px);
+}  
+  
+.topics, .posts {
+    display: flex;
+    align-items: center;
+    color: var(--color-3);
+    font-size: 1em;
+}    
+  
+.fori .topics,
+.fori .posts { display: flex; align-items: center; gap: 10px;}
+
+/* NUMERO */
+
+.fori .numc {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 40;
+    background: var(--color-3);
+    padding: 10px;
+    border-radius: 0.18em;
+    color: var(--color-7);
+    font-family: var(--titulos);
+    min-width: 35px;
+    display: flex;
+    max-height: 35px;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.5em;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+/* CATEGORIAS TITULO */
+
 .titlecate h2 {
     background: var(--color-5);
     display: flex;
-    flex-flow: row-reverse;
-    justify-content: end;
+    flex-flow: row-reverse wrap;
+    justify-content: flex-start;
     align-items: center;
+    gap: 12px;
     border-radius: 6px;
-    height: 120px;
+    min-height: 120px;
+    padding: 20px;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
 }
 
-
-.titlecate h2 p {
-    margin: 0 30px;
-    font-size: 1em;
-    font-family: var(--titulos);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: var(--color-3);
-}
-  
-.titlecate h2 em {
-    margin: 0px 199px 0px 0px;
-    font-size: 2em;
-    color: var(--color-3);
-    filter: drop-shadow(0px 0px 2px var(--color-3));
-    padding: 10px;
-    border-radius: 10px;
+.titlecate h2 p{
+margin:0;
+font-size:clamp(.8rem,1vw,1rem);
+font-family:var(--titulos);
+text-transform:uppercase;
+letter-spacing:1px;
+color:var(--color-3);
 }
 
-.bien.titlecate h2 em {
-    margin: 0px 199px 0px 0px;
-    font-size: 2em;
-    color: var(--color-3);
-    filter: drop-shadow(0px 0px 2px var(--color-3));
-    padding: 10px;
-    border-radius: 10px;
-}
-  
-.pers.titlecate h2 em {
-    margin: 0px 215px 0px 0px;
-    font-size: 2em;
-    color: var(--color-3);
-    filter: drop-shadow(0px 0px 2px var(--color-3));
-    padding: 10px;
-    border-radius: 10px;
-}
-  
-.zarp.titlecate h2 em {
-    margin: 0px 245px 0px 0px;
-    font-size: 2em;
-    color: var(--color-3);
-    filter: drop-shadow(0px 0px 2px var(--color-3));
-    padding: 10px;
-    border-radius: 10px;
-}
-  
-.admi.titlecate h2 em {
-    margin: 0px 125px 0px 0px;
-    font-size: 2em;
-    color: var(--color-3);
-    filter: drop-shadow(0px 0px 2px var(--color-3));
-    padding: 10px;
-    border-radius: 10px;
-}
-    
-/*Titulos personalizados*/  
-.titlecate h2 {
-background-image: var(--mare);
-}    
-.titlecate.bien h2 {
-background-image: var(--bien);
-} 
-.titlecate.pers h2 {
-background-image: var(--crea);
-}  
-.titlecate.zarp h2 {
-background-image: var(--zarp);
-}  
-.titlecate.admi h2 {
-background-image: var(--admi);
-}    
-/*FIN DE TITULOS*/
-  
-.oppfor {
-    background: var(--color-5);
-    padding: 10px;
-    width: -webkit-fill-available;
-    height: 100%;
-    position: relative;
-    overflow: hidden;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-auto-rows: minmax(303px, 1fr);
-    gap: 0.75rem;
-    margin: 0 0 10px 0;
-    border-radius: 6px;
-}
-  
-.oppfor.admi {
-    background: var(--color-5);
-    padding: 10px;
-    width: -webkit-fill-available;
-    height: -webkit-fill-available;
-    position: relative;
-    overflow: hidden;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(4, 100px); 
-    gap: 0.75rem;
-    margin: 0 0 10px 0;
-    border-radius: 6px;
+.titlecate h2 em{
+margin-inline-end:clamp(20px,10vw,200px);
+font-size:clamp(1.4rem,2vw,2rem);
+color:var(--color-3);
+filter:drop-shadow(0 0 2px var(--color-3));
+padding:10px;
+border-radius:10px;
 }
 
-.oppfor.bien {
-    background: var(--color-5);
-    padding: 10px;
-    width: -webkit-fill-available;
-    height: -webkit-fill-available;
-    position: relative;
-    overflow: hidden;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1.2fr 1.2fr;
-    grid-auto-rows: 80px;
-    gap: 0.75rem;
-    margin: 0 0 10px 0;
-    border-radius: 6px;
+.titlecate h2 {background-image:var(--mare)}
+.titlecate.bien h2{background-image:var(--bien)}
+.titlecate.pers h2{background-image:var(--crea)}
+.titlecate.zarp h2{background-image:var(--zarp)}
+.titlecate.admi h2{background-image:var(--admi)} 
+  
+/* GRID GENERAL */  
+
+.oppfor{
+background: var(--color-5);
+padding: 10px;
+width: 100%;
+position: relative;
+overflow: hidden;
+display: grid;
+grid-template-columns:repeat(2,minmax(280px, 1fr));
+grid-auto-rows: minmax(303px, auto);
+gap: .75rem;
+margin: 0 0 10px;
+border-radius: 6px;
+color: var(--color-6);
 }
 
-.oppfor.pers {
-    background: var(--color-5);
-    padding: 10px;
-    width: -webkit-fill-available;
-    height: -webkit-fill-available;
-    position: relative;
-    overflow: hidden;
-    display: grid;
-    grid-template-columns: 1fr 2fr; 
-    grid-auto-rows: 80px;
-    gap: 10px;
-    margin: 0 0 10px 0;
-    border-radius: 6px;
+.oppfor.bien{
+grid-template-columns: repeat(4,minmax(180px, 1fr));
+grid-auto-rows: minmax(80px, auto);
 }
-  
-.oppfor.zarp {
-    background: var(--color-5);
-    padding: 10px;
-    width: -webkit-fill-available;
-    height: -webkit-fill-available;
-    position: relative;
-    overflow: hidden;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-auto-rows: 80px;
-    gap: 10px;
-    margin: 0 0 10px 0;
-    border-radius: 6px;
-}  
+
+.oppfor.pers{
+grid-template-columns: minmax(220px, 1fr) minmax(320px, 2fr);
+grid-auto-rows: minmax(80px, auto);
+}
+
+.oppfor.zarp{
+grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+grid-auto-rows :minmax(80px, auto);
+}
+
+.oppfor.admi{
+grid-template-columns: repeat(2, minmax(320px, 1fr));
+grid-auto-rows :minmax(100px, auto);
+}
 
 .oppfor .fori {
     background: var(--color-1);
     border-radius: .85rem;
-    overflow: hidden;
     position: relative;
-}  
-  
-
-/*CAT BIENVE*/
-.oppfor.bien .fori:nth-child(1) {
-    grid-column: 1 / 3;
-    grid-row: 1 / 4;
-}
-  
-.oppfor.bien .fori:nth-child(1) .ftile {
-    z-index: 99;
-    width: 100%;
-}  
-
-.oppfor.bien .fori:nth-child(1) .f-img {
-    width: 100%;
-    height: 264px;
-    max-width: 480px;
-    object-fit: cover;
-}
-  
-
-.oppfor.bien .fori:nth-child(1) .ultima {
-    z-index: 99;
-    top: 183px;
-    left: 60px;
-    right: 0;
-    width: stretch;
-    bottom: 0;
-    height: 61px;
-    display: flex;
-    align-items: center;
-}
-  
-.oppfor.bien .fori:nth-child(1) .culti {
-    width: 100%;
-    height: -webkit-fill-available;
-    margin: 10px;
-    color: var(--color-6);
-    font-size: 0.6em;
-    font-family: var(--cuerpo1);
-    display: flex;
-    align-items: flex-start;
-    flex-flow: column;
-}  
-  
-.oppfor.bien .fori:nth-child(1) .d-im {
-    width: 100%;
-}  
-  
-.oppfor.bien .fori:nth-child(1) .oppava {
-    width: 50px;
-    height: 60px;
-}
-  
-.oppfor.bien .fori:nth-child(1) .dscont .descripy {
-    position: absolute;
-    top: 9vh;
-    left: 0px;
-    width: 34.9vw;
-    height: 9.3vh;
-    z-index: 99;
-}
-  
-.oppfor.bien .fori:nth-child(1) .dscont .f-linky {
-    position: absolute;
-    z-index: 99;
-    width: -webkit-fill-available;
-    top: 45px;
-}
-  
-.oppfor.bien .fori:nth-child(1) .descripy,
-.oppfor.bien .fori:nth-child(1) .f-linky {
-  opacity: 0;
-  transform: translateY(10px);
-  transition: all 0.3s ease;
+    height: 388px;
+    max-height: 390px;
+    overflow: hidden;
 }
 
-.oppfor.bien .fori:nth-child(1) .dscont:hover .descripy,
-.oppfor.bien .fori:nth-child(1) .dscont:hover .f-linky {
-  opacity: 1;
-  transform: translateY(0);
-}  
-  
-.oppfor.bien .fori:nth-child(1) .dscont .f-linky a  {
-    font-size: 1em;
-    font-weight: 800;
-    color: var(--color-3);
-    background: var(--color-5);
-    padding: 7px;
-    border-radius: 5px;
-    flex: 1 1 calc(0% - 0px);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-  
-.oppfor.bien .fori:nth-child(1):hover .descripy {
-  opacity: 1;
-}
- 
-.oppfor.bien .fori:nth-child(1):hover .f-linky {
-  opacity: 1;
-}  
-   
-.oppfor.bien .fori:nth-child(1) .opp-cf {
-    top: 0px;
-    right: 4vw;
-    width: auto;
-    max-height: 100%;
-}
-  
-.oppfor.bien .fori:nth-child(1) .typ {
-    position: absolute;
-    top: 45px;
-    right: 0;
-    background: var(--color-5);
-    margin: 10px;
-    width: 3vw;
-    height: 13.7vh;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-flow: column;
-    z-index: 99;
-} 
-  
-  
-.oppfor.bien .fori:nth-child(2) {
-    grid-column: 3 / 5;
-    grid-row: 1 / 4;
-}
-  
-.oppfor.bien .fori:nth-child(3) {
-    grid-column: 1 / 4;
-    grid-row: 4 / 7;
-}
-  
-.oppfor.bien .fori:nth-child(4) {
-    grid-column: 4 / 4;
-    grid-row: 4 / 7;
-}
-  
-/*CAT CREACION*/
-.oppfor.pers .fori:nth-child(1) {
-    grid-column: 1;
-    grid-row: span 4;
-}
-.oppfor.pers .fori:nth-child(2) {
-    grid-column: 2;
-    grid-row: span 4;
-}
-.oppfor.pers .fori:nth-child(3) {
-    grid-column: 1;
-    grid-row: span 6;
-}
-.oppfor.pers .fori.fori:nth-child(4) {
-    grid-column: 2;
-    grid-row: span 3;
-}
-.oppfor.pers .fori:nth-child(5) {
-    grid-column: 2;
-    grid-row: span 3;
-}
-/*cate zarpemos*/
-.oppfor.zarp .fori:nth-child(1) {
-    grid-column: 1;
-    grid-row: 1 / span 4;
-}
-.oppfor.zarp .fori:nth-child(2) {
-    grid-column: 2;
-    grid-row: 1 / span 3;
-}
-.oppfor.zarp .fori:nth-child(3) {
-    grid-column: 2;
-    grid-row: 4 / span 2;
-}
-.oppfor.zarp .fori:nth-child(4) {
-    grid-column: 1;
-    grid-row: 5 / span 3;
-}
-.oppfor.zarp .fori:nth-child(5) {
-    grid-column: 2;
-    grid-row: 6 / span 2;
-}
-  
-/*CAT ADMIN*/
-.oppfor.admi .fori:nth-child(1) {
-    grid-row: span 3;
-}
-  
-.oppfor.admi .fori:nth-child(1) .dscont .ftile {
-    position: absolute;
-    width: 100%;
-    height: 52%;
-    display: flex;
-    align-items: end;
-    transition: transform 400ms ease;
-    justify-content: flex-start;
-    flex-flow: row;
-}
-  /*
-.oppfor.admi .fori:nth-child(1) .dscont .ftile a,
-.oppfor.admi .fori:nth-child(2) .dscont .ftile a,
-.oppfor.admi .fori:nth-child(3) .dscont .ftile a {
-    background: var(--color-3);
-    color: var(--color-1);
-    padding: 5px 10px 5px 10px;
-    font-size: 1em;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-family: var(--titulos);
-    margin: 10px 10px 8px 10px;
-    border-radius: 0.28em;
-    text-decoration: none;
-    z-index: 99;
-    max-height: 35px;
-  } */
-  
-.oppfor.admi .fori:nth-child(1) .dscont .f-img {
-    width: 100%;
-    height: 170px;
-    position: relative;
-    overflow: hidden;
-    border-radius: 10px;
-    z-index: 9;
-    box-shadow: 0 11px 10px var(--tcolor6);
-}
-  
-  
-.oppfor.admi .fori:nth-child(1) .dscont .d-im {
-    width: 100%;
-    height: 170px;
-}
-  
-  
-.oppfor.admi .fori:nth-child(1) .dscont .opp-cf {
-    position: absolute;
-    top: 0;
-    width: -webkit-fill-available;
-    height: auto;
-    margin: 10px;
-    border-radius: 0.38em;
-    overflow: hidden;
-    z-index: 99;
-}
-  
-.oppfor.admi .fori:nth-child(1) .dscont .opp-cf dl.icon[style*="fleido"] {
-    width: fit-content;
-    height: -webkit-fill-available;
-    margin: 0;
-    display: flex;
-    align-items: center;
-}
-  
-.oppfor.admi .fori:nth-child(1) .dscont .opp-cf dl.icon[style*="fleido"]::before,
-.oppfor.admi .fori:nth-child(2) .dscont .opp-cf dl.icon[style*="fleido"]::before  {
-    content: '\f00c';
-    font-family: 'Font Awesome 7 Free';
-    font-weight: 900;
-    font-size: 0.7em;
-    color: var(--color-3);
-    background: var(--color-1);
-    height: 25px;
-    padding: 7px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 5px;
-    outline: 1px solid var(--color-3);
-}
-  
-.oppfor.admi .fori:nth-child(1) .dscont .opp-cf dl.icon[style*="fleido"]::after, 
-.oppfor.admi .fori:nth-child(2) .dscont .opp-cf dl.icon[style*="fleido"]::after  {
-    content: 'Foro Leido';
-    font-family: var(--cuerpo1);
-    font-weight: 800;
-    font-size: 0.7em;
-    color: var(--color-3);
-    background: var(--color-1);
-    width: 100%;
-    height: 25px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 5px;
-    outline: 1px solid var(--color-3);
-    margin: 0px 1px 0 10px;
-    padding: 1px 7px 0px 7px;
-    line-height: 1em;
-}
-  
-.oppfor.admi .fori:nth-child(1) .dscont .ultima {
-    position: absolute;
-    top: 152px;
-    right: 0px;
-    margin: 0;
-    width: 100%;
-    display: flex;
-    background: var(--color-3);
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    border-top-right-radius: 0px;
-    border-top-left-radius: 0px;
-    align-items: center;
-    justify-content: space-between;
-    font-size: 0.9em;
-    padding: 18px 10px 0 10px;
-    height: 50px;
-    z-index: 1;
-}
-  
-.oppfor.admi .fori:nth-child(1) .dscont .ultima .culti a {
-    color: var(--color-1);
-    font-size: 0.8em;
-    width: stretch;
-    line-height: 1.2em;
-    max-width: 100px;
-}
-  
-.oppfor.admi .fori:nth-child(1) .dscont .ultima p {
-    display: flex;
-    margin: 0 0 0 8vw;
-    font-size: 1em;
-    left: 0;
-    position: relative;
-    width: 100%;
-}
-  
-  
-.oppfor.admi .fori:nth-child(1) .dscont .descripy {
-    position: absolute;
-    top: 202px;
-    left: 0;
-    width: 45%;
-    height: 32%;
-    background: var(--color-5);
-    overflow: auto;
-    margin: 10px;
-    padding: 4px 8px;
-    border-radius: 10px;
-}
-  
-.oppfor.admi .fori:nth-child(1) .dscont .descripy p {
-    color: var(--color-6);
-    font-size: 0.9em;
-    line-height: 1.5em;
-    text-align: justify;
-    hyphens: auto;
-    margin: 0;
-}
-  
-  
-.oppfor.admi .fori:nth-child(1) .dscont .oppava {
-    position: absolute;
-    top: 239px;
-    left: 248px;
-    width: 50px;
-    height: 65px;
-    overflow: hidden;
-    border-radius: 10px;
-    margin: 10px;
-    z-index: 99;
-}
-  
-.oppfor.admi .fori:nth-child(1) .dscont .oppava img {
-    object-fit: cover;
-    width: 80px;
-    margin: -7px 0 0 -7px;
-}  
-  
-.oppfor.admi .fori:nth-child(1) .dscont .typ {
-    position: absolute;
-    top: 239px;
-    left: 308px;
-    display: flex;
-    background: var(--color-1);
-    height: 65px;
-    width: 38%;
-    margin: 10px;
-    align-items: center;
-    justify-content: space-around;
-    border-radius: 0.38em;
-    flex-flow: row;
-    color: var(--color-3);
-}
-  
-.oppfor.admi .fori:nth-child(1) .dscont .typ i {
-    color: var(--color-3);
-}  
+/* =========================================
+   LAYOUTS PERSONALIZADOS
+========================================= */
 
-.oppfor.admi .fori:nth-child(1) .dscont .f-linky {
-    position: absolute;
-    top: 202px;
-    right: 0;
-    margin: 10px;
-    background: transparent;
-    width: 49%;
-    border-radius: 0.28em;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: nowrap;
-    gap: 10px;
-}
-  
-.oppfor.admi .fori:nth-child(1) .dscont .f-linky a {
-    color: var(--color-3);
-    font-weight: 800;
-    font-size: 1em;
-    padding: 5px;
-    border-radius: 5px;
-    flex: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: var(--color-5);
-}
-  
-.oppfor.admi .fori:nth-child(1) .dscont .topics,
-.oppfor.admi .fori:nth-child(1) .dscont .posts {
-    display: flex;
-    align-items: center;
-    flex-flow: row;
-    color: var(--color-3);
-}
-  
-.oppfor.admi .fori:nth-child(1) .dscont .topics p,
-.oppfor.admi .fori:nth-child(1) .dscont .posts p {
-    margin: 0 5px;
-}  
-  
-.oppfor.admi .fori:nth-child(2) {
-    grid-row: span 3;
-}
-  
-.oppfor.admi .fori:nth-child(2) .dscont .ftile {
-    position: absolute;
-    width: 45%;
-    display: flex;
-    align-items: flex-start;
-    transition: transform 400ms ease;
-    justify-content: flex-start;
+/* BIENVENIDOS */
+
+.oppfor.bien .fori:nth-child(1){
+grid-column: 1 / 3;
+grid-row: 1 / 4;
 }
 
-  
-.oppfor.admi .fori:nth-child(2) .dscont .f-img {
-    width: 45%;
-    height: 325px;
-    position: relative;
-    overflow: hidden;
-    border-radius: 10px;
-    z-index: 9;
-    box-shadow: 0 11px 10px var(--tcolor6);
+.oppfor.bien .fori:nth-child(2){
+grid-column: 3 / 5;
+grid-row: 1 / 4;
 }
-  
-   
-.oppfor.admi .fori:nth-child(2) .dscont .d-im {
-    width: 100%;
-    height: 325px;
-}
-  
-  
-.oppfor.admi .fori:nth-child(2) .dscont .oppava {
-    position: absolute;
-    top: 254px;
-    margin: 10px;
-    z-index: 9;
-    width: 50px;
-    height: 50px;
-    overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 0 0px 20px var(--tcolor6);
-}
-  
-.oppfor.admi .fori:nth-child(2) .dscont .oppava img {
-    max-width: 300px;
-    max-height: 500px;
-    object-fit: cover;
-    width: 80px;
-    margin: -7px 0 0 -7px;
-}    
-  
-.oppfor.admi .fori:nth-child(2) .dscont .descripy {
-    position: absolute;
-    top: 0;
-    right: 44px;
-    background: var(--color-5);
-    width: 43%;
-    height: 50%;
-    margin: 10px;
-    border-radius: 10px;
-    overflow: auto;
-}
-  
-.oppfor.admi .fori:nth-child(2) .dscont .descripy p{
-    color: var(--color-6);
-    font-size: 0.9em;
-    line-height: 1.5em;
-    hyphens: auto;
-    text-align: justify;
-}  
-  
-.oppfor.admi .fori:nth-child(2) .dscont .f-linky {
-    display: flex;
-    position: absolute;
-    top: 50px;
-    width: 7%;
-    margin: 0 10px 5px 0;
-    height: -webkit-fill-available;
-    right: 0px;
-    align-items: center;
-    justify-content: space-around;
-    flex-flow: column;
-}
-  
-.oppfor.admi .fori:nth-child(2) .dscont .f-linky a {
-    font-size: 1em;
-    font-weight: 800;
-    color: var(--color-3);
-    background: var(--color-5);
-    padding: 7px;
-    border-radius: 5px;
-} 
-  
-.oppfor.admi .fori:nth-child(2) .dscont .ultima {
-    position: absolute;
-    top: 172px;
-    right: 44px;
-    background: var(--color-5);
-    margin: 10px;
-    width: 43%;
-    border-radius: 10px;
-    height: 17%;
-    overflow: hidden;
-    color: var(--color-6);
-} 
-  
-.oppfor.admi .fori:nth-child(2) .dscont .ultima .culti {
-    width: -webkit-fill-available;
-    height: -webkit-fill-available;
-    display: flex;
-    flex-wrap: wrap;
-    font-size: 0.6em;
-    align-items: center;
-    justify-content: flex-start;
-}
-  
-.oppfor.admi .fori:nth-child(2) .dscont .ultima .culti a{
-margin: 0px 5px 0 0px;
-}   
-   
-.oppfor.admi .fori:nth-child(2) .dscont .typ {
-    position: absolute;
-    top: 237px;
-    right: 44px;
-    background: var(--color-5);
-    width: 43%;
-    height: 10%;
-    margin: 10px;
-    border-radius: 10px;
-    color: var(--color-6);
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-flow: row;
-}
-  
-.oppfor.admi .fori:nth-child(2) .dscont .typ .topics, 
-.oppfor.admi .fori:nth-child(2) .dscont .typ .posts {
-    display: flex;
-    width: -webkit-fill-available;
-    height: -webkit-fill-available;
-    font-size: 0.8em;
-    align-items: center;
-    justify-content: center;
-    flex-flow: row;
-}  
-  
-.oppfor.admi .fori:nth-child(2) .dscont .typ .topics p, 
-.oppfor.admi .fori:nth-child(2) .dscont .typ .posts p  {
-    margin: 0 5px;
-}  
-   
-  
-.oppfor.admi .fori:nth-child(2) .dscont .opp-cf {
-    position: absolute;
-    top: 273px;
-    right: 44px;
-    width: 43%;
-    height: auto;
-    margin: 10px;
-    border-radius: 0.38em;
-    overflow: hidden;
-    z-index: 99;
-}
-  
-  
-.oppfor.admi .fori:nth-child(2) .dscont .opp-cf dl.icon[style*="fleido"] {
-    width: stretch;
-    height: -webkit-fill-available;
-    margin: 0 0px 0 1px;
-    display: flex;
-    align-items: center;
-}  
-  
-.oppfor.admi .fori:nth-child(3) {
-    grid-row: span 1;
-    grid-column: span 2;
-}
-  
-.oppfor.admi .fori:nth-child(3) .dscont .ftile {
-    position: absolute;
-    width: 45%;
-    height: 100%;
-    display: flex;
-    align-items: flex-start;
-    transition: transform 400ms ease;
-    z-index: 99;
-}
-  
 
-  
-.oppfor.admi .fori:nth-child(3) .dscont .f-img {
-    width: 45%;
-    height: 100px;
-    position: relative;
-    overflow: hidden;
-    border-radius: 10px;
-    z-index: 9;
-    box-shadow: 0 11px 10px var(--tcolor6);
+.oppfor.bien .fori:nth-child(3){
+grid-column: 1 / 4;
+grid-row: 4 / 7;
 }
-  
-   
-.oppfor.admi .fori:nth-child(3) .dscont .d-im {
-    width: 100%;
-    height: 100px;
-    min-width: 480px;
-    background-size: cover;
-    background-position: unset;
-    background-repeat: no-repeat;
-    transition: transform 400ms cubic-bezier(0.22, 1, 0.36, 1);
-}
-  
-.oppfor.admi .fori:nth-child(3) .dscont .f-img:hover .d-im {
-  transform: scale(1.05);
-}  
-  
-.oppfor.admi .fori:nth-child(3) .dscont .descripy {
-    position: absolute;
-    z-index: 99;
-    background: var(--color-5);
-    padding: 10px;
-    top: 0;
-    width: 25%;
-    margin: 10px;
-    right: 300px;
-    overflow: auto;
-    height: 80%;
-    border-radius: 10px;
-}
-  
-.oppfor.admi .fori:nth-child(3) .dscont .descripy p {
-    font-size: 0.9em;
-    line-height: 1.5em;
-    hyphens: auto;
-    text-align: justify;
-    color: var(--color-6);
-}  
-  
-.oppfor.admi .fori:nth-child(3) .dscont .f-linky {
-    position: absolute;
-    top: 0;
-    right: 45px;
-    height: 36%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 10px;
-    gap: 5px;
-    width: 23%;
-    flex-flow: row;
-}
-  
-.oppfor.admi .fori:nth-child(3) .dscont .opp-cf {
-    position: absolute;
-    top: 0px;
-    right: 587px;
-    width: 14.7%;
-    max-height: 40%;
-    margin: 10px;
-    border-radius: 0.38em;
-    overflow: hidden;
-    z-index: 99;
-    background: transparent;
-    display: flex;
-    align-items: flex-start;
-  } 
-  
-.oppfor.admi .fori:nth-child(3) .dscont .oppava {
-    position: absolute;
-    bottom: 0;
-    left: 420px;
-    width: 40px;
-    height: 40px;
-    overflow: hidden;
-    margin: 10px;
-    border-radius: 10px;
-    z-index: 99;
-}    
-  
-.oppfor.admi .fori:nth-child(3) .dscont .ultima {
-    position: absolute;
-    top: 45px;
-    right: 0px;
-    background: var(--color-5);
-    margin: 10px;
-    border-radius: 10px;
-    overflow: hidden;
-    height: 35%;
-    width: 27.2%;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-}  
-  
-.oppfor.admi .fori:nth-child(3) .dscont .culti {
-    width: 100%;
-    height: -webkit-fill-available;
-    color: var(--color-6);
-    font-size: 0.6em;
-    font-family: var(--cuerpo1);
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    margin: 0 10px 0 10px;
-}  
-  
-.oppfor.admi .fori:nth-child(3) .dscont .typ {
-    position: absolute;
-    top: 0px;
-    right: 45px;
-    background: var(--color-5);
-    margin: 10px;
-    width: 23%;
-    height: 36%;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-flow: row;
-}
-  
-.oppfor.admi .fori:nth-child(3) .dscont .typ .topics, 
-.oppfor.admi .fori:nth-child(3) .dscont .typ .posts {
-    flex-flow: row;
-}  
-  
-.oppfor.admi .fori:nth-child(3) .dscont .typ .topics p, 
-.oppfor.admi .fori:nth-child(3) .dscont .typ .posts p {
-    margin: 0 5px;
-    font-size: 0.8em;
-    color: var(--color-3);
-}  
-  
-.oppfor.admi .fori:nth-child(3) .opp-cf dl.icon[style*="fleido"] {
-  width: stretch;
-  }
-  
-  
-/*IMAGENES DE SUBFOROS*/ 
-.admi.fori .f-img:nth-child(1) {
-  background-image: var(--sadm);
-  }  
 
-/*SUBFOROS GENERALES*/
- 
-.numc {
-    position: absolute;
-    background: var(--color-3);
-    margin: 10px;
-    top: 0px;
-    right: 0px;
-    width: 35px;
-    height: 35px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 9px;
-    z-index: 999;
-    font-family: var(--titulos);
-    font-size: 0.7em;
+.oppfor.bien .fori:nth-child(4){
+grid-column: 4 / 5;
+grid-row: 4 / 7;
 }
- 
+
+/* PERSONAJES */
+
+.oppfor.pers .fori:nth-child(1){
+grid-column: 1;
+grid-row: span 4;
+}
+
+.oppfor.pers .fori:nth-child(2){
+grid-column: 2;
+grid-row: span 4;
+}
+
+.oppfor.pers .fori:nth-child(3){
+grid-column: 1;
+grid-row: span 6;
+}
+
+.oppfor.pers .fori:nth-child(4){
+grid-column: 2;
+grid-row: span 3;
+}
+
+.oppfor.pers .fori:nth-child(5){
+grid-column: 2;
+grid-row: span 3;
+}
+
+/* ZARPEMOS */
+
+.oppfor.zarp .fori:nth-child(1){
+grid-column: 1;
+grid-row: 1 / span 4;
+}
+
+.oppfor.zarp .fori:nth-child(2){
+grid-column: 2;
+grid-row: 1/ span 3;
+}
+
+.oppfor.zarp .fori:nth-child(3){
+grid-column: 2;
+grid-row: 4 / span 2;
+}
+
+.oppfor.zarp .fori:nth-child(4){
+grid-column: 1;
+grid-row: 5 / span 3;
+}
+
+.oppfor.zarp .fori:nth-child(5){
+grid-column: 2;
+grid-row: 6 / span 2;
+}
+
+/* ADMINISTRACION */
+
+.oppfor.admi .fori:nth-child(1),
+.oppfor.admi .fori:nth-child(2){
+grid-row: span 3;
+}
+
+.oppfor.admi .fori:nth-child(3){
+grid-row: span 1;
+grid-column: span 2;
+}
   
+/*TITULOS DE SUBFOROS*/  
 .ftile {
     z-index: 99;
-    position: absolute;
-    width: 40%;
-    height: 100%;
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
@@ -1112,135 +432,21 @@ margin: 0px 5px 0 0px;
   
 .dscont:hover .ftile a {
     transform: translateY(-3px);
-}
-  
-.f-img {
-    position: relative;
-    top: 0;
-    width: 40%;
-    height: 303px;
-    object-fit: cover;
-    overflow: hidden;
-    border-radius: 10px;
-     z-index: 9;
-    box-shadow: 0 11px 10px var(--tcolor6);
-
 }  
   
-.dscont .f-img::after,
-.dscont .f-img::after  {
-    background: var(--tcolor6);
-    content: "";
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-}  
-  
-.d-im {
-    width: 211px;
-    height: 303px;
-    background-size: cover;
-    background-position: unset;
-    background-repeat: no-repeat;
-    transition: transform 400ms cubic-bezier(0.22, 1, 0.36, 1);
-}  
-  
-.dscont:hover .d-im {
-  transform: scale(1.05);
-}  
-  
-.descripy {
-    position: absolute;
-    top: 0;
-    right: 44px;
-    width: 48%;
-    margin: 10px;
-    background: var(--color-5);
-    padding: 10px;
-    border-radius: 10px;
-    overflow: auto;
-    height: 45%;
-}
-  
+/*DESCRIPCIÓN GENERAL*/
 .descripy p {
-    font-size: 0.9em;
+    margin: 0;
+    line-height: 1.5em;
+    font-size: 1em;
     hyphens: auto;
     text-align: justify;
-    color: var(--color-6);
-    line-height: 1.5em;
-} 
-  
-
-  
-.oppava {
-    position: absolute;
-    bottom: 0;
-    width: 50px;
-    height: 50px;
-    overflow: hidden;
-    margin: 10px;
-    border-radius: 10px;
-  z-index: 99;
+    font-family: var(--cuerpo1);
+    font-weight: 400;
 }
   
-.f-linky {
-    position: absolute;
-    right: 44px;
-    top: 146px;
-    width: 48%;
-    display: flex;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    margin: 10px;
-    align-items: stretch;
-    gap: 10px;
-}
-  
-.f-linky a {
-    font-size: 1em;
-    font-weight: 800;
-    color: var(--color-3);
-    background: var(--color-5);
-    padding: 7px;
-    border-radius: 5px;
-    flex: 1 1 calc(0% - 0px);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-  
-.f-linky a:hover {
-  transform: scale(1.1);
-  opacity: 0.8;
-}  
-  
-.opp-cf {
-    position: absolute;
-    top: 45px;
-    right: 0;
-    width: 6.5%;
-    max-height: 40%;
-    margin: 10px;
-    border-radius: 0.38em;
-    overflow: hidden;
-    z-index: 99;
-    background: transparent;
-    display: flex;
-    align-items: flex-start;
-}
-  
-.davip {
-    width: 50px;
-    height: 50px;
-    margin: 7px 0 0 0px;
-}  
-  
-.davip img {
-    object-fit: cover;
-    width: 80px;
-    margin: -7px 0 0 -7px;
-}  
-  
+/*STATUS DE LECTURA*/   
+ 
 .opp-cf dl.icon[style*="cleido"] {
     width: stretch;
     height: stretch;
@@ -1297,23 +503,25 @@ margin: 0px 5px 0 0px;
     margin: 0;
     display: flex;
     align-items: center;
+    gap: 10px;
 }
   
-.opp-cf dl.icon[style*="fleido"]::before,
-.opp-cf dl.icon[style*="fleido"]::before {
+.opp-cf dl.icon[style*="fleido"]::before, .opp-cf dl.icon[style*="fleido"]::before {
     content: '\f00c';
     font-family: 'Font Awesome 7 Free';
     font-weight: 900;
     font-size: 0.7em;
     color: var(--color-3);
     background: var(--color-1);
-    height: 35px;
+    width: 35px;
+    height: 30px;
     padding: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 5px;
-    outline: 1px solid var(--color-3);
+    border: 1px solid var(--tcolor3);
+    margin: 0 0 0 1px;
 }
   
 .opp-cf dl.icon[style*="fleido"]::after,
@@ -1325,94 +533,58 @@ margin: 0px 5px 0 0px;
     color: var(--color-3);
     background: var(--color-1);
     width: 100%;
-    height: 35px;
+    height: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 5px;
-    outline: 1px solid var(--color-3);
-    margin: 0px 1px 0 10px;
+    border: 1px solid var(--tcolor3);
     padding: 1px 10px 0px 10px;
     line-height: 1em;
-} 
-  
-.typ {
-    position: absolute;
-    top: 175px;
-    right: 0;
-    background: var(--color-5);
-    margin: 10px;
-    width: 6.5%;
-    height: 36%;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-flow: column;
-}
-  
-.topics, .posts {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-flow: column;
-    margin: 10px;
-    hyphens: auto;
-} 
-  
-.topics p, .posts p{
-    margin: 0;
-    font-size: 0.8em;
-    color: var(--color-3);
-}  
-  
-.topics dfn, .posts dfn {
-    font-size: 0.7em;
-    color: var(--color-3);
-}  
-  
-.ultima {
-    position: absolute;
-    top: 230px;
-    right: 44px;
-    background: var(--color-5);
-    margin: 10px;
-    border-radius: 10px;
-    overflow: hidden;
-    height: 17.5%;
-    width: 48%;
-}
-  
-.culti {
-    width: 100%;
-    height: -webkit-fill-available;
-    margin: 10px;
-    color: var(--color-6);
-    font-size: 0.6em;
-    font-family: var(--cuerpo1);
-    display: flex;
-    align-items: center;
-}
-  
-.culti a:nth-child(1) {
-    margin: 0 7px 0 0px;
-}  
-  
-.culti p {
-    display: flex;
-    flex-flow: row-reverse;
-    align-items: center;
-    justify-content: flex-end;
-}  
-.culti p a {
-    margin: 0!important;
-}  
-    
-  
-.culti strong {
-    margin: 0 5px 0 0px;
-}  
-  
-.last-post-icon { display: none!important;}  
-.ultima p img  { display: none;}    
+}   
 </style>
+<style>
+/*01*/  
+.admi .fori:nth-child(1) { min-height: 340px;}
+.admi .fori:nth-child(1) .dscont { height: 100%; position: relative;}
+.admi .fori:nth-child(1) .dscp { display: grid; grid-template-columns: minmax(0, 1fr) 175px 60px; grid-template-rows: 170px 40px 70px 60px; gap: 10px; padding: 10px; height:100%;}
+.admi .fori:nth-child(1) .f-img { grid-column: 1 / 4; grid-row: 1; position: relative; overflow: hidden; border-radius: 10px; isolation: isolate;}
+.admi .fori:nth-child(1) .ftile { z-index: 20; display: flex; flex-flow: column; align-items: flex-start; grid-column: 1 / 2; grid-row: 1;justify-content: flex-end;}
+.admi .fori:nth-child(1) .opp-cf { z-index: 40; grid-column: 1; grid-row: 1; display: flex; height: fit-content; margin: 5px;}
+.admi .fori:nth-child(1) .ultima { grid-column: 1 / 4; grid-row: 2; display: flex; align-items: center; background: var(--color-5); border-radius: 10px; padding: 5px 10px; overflow: hidden; min-height: 40px; max-height: 40px;}
+.admi .fori:nth-child(1) .culti { width: 100%; height: 100%; display: flex; align-items: center; flex-wrap: wrap; gap: 10px; font-size: .7em;}
+.admi .fori:nth-child(1) .culti a { color: var(--color-3); font-weight: 700; line-height: 1.2em;}
+.admi .fori:nth-child(1) .descripy { grid-column: 1; grid-row: 3 / 5; background: var(--color-5); border-radius: 10px; padding: 15px; overflow: auto; max-height: 220px;}
+.admi .fori:nth-child(1) .f-linky { grid-column: 2 / 4; grid-row: 3; display: grid; grid-template-columns: 1fr 1fr 1fr; gap:10px; align-content: start; align-self: start;}
+.admi .fori:nth-child(1) .typ { grid-column: 2; grid-row: 4; display: flex; align-items: center; justify-content: space-around; gap: 10px; background: var(--color-5); border-radius: 10px; padding: 10px; overflow: hidden;} 
+.admi .fori:nth-child(1) .oppava { flex-shrink: 0; width: 60px; grid-column: 3; grid-row: 4; overflow: hidden; border-radius: 10px; min-height: 60px;}
+.admi .fori:nth-child(1) .posts p { margin: 0; font-size: .8em; color: var(--color-3);}
+.admi .fori:nth-child(1) dfn { font-style: normal;}
+/*02*/
+.admi .fori:nth-child(2) .dscp { display: grid; grid-template-columns: minmax(0, 1fr) 200px 35px; grid-template-rows:35px 116px 37px 103px 37px; gap: 10px; padding: 10px; height: 100%;}
+.admi .fori:nth-child(2) .f-img { grid-column: 1 / 1; grid-row: 1 / 6; position: relative; overflow: hidden; border-radius: 10px; isolation: isolate;}
+.admi .fori:nth-child(2) .f-img .d-im { width:100%; height:100%; background-size:cover; background-position:right center; background-repeat: no-repeat; transition: transform .5s cubic-bezier(.22, 1, .36, 1);}
+.admi .fori:nth-child(2) .ftile { z-index: 20; display: flex; flex-flow: column; align-items: flex-start; grid-column: 1 / 2; grid-row: 1; justify-content: flex-start;}
+.admi .fori:nth-child(2) .descripy{ grid-column: 2 / 3; grid-row: 1 / 3; position: relative; border-radius: 10px; isolation: isolate; background: var(--color-5); padding: 10px; overflow: auto;}
+.admi .fori:nth-child(2) .oppava { width: 60px; overflow: hidden; grid-column: 1 / 3; grid-row: 5 / 6; position: relative; border-radius: 10px; isolation: isolate;}
+.admi .fori:nth-child(2) .ultima { background: var(--color-5); padding: 10px; overflow: hidden; grid-column: 2 / 3; grid-row: 4 / 4; position: relative; border-radius: 10px; isolation: isolate;}
+.admi .fori:nth-child(2) .culti { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 10px; font-size:.7em;}
+.admi .fori:nth-child(2) .culti p { margin:0; display:flex; flex-flow: column; font-size: 1em;}
+.admi .fori:nth-child(2) .opp-cf { overflow: hidden; grid-column: 2 / 3; grid-row: 6 / 5; position: relative; border-radius: 10px; isolation: isolate; width: 100%;}
+.admi .fori:nth-child(2) .typ { overflow: hidden; grid-column: 2 / 3; grid-row: 3 / 3; position: relative; border-radius: 10px; isolation: isolate; width: 100%; background: var(--color-5); display: flex; align-items: center; justify-content: space-around;}
+.admi .fori:nth-child(2) .f-linky { grid-column: 3 / 3; grid-row: 2 / 6; position: relative; border-radius: 10px; isolation: isolate; overflow: auto; display: flex; align-items: center; flex-flow: column; gap: 10px; justify-content: space-around;}  
+/*03*/
+.admi .fori:nth-child(3) { max-height: 300px; }  
+.admi .fori:nth-child(3) .dscp { display: grid; grid-template-columns: minmax(0, 1fr) 148px 455px 35px; grid-template-rows: 34px 75px 100px 40px; gap: 10px; padding: 10px; height: 100%; }
+.admi .fori:nth-child(3) .f-img { grid-column: 1 / 2; grid-row: 1 / 5; position: relative; overflow: hidden; border-radius: 10px; isolation: isolate; }
+.admi .fori:nth-child(3) .ftile { grid-column: 1 / 3; grid-row: 1 / 5; position: relative; overflow: hidden; border-radius: 10px; isolation: isolate; }  
+.admi .fori:nth-child(3) .descripy { background: var(--color-5); padding: 10px; overflow: auto; line-height: 1.5em; font-size: 1em; hyphens: auto; grid-column: 2 / 4; grid-row: 1 / 3; position: relative; border-radius: 10px; isolation: isolate; }
+.admi .fori:nth-child(3) .opp-cf { grid-column: 5 / 4; grid-row: 2 / 5; position: relative; border-radius: 10px; isolation: isolate; }
+.admi .fori:nth-child(3) .oppava { grid-column: 2 / 3; grid-row: 3 / 5; position: relative; border-radius: 10px; isolation: isolate; overflow: hidden; }
+.admi .fori:nth-child(3) .opp-cf dl.icon[style*="fleido"] { flex-flow: column; }
+.admi .fori:nth-child(3) .opp-cf dl.icon[style*="fleido"]::after,
+.admi .fori:nth-child(3) .opp-cf dl.icon[style*="fleido"]::after { height: 100%; writing-mode: vertical-rl; text-orientation: upright; }
+.admi .fori:nth-child(3) .ultima { grid-column: 3 / 3; grid-row: 3 / 4; position: relative; border-radius: 10px; isolation: isolate; overflow: hidden; background: var(--color-5); padding: 10px; }
+.admi .fori:nth-child(3) .culti { height: 100%; display: flex; align-items: flex-start; flex-flow: column; }
+.admi .fori:nth-child(3) .typ { grid-column: 3 / 3; grid-row: 4 / 4; position: relative; border-radius: 10px; isolation: isolate; overflow: hidden; background: var(--color-5); display: flex; align-items: center; justify-content: space-around; }
+</style>  
