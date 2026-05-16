@@ -671,12 +671,28 @@ grid-column: span 2;
 .bien .fori:nth-child(2) .f-img { grid-column: 2 / 5; grid-row: 1 / 5; }
 .bien .fori:nth-child(2) .fori .d-im  { background-position: center left; }
 .bien .fori:nth-child(2) .descripy { grid-column: 1 / 2; grid-row: 3 / 2; }  
-.bien .fori:nth-child(2) .f-linky { grid-column: 2 / 2; grid-row: 2 / 2; z-index: 9; opacity: 0;  transition: opacity 300ms ease;}
+.bien .fori:nth-child(2) .f-linky { grid-column: 2 / 5; grid-row: 2 / 2;  z-index: 9; opacity: 0; transition: opacity 300ms ease; display: grid; margin: 10px; align-items: center; grid-template-columns: minmax(0, 1fr) 115px; grid-template-rows: 46px 49px; }
+.bien .fori:nth-child(2) .f-linky .ppli { margin: 10px; }  
 .bien .fori:nth-child(2) .dscp:hover .f-linky { opacity: 1; z-index: 99;}  
-.bien .fori:nth-child(2) .opp-cf { grid-column: 4 / 4; grid-row: 2 / 2; z-index: 9; }
+.bien .fori:nth-child(2) .opp-cf { grid-column: 2 / 2; grid-row: 3 / 5; z-index: 9; display: flex; align-items: end; }
 .bien .fori:nth-child(2) .typ { grid-column: 1 / 1; grid-row: 3 / 3; z-index: 9; }  
 .bien .fori:nth-child(2) .ultima { grid-column: 1 / 1; grid-row: 4 / 4; z-index: 9; padding: 10px; }
 .bien .fori:nth-child(2) .oppava { grid-column: 3 / 5; grid-row: 4 / 4; z-index: 9; } 
 .bien .fori:nth-child(2) .culti { padding: 0; font-size: 0.7em; } 
 .bien .fori:nth-child(2) .culti p { flex-flow: column; }  
+.bien .fori:nth-child(2) .opp-cf dl.icon[style*="fleido"] { align-items: end; margin: 0 0px 10px 10px; } 
+/*03*/
+.bien .fori:nth-child(3) .dscp { grid-template-columns: minmax(0, 1fr) 82px 300px 35px; grid-template-rows: 35px 130px 71px 102px; }
+.bien .fori:nth-child(3) .ftile { grid-column: 1 / 1; grid-row: 1 / 1; }
+.bien .fori:nth-child(3) .ftile a { margin: 0; }
+.bien .fori:nth-child(3) .f-img { grid-column: 1 / 3; grid-row: 1 / 5; }  
+.bien .fori:nth-child(3) .descripy { grid-column: 3 / 3; grid-row: 2 / 3; }  
+.bien .fori:nth-child(3) .f-linky { grid-column: 4 / 4; grid-row: 2 / 5; display: flex; flex-flow: column; justify-content: space-between; }
+.bien .fori:nth-child(3) .f-linky a { min-height: 40px; }
+.bien .fori:nth-child(3) .opp-cf { grid-column: 3 / 3; grid-row: 1 / 2; }  
+.bien .fori:nth-child(3) .typ { grid-column: 3 / 3; grid-row: 3 / 4; }  
+.bien .fori:nth-child(3) .oppava { grid-column: 2 / 2; grid-row: 4 / 4; margin: 10px 10px 10px 0; }  
+.bien .fori:nth-child(3) .ultima { grid-column: 3 / 3; grid-row: 4 / 4; }
+.bien .fori:nth-child(3) .culti { font-size: 0.85em; }  
+.bien .fori:nth-child(3) .culti p { flex-flow: column; }  
 </style>  
