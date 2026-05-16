@@ -26,20 +26,20 @@ html.loading #main-content {
 /*IMAGENES DE SUBFOROS*/
 :root {
 /*ADministración*/  
-  --sadm: url('https://images2.imgbox.com/65/f8/FoavmGrt_o.jpg');  
-  --smod: url('https://images2.imgbox.com/0a/e7/sksOUI68_o.jpg');  
-  --snar: url('https://images2.imgbox.com/93/a7/0rHPEDHB_o.jpg');  
+  --sadm: url('https://images2.imgbox.com/65/f8/FoavmGrt_o.jpg');  /*administradores*/
+  --smod: url('https://images2.imgbox.com/0a/e7/sksOUI68_o.jpg');  /*narradores*/
+  --snar: url('https://images2.imgbox.com/93/a7/0rHPEDHB_o.jpg');  /*moderadores*/
 /*Bienvenidos*/    
-  --dgui: url('https://images2.imgbox.com/9e/9d/givzMhVM_o.jpg'); 
-  --dcron: url('https://images2.imgbox.com/4b/73/lHhZOUks_o.jpg');  
-  --dnot: url('https://images2.imgbox.com/1d/c2/ic5prEC5_o.jpg');  
-  --dpre: url('https://i.pinimg.com/1200x/16/bd/24/16bd24dfd18a1af3bd035a7d3d1708a7.jpg'); 
+  --dgui: url('https://images2.imgbox.com/9e/9d/givzMhVM_o.jpg');  /*guias*/
+  --dcron: url('https://images2.imgbox.com/4b/73/lHhZOUks_o.jpg'); /*cronología*/
+  --dnot: url('https://images2.imgbox.com/1d/c2/ic5prEC5_o.jpg');  /*noticias*/
+  --dpre: url('https://images2.imgbox.com/f3/2c/vl5lv8fI_o.jpg');  /*presentaciones*/
 /*PERSONAJES*/
-  --pexp: url('https://i.pinimg.com/1200x/16/bd/24/16bd24dfd18a1af3bd035a7d3d1708a7.jpg');  
-  --phoj: url('https://i.pinimg.com/1200x/16/bd/24/16bd24dfd18a1af3bd035a7d3d1708a7.jpg');  
-  --pres: url('https://i.pinimg.com/1200x/16/bd/24/16bd24dfd18a1af3bd035a7d3d1708a7.jpg');  
-  --pcom: url('https://i.pinimg.com/1200x/16/bd/24/16bd24dfd18a1af3bd035a7d3d1708a7.jpg');  
-  --paku: url('https://i.pinimg.com/1200x/16/bd/24/16bd24dfd18a1af3bd035a7d3d1708a7.jpg');  
+  --pexp: url('https://images2.imgbox.com/b2/20/Z0kRuTdJ_o.jpg');  /*expedientes*/
+  --phoj: url('https://images2.imgbox.com/c8/59/CfAQsWkg_o.jpg');  /*hojas*/
+  --pres: url('https://images2.imgbox.com/3f/74/cBhXSWzG_o.jpg');  /*registro*/
+  --pcom: url('https://images2.imgbox.com/3e/49/V5HzSI1N_o.jpg');  /*estilos de combate*/
+  --paku: url('https://images2.imgbox.com/ec/ca/wBEjKuNC_o.jpg');  /*akuma no mi*/
 /*ZARPEMOS*/
 /*OFF ROL*/  
   --spap: url('https://i.pinimg.com/1200x/16/bd/24/16bd24dfd18a1af3bd035a7d3d1708a7.jpg');    
