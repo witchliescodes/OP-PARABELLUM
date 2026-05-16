@@ -29,12 +29,10 @@ html.loading #main-content {
   --sadm: url('https://images2.imgbox.com/65/f8/FoavmGrt_o.jpg');  
   --smod: url('https://images2.imgbox.com/0a/e7/sksOUI68_o.jpg');  
   --snar: url('https://images2.imgbox.com/93/a7/0rHPEDHB_o.jpg');  
-  --spap: url('https://i.pinimg.com/1200x/16/bd/24/16bd24dfd18a1af3bd035a7d3d1708a7.jpg');  
-/*ADministración*/    
-  --dpri: url('https://i.pinimg.com/1200x/16/bd/24/16bd24dfd18a1af3bd035a7d3d1708a7.jpg');  
-  --dgui: url('https://i.pinimg.com/1200x/16/bd/24/16bd24dfd18a1af3bd035a7d3d1708a7.jpg'); 
-  --dcron: url('https://i.pinimg.com/1200x/16/bd/24/16bd24dfd18a1af3bd035a7d3d1708a7.jpg');  
-  --dnot: url('https://i.pinimg.com/1200x/16/bd/24/16bd24dfd18a1af3bd035a7d3d1708a7.jpg');  
+/*Bienvenidos*/    
+  --dgui: url('https://images2.imgbox.com/9e/9d/givzMhVM_o.jpg'); 
+  --dcron: url('https://images2.imgbox.com/4b/73/lHhZOUks_o.jpg');  
+  --dnot: url('https://images2.imgbox.com/1d/c2/ic5prEC5_o.jpg');  
   --dpre: url('https://i.pinimg.com/1200x/16/bd/24/16bd24dfd18a1af3bd035a7d3d1708a7.jpg'); 
 /*PERSONAJES*/
   --pexp: url('https://i.pinimg.com/1200x/16/bd/24/16bd24dfd18a1af3bd035a7d3d1708a7.jpg');  
@@ -44,7 +42,7 @@ html.loading #main-content {
   --paku: url('https://i.pinimg.com/1200x/16/bd/24/16bd24dfd18a1af3bd035a7d3d1708a7.jpg');  
 /*ZARPEMOS*/
 /*OFF ROL*/  
-    --spap: url('https://i.pinimg.com/1200x/16/bd/24/16bd24dfd18a1af3bd035a7d3d1708a7.jpg');    
+  --spap: url('https://i.pinimg.com/1200x/16/bd/24/16bd24dfd18a1af3bd035a7d3d1708a7.jpg');    
 /*IMAGENES DE AFILIADOS*/
   --herman1: url('https://images2.imgbox.com/46/d2/FkWZoBND_o.png');  
   --herman2: url('https://images2.imgbox.com/46/d2/FkWZoBND_o.png');  
@@ -255,16 +253,18 @@ a:hover {
 
 
 body.claro, body.oscuro {
-    background-image: var(--fondo1);
+   background-image: var(--fondo1);
    background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center center;
-  background-size: cover;
-  min-height: 100vh;
-    display: flex; 
-    flex-flow: column;
-    align-items: center; 
-    justify-content: center;
+   background-attachment: fixed;
+   background-position: center center;
+   background-size: cover;
+   min-height: 100vh;
+   display: flex; 
+   flex-flow: column;
+   align-items: center; 
+   justify-content: center;
+   font-family: var(--cuerpo1);
+   font-size: clamp(15px, 0.9vw, 17px);
 }
 
 #wrap {
@@ -284,6 +284,7 @@ body.claro, body.oscuro {
   color: var(--color-5);
 }
 
+p {margin: 0;}
 
 /*BARRA DE NAVEGACIÓN*/
 .parahead {
