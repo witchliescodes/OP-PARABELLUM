@@ -640,9 +640,9 @@ grid-column: span 2;
 .admi .fori:nth-child(3) .descripy {  grid-column: 2 / 4; grid-row: 1 / 3; }
 .admi .fori:nth-child(3) .opp-cf { grid-column: 5 / 4; grid-row: 2 / 5; position: relative; border-radius: 10px; isolation: isolate; }
 .admi .fori:nth-child(3) .oppava { grid-column: 2 / 3; grid-row: 3 / 5; }
-.admi .fori:nth-child(3) .opp-cf dl.icon[style*="fleido"] { flex-flow: column; }
-.admi .fori:nth-child(3) .opp-cf dl.icon[style*="fleido"]::after,
-.admi .fori:nth-child(3) .opp-cf dl.icon[style*="fleido"]::after { height: 100%; writing-mode: vertical-rl; text-orientation: upright; }
+.admi .fori:nth-child(3) dl.icon { flex-flow: column; }
+.admi .fori:nth-child(3) dl.icon::after,
+.admi .fori:nth-child(3) dl.icon::after { height: 100%; writing-mode: vertical-rl; text-orientation: upright; }
 .admi .fori:nth-child(3) .ultima { grid-column: 3 / 3; grid-row: 3 / 4; }
 .admi .fori:nth-child(3) .culti { height: 100%; display: flex; align-items: flex-start; flex-flow: column; }
 .admi .fori:nth-child(3) .typ { grid-column: 3 / 3; grid-row: 4 / 4; }
@@ -656,7 +656,7 @@ grid-column: span 2;
 .bien .fori:nth-child(1) .dscp:hover .descripy { opacity: 1; }
 .bien .fori:nth-child(1) .oppava { grid-column: 1 / 2; grid-row: 4 / 6; }
 .bien .fori:nth-child(1) .opp-cf { grid-column: 1 / 3; grid-row: 3 / 3; position: relative; overflow: hidden; border-radius: 10px; isolation: isolate; height: 100%; flex-flow: column; display: flex; justify-content: flex-end; padding: 10px; }
-.bien .fori:nth-child(1) .opp-cf dl.icon[style*="fleido"] { width: -webkit-fill-available; height: 100%; margin: 0; display: flex; align-items: flex-end; gap: 10px; justify-content: flex-end; }
+.bien .fori:nth-child(1)  dl.icon { width: -webkit-fill-available; height: 100%; margin: 0; display: flex; align-items: flex-end; gap: 10px; justify-content: flex-end; }
 .bien .fori:nth-child(1) .ultima { grid-column: 2 / 3; grid-row: 4 / 4; position: }
 .bien .fori:nth-child(1) .ultima .culti { display: flex; flex-flow: column; font-size: 0.8em; gap: 0px;}
 .bien .fori:nth-child(1) .f-linky { grid-column: 3 / 4; grid-row: 2 / 6; position: relative; overflow: hidden; isolation: isolate; display: flex; flex-flow: column; justify-content: space-between; font-size: 1em; }
@@ -678,7 +678,7 @@ grid-column: span 2;
 .bien .fori:nth-child(2) .oppava { grid-column: 3 / 5; grid-row: 4 / 4; z-index: 9; } 
 .bien .fori:nth-child(2) .culti { padding: 0; font-size: 0.7em; } 
 .bien .fori:nth-child(2) .culti p { flex-flow: column; }  
-.bien .fori:nth-child(2) .opp-cf dl.icon[style*="fleido"] { align-items: end; margin: 0 0px 10px 10px; } 
+.bien .fori:nth-child(2) dl.icon { align-items: end; margin: 0 0px 10px 10px; } 
 /*03*/
 .bien .fori:nth-child(3) .dscp { grid-template-columns: minmax(0, 1fr) 82px 300px 35px; grid-template-rows: 35px 130px 71px 102px; }
 .bien .fori:nth-child(3) .ftile { grid-column: 1 / 1; grid-row: 1 / 1; margin: 10px; }
@@ -708,16 +708,49 @@ grid-column: span 2;
 .bien .fori:nth-child(4) .culti p { flex-flow: column; gap: 0; }  
 /*PERSONAJES*/
 /*01*/  
-.pers .fori:nth-child(1) .dscp { grid-template-columns: minmax(0, 1fr) 85px 90px 60px; grid-template-rows: 33px 103px 32px 40px 45px 52px; }
-.pers .fori:nth-child(1) .ftile { grid-column: 1 / 4; grid-row: 1 / 3; }
+.pers .fori:nth-child(1) .dscp { grid-template-columns: minmax(0, 1fr) 85px 90px 60px; grid-template-rows: 32px 120px 35px 30px 40px 60px; }
+.pers .fori:nth-child(1) .ftile { grid-column: 1 / 4; grid-row: 1 / 1; }
 .pers .fori:nth-child(1) .ftile a { margin: 5px; }  
-.pers .fori:nth-child(1) .f-img { grid-column: 1 / 5; grid-row: 1 / 3; }  
-.pers .fori:nth-child(1) .descripy { opacity: 0; transition: all 300ms; grid-column: 1 / 5; grid-row: 2 / 3; z-index: 99; margin: 10px; }  
+.pers .fori:nth-child(1) .f-img { grid-column: 1 / 5; grid-row: 1 / 3; }
+.pers .fori:nth-child(1) .descripy { opacity: 0; transition: all 300ms; grid-column: 1 / 5; grid-row: 2 / 2; z-index: 99; margin: 10px; } 
 .pers .fori:nth-child(1) .dscp:hover .descripy {  opacity: 1; }
-.pers .fori:nth-child(1) .f-linky { grid-column: 1 / 5; grid-row: 4 / 5; display: flex; justify-content: space-between; }  
-.pers .fori:nth-child(1) .opp-cf { grid-column: 1 / 5; grid-row: 3 / 3; }  
+.pers .fori:nth-child(1) .f-linky { grid-column: 1 / 5; grid-row: 4 / 4; display: flex; justify-content: space-between; }
+.pers .fori:nth-child(1) .opp-cf { grid-column: 1 / 5; grid-row: 3 / 3; }
 .pers .fori:nth-child(1) .typ { grid-column: 1 / 5; grid-row: 5 / 5; }
-.pers .fori:nth-child(1) .oppava { grid-column: 4 / 5; grid-row: 6 / 6; }  
-.pers .fori:nth-child(1) .ultima { grid-column: 1 / 4; grid-row: 6 / 6; }  
-
+.pers .fori:nth-child(1) .oppava { grid-column: 4 / 4; grid-row: 6 / 6; }  
+.pers .fori:nth-child(1) .ultima { grid-column: 1 / 4; grid-row: 6 / 6; }
+.pers .fori:nth-child(1) .culti { font-size: 0.6em; }  
+/*02*/  
+.pers .fori:nth-child(2) .dscp { grid-template-columns: minmax(0, 1fr) 250px 115px 200px 36px; grid-template-rows: 35px 125px 50px 49px 69px; }  
+.pers .fori:nth-child(2) .ftile { grid-column: 1 / 3; grid-row: 1 / 1; }
+.pers .fori:nth-child(2) .ftile a { margin: 0; }  
+.pers .fori:nth-child(2) .f-img { grid-column: 3 / 6; grid-row: 1 / 6; }  
+.pers .fori:nth-child(2) .descripy { grid-column: 1 / 3; grid-row: 2 / 3; }  
+.pers .fori:nth-child(2) .f-linky { grid-column: 1 / 3; grid-row: 3 / 3; display: flex; align-items: center; justify-content: space-between; }  
+.pers .fori:nth-child(2) .f-linky a { min-width: 40px; font-size: 1em; }
+.pers .fori:nth-child(2) .opp-cf { grid-column: 3 / 6; grid-row: 5 / 6; z-index: 99; margin: 10px; display: flex; align-items: flex-end; }
+.pers .fori:nth-child(2) dl.icon { height: fit-content; }  
+.pers .fori:nth-child(2) .typ { grid-column: 1 / 3; grid-row: 4 / 4; }  
+.pers .fori:nth-child(2) .oppava { grid-column: 1 / 2; grid-row: 5 / 6; }  
+.pers .fori:nth-child(2) .ultima { grid-column: 2 / 2; grid-row: 5 / 5; }  
+.pers .fori:nth-child(2) .culti { font-size: 0.7em; }  
+/*03, 04 y 05*/
+.pers .fori:nth-child(3) .dscp,
+.pers .fori:nth-child(4) .dscp,
+.pers .fori:nth-child(5) .dscp  { grid-template-columns: minmax(0, 1fr) 210px 36px; grid-template-rows: 34px 130px 70px 46px 47px; }    
+.pers .fori:nth-child(3) .ftile,
+.pers .fori:nth-child(4) .ftile, 
+.pers .fori:nth-child(5) .ftile { grid-column: 1 / 3; grid-row: 2 / 2; display: flex; align-items: flex-start; justify-content: flex-end; }
+.pers .fori:nth-child(3) .ftile a,
+.pers .fori:nth-child(4) .ftile a, 
+.pers .fori:nth-child(5) .ftile a { margin: 10px; }
+.pers .fori:nth-child(3) .f-img,
+.pers .fori:nth-child(4) .f-img,
+.pers .fori:nth-child(5) .f-img { grid-column: 1 / 4; grid-row: 1 / 3; }  
+.pers .fori:nth-child(3) .d-im,
+.pers .fori:nth-child(4) .d-im,
+.pers .fori:nth-child(5) .d-im { background-position: center; }  
+.pers .fori:nth-child(3) .opp-cf,
+.pers .fori:nth-child(4) .opp-cf,
+.pers .fori:nth-child(5) .opp-cf { grid-column: 1 / 3; grid-row: 1 / 1; z-index: 99; }  
 </style>  
