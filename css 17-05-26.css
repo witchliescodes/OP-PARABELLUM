@@ -1683,6 +1683,23 @@ ol, ul {
 }
 /*FIN MODAL CREDITOS*/
 
+/*PATH NAVEGACION*/
+.pathname-box{
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: opacity .3s ease, transform .3s ease,visibility .3s ease;
+  pointer-events: none;
+}
+
+.parahead.nav-fixed .pathname-box{
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+/*FIN PATH NAVEGACION*/
+
 /*RESPONSIVE*/
 
 @media (max-width:1400px){
