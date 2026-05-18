@@ -41,13 +41,15 @@ html.loading #main-content {
   --pcom: url('https://images2.imgbox.com/3e/49/V5HzSI1N_o.jpg');  /*estilos de combate*/
   --paku: url('https://images2.imgbox.com/ec/ca/wBEjKuNC_o.jpg');  /*akuma no mi*/
 /*ZARPEMOS*/
-  --ztri: url('https://images2.imgbox.com/be/24/jsQ5PMSg_o.jpg');
-  --zmer: url('https://images2.imgbox.com/c4/d4/wnQFv1Bs_o.jpg');
-  --znpc: url('https://images2.imgbox.com/5c/a1/lW9MDmDN_o.jpg');
-  --zwan: url('https://images2.imgbox.com/c9/ae/35a4CZT4_o.jpg');
-  --zbus: url('https://images2.imgbox.com/35/51/QdmkebTc_o.jpg');
+  --ztri: url('https://images2.imgbox.com/be/24/jsQ5PMSg_o.jpg'); /*tripulaciones*/
+  --zmer: url('https://images2.imgbox.com/c4/d4/wnQFv1Bs_o.jpg'); /*mercados*/
+  --znpc: url('https://images2.imgbox.com/5c/a1/lW9MDmDN_o.jpg'); /*fichas npc*/
+  --zwan: url('https://images2.imgbox.com/c9/ae/35a4CZT4_o.jpg'); /*wanted*/
+  --zbus: url('https://images2.imgbox.com/35/51/QdmkebTc_o.jpg'); /*busquedas*/
 /*OFF ROL*/  
-  --spap: url('https://i.pinimg.com/1200x/16/bd/24/16bd24dfd18a1af3bd035a7d3d1708a7.jpg');    
+  --ooff: url('');
+  --oafi: url('');
+  --opap: url('https://i.pinimg.com/1200x/16/bd/24/16bd24dfd18a1af3bd035a7d3d1708a7.jpg');    
 /*IMAGENES DE AFILIADOS*/
   --herman1: url('https://images2.imgbox.com/46/d2/FkWZoBND_o.png');  
   --herman2: url('https://images2.imgbox.com/46/d2/FkWZoBND_o.png');  
