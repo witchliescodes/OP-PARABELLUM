@@ -91,13 +91,13 @@
       <div class="tiest">
         <h1>Estados <i class="fi fi-rr-badge-check"></i></h1>
       <div class="stop">
-        <p>Mensajes {TOTAL_POSTS}</p>
-        <p>Usuarios {TOTAL_USERS}</p>
+        <p>Mensajes <dfn>{TOTAL_POSTS}</dfn></p>
+        <p>Usuarios <dfn>{TOTAL_USERS}</dfn></p>
       </div>
       </div>
       <div class="backstas">
         <div class="stalinky">
-          links
+          <h1><i class="fi fi-rr-user-link"></i> links</h1>
         </div>
 <div class="opbinsa">
   <div class="instas">
@@ -197,7 +197,7 @@
     content: "";
     position: absolute;
     top: calc(100% - 9%);
-    right: calc(100% - 64.5%);
+    right: calc(100% - 66.5%);
     width: 20px;
     height: 20px;
     background: transparent;
@@ -208,7 +208,7 @@
 
 .fopb-est h1 {
     font-family: var(--titulos);
-    margin: 0 2vw 11vh 0vw;
+    margin: 0 10vw 11vh 0vw;
     font-size: 2.5em;
     text-transform: uppercase;
     color: var(--color-3);
@@ -431,8 +431,23 @@
     padding: 5px 10px;
     color: var(--color-5);
     min-width: 155px;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: var(--cuerpo1);
 }
-
+  
+.stop p dfn  {
+    font-size: 0;
+    display: flex;
+    align-items: center;
+}  
+  
+.stop p dfn strong {
+    font-size: 12px;
+} 
+  
 .backstas {
     width: -webkit-fill-available;
     height: -webkit-fill-available;
@@ -446,25 +461,44 @@
     width: -webkit-fill-available;
     display: flex;
     align-items: center;
-    justidfy-content: space-between;
+    justify-content: space-between;
     background: var(--color-1);
     border-radius: 10px;
     padding: 10px;
     font-size: 1.2em;
 }
+  
+.stalinky h1 {
+    margin: 0;
+    color: var(--color-3);
+    font-family: var(--titulos);
+    font-size: 1em;
+    display: flex;
+    gap: 10px;
+    width: stretch;
+} 
+  
+.est-links {
+    display: flex;
+    width: -webkit-fill-available;
+    gap: 10px;
+    justify-content: flex-end;
+}  
 
 .opbinsa {
-    width: -webkit-fill-available;
+    width: stretch;
     height: -webkit-fill-available;
-    display: flex;
+    display: grid;
     align-items: center;
+    grid-template-columns: repeat(1, minmax(150px, 1fr));
+    gap: 10px;
 }
 
 .instas {
     width: auto;
     height: -webkit-fill-available;
     background: var(--color-1);
-    margin: 10px 10px 0 0;
+    margin: 10px 0px 0 0;
     border-radius: 5px;
     display: flex;
     flex-flow: column;
@@ -483,492 +517,267 @@
 }
 
 .instas h1 {
-    font-size: 1.5em;
+    font-size: 1em;
     margin: 0;
     line-height: 1.5em;
     font-weight: 800;
     font-family: var(--titulos);
     color: var(--color-3);
 }
+  
+.newestext {
+    font-size: 0px;
+}
+  
+.newestext strong {
+    font-size: 21px;
+    font-family: var(--titulos);
+}  
 
 #avaulti {
-    max-width: 300px;
-    width: 150px;
-    height: 150px;
-    background: var(--color-2);
     margin: 10px 0 0 0;
     overflow: hidden;
     border-radius: 0.38rem;
+    grid-column: 2 / 2;
+    width: fit-content;
+    height: fit-content;
 }
   
 #avaulti img {
     max-width: 300px;
     max-height: 500px;
     object-fit: cover;
-    width: 78px;
     height: 150px;
-}  
+}
+  
 /* =====================================
    RESPONSIVE ESTADÍSTICAS
 ===================================== */
 
-/* =====================================
-   LAPTOP
-===================================== */
-
 @media (max-width: 1200px){
-
   .op-est{
-
-    grid-template-columns:
-    1fr 1fr;
-
+    grid-template-columns: 1fr 1fr;
     grid-template-rows:auto;
-
     height:auto;
-
   }
-
   .fopb-est{
-
     grid-column:1 / 3;
-
     max-width:none;
-
     min-height:220px;
-
     flex-wrap:wrap;
-
     padding:10px;
-
   }
-
   .fopb-est h1{
-
-    font-size:clamp(
-      2rem,
-      4vw,
-      2.5rem
-    );
-
-    margin:0 2vw 4vh 0;
-
+    font-size:clamp(2rem, 4vw, 2.5rem);
+    margin: 0 2vw 4vh 0;
   }
-
   .sopb-est{
-
     grid-column:1 / 2;
-
     grid-row:auto;
-
     margin:0 0 10px 10px;
-
   }
-
   .op-barsta{
-
     grid-column:2 / 3;
-
     grid-row:auto;
-
     height:auto;
-
   }
-
 }
-
-/* =====================================
-   TABLET
-===================================== */
-
 @media (max-width: 1024px){
-
   .op-est{
-
     display:flex;
-
     flex-direction:column;
-
     gap:14px;
-
     height:auto;
-
   }
-
   /* HEADER */
-
   .fopb-est{
-
     width:auto;
-
     min-height:220px;
-
     margin:10px;
-
     flex-direction:column;
-
     justify-content:space-between;
-
     align-items:flex-end;
-
     overflow:hidden;
-
   }
-
   .fopb-est h1{
-
     margin:20px;
-
     text-align:right;
-
   }
 
   .opbsta{
-
     width:100%;
-
     flex-wrap:wrap;
-
     justify-content:flex-start;
-
     gap:10px;
-
   }
-
   .opbsta p{
-
     margin:0;
-
   }
-
   /* MAIN BLOCK */
-
   .sopb-est{
-
     width:auto;
-
     margin:0 10px;
-
     grid-template-columns:1fr;
-
     grid-template-rows:auto;
-
     gap:14px;
-
   }
-
   .op-aest,
   .op-grups,
   .op-nest{
-
     grid-column:auto;
-
     grid-row:auto;
-
   }
-
   .op-aest::before{
-
     display:none;
-
   }
-
   .contec{
-
     width:120px;
-
     height:120px;
-
     border-radius:20px;
-
     float:none;
-
     margin:0 auto 14px;
-
   }
-
   .concuaoch{
-
     width:auto;
-
     margin:0 0 14px 0;
-
   }
-
   .congroup{
-
     width:100%;
-
     height:auto;
-
     border-radius:10px;
-
     flex-direction:row;
-
     padding:10px;
-
   }
-
   .congroup p{
-
     transform:none;
-
     margin:0;
-
   }
-
   .congroup i{
-
     margin:0;
-
   }
-
   /* SIDEBAR */
-
   .op-barsta{
-
     width:auto;
-
     height:auto;
-
     margin:0 10px 10px;
-
     padding:0;
-
   }
-
   .op-bariner::before{
-
     display:none;
-
   }
-
   .stop{
-
     flex-wrap:wrap;
-
     gap:10px;
-
   }
-
   .stop p{
-
     min-width:0;
-
     flex:1;
-
   }
-
 }
 
-/* =====================================
-   MOBILE
-===================================== */
 
 @media (max-width: 768px){
-
   .op-est{
-
     padding:10px;
-
   }
-
   /* HEADER */
-
   .fopb-est{
-
-    min-height:260px;
-
+    min-height: 260px;
     background-position:center;
-
     background-size:cover;
-
     align-items:center;
-
   }
-
   .fopb-est h1{
-
-    font-size:clamp(
-      1.8rem,
-      8vw,
-      2.5rem
-    );
-
-    text-align:center;
-
-    margin:20px 0;
-
+    font-size:c lamp(1.8rem, 8vw, 2.5rem);
+    text-align: center;
+    margin: 20px 0;
   }
-
   .fopb-est::before,
   .fopb-est::after{
-
     display:none;
-
   }
-
   .opbsta{
-
     justify-content:center;
-
   }
-
   .opbsta p{
-
     min-width:100px;
-
     font-size:0.8rem;
-
   }
-
   /* MAIN */
-
   .sopb-est{
-
     margin:0;
-
     padding:10px;
-
   }
-
   .contec{
-
     width:100px;
-
     height:100px;
-
     font-size:0.7rem;
-
   }
-
   .concuaoch{
-
     font-size:0.8rem;
-
   }
-
   /* GROUPS */
-
   .congroup{
-
     justify-content:center;
-
     gap:10px;
-
   }
-
   /* SIDEBAR */
-
   .op-barsta{
-
     margin:0;
-
   }
-
   .tiest h1{
-
     font-size:1.2rem;
-
   }
-
   .stalinky{
-
     flex-wrap:wrap;
-
     gap:10px;
-
     justify-content:center;
-
   }
-
   .opbinsa{
-
     flex-direction:column;
-
     gap:10px;
-
   }
-
   .instas{
-
     width:100%;
-
     margin:0;
-
   }
-
   #avaulti{
-
     width:100%;
-
     max-width:none;
-
     height:220px;
-
   }
-
   #avaulti img{
-
     width:100%;
-
     height:100%;
-
   }
-
 }
 
-/* =====================================
-   MOBILE PEQUEÑO
-===================================== */
 
 @media (max-width: 480px){
-
   .fopb-est{
-
     min-height:220px;
-
   }
-
   .fopb-est h1{
-
     font-size:1.6rem;
-
   }
 
   .opbsta{
-
     flex-direction:column;
-
     align-items:stretch;
-
   }
 
   .opbsta p{
-
     width:100%;
-
   }
-
   .contec{
-
     width:90px;
-
     height:90px;
-
   }
-
   .tiest h1{
-
     font-size:1rem;
-
   }
-
   .stop{
-
     flex-direction:column;
-
   }
-
 }  
 </style>
