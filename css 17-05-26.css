@@ -343,7 +343,7 @@ p {margin: 0;}
     left: 50%;
     transform: translateX(-50%);
     width: 99%;
-    max-width: 100%;
+    max-width: 1200px;
     z-index: 999;
     box-shadow: 0px 0px 33px var(--tcolor3);
     backdrop-filter: blur(16px);
@@ -1685,18 +1685,30 @@ ol, ul {
 
 /*PATH NAVEGACION*/
 .pathname-box{
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(-10px);
-  transition: opacity .3s ease, transform .3s ease,visibility .3s ease;
-  pointer-events: none;
+    position: fixed;
+    top: 78px;
+    left: 50%;
+    transform:translateX(-50%) translateY(-10px);
+    width: 99%;
+    max-width: 1200px;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    z-index: 998;
+    padding: 10px 20px;
+    border-radius: 10px;
+    backdrop-filter: blur(16px);
+    background: var(--tcolor3);
+    box-shadow: 0px 0px 20px var(--tcolor3);
+    transition: opacity .3s ease, transform .3s ease, visibility .3s ease;
+    margin: 0;
 }
 
-.parahead.nav-fixed .pathname-box{
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-  pointer-events: auto;
+.pathname-box.path-visible{
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateX(-50%) translateY(0);
 }
 /*FIN PATH NAVEGACION*/
 
