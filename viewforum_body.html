@@ -50,20 +50,29 @@
 
 {TOPICS_LIST_BOX}
 
-<div class="topic-actions">
-	<!-- BEGIN switch_user_authpost -->
-	<div class="buttons">
-		<div class="post-icon"><a href="{U_POST_NEW_TOPIC}" accesskey="n" rel="nofollow"><img src="{POST_IMG}" class="{POST_IMG_ID}" alt="{L_POST_NEW_TOPIC}" /></a></div>
-	</div>
-	<!-- END switch_user_authpost -->
 
-	<div class="pagination">
-		{PAGINATION}<br />
-		<a href="{U_MARK_READ}">{L_MARK_TOPICS_READ}</a>&nbsp;&bull;&nbsp;{S_WATCH_FORUM}&nbsp;&bull;&nbsp;<a href="#top">{L_BACK_TO_TOP}</a><br /><br />
-	</div>
+<div class="forumb">
+<div class="n-s">  
+  <div class="n-tem">
+    	<!-- BEGIN switch_user_authpost -->
+    <a href="{U_POST_NEW_TOPIC}" accesskey="n" rel="nofollow"><i class="fi fi-rr-edit-alt"></i> Nuevo tema</a>
+  	<!-- END switch_user_authpost -->
+  </div>
+  
+azszasdasd
 </div>
-
-<div class="clear"></div>
+  
+  
+<div class="mrpgt">  
+  <div class="mark-l">
+  <a href="{U_MARK_READ}">Marcar todo como leido</a>
+  </div>
+  <div class="pgt">
+  {PAGINATION}
+  </div>
+</div>  
+  
+</div>
 
 <div class="action-box">
 	<!-- BEGIN switch_sort_options -->
@@ -92,12 +101,8 @@
 {LOGGED_IN_USER_LIST}
 
 <div id="info_open" style="display:block;clear:both">
-<div class="h3">{L_MODERATOR}</div>
-<p>{MODERATORS}</p>
-
 <div class="h3">{L_TABS_PERMISSIONS}</div>
 <p>{S_AUTH_LIST}</p>
-
 </div>
 
 <style>
