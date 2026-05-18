@@ -1682,11 +1682,14 @@ font-size: clamp(3rem,6vw,6rem);
 .sinscroll {
       margin: 10px 9px 0 0px!important;
   }
+  .c-pas1 {
+    overflow: auto;
+  }
 }
 
 @media (max-width: 1200px) {
 .c-pas1 {
-    max-height: 298px;
+    max-height: 360px;
   }
 }
 
