@@ -94,7 +94,10 @@
 </form>
 </div>
 
-{LOGGED_IN_USER_LIST}
+<div class="vusnav">
+<h4>Navegando ahora en este subforo</h4>  
+<p>{LOGGED_IN_USER_LIST}</p>
+</div>
 
 <div id="info_open" style="display:block;clear:both">
 <div class="h3">{L_TABS_PERMISSIONS}</div>
@@ -224,12 +227,12 @@
     border-radius: 0.18em;
 } 
   
-.action-box  {
+.action-box {
     text-align: right;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: var(--color-5);
+    background: var(--color-1);
     border-radius: 0.38em;
     padding: 10px;
     color: var(--color-6);
@@ -245,4 +248,108 @@
     align-items: center;
     text-transform: uppercase;
 }
+  
+#sort-box fieldset p {
+    color: var(--color-3);
+    font-weight: 900;
+    font-family: var(--titulos);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}  
+  
+#sort-box fieldset select{
+    font-family: var(--cuerpo1);
+    font-weight: 400;
+    cursor: pointer;
+    vertical-align: middle;
+    border: none;
+    background-color: var(--color-1);
+    padding: 10px;
+    border-radius: 0.18em;
+}  
+  
+.action-box fieldset.vf_jumpbox {
+    text-align: right;
+    height: auto;
+    min-height: 2.5em;
+    display: flex;
+    align-items: center;
+    background: var(--color-5);
+    padding: 10px;
+    gap: 10px;
+    font-size: 0.7em;
+    text-transform: uppercase;
+}  
+  
+.action-box fieldset.vf_jumpbox p {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--color-3);
+    font-family: var(--titulos);
+}  
+  
+.action-box fieldset.vf_jumpbox select {
+    font-family: var(--cuerpo1);
+    font-weight: 400;
+    cursor: pointer;
+    vertical-align: middle;
+    border: none;
+    padding: 10px;
+    background-color: var(--color-1);
+}  
+  
+.vusnav {
+    margin: 20px 0 0 0;
+    background: var(--color-1);
+    padding: 10px;
+    display: flex;
+    flex-flow: column;
+    gap: 10px;
+    color: var(--color-6);
+    border-radius: 0.38em;
+}  
+  
+.vusnav h4 {
+    margin: 0;
+    border-bottom: 10px solid var(--color-3);
+    padding: 0 0 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: var(--titulos);
+    color: var(--color-3);
+    opacity: 0.7;
+}  
+  
+.vusnav p {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 0px;
+    min-height: 20px;
+}  
+  
+.vusnav a {
+    font-size: 12px;
+    text-transform: uppercase;
+}  
+  
+#info_open {
+    display: block;
+    clear: both;
+    padding: 10px;
+    background: var(--color-5);
+    margin: 20px 0 0 0;
+    color: var(--color-6);
+    border-radius: 0.38em;
+}  
+  
+#info_open .h3{
+    margin: 0;
+}  
 </style>  
