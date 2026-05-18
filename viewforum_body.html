@@ -73,27 +73,25 @@
 </div>
 
 <div class="action-box">
-	<!-- BEGIN switch_sort_options -->
-	<div id="sort-box">
-		<form method="post" class="sort-form">
-			<fieldset>
-				<label>{switch_sort_options.L_SORT_BY}:&nbsp;</label>
-				<select name="sort_method">
-					{switch_sort_options.S_OPTIONS}
-				</select>&nbsp;
-				<input class="button2" type="submit" value="{switch_sort_options.L_SORT}" />
-			</fieldset>
-		</form>
-	</div>
-	<!-- END switch_sort_options -->
+<!-- BEGIN switch_sort_options -->
+<div id="sort-box">
+<form method="post" class="sort-form">
+<fieldset>
+<p><i class="fi fi-rr-sort-alt"></i> Ordenar por</p>
+<select name="sort_method">{switch_sort_options.S_OPTIONS}</select>
+<input class="button2" type="submit" value="{switch_sort_options.L_SORT}" />
+</fieldset>
+</form>
+</div>
+<!-- END switch_sort_options -->
 
-	<form action="{S_JUMPBOX_ACTION}" method="get" name="jumpbox" onsubmit="if(document.jumpbox.f.value == -1){return false;}">
-		<fieldset class="vf_jumpbox">
-			<label>{L_JUMP_TO}:&nbsp;</label>
-			{S_JUMPBOX_SELECT}&nbsp;
-			<input class="button2" type="submit" value="{L_GO}" />
-		</fieldset>
-	</form>
+<form action="{S_JUMPBOX_ACTION}" method="get" name="jumpbox" onsubmit="if(document.jumpbox.f.value == -1){return false;}">
+<fieldset class="vf_jumpbox">
+<p><i class="fi fi-rr-calendar-shift-swap"></i> Cambiar a</p>
+{S_JUMPBOX_SELECT}
+<input class="button2" type="submit" value="{L_GO}" />
+</fieldset>
+</form>
 </div>
 
 {LOGGED_IN_USER_LIST}
@@ -225,4 +223,15 @@
     color: var(--color-3);
     border-radius: 0.18em;
 } 
+  
+.action-box  {
+    text-align: right;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--color-5);
+    border-radius: 0.38em;
+    padding: 10px;
+    color: var(--color-6);
+}
 </style>  
