@@ -188,6 +188,13 @@ font-style: normal;
 src: url('https://dl.dropbox.com/scl/fi/fo3u5mp48i3s9gmh26h8s/OpenSans-VariableFont_wdth-wght.ttf?rlkey=w0lu3xqf25p5i8is1w8rbokvl&st=a4oc4sty&dl=1') format('truetype');
 }
 
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 900;
+  src: url('https://dl.dropbox.com/scl/fi/dljvvkwwk860ff7mgpdyn/poppins.black.ttf?rlkey=4nvdvluqk0sk8gmr2sj0nz2jt&st=e43g11nj&dl=1') format('truetype');
+}
+
 body::-webkit-scrollbar { background-color:var(--color-1);width:19px;height:19px; }
 body::-webkit-scrollbar-thumb { border:solid 9px var(--color-1);background-color:var(--color-3); }
 
