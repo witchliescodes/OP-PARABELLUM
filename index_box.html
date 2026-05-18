@@ -278,11 +278,11 @@ transform: translateY(-2px);
     background-position: center;
     overflow: hidden;
     margin: 0;
+    font-size: 2em;
 }
 
 .titlecate h2 p{
 margin:0;
-font-size:clamp(.8rem,1vw,1rem);
 font-family:var(--titulos);
 text-transform:uppercase;
 letter-spacing:1px;
@@ -291,18 +291,17 @@ color:var(--color-3);
 
 .titlecate h2 em{
 margin-inline-end:clamp(20px,10vw,200px);
-font-size:clamp(1.4rem,2vw,2rem);
 color:var(--color-3);
 filter:drop-shadow(0 0 2px var(--color-3));
 padding:10px;
 border-radius:10px;
 }
 
-.titlecate h2 {background-image:var(--mare)}
-.titlecate.bien h2{background-image:var(--bien)}
-.titlecate.pers h2{background-image:var(--crea)}
-.titlecate.zarp h2{background-image:var(--zarp)}
-.titlecate.admi h2{background-image:var(--admi)} 
+.titlecate h2 { background-image:var(--mare); } /*general*/
+.titlecate.bien h2{background-image:var(--bien); } /* beinvenidos*/
+.titlecate.pers h2{ background-image:var(--crea); } /*personajes*/
+.titlecate.zarp h2{ background-image:var(--zarp); } /*zarpemos*/
+.titlecate.admi h2{ background-image:var(--admi); } /*administracion*/
   
 /* GRID GENERAL */  
 
