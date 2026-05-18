@@ -32,6 +32,8 @@ html.loading #main-content {
   --ssis: url('https://images2.imgbox.com/30/00/sERn5qAo_o.jpg'); /*sistemas*/
 /*Bienvenidos*/    
   --dgui: url('https://images2.imgbox.com/9e/9d/givzMhVM_o.jpg');  /*guias*/
+  --dgii: url('https://images2.imgbox.com/2b/c3/45EhUqZc_o.jpg'); /*guias iniciales*/
+  --guia: url('https://images2.imgbox.com/35/d0/F2k2yHBF_o.jpg'); /*guias avanzadas*/
   --dcron: url('https://images2.imgbox.com/4b/73/lHhZOUks_o.jpg'); /*cronología*/
   --dnot: url('https://images2.imgbox.com/1d/c2/ic5prEC5_o.jpg');  /*noticias*/
   --dpre: url('https://images2.imgbox.com/f3/2c/vl5lv8fI_o.jpg');  /*presentaciones*/
