@@ -12,36 +12,50 @@
 						</div>
 					</div>
 				</div>
-				<div id="{ID_RIGHT}">
-					<!-- BEGIN giefmod_index2 -->
-					{giefmod_index2.MODVAR}
-					<!-- BEGIN saut -->
-					<div style="height:{SPACE_ROW}px"></div>
-					<!-- END saut -->
-					<!-- END giefmod_index2 -->
-				</div>
+			
 			</div>
 		</div>
 	</div>
 </div>
-{FOOTER_WIDGETS}
 <div id="page-footer">
-	<div class="navbar">
+	<div class="fot navbar">
 		<div class="inner">
 			<span class="corners-top"><span></span></span>
-			<ul class="linklist clearfix">
-				<li class="footer-home">
-					<a class="icon-home" href="{U_INDEX}" accesskey="h">{L_HOME}</a>
-				</li>
-				<li class="rightside">
+			<div class="wraplik">
+				
+					<a class="icon-home" href="{U_INDEX}" accesskey="h"><i class="fi fi-rr-home"></i> {L_HOME}</a>
+				
+				<div class="wrigh">
 <!-- BEGIN html_validation -->
-				</li>
-			</ul>
+                          </div>
+			</div>
 		</div>
 	</div>
 </div>
 <!-- END html_validation -->
 <style>
-responsive
-  
+.fot.navbar {
+    padding: 0;
+    margin: 0;
+}  
+.wraplik {
+    background: var(--color-1);
+    padding: 10px;
+    margin: 0 0 20px 0;
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    border-radius: 0.38em;
+    font-size: 0.8em;
+    font-family: var(--cuerpo1);
+    color: var(--color-3);
+    line-height: 1.5em;
+}
+.wraplik .icon-home {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--color-3);
+    font-weight: 900;
+}  
 </style>  
