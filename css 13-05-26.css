@@ -156,7 +156,7 @@ html.loading #main-content {
 --staff5: url('https://i.pinimg.com/736x/26/e6/12/26e612029595fab52c9b5f3775353b92.jpg'); /*Imagen 5 de staff*/
 --staff6: url('https://i.pinimg.com/1200x/73/f7/a5/73f7a5d3000cca8c9212acf5abeb3ab4.jpg'); /*Imagen 6 de staff*/  
   /*PESTAÑA2*/
---pes2: url('https://images2.imgbox.com/97/01/aIORv10q_o.png'); /*imagen pestaña 2*/
+--pes2: url('https://images2.imgbox.com/63/1b/cXPOJ3WP_o.png'); /*imagen pestaña 2*/
 --tevent: url('https://images2.imgbox.com/bb/d6/Zbtd40qr_o.png'); /*imagen evento*/  
   /*PESTAÑA3*/
 --want: url('https://images2.imgbox.com/92/4a/pYaFAHOj_o.png');   
@@ -1677,7 +1677,7 @@ height: clamp(320px,48vw,600px);
 font-size: clamp(3rem,6vw,6rem);
 }
 
-  #sinscroll {
+.sinscroll {
       margin: 10px 9px 0 0px!important;
   }
 }
