@@ -25,41 +25,33 @@
   
 
 <div class="tema {topics_list_box.row.ROW_ALT_CLASS}">
-  
+<div class="w-tem">  
 <div class="satus" style="background-image:url('{topics_list_box.row.TOPIC_FOLDER_IMG}');"></div>
-  
 <div class="topic" title="{topics_list_box.row.L_TOPIC_FOLDER_ALT}" {topics_list_box.row.ICON}>
-  
 <!-- BEGIN single_selection -->
 <input type="radio" name="{topics_list_box.FIELDNAME}" value="{topics_list_box.row.FID}" {topics_list_box.row.L_SELECT} />
 <!-- END single_selection -->
-  
 <div class="toptt">  
-  <dfn>{topics_list_box.row.TOPIC_TYPE}</dfn>
-
+<dfn>{topics_list_box.row.TOPIC_TYPE}</dfn>
 <a class="topictitle" href="{topics_list_box.row.U_VIEW_TOPIC}">
 {topics_list_box.row.TOPIC_TITLE}
 </a>
 </div>
-  
 <div class="autfe">
 <span>
 {topics_list_box.row.LAST_POST_AUTHOR}
 <dfn>{topics_list_box.row.LAST_POST_TIME}</dfn>
 </span>
 {topics_list_box.row.GOTO_PAGE_NEW}
-
 <!-- BEGIN nav_tree -->
 {topics_list_box.row.TOPIC_NAV_TREE_NEW}
 <!-- END nav_tree -->  
 </div>
 </div>
- 
 <div class="pyv">  
 <div class="posts">{topics_list_box.row.REPLIES} <dfn><i class="fi fi-rr-auto-reply"></i></dfn></div>
 <div class="views">{topics_list_box.row.VIEWS} <dfn><i class="fi fi-rr-eye"></i></dfn></div>
 </div>  
-  
 <div class="lastpost">
 <!-- BEGIN avatar -->
 <div class="avalist">{topics_list_box.row.topic.avatar.LAST_POST_AVATAR}</div>
@@ -68,6 +60,8 @@
 <!-- BEGIN multi_selection -->
 <input onclick="javascript:check_uncheck_main_{topics_list_box.row.BOX_ID}();" type="checkbox" name="{topics_list_box.FIELDNAME}[]{topics_list_box.row.BOX_ID}" value="{topics_list_box.row.FID}" {topics_list_box.row.L_SELECT} />
 <!-- END multi_selection -->
+</div>
+  
   
 <div class="descp">  
 <!-- BEGIN switch_description -->
@@ -76,7 +70,7 @@
 </div>    
 
 
-  </div>
+</div>
   
 <!-- END topic -->  
   
@@ -129,7 +123,6 @@
 .tema {
     background: var(--color-5);
     display: grid;
-    grid-template-columns: 50px minmax(200px, 2fr) 100px 80px 230px;
     align-items: center;
     gap: 10px;
     padding: 10px;
@@ -139,6 +132,14 @@
     color: var(--color-6);
 }
   
+.w-tem {
+    display: grid;
+    grid-template-columns: 60px minmax(200px, 2fr) 100px 157px;
+    border-bottom: 1px solid var(--color-3);
+    padding: 0 0 10px 0;
+    gap: 10px;
+}
+  
 .tema:hover {
     transform: translateY(-2px);
     box-shadow: 0 5px 0px var(--tcolor3);
@@ -146,9 +147,13 @@
   
 
 .topic {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: flex-start;
+    justify-content: center;
+    grid-column: 2 / 2;
+    grid-row: 1 / 1;
 }
   
 .toptt {
@@ -176,6 +181,8 @@
     justify-content: space-between;
     gap: 10px;
     width: -webkit-fill-available;
+    grid-column: 3 / 3;
+    grid-row: 1 / 1;
 }
 
 .posts, .views {
@@ -193,18 +200,17 @@
 .lastpost {
     display: flex;
     justify-content: center;
-    width: 80px;
     height: 80px;
     overflow: hidden;
     border-radius: 0.38em;
+    grid-column: 4 / 4;
+    grid-row: 1 / 1;
 }
   
 .lastpost img{
     max-width: 300px;
     max-height: 500px;
-    width: 150px;
     object-fit: cover;
-    margin: 0 0 0 15px;
 }
   
   
@@ -243,15 +249,16 @@
   
 /*Status de aviso*/    
 .satus {
-  width: 50px;
-  height: -webkit-fill-available;
-  position: relative;
-  display: grid;
-  place-items: center;
-  background: var(--color-1);
-  border-radius: 0.18em;
-  --icon-size: 30px;
-  --grad: linear-gradient(135deg, var(--color-2), var(--color-3));
+    height: -webkit-fill-available;
+    position: relative;
+    display: grid;
+    grid-column: 1 / 1;
+    grid-row: 1 / 1;
+    place-items: center;
+    background: var(--color-1);
+    border-radius: 0.18em;
+    --icon-size: 30px;
+    --grad: linear-gradient(135deg, var(--color-2), var(--color-3));
 }
 
 .satus::after {
