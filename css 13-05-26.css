@@ -1497,6 +1497,7 @@ ol, ul {
     border: 1px solid var(--color-3);
     padding: 10px;
     overflow: auto;
+    max-height: 384px;
 }
 
 .c-pas2 {
