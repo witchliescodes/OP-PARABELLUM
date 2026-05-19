@@ -1846,6 +1846,33 @@ dt label {
     cursor: text;
 }
 
+/*citacion*/
+
+blockquote {
+    padding: 5px;
+    background: var(--color-1);
+    border: 1px solid var(--tcolor3);
+    font-size: 1em;
+    margin: 10px;
+    overflow: hidden;
+    border-radius: 0.38em;
+}
+
+blockquote div {
+    margin: 20px;
+}
+
+blockquote cite {
+    font-style: normal;
+    font-weight: 700;
+    display: block;
+    font-size: 0.9em;
+    background: var(--tcolor3);
+    padding: 10px;
+    border-radius: 0.18em;
+    font-family: var(--titulos);
+}
+
 /*RESPONSIVE*/
 
 @media (max-width:1400px){
