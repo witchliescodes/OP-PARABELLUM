@@ -273,6 +273,9 @@ a:hover {
     flex-flow: column;
 }
 
+body {
+    overflow-x: clip;
+}
 
 body.claro, body.oscuro {
    background-image: var(--fondo1);
@@ -1361,8 +1364,14 @@ a:hover {
       text-decoration: none;
 }
 
+#content-container div#main {
+overflow: visible;
+  margin: 0;
+}
+
 #content-container div#left {
     display: none;
+    overflow: auto;
 }
 
 dl, ol, ul {
@@ -1694,9 +1703,10 @@ ol, ul {
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
+    font-size: 0;
     z-index: 998;
     padding: 30px 20px 10px 15px;
-    border-radius: 10px;
+    border-radius: 5px;
     backdrop-filter: blur(16px);
     background: var(--tcolor3);
     box-shadow: 0 0 20px var(--tcolor3);
@@ -1710,12 +1720,20 @@ ol, ul {
     pointer-events: auto;
     transform: translateX(-50%) translateY(0);
     display: flex;
-    gap: 10px;
+    gap: 5px;
 }
 
-.pathname-box p {
-    margin-bottom: 0;
-    font-size: 0px;
+.pathname-box a {
+    background: var(--color-5);
+    font-size: 12px;
+    padding: 5px 10px;
+    border-radius: .18em;
+    color: var(--color-3);
+}
+
+.pathname-box a span{
+    display: flex;
+    gap: 5px;
 }
 /*FIN PATH NAVEGACION*/
 
