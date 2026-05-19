@@ -81,24 +81,6 @@
 	<!-- END tablefoot -->
 <!-- END catrow -->
 
-<!-- BEGIN switch_forum_images -->
-<div class="forabg">
-	<div class="inner"><span class="corners-top"><span></span></span>
-		<ul class="topiclist">
-			<li class="header">
-				<dl class="icon">
-					<dd class="dterm"><div class="table-title"><h2>{switch_forum_images.TITLE}</h2></div></dd>
-				</dl>
-			</li>
-		</ul>
-		<div class="container-imgs-list" style="max-height: 500px" id="imageList">
-			{switch_forum_images.SCRIPTS}
-		</div>
-	</div>
-	<span class="corners-bottom"><span></span></span>
-</div>
-<!-- END switch_forum_images -->
-
 <!-- BEGIN switch_on_index -->
 <div class="est-links">
 	<a href="{U_TODAY_ACTIVE}" class="linku" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" title="Temas activos del día"><i class="fi fi-rr-comment"></i></a>
@@ -668,7 +650,7 @@ grid-column: span 2;
 .admi .fori:nth-child(2) .ultima { grid-column: 2 / 3; grid-row: 4 / 4; }
 .admi .fori:nth-child(2) .culti { width: 100%; height: 100%; display: flex; align-items: flex-start; gap: 7px; font-size: .7em; }
 .admi .fori:nth-child(2) .culti p { margin:0; display:flex; flex-flow: column; font-size: 1em;}
-.admi .fori:nth-child(2) .opp-cf { overflow: hidden; grid-column: 2 / 3; grid-row: 6 / 5; position: relative; border-radius: 10px; isolation: isolate; width: 100%;}
+.admi .fori:nth-child(2) .opp-cf { overflow: hidden; grid-column: 2 / 3; grid-row: 6 / 5; position: relative; border-radius: 10px; isolation: isolate; width: 100%; margin: 0;}
 .admi .fori:nth-child(2) .typ { grid-column: 2 / 3; grid-row: 3 / 3; }
 .admi .fori:nth-child(2) .f-linky { grid-column: 3 / 3; grid-row: 2 / 6; position: relative; border-radius: 10px; isolation: isolate; overflow: auto; display: flex; align-items: center; flex-flow: column; gap: 10px; justify-content: space-around;}  
 .admi .fori:nth-child(2) .f-linky a { min-width: 35px; min-height: 35px; }
@@ -678,7 +660,7 @@ grid-column: span 2;
 .admi .fori:nth-child(3) .f-img { grid-column: 1 / 2; grid-row: 1 / 5; }
 .admi .fori:nth-child(3) .ftile { grid-column: 1 / 3; grid-row: 1 / 5; position: relative; overflow: hidden; border-radius: 10px; isolation: isolate; }  
 .admi .fori:nth-child(3) .descripy {  grid-column: 2 / 4; grid-row: 1 / 3; }
-.admi .fori:nth-child(3) .opp-cf { grid-column: 5 / 4; grid-row: 2 / 5; position: relative; border-radius: 10px; isolation: isolate; }
+.admi .fori:nth-child(3) .opp-cf { grid-column: 5 / 4; grid-row: 2 / 5; position: relative; border-radius: 10px; isolation: isolate; margin: 0;}
 .admi .fori:nth-child(3) .oppava { grid-column: 2 / 3; grid-row: 3 / 5; }
 .admi .fori:nth-child(3) dl.icon { flex-flow: column; }
 .admi .fori:nth-child(3) dl.icon::after { height: 100%; writing-mode: vertical-rl; text-orientation: upright; }
