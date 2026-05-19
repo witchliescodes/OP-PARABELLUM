@@ -1762,6 +1762,10 @@ a.button1, input.button1, a.button2, input.button2, button.button2, .external-mo
     border-radius: 0.38em;
 }
 
+.oscuro .panel {
+    background-color: var(--color-5);
+}
+
 .panel .h3 {
     border-bottom: 10px solid var(--color-3);
     padding: 0 0 10px 0;
