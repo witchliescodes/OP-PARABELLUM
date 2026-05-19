@@ -82,7 +82,7 @@
        <p>Grupos</p>
     </div>  
      <!-- BEGIN switch_group_legend -->
-<em>{GROUP_LEGEND}</em>
+{GROUP_LEGEND}
 <!-- END switch_group_legend -->
     </div>
   </div>
@@ -330,22 +330,23 @@
     grid-row: 1 / 3;
     background: transparent;
     overflow: hidden;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 45px 1fr;
+    align-items: start;
 }
 
 .congroup {
-    width: calc(100% - 88%);
-    height: 75%;
     background: var(--color-1);
     border-bottom-right-radius: 0.38em;
     border-bottom-left-radius: 0.38em;
-    float: left;
-    margin: 0 10px 0 0px;
     color: var(--color-3);
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-direction: column;
     overflow: hidden;
+    gap: 10px;
 }
 
 .congroup p {
@@ -360,6 +361,11 @@
 .congroup i {
     margin: 21px 0 0 0;
 }
+  
+.groups-wrapper  {
+    height: 100%;
+    display: grid;
+  }
 
 .op-barsta {
     grid-column: 3 / 4;
