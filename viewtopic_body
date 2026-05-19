@@ -787,6 +787,7 @@ div.award {
     border-radius: 0.38em;
     overflow: hidden;
     gap: 10px;
+    padding: 0 0 10px 0;
 }
 .quik a[name="quickreply"] {
     display: none;
@@ -848,4 +849,14 @@ display: none;
     width: stretch !important;
     text-align: justify !important;
 }
+  
+.button2 {
+    background: var(--color-1);
+    padding: 5px 10px;
+    border-radius: 0.18em;
+    border: 1px solid var(--tcolor3);
+    font-size: 0.7em;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}  
 </style>  
