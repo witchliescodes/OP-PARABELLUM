@@ -786,12 +786,66 @@ div.award {
     margin: 15px 0 10px 0;
     border-radius: 0.38em;
     overflow: hidden;
+    gap: 10px;
 }
-.quik h3 {
+.quik a[name="quickreply"] {
+    display: none;
+}
+.quik br{
+display: none;
+}  
+  
+.quik .h3 {
     margin: 0;
-    font-size: 1.5em;
     padding: 10px;
     background: var(--tcolor3);
+    position: relative;
+    color: transparent;
+    font-size: 0px;
+    display: flex;
+    flex-flow: row-reverse;
+    justify-content: flex-end;
+    gap: 5px;
+    align-items: center;
+}
+  
+.quik .h3::before {
+    content: 'Respuesta rápida';
+    font-size: 1.5rem;
     font-family: var(--titulos);
+    color: var(--color-3);
+    display: block;
+}
+  
+.quik .h3::after {
+    content: "";
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    background: var(--color-3);
+    -webkit-mask: url(https://cdn.jsdelivr.net/gh/witchliescodes/ui-icons/icons/respuesta.svg) center / contain no-repeat;
+    mask: url(https://cdn.jsdelivr.net/gh/witchliescodes/ui-icons/icons/respuesta.svg) center / contain no-repeat;
+}
+  
+#quick_reply {
+    display: flex;
+    gap: 10px;
+    flex-flow: column;
 }  
+  
+.quik #textarea_content + div {
+    text-align: left !important;
+    margin-top: 0 !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+  
+#quick_reply #textarea_content {
+    margin: 0 10px !important;
+    clear: none !important;
+    width: stretch !important;
+    text-align: justify !important;
+}
 </style>  
