@@ -55,11 +55,6 @@
     <!-- BEGIN switch_viewonline_link -->
     <a href="{U_VIEWONLINE}"><h1>Estadisticas</h1></a>
     <!-- END switch_viewonline_link -->
-    <div class="opbsta">
-      <p>En linea</p>
-      <p>Ocultos</p>
-      <p>Invitados</p>
-    </div>
   </div>
   <div class="sopb-est">
     <div class="op-aest">
@@ -93,6 +88,11 @@
       <div class="stop">
         <p>Mensajes <dfn>{TOTAL_POSTS}</dfn></p>
         <p>Usuarios <dfn>{TOTAL_USERS}</dfn></p>
+      </div>
+      <div class="opbsta">
+      <p>En linea</p>
+      <p>Ocultos</p>
+      <p>Invitados</p>
       </div>
       </div>
       <div class="backstas">
@@ -151,17 +151,16 @@
 <style>
 .op-est {
     margin: 20px 0 0 0;
-    background: var(--color-1);
+    background: var(--color-5);
     color: var(--color-6);
     border-radius: 0.38em;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: repeat(4, 100px);
     gap: 0.75rem;
+    grid-template-columns: repeat(2, minmax(180px, 1fr));
+    grid-auto-rows: minmax(100px, auto);
     width: -webkit-fill-available;
     height: -webkit-fill-available;
-    overflow: hidden; 
-    
+    overflow: hidden;
 }
 
 .fopb-est {
@@ -190,19 +189,19 @@
     height: 20px;
     background: transparent;
     border-bottom-right-radius: 10px;
-    box-shadow: 5px 4px 0px var(--color-1);
+    box-shadow: 5px 4px 0px var(--color-5);
 }
 
 .fopb-est::after {
     content: "";
     position: absolute;
     top: calc(100% - 9%);
-    right: calc(100% - 66.5%);
+    right: calc(100% - 66.8%);
     width: 20px;
     height: 20px;
     background: transparent;
     border-bottom-right-radius: 10px;
-    box-shadow: 5px 4px 0px var(--color-1);
+    box-shadow: 5px 4px 0px var(--color-5);
     z-index: 99;
 }
 
@@ -215,27 +214,22 @@
 }
 
 .opbsta {
-    width: -webkit-fill-available;
     display: flex;
-    margin: 10px;
-    align-items: end;
     justify-content: flex-start;
-    height: -webkit-fill-available;
+    flex-flow: column;
+    gap: 10px;
 }
 
 .opbsta p {
-    margin: 0;
-    padding: 1px 10px;
-    background: var(--color-2);
+    padding: 10px;
+    background: var(--color-5);
     border-radius: 10px;
-    min-width: 121px;
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-right: 1vw;
     color: var(--color-7);
-    font-size: 0.9em;
+    font-size: 0.7em;
     line-height: 1.5em;
     font-weight: 500;
     font-family: var(--cuerpo1);
@@ -243,22 +237,21 @@
 
 .sopb-est {
     grid-column: 1 / 3;
-    grid-row: 3 / 13;
-    background: var(--color-5);
+    grid-row: 3 / 7;
+    background: var(--color-1);
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(2, 100px);
+    grid-template-rows: repeat(2, 128px);
+    grid-template-columns: repeat(1, minmax(300px, 0fr));
     gap: 0.75rem;
     margin: 0 0px 10px 10px;
     width: -webkit-fill-available;
     height: auto;
     border-radius: 0.38rem;
 }
-
+  
 .op-aest {
     grid-column: 1 / 2;
     grid-row: 1 / 3;
-    background: var(--color-5);
 }
 
 .op-aest::before {
@@ -266,18 +259,18 @@
     background: transparent;
     position: absolute;
     padding: 10px;
-    left: calc(38% - 23.9%);
+    left: calc(38% - 25.5%);
     height: 10px;
     border-top-left-radius: 0.7rem;
     display: block;
     width: 10px;
-    box-shadow: 0px -10px 0 var(--color-1);
+    box-shadow: 0px -10px 0 var(--color-5);
 }
 
 .contec {
     width: 30%;
     height: 40%;
-    background: var(--color-1);
+    background: var(--color-5);
     border-bottom-right-radius: 50%;
     display: flex;
     align-items: center;
@@ -300,12 +293,11 @@
 
 .op-nest {
     grid-column: 1 / 3;
-    grid-row: 3 / 13;
-    background: var(--color-5);
+    grid-row: 3 / 4;
 }
 
 .concuaoch {
-    background: var(--color-1);
+    background: var(--color-5);
     float: left;
     display: flex;
     padding: 5px 10px 5px 10px;
@@ -328,65 +320,109 @@
 .op-grups {
     grid-column: 2 / 3;
     grid-row: 1 / 3;
-    background: transparent;
-    overflow: hidden;
     display: grid;
-    gap: 10px;
     grid-template-columns: 45px 1fr;
-    align-items: start;
+    gap: 0px;
+    overflow: hidden;
+    min-height: 0;
 }
 
 .congroup {
-    background: var(--color-1);
-    border-bottom-right-radius: 0.38em;
-    border-bottom-left-radius: 0.38em;
-    color: var(--color-3);
     display: flex;
-    align-items: center;
-    justify-content: space-between;
     flex-direction: column;
-    overflow: hidden;
-    gap: 10px;
-}
-
-.congroup p {
-    transform: rotate(-90deg);
-    margin: 27px 0 32px 0;
-    font-size: 1em;
-    font-weight: 800;
-    font-family: var(--cuerpo1);
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border-bottom-left-radius: 0.38em;
+    background: var(--color-5);
+    border-bottom-right-radius: 0.38em;
+    color: var(--color-3);
+    font-size: 1.2em;
+    font-family: var(--titulos);
     text-transform: uppercase;
 }
 
-.congroup i {
-    margin: 21px 0 0 0;
+.congroup i{
+    font-size:18px;
 }
+
+.congroup p{
+    writing-mode:vertical-rl;
+    transform:rotate(180deg);
+    margin:0;
+    font-size:.8em;
+    font-weight:700;
+    letter-spacing:2px;
+}
+
   
 .groups-wrapper {
-    height: 100%;
-    grid-auto-rows: 1fr;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-    align-content: stretch;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+    padding: 11px;
+    align-content: start;
+    min-height: 0;
 }
   
 .rpg-group {
-    gap: 7px;
-    height: 100%;
-    min-height: 45px;
     display: flex;
     align-items: center;
-    font-size: 0.7em;
-}  
+    gap: 10px;
+    min-height: 42px;
+    padding: 6px 10px;
+    border-radius: 12px;
+    text-decoration: none !important;
+    overflow: hidden;
+    transition: .25s ease;
+    background: rgb(from var(--color-5) r g b / 0.45);
+    border: 1px solid rgb(from var(--color-2) r g b / 0.08);
+    backdrop-filter: blur(3px);
+    font-size: .7em;
+    position: relative;
+}
 
+.rpg-group:hover{
+    transform:translateY(-2px);
+    background:rgb(from var(--color-5) rgb / 0.7);
+    border-color:rgb(from var(--color-2) rgb / 0.2);
+}
+  
+.rpg-group-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    flex-shrink: 0;
+    font-size: 25px;
+    margin: 0 10px 0 0;
+}
+  
+.admin { color: #999999!important; }
+.mod {color: #00567A!important; }
+.modjr { color: #007BA8!important; }
+.narrador { color: #B88700!important; }
+.narradorjr { color: #E6A800!important; }
+.pirata { color: #D50C0C!important; }
+.gobierno { color: #BDAF03!important; }
+.civil { color: #FF75BF!important; }
+.baroque { color: #9A23D1!important; }
+.marina { color: #6AB7D2!important; }
+.armada { color: #1C9F25!important; }  
+ 
+.rpg-group-name {
+    line-height: 1.2;
+    word-break: break-word;
+    font-family: var(--cuerpo1);
+}
+  
 .op-barsta {
     grid-column: 3 / 4;
-    grid-row: 2 / 13;
+    grid-row: 2 / 7;
     width: -webkit-fill-available;
     height: -webkit-fill-available;
     margin: 0;
-    background: var(--color-1);
+    background: var(--color-5);
     padding-top: 0.75rem;
     padding-right: 0.75rem;
     padding-bottom: 0.75rem;
@@ -395,9 +431,9 @@
 }
 
 .op-bariner {
-    box-sizing: border-box;
+     box-sizing: border-box;
     border-radius: 0.3em;
-    background-color: var(--color-5);
+    background-color: var(--color-1);
     height: 100%;
     padding: 10px;
     display: flex;
@@ -413,13 +449,16 @@
     width: 0.75rem;
     top: 0rem;
     bottom: -0.75rem;
-    background: var(--color-1);
+    background: var(--color-5);
     border-top-left-radius: 0.58rem;
 }
 
 .tiest {
     width: -webkit-fill-available;
     height: -webkit-fill-available;
+    display: flex;
+    flex-flow: column;
+    gap: 10px;
 }
 
 .tiest h1 {
@@ -434,14 +473,14 @@
     flex-direction: row-reverse;
     justify-content: space-between;
 }
-
+  
 .stop {
     width: -webkit-fill-available;
     height: auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 10px 0 0 0;
+    gap: 10px;
 }
 
 .stop p {
@@ -469,7 +508,6 @@
   
 .backstas {
     width: -webkit-fill-available;
-    height: -webkit-fill-available;
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -481,7 +519,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: var(--color-1);
+    background: var(--color-5);
     border-radius: 10px;
     padding: 10px;
     font-size: 1.2em;
@@ -516,7 +554,7 @@
 .instas {
     width: auto;
     height: -webkit-fill-available;
-    background: var(--color-1);
+    background: var(--color-5);
     margin: 10px 0px 0 0;
     border-radius: 5px;
     display: flex;
