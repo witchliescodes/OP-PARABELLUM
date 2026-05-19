@@ -1805,6 +1805,11 @@ fieldset dl {
     gap: 10px;
 }
 
+.oscuro fieldset dl {
+    background: var(--tcolor6);
+}
+
+
 fieldset dt {
     float: left;
     width: auto;
