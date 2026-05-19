@@ -1754,6 +1754,20 @@ a.button1, input.button1, a.button2, input.button2, button.button2, .external-mo
     font-weight: bold;
 }
 
+.panel {
+    margin-bottom: 4px;
+    padding: 10px;
+    background-color: var(--color-1);
+    color: var(--color-6);
+    border-radius: 0.38em;
+}
+
+.panel .h3 {
+    border-bottom: 10px solid var(--color-3);
+    padding: 0 0 10px 0;
+    margin: 0 0 11px 0;
+}
+
 .panel .inner {
     color: var(--color-6);
 }
@@ -1768,6 +1782,59 @@ a.button1, input.button1, a.button2, input.button2, button.button2, .external-mo
     padding-bottom: .5em;
     font-family: var(--titulos);
     text-transform: uppercase;
+}
+
+.fld_connexion {
+    width: -webkit-fill-available;
+    display: flex;
+    flex-flow: column;
+    gap: 10px;
+}
+
+fieldset dl {
+    background: var(--tcolor5);
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    padding: 10px;
+    border-radius: 0.18em;
+    gap: 10px;
+}
+
+fieldset dt {
+    float: left;
+    width: auto;
+    text-align: left;
+    display: flex;
+    background: var(--tcolor3);
+    height: stretch;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-5);
+    border-radius: 0.18em;
+    line-height: 1.2em;
+    font-family: var(--cuerpo1);
+}
+
+fieldset dd {
+    vertical-align: top;
+    margin-bottom: 3px;
+    margin-left: 0px!important;
+}
+
+dt label {
+    font-weight: 700;
+    text-align: left;
+    font-size: 0.9em;
+    padding: 0;
+}
+
+.inputbox {
+    background-color: var(--color-1);
+    border: 1px solid var(--color-3);
+    color: var(--color-7);
+    padding: 2px;
+    cursor: text;
 }
 
 /*RESPONSIVE*/
