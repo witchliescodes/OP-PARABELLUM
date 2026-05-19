@@ -301,6 +301,8 @@ showHiddenMessage = function(id)
     display: flex;
     flex-flow: column;
     gap: 10px;
+    float: none;
+    clear: none;
 }
   
 .oppbyd  {
@@ -546,6 +548,10 @@ showHiddenMessage = function(id)
     justify-content: flex-start;
 }
   
+.oscuro .p-rang {
+    background: var(--tcolor6);
+  }
+  
 .prang-icon{
     color: var(--color-3);
     font-size: 1.5em;
@@ -688,52 +694,80 @@ div.award {
 }
   
 /*COLORES POR GRUPO*/
+.bopost.post-group-1{
+   --color-2: #999999;
+   --color-3: #999999;
+   --group-main: #999999;
+   --tcolor3: #9999993d;
+}    
+  
 .bopost.post-group-2{
-   --color-2:#737373;
-   --color-3:#737373;
-   --group-main: #737373;
-   --tcolor3: #73737352;
+   --color-2: #00567A;
+   --color-3: #00567A;
+   --group-main: #00567A;
+   --tcolor3: #00567a6e;
 }  
- 
-.bopost.post-group-3{
-   --color-2:#B23E2A;
-   --color-3:#B23E2A;
-   --group-main: #B23E2A;
-   --tcolor3: #b23e2a5c;
-}   
 
-.bopost.post-group-4{
-   --color-2:#6AB7D2;
-   --color-3:#6AB7D2;
-   --group-main: #6AB7D2;
-   --tcolor3: #6ab7d26b;
+.bopost.post-group-12{
+   --color-2: #007BA8;
+   --color-3: #007BA8;
+   --group-main: #007BA8;
+   --tcolor3: #007ba847;
+}    
+ 
+.bopost.post-group-11{
+   --color-2: #B88700;
+   --color-3: #B88700;
+   --group-main: #B88700;
+   --tcolor3: #b887006e;
+}    
+  
+.bopost.post-group-13{
+   --color-2: #E6A800;
+   --color-3: #E6A800;
+   --group-main: #E6A800;
+   --tcolor3: #e6a80047;
 }   
   
 .bopost.post-group-5{
-   --color-2:#8D22BF;
-   --color-3:#8D22BF;
-   --group-main: #8D22BF;
-   --tcolor3: #8d22bf2e;
+   --color-2:#D50C0C;
+   --color-3:#D50C0C;
+   --group-main: #D50C0C;
+   --tcolor3: #d50c0c4a;
 }   
     
 .bopost.post-group-6{
-   --color-2:#4E7A2A;
-   --color-3:#4E7A2A;
-   --group-main: #4E7A2A;
-   --tcolor3: #4e7a2a69;
+   --color-2:#6AB7D2;
+   --color-3:#6AB7D2;
+   --group-main: #6AB7D2;
+   --tcolor3: #6ab7d254;
 } 
   
 .bopost.post-group-7{
-   --color-2:#CA53BA;
-   --color-3:#CA53BA;
-   --group-main: #CA53BA;
-   --tcolor3: #ca53ba6b;
+   --color-2: #9A23D1;
+   --color-3: #9A23D1;
+   --group-main: #9A23D1;
+   --tcolor3: #9a23d147;
 } 
   
 .bopost.post-group-8{
-   --color-2:#C2AD47;
-   --color-3:#C2AD47;
-   --group-main: #C2AD47;
-   --tcolor3: #c2ad4773;
+   --color-2:#1C9F25;
+   --color-3:#1C9F25;
+   --group-main: #1C9F25;
+   --tcolor3: #1c9f254f;
 }  
+  
+.bopost.post-group-9{
+   --color-2:#BDAF03;
+   --color-3:#BDAF03;
+   --group-main: #BDAF03;
+   --tcolor3: #bdaf0359;
+}    
+  
+.bopost.post-group-10{
+   --color-2:#FF75BF;
+   --color-3:#FF75BF;
+   --group-main: #FF75BF;
+   --tcolor3: #ff75bf61;
+}    
 </style>  
