@@ -904,6 +904,25 @@ div.sceditor-group {
     justify-content: space-between;
 }  
   
+.sceditor-button {
+    -moz-background-clip: padding;
+    -moz-border-radius: 3px;
+    -webkit-background-clip: padding-box;
+    -webkit-border-radius: 3px;
+    background-clip: padding-box;
+    border-radius: 3px;
+    cursor: pointer;
+    cursor: pointer;
+    float: left;
+    height: 20px;
+    padding: 5px;
+    text-indent: -9999px;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}  
+  
 .button2 {
     background: var(--color-1);
     padding: 5px 10px;
@@ -913,4 +932,5 @@ div.sceditor-group {
     letter-spacing: 1px;
     text-transform: uppercase;
 }  
+  
 </style>  
