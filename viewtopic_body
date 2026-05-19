@@ -497,7 +497,7 @@ showHiddenMessage = function(id)
 
 .profile-p {
     position: sticky;
-    top: 95px;
+    top: 145px;
     align-self: start;
     height: fit-content;
     border-radius: 0.18em;
@@ -770,4 +770,5 @@ div.award {
    --group-main: #FF75BF;
    --tcolor3: #ff75bf61;
 }    
+  
 </style>  
