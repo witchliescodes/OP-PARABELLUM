@@ -1754,6 +1754,22 @@ a.button1, input.button1, a.button2, input.button2, button.button2, .external-mo
     font-weight: bold;
 }
 
+.panel .inner {
+    color: var(--color-6);
+}
+
+.content h1, .panel h1 {
+    color: var(--color-3);
+    border-bottom: 10px solid var(--color-3);
+    font-weight: 400;
+    font-size: 1.6em;
+    margin-top: .5em;
+    margin-bottom: .5em;
+    padding-bottom: .5em;
+    font-family: var(--titulos);
+    text-transform: uppercase;
+}
+
 /*RESPONSIVE*/
 
 @media (max-width:1400px){
