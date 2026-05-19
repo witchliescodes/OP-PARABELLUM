@@ -273,8 +273,12 @@ a:hover {
     flex-flow: column;
 }
 
+html, body {
+    overflow-x: clip!important;
+}
+
 body {
-    overflow-x: clip;
+    overflow-x: clip!important;
 }
 
 body.claro, body.oscuro {
@@ -1736,6 +1740,19 @@ ol, ul {
     gap: 5px;
 }
 /*FIN PATH NAVEGACION*/
+
+/*botones y cositas*/
+a.button1, input.button1, a.button2, input.button2, button.button2, .external-module .external-more a {
+    width: auto !important;
+    padding: 5px 10px;
+    font-family: var(--cuerpo1);
+    color: var(--color-3);
+    background-position: top;
+    border: 1px solid var(--tcolor3);
+    background: var(--color-1);
+    background-image: none;
+    font-weight: bold;
+}
 
 /*RESPONSIVE*/
 
