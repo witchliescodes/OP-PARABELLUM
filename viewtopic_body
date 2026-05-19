@@ -191,6 +191,13 @@ showHiddenMessage = function(id)
 <!-- END displayed -->
 <!-- END postrow -->
 </div>
+<!-- INICIO DESPUESTAS RAPIDAS-->
+<div class="quik">
+<!-- BEGIN switch_user_logged_in -->
+<a name="quickreply"></a>
+{QUICK_REPLY_FORM}
+<!-- END switch_user_logged_in -->
+</div>
 
 <style>
 .wrap-todo {
@@ -770,5 +777,21 @@ div.award {
    --group-main: #FF75BF;
    --tcolor3: #ff75bf61;
 }    
-  
+
+/*RESPUESTAS Y PREVISUALIZACION*/
+.quik {
+    background: var(--color-5);
+    display: flex;
+    flex-flow: column;
+    margin: 15px 0 10px 0;
+    border-radius: 0.38em;
+    overflow: hidden;
+}
+.quik h3 {
+    margin: 0;
+    font-size: 1.5em;
+    padding: 10px;
+    background: var(--tcolor3);
+    font-family: var(--titulos);
+}  
 </style>  
