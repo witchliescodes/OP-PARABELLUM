@@ -55,9 +55,9 @@ html.loading #main-content {
   --zwan: url('https://images2.imgbox.com/c9/ae/35a4CZT4_o.jpg'); /*wanted*/
   --zbus: url('https://images2.imgbox.com/35/51/QdmkebTc_o.jpg'); /*busquedas*/
 /*OFF ROL*/  
-  --ooff: url('');
-  --oafi: url('');
-  --opap: url('https://i.pinimg.com/1200x/16/bd/24/16bd24dfd18a1af3bd035a7d3d1708a7.jpg');    
+  --ooff: url('https://images2.imgbox.com/03/9b/uX4ezhgc_o.jpg'); /*offrol*/
+  --oafi: url('https://images2.imgbox.com/06/98/R5HwSuVh_o.jpg'); /*afiliaciones*/
+  --opap: url('https://images2.imgbox.com/1d/e2/ZDq3XU11_o.jpg'); /*papelera*/   
 /*IMAGENES DE AFILIADOS*/
   --herman1: url('https://images2.imgbox.com/46/d2/FkWZoBND_o.png');  
   --herman2: url('https://images2.imgbox.com/46/d2/FkWZoBND_o.png');  
@@ -1847,6 +1847,7 @@ dt label {
 }
 
 /*citacion*/
+blockquote br, blockquote cite br, dl.codebox.spoiler br, .spoiler_content br, .codebox.hidecode br{ display: block;}
 
 blockquote {
     padding: 5px;
@@ -1927,6 +1928,8 @@ margin: 0;
 }
 
 /*code*/
+dl.codebox br, dl.codebox code br { display: block;}
+
 dl.codebox {
     padding: 10px;
     background-color: var(--color-1);
