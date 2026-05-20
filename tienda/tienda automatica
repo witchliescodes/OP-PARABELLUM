@@ -54,6 +54,19 @@
 --cuerpo1: 'Open Sans';
 }  
   
+@font-face {
+font-family: 'Open Sans';
+font-style: normal; 
+src: url('https://dl.dropbox.com/scl/fi/fo3u5mp48i3s9gmh26h8s/OpenSans-VariableFont_wdth-wght.ttf?rlkey=w0lu3xqf25p5i8is1w8rbokvl&st=a4oc4sty&dl=1') format('truetype');
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 900;
+  src: url('https://dl.dropbox.com/scl/fi/dljvvkwwk860ff7mgpdyn/poppins.black.ttf?rlkey=4nvdvluqk0sk8gmr2sj0nz2jt&st=e43g11nj&dl=1') format('truetype');
+}  
+  
 body{
     margin:0;
     background: var(--color-1);
@@ -145,18 +158,17 @@ body{
     align-items:start;
 }
 
-
-
-.producto-card{
-    background: linear-gradient(180deg, var(--color-5), color-mix(in srgb, var(--color-5) 90%, black));
-    border:1px solid var(--tcolor3);
-    border-radius:18px;
-    overflow:hidden;
+.producto-card {
+    background: linear-gradient(180deg, var(--color-5), 
+color-mix(in srgb, var(--color-5) 90%, black));
+    border: 1px solid var(--tcolor3);
+    border-radius: 0.38em;
+    overflow: hidden;
     transition: transform 300ms ease, box-shadow 300ms ease, border-color 300ms ease;
-    display:flex;
-    flex-direction:column;
-    position:relative;
-    backdrop-filter:blur(6px);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    backdrop-filter: blur(6px);
 }
 
 
@@ -452,35 +464,20 @@ body{
 
 /* BOX */
 
-.modal-box{
-    width:min(550px,100%);
-
-    background:
-    linear-gradient(
-        180deg,
-        var(--color-5),
-        color-mix(in srgb, var(--color-5) 90%, black)
-    );
-
-    border:
-    1px solid var(--tcolor3);
-
-    border-radius:20px;
-
-    padding:25px;
-
-    position:relative;
-
-    display:flex;
-    flex-direction:column;
-
-    gap:20px;
-
-    transform:translateY(10px);
-
-    transition:300ms ease;
-
-    backdrop-filter:blur(10px);
+.modal-box {
+    width: min(550px, 100%);
+    background: linear-gradient(180deg, var(--color-5), 
+    color-mix(in srgb, var(--color-5) 90%, black));
+    border: 1px solid var(--tcolor3);
+    border-radius: 0.38em;
+    padding: 25px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    transform: translateY(10px);
+    transition: 300ms ease;
+    backdrop-filter: blur(10px);
 }
 
 
@@ -492,27 +489,18 @@ body{
 
 
 /* CERRAR */
-
-.modal-close{
-    position:absolute;
-
-    top:15px;
-    right:15px;
-
-    width:40px;
-    height:40px;
-
-    border:none;
-
-    border-radius:50%;
-
-    background:var(--deg2);
-
-    color:var(--color-4);
-
-    cursor:pointer;
-
-    transition:300ms ease;
+.modal-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 0.18em;
+    background: var(--deg2);
+    color: var(--color-4);
+    cursor: pointer;
+    transition: 300ms ease;
 }
 
 .modal-close:hover{
@@ -619,8 +607,7 @@ body{
 <body>
 <button id="themeToggle" class="theme-toggle">
 <i class="bi bi-moon-stars-fill"></i>
-</button>  
-<div class="tienda-container">
+</button>  <div class="tienda-container">
 <!-- items a la izquierda --><div class="tienda-left">
 <!-- TABS --><div class="tabs-tienda">
 <button class="tab-btn active" data-categoria="todos">Todos los Items</button>
@@ -639,7 +626,7 @@ body{
 <!-- CARRITO --><div class="carrito-panel"><div>
 <h3>Tu Compra</h3>
 <ul id="lista-carrito">
-<li style="color:#999;"> El carrito está vacío </li>
+<li style="color:var(--color-6);"> El carrito está vacío </li>
 </ul>
 </div><div><div class="total-box"> Total: $ <span id="total-precio">0</span></div>
 <button class="btn-pagar" onclick="realizarCompra()"> Confirmar Compra</button>
