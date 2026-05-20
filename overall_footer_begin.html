@@ -220,4 +220,29 @@ grid-template-columns:1fr 1fr; }
 .wanhit p { display: block;}
 .wanhit > p{ margin:0; padding:25px; line-height:2em; color:var(--color-6); text-align:justify; position:relative; z-index:2; } .wanhit > p::first-letter{ font-size:1.4em; color:var(--color-3); font-family:var(--titulos); }
 @media(max-width:600px){ .wrap-wan > h1{ font-size:1.4rem; } .wandat{ grid-template-columns:1fr; } .wanimg{ height:320px; } .wanhit dfn{ flex-direction:column; align-items:flex-start; } .wanhit dfn p{ width:100%; text-align:center; }}  
+/*Tripulaciones*/
+.wrap-tripu br {display: none;}
+.wrap-tripu{ width:min(100%, 950px); margin:20px auto; padding:20px; background: linear-gradient( 145deg, var(--color-5), var(--color-1)); border:1px solid var(--tcolor3); border-radius:0.38em; display:flex; flex-direction:column; gap:20px; position:relative; overflow:hidden; isolation:isolate; box-shadow: 0 20px 35px rgba(0,0,0,.12); }
+.wrap-tripu::before{ content:""; position:absolute; inset:0; background: radial-gradient(circle at top right, var(--tcolor3), transparent 60%); opacity:.10; pointer-events:none; }
+.tripu-card{ display:grid; grid-template-columns:260px 1fr; gap:20px; background:linear-gradient(145deg, var(--color-5), var(--color-1)); border:1px solid var(--tcolor3); border-radius:0.38em; padding:20px; position:relative; overflow:hidden; isolation:isolate; box-shadow: 0 20px 35px rgba(0,0,0,.12); }
+.img-tripu{ width:100%; aspect-ratio:1/1; object-fit:cover; border-radius:0.28em; border: 1px solid var(--tcolor3); display:block; transition:400ms ease; box-shadow: 0 15px 30px rgba(0,0,0,.15); }
+.tripu-card::before{ content:""; position:absolute; inset:0; background: linear-gradient(180deg, transparent 10%, var(--color-3)); z-index:-2; }
+.tripu-card::after{ content:""; position:absolute; inset:0; background: linear-gradient( 135deg, transparent, rgba(255,255,255,.06)); z-index:-1; }
+.tripu-card:hover .img-tripu{ transform:scale(1.04); }
+.tripu-card h2{ margin:0; height:100%; display:flex; align-items:center; justify-content:center; flex-direction:column; gap:20px; text-align:center; font-size:2.5rem; color:var(--color-3); font-family:var(--titulos); text-transform:uppercase; letter-spacing:2px; line-height:1em; position:relative; }
+.conlabstrip{ display:grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap:12px; position:relative; z-index:2; }
+.conlabstrip label{ min-height:55px; background: linear-gradient(145deg, var(--color-5), var(--color-1)); border:1px solid var(--tcolor3); border-radius:0.28em; display:flex; align-items:center; justify-content:center; cursor:pointer; transition:300ms ease; font-family:var(--titulos); text-transform:uppercase; letter-spacing:1px; color:var(--color-6); position:relative; overflow:hidden; font-size:.85rem; box-shadow: 0 10px 20px rgba(0,0,0,.05); }
+.conlabstrip label::before{ content:""; position:absolute; inset:0; background: radial-gradient(circle at top right, var(--tcolor3), transparent 70%); opacity:.08; pointer-events:none; }
+.conlabstrip label.active{ background:var(--color-3); color:var(--color-4); border-color:transparent; box-shadow: 0 15px 30px rgba(0,0,0,.15); }
+.conlabstrip label:hover{ transform:translateY(-3px); }
+.pestcon br, .pestintrg br, .pestbar br, .pestbot br { display: block;}
+.pestcon, .pestintrg, .pestbar, .pestbot{ background: linear-gradient( 145deg, var(--color-5), var(--color-1)); border:1px solid var(--tcolor3); border-radius:0.38em; padding:30px; line-height:2em; color:var(--color-6); position:relative; overflow:hidden; box-shadow: 0 10px 25px rgba(0,0,0,.05); animation:fadeTripu 400ms ease; }
+.pestcon::before, .pestintrg::before, .pestbar::before, .pestbot::before{ content:""; position:absolute; inset:0; background: radial-gradient(circle at top right, var(--tcolor3), transparent 70%); opacity:.08; pointer-events:none; }
+.pestcon *, .pestintrg *, .pestbar *, .pestbot *{ position:relative; z-index:2; }
+.pestcon::first-letter, .pestintrg::first-letter, .pestbar::first-letter, .pestbot::first-letter{ font-size:1.4rem; color:var(--color-3); font-family:var(--titulos); }
+@keyframes fadeTripu{ from{ opacity:0; transform:translateY(10px); } to{ opacity:1; transform:translateY(0); }}
+@media(max-width:700px){ .tripu-card{ min-height:300px; padding:25px; } .tripu-card h2{ font-size:1.8rem; flex-direction:column; align-items:flex-start; }
+.tripu-card h2::before{ width:55px; height:55px; font-size:1.3rem; }
+.conlabstrip{ grid-template-columns:1fr 1fr; }}
+@media(max-width:500px){ .conlabstrip{ grid-template-columns:1fr; }}  
 </style>  
