@@ -436,9 +436,7 @@ body{
 
 <button id="themeToggle" class="theme-toggle">
 <i class="bi bi-moon-stars-fill"></i>
-</button>
-
-<div class="tienda-container">
+</button><div class="tienda-container">
 
 <!-- IZQUIERDA --><div class="tienda-left">
 
@@ -460,8 +458,7 @@ body{
 <li style="color:var(--color-6);">
 El carrito está vacío
 </li></ul>
-</div><div>
-<div class="total-box">Total: $<span id="total-precio">0</span></div>
+</div><div><div class="total-box">Total: $<span id="total-precio">0</span></div>
 <button class="btn-pagar" onclick="realizarCompra()">Confirmar Compra</button>
 </div>
 </div>
@@ -577,14 +574,11 @@ div.innerHTML = `
 <img
 src="${prod.imagen}"
 class="producto-img"
-alt="${prod.nombre}">
-<div class="producto-card-content">
+alt="${prod.nombre}"><div class="producto-card-content">
 
-<h3>${prod.nombre}</h3>
-<div class="precio">
+<h3>${prod.nombre}</h3><div class="precio">
 $${prod.precio}
-</div>
-<div class="btn-wrap">
+</div><div class="btn-wrap">
 
 <button
 class="btn-add"
@@ -703,8 +697,7 @@ document.createElement('li');
 
 li.innerHTML = `
 
-<span>${item.nombre}</span>
-<div style="display:flex; gap:5px;">
+<span>${item.nombre}</span><div style="display:flex; gap:5px;">
 
 <b>$${item.precio}</b>
 
@@ -758,23 +751,21 @@ document.getElementById(
 'total-precio'
 ).innerText;
 
-
+  
 let mensaje =
-`[quote][b]SOLICITUD DE COMPRA[/b]\n\n`;
-
-mensaje += `[list]`;
-
+`[quote][b]❧ SOLICITUD DE COMPRA ☙[/b]
+`;
 carrito.forEach(item => {
-
 mensaje +=
-`[*] ${item.nombre} - [b]$${item.precio}[/b]\n`;
-
+`☉ [b]${item.nombre}[/b] — [color=#d76060][b]$${item.precio}[/b][/color]
+`;
 });
-
-mensaje += `[/list]\n`;
-
-mensaje +=
-`[b]TOTAL A PAGAR: $${total}[/b][/quote]`;
+mensaje += `
+[center]
+[b]TOTAL:[/b]
+[color=#d76060][b] $${total}[/b][/color]
+[/center]
+[/quote]`;
 
 
 const form =
