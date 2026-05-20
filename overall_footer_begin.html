@@ -34,317 +34,64 @@
 </div>
 <!-- END html_validation -->
 <style>
-.fot.navbar {
-    padding: 0;
-    margin: 0;
-}  
-.wraplik {
-    background: var(--color-1);
-    padding: 10px;
-    margin: 0 0 20px 0;
-    display: flex;
-    gap: 10px;
-    justify-content: space-between;
-    border-radius: 0.38em;
-    font-size: 0.8em;
-    font-family: var(--cuerpo1);
-    color: var(--color-3);
-    line-height: 1.5em;
-}
-  
-.oscuro  .wraplik {
-    background: var(--color-5); 
-  
- }
-  
-.wraplik .icon-home {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    color: var(--color-3);
-    font-weight: 900;
-}  
-
-/*PREVIEW*/
-form[name="post"] h1.page-title {
-    font-family: var(--titulos);
-    color: var(--color-3);
-    font-size: 2em;
-    margin: 20px 0;
-    text-transform: uppercase;
-}
-  
-form[name="post"] #preview {
-    background: var(--color-1);
-    padding: 10px;
-    margin: 0;
-    border-radius: 0.38em;
-    color: var(--color-6);
-}
-  
-.oscuro form[name="post"] #preview {
-    background: var(--color-5);
-}
-  
-form[name="post"] .postbody {
-    padding: 0;
-    line-height: 1.5em;
-    color: var(--color-6);
-    width: 100%;
-    float: left;
-    clear: both;
-}  
-  
-form[name="post"] .postbody .h3 {
-    margin: 0;
-    background: var(--tcolor3);
-    padding: 10px;
-    border-radius: 0.18em;
-    font-family: var(--titulos);
-    color: var(--color-5);
-}  
-  
-form[name="post"] .postbody .content {
-    word-wrap: break-word;
-    font-family: var(--cuerpo1);
-    font-size: 1.2em;
-    hyphens: auto;
-    line-height: 1.5em;
-    color: var(--color-6);
-    overflow: visible;
-    margin: 10px 0;
-}  
-  
-form[name="post"] .h3 {
-    font-family: var(--titulos);
-    text-transform: uppercase;
-    border-bottom: 10px solid var(--color-3);
-    font-size: 1.05em;
-    color: var(--color-3);
-    margin: 20px 0;
-    padding: 0 0 10px 0;
-}  
-  
-form[name="post"] fieldset.fields1 dt {
-    width: 18em;
-    border-right-width: 0;
-}  
-  
-form[name="post"] dt label {
-    font-weight: 700;
-    text-align: left;
-    font-size: .9em;
-    padding: 0 10px;
-}  
-  
-form[name="post"] fieldset.fields1 dd {
-    margin-left: 10em;
-    border-left-width: 0;
-    width: -webkit-fill-available;
-}  
-  
-form[name="jumpbox"] p.right {
-    text-align: right;
-    background: var(--color-1);
-    border-radius: 0.38em;
-    padding: 10px;
-    margin: 20px 0;
-    color: var(--color-6);
-    display: flex;
-    align-items: center;
-    justify-content: end;
-    font-family: var(--cuerpo1);
-}
-  
-form[name="jumpbox"] select {
-    font-family: var(--cuerpo1);
-    font-weight: 400;
-    cursor: pointer;
-    vertical-align: middle;
-    border: 1px solid var(--color-3);
-    padding: 4px;
-    background-color: var(--color-5);
-    font-size: 0.9em;
-    border-radius: 0.18em;
-}
-  
+.fot.navbar { padding: 0; margin: 0; } .wraplik { background: var(--color-1); padding: 10px; margin: 0 0 20px 0; display: flex; gap: 10px; justify-content: space-between; border-radius: 0.38em; font-size: 0.8em; font-family: var(--cuerpo1); color: var(--color-3); line-height: 1.5em; }
+.oscuro  .wraplik { background: var(--color-5);}
+.wraplik .icon-home { display: flex; align-items: center; gap: 10px; color: var(--color-3); font-weight: 900; }
+/*PREVIEW*/ 
+form[name="post"] h1.page-title { font-family: var(--titulos); color: var(--color-3); font-size: 2em; margin: 20px 0; text-transform: uppercase; }
+form[name="post"] #preview { background: var(--color-1); padding: 10px; margin: 0; border-radius: 0.38em; color: var(--color-6); }
+.oscuro form[name="post"] #preview { background: var(--color-5); }
+form[name="post"] .postbody { padding: 0; line-height: 1.5em; color: var(--color-6); width: 100%; float: left; clear: both; }
+form[name="post"] .postbody .h3 { margin: 0; background: var(--tcolor3); padding: 10px; border-radius: 0.18em; font-family: var(--titulos); color: var(--color-5); }
+form[name="post"] .postbody .content { word-wrap: break-word; font-family: var(--cuerpo1); font-size: 1.2em; hyphens: auto; line-height: 1.5em; color: var(--color-6); overflow: visible; margin: 10px 0; }
+form[name="post"] .h3 { font-family: var(--titulos); text-transform: uppercase; border-bottom: 10px solid var(--color-3); font-size: 1.05em; color: var(--color-3); margin: 20px 0; padding: 0 0 10px 0; }
+form[name="post"] fieldset.fields1 dt { width: 18em; border-right-width: 0; }
+form[name="post"] dt label { font-weight: 700; text-align: left; font-size: .9em; padding: 0 10px; }
+form[name="post"] fieldset.fields1 dd { margin-left: 10em; border-left-width: 0; width: -webkit-fill-available; }
+form[name="jumpbox"] p.right { text-align: right; background: var(--color-1); border-radius: 0.38em; padding: 10px; margin: 20px 0; color: var(--color-6); display: flex; align-items: center; justify-content: end; font-family: var(--cuerpo1); }
+form[name="jumpbox"] select { font-family: var(--cuerpo1); font-weight: 400; cursor: pointer; vertical-align: middle; border: 1px solid var(--color-3); padding: 4px; background-color: var(--color-5); font-size: 0.9em; border-radius: 0.18em; }
 /* EDITOR */
-
-#textarea_content {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-}
-
-
-#postingbox .sceditor-container {
-    background: var(--color-5);
-    border: 1px solid var(--tcolor3);
-    border-radius: 0.38em;
-    color: var(--color-6);
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    height: 100%;
-    min-height: 420px;
-}
-
-#postingbox div.sceditor-toolbar {
-    background: var(--color-5);
-    border-bottom: 1px solid var(--tcolor3);
-    padding: 10px;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 10px;
-    overflow: visible;
-    min-height: 64px;
-    flex-shrink: 0;
-}
-
-#postingbox div.sceditor-group {
-    background: var(--color-1);
-    border: 1px solid var(--tcolor3);
-    border-radius: 0.28em;
-    padding: 0 8px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 5px;
-    flex: 0 0 auto;
-    height: 46px;
-}
-
-#postingbox a.sceditor-button {
-    width: 35px;
-    height: 35px;
-    display: flex !important;
-    align-items: center;
-    justify-content: center;
-    border-radius: 0.2em;
-    transition: 300ms ease;
-}
-
-#postingbox a.sceditor-button:hover {
-    background: var(--tcolor3);
-}
-
-#postingbox .sceditor-button div {
-    transform: scale(0.95);
-    opacity: 0.8;
-}
-
-#text_editor_textarea,
-#postingbox iframe,
-#postingbox textarea {
-    background: var(--color-5) !important;
-    color: var(--color-6) !important;
-    padding: 20px !important;
-    font-family: var(--cuerpo1);
-    font-size: 0.95rem;
-    line-height: 1.7em;
-    border: none !important;
-    flex: 1;
-    height: 100% !important;
-    min-height: 350px !important;
-}
-
-#postingbox .sceditor-container textarea {
-    resize: none;
-}
-
-
-#postingbox .sceditor-container iframe {
-    width: 100%;
-    flex: 1;
-}
-
-
-#smiley-box {
-    min-height: 420px;
-    overflow-y: auto;
-}
-
-
-#postingbox fieldset.fields1 div {
-    margin-bottom: 0 !important;
-}
-
-
+#textarea_content { display: flex; flex-direction: column; height: 100%; }
+#postingbox .sceditor-container { background: var(--color-5); border: 1px solid var(--tcolor3); border-radius: 0.38em; color: var(--color-6); position: relative; overflow: hidden; display: flex; flex-direction: column; flex: 1; height: 100%; min-height: 420px; }
+#postingbox div.sceditor-toolbar { background: var(--color-5); border-bottom: 1px solid var(--tcolor3); padding: 10px; display: flex; flex-wrap: wrap; align-items: center; gap: 10px; overflow: visible; min-height: 64px; flex-shrink: 0; }
+#postingbox div.sceditor-group { background: var(--color-1); border: 1px solid var(--tcolor3); border-radius: 0.28em; padding: 0 8px; display: flex; align-items: center; justify-content: flex-start; gap: 5px; flex: 0 0 auto; height: 46px; }
+#postingbox a.sceditor-button { width: 35px; height: 35px; display: flex !important; align-items: center; justify-content: center; border-radius: 0.2em; transition: 300ms ease; }
+#postingbox a.sceditor-button:hover { background: var(--tcolor3); }
+#postingbox .sceditor-button div { transform: scale(0.95); opacity: 0.8; }
+#text_editor_textarea, #postingbox iframe, #postingbox textarea { background: var(--color-5) !important; color: var(--color-6) !important; padding: 20px !important; font-family: var(--cuerpo1); font-size: 0.95rem; line-height: 1.7em; border: none !important; flex: 1; height: 100% !important; min-height: 350px !important; }
+#postingbox .sceditor-container textarea { resize: none; }
+#postingbox .sceditor-container iframe { width: 100%; flex: 1; }
+#smiley-box { min-height: 420px; overflow-y: auto; }
+#postingbox fieldset.fields1 div { margin-bottom: 0 !important; }
 @media (max-width: 900px) {
-
-    #postingbox div.sceditor-toolbar {
-        gap: 5px;
-        min-height: auto;
-    }
-
-    #postingbox div.sceditor-group {
-        gap: 3px;
-        padding: 0 6px;
-        height: 42px;
-    }
-
-    #postingbox a.sceditor-button {
-        width: 32px;
-        height: 32px;
-    }
-
-}
-  
-  
+#postingbox div.sceditor-toolbar { gap: 5px; min-height: auto; }
+#postingbox div.sceditor-group { gap: 3px; padding: 0 6px; height: 42px; }
+#postingbox a.sceditor-button { width: 32px; height: 32px; }}
 /*TITULO*/
-#postingbox fieldset.fields1 dt {
-    width: 13em;
-    border-right-width: 0;
-    padding: 0 10px;
-}  
-  
-#postingbox fieldset.fields1 dd {
-    margin-left: 10em;
-    border-left-width: 0;
-    margin: 0;
-    width: -webkit-fill-available;
-}  
-  
+#postingbox fieldset.fields1 dt { width: 13em; border-right-width: 0; padding: 0 10px; }
+#postingbox fieldset.fields1 dd { margin-left: 10em; border-left-width: 0; margin: 0; width: -webkit-fill-available; }
 /*Revisión de tema*/
-.post-pag .h3 {
-      font-family: var(--titulos);
-    text-transform: uppercase;
-    border-bottom: 10px solid var(--color-3);
-    font-size: 1.05em;
-    color: var(--color-3);
-    margin: 20px 0;
-    padding: 0 0 10px 0;
-  }    
-
-  
-.post-pag .postbody{
-    padding: 0;
-    line-height: 1.48em;
-    color: var(--color-6);
-    width: 100%;
-    float: left;
-    clear: both;
-}  
-
+.post-pag .h3 { font-family: var(--titulos); text-transform: uppercase; border-bottom: 10px solid var(--color-3); font-size: 1.05em; color: var(--color-3); margin: 20px 0; padding: 0 0 10px 0; }
+.post-pag .postbody{ padding: 0; line-height: 1.48em; color: var(--color-6); width: 100%; float: left; clear: both; }
 .post-pag .postbody h3 { display: none; }
-  
-.post-pag .panel p, .post-pag .panel div.mes-txt {
-    font-size: 1.2em;
-    margin-bottom: 1em;
-    line-height: 1.4em;
-    word-wrap: break-word;
-    width: 100%;
-    margin: 0;
-    background: var(--tcolor3);
-    display: flex;
-    align-items: center;
-    justify-content: start;
-    font-size: 0.8em;
-    font-family: var(--cuerpo1);
-    padding: 10px;
-    border-radius: 0.18em;
-}  
+.post-pag .panel p, .post-pag .panel div.mes-txt { font-size: 1.2em; margin-bottom: 1em; line-height: 1.4em; word-wrap: break-word; width: 100%; margin: 0; background: var(--tcolor3); display: flex; align-items: center; justify-content: start; font-size: 0.8em; font-family: var(--cuerpo1); padding: 10px; border-radius: 0.18em; }
+</style>  
+<style>
+/*Tablilla de guias*/
+.opp-guid br { display: none;}
+.opp-guid { background: linear-gradient(180deg, var(--color-1), color-mix(in srgb, var(--color-1) 92%, black)); padding: 20px; border-radius: 0.38em; margin: 0px; height: auto; border: 1px solid var(--tcolor3); display: flex; flex-flow: column; gap: 10px; position: relative; overflow: hidden; }
+.opp-guid::before { content: ""; position: absolute; inset: 0; background: radial-gradient(circle at top right, var(--tcolor3), transparent 60%); opacity: 0.08; pointer-events: none; }
+.gui-tl { display: flex; align-items: center; justify-content: space-between; flex-flow: row-reverse; gap: 10px; padding: 15px; font-size: 2em; font-family: var(--titulos); border-radius: 0.18em; background: linear-gradient(90deg, var(--tcolor3), transparent); position: relative; overflow: hidden; }
+.gui-tl i { color: var(--color-5); padding: 12px; background: var(--color-3); border-radius: 0.18em; min-height: 65px; min-width: 75px; display: flex; align-items: center; justify-content: center; font-size: 0.7em; box-shadow: 0 0 20px color-mix(in srgb, var(--color-3) 30%, transparent); flex-shrink: 0; }
+.gui-tl h1 { margin: 0; flex: 1; text-transform: uppercase; color: var(--color-6); font-size: 1em; line-height: 1em; letter-spacing: 1px; }
+.tags-guid { padding: 10px; background: var(--color-5); border-radius: 0.18em; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+.tags-guid a { background: var(--color-1); border: 1px solid var(--tcolor3); border-radius: 0.18em; padding: 10px; min-height: 35px; display: flex; align-items: center; justify-content: center; text-align: center; line-height: 1.4em; transition: 300ms ease; color: var(--color-6); text-decoration: none; position: relative; overflow: hidden; overflow-wrap: break-word; }
+.tags-guid a:hover { transform: translateY(-2px); border-color: var(--color-3); background: color-mix(in srgb, var(--color-5) 85%, var(--tcolor3)); box-shadow: 0 10px 20px rgba(0,0,0,.12); }
+.wrap-intro p br, .wrap-conten p br  {display: block;}
+.wrap-intro { padding: 20px; background: color-mix(in srgb, var(--color-5) 92%, black); border-left: 5px solid var(--color-3); }
+.wrap-conten { display: flex; flex-flow: column; gap: 12px; }
+.wrap-conten dfn { display: flex; align-items: center; gap: 10px; font-style: normal; text-transform: uppercase; font-family: var(--titulos); color: var(--color-3); font-size: 1.2rem; letter-spacing: 1px; }
+.wrap-conten dfn::after { content: ""; flex: 1; height: 1px; background: linear-gradient(90deg, var(--color-3),transparent); }
+.wrap-conten p, .wrap-intro p { margin: 0; color: var(--color-6); line-height: 1.9em; text-align: justify; }
+@media (max-width: 700px) { .gui-tl { flex-flow: column; text-align: center; } .tags-guid { grid-template-columns: 1fr; } }
 </style>  
