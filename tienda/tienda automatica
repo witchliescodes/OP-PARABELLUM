@@ -3,302 +3,612 @@
 
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
 <title>Mercado Naval</title>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" rel="stylesheet" />
-  
+
+<link
+href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+rel="stylesheet"
+/>
+
 <style>
 :root.claro{
-  /* Mi Paleta */
-  --color-1: #dddde2;
-  --color-2: #6f9bd3;
-  --color-3: #6f70d3;
-  --color-4: #faf8fc;
-  --color-5: #e5e5eb;
-  --color-6: #0a0a15;
-  --color-7: #1d1d59;
-  /*Transparencias*/
-  --tcolor3: #6f70d38c;
-  --tcolor4: #6f9bd36b;
-  --tcolor5: #faf8fc75;
-  --tcolor6: #1f1f3ec2;
-  /*DEGRADADOS*/
-  --deg3: linear-gradient(145deg, #6f9bd3, #6f70d3);
-  --deg2: linear-gradient(90deg, #6f9bd3, #6f70d3);
-  --deg1: linear-gradient(145deg, #e5e5eb, #dddde2);
-  /* Fuentes */
---titulos: 'Poppins';
---cuerpo1: 'Open Sans';
+  --color-1:#dddde2;
+  --color-2:#6f9bd3;
+  --color-3:#6f70d3;
+  --color-4:#faf8fc;
+  --color-5:#e5e5eb;
+  --color-6:#0a0a15;
+  --color-7:#1d1d59;
+  --tcolor3:#6f70d38c;
+  --tcolor4:#6f9bd36b;
+  --tcolor5:#faf8fc75;
+  --tcolor6:#1f1f3ec2;
+  --deg3:linear-gradient(145deg,#6f9bd3,#6f70d3);
+  --deg2:linear-gradient(90deg,#6f9bd3,#6f70d3);
+  --deg1:linear-gradient(145deg,#e5e5eb,#dddde2);
+  --titulos:'Poppins';
+  --cuerpo1:'Open Sans';
+
 }
 
-:root.oscuro  {
-  /* Mi Paleta */
---color-1: #0b0e11;
---color-2: #0c4542;
---color-3: #d76060;
---color-4: #f8fcfb;
---color-5: #14191f;
---color-6: #c5cccc;
---color-7: #612b2b;
-  /*Transparencias*/
---tcolor3: #d760603d;
---tcolor4: #0c4542a1;
---tcolor5: #14191f78;
---tcolor6: #0b0e1178;
-/*DEGRADADOS*/
---deg3: linear-gradient(145deg, #291213, #14191f);
---deg2: linear-gradient(145deg, #d76060, #0c4542);
---deg1: linear-gradient(145deg, #14191f, #291213);
-/* Fuentes */
---titulos: 'Poppins';
---cuerpo1: 'Open Sans';
-}  
-  
-@font-face {
-font-family: 'Open Sans';
-font-style: normal; 
-src: url('https://dl.dropbox.com/scl/fi/fo3u5mp48i3s9gmh26h8s/OpenSans-VariableFont_wdth-wght.ttf?rlkey=w0lu3xqf25p5i8is1w8rbokvl&st=a4oc4sty&dl=1') format('truetype');
+
+:root.oscuro{
+  --color-1:#0b0e11;
+  --color-2:#0c4542;
+  --color-3:#d76060;
+  --color-4:#f8fcfb;
+  --color-5:#14191f;
+  --color-6:#c5cccc;
+  --color-7:#612b2b;
+  --tcolor3:#d760603d;
+  --tcolor4:#0c4542a1;
+  --tcolor5:#14191f78;
+  --tcolor6:#0b0e1178;
+  --deg3:linear-gradient(145deg,#291213,#14191f);
+  --deg2:linear-gradient(145deg,#d76060,#0c4542);
+  --deg1:linear-gradient(145deg,#14191f,#291213);
+  --titulos:'Poppins';
+  --cuerpo1:'Open Sans';
 }
 
-@font-face {
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 900;
-  src: url('https://dl.dropbox.com/scl/fi/dljvvkwwk860ff7mgpdyn/poppins.black.ttf?rlkey=4nvdvluqk0sk8gmr2sj0nz2jt&st=e43g11nj&dl=1') format('truetype');
-}  
+@font-face{
+font-family:'Open Sans';
+font-style:normal;
+src:url('https://dl.dropbox.com/scl/fi/fo3u5mp48i3s9gmh26h8s/OpenSans-VariableFont_wdth-wght.ttf?rlkey=w0lu3xqf25p5i8is1w8rbokvl&st=a4oc4sty&dl=1') format('truetype');
+}
+
+@font-face{
+font-family:'Poppins';
+font-style:normal;
+font-weight:900;
+src:url('https://dl.dropbox.com/scl/fi/dljvvkwwk860ff7mgpdyn/poppins.black.ttf?rlkey=4nvdvluqk0sk8gmr2sj0nz2jt&st=e43g11nj&dl=1') format('truetype');
+}
+
+body{
+    margin:0;
+    background:var(--color-1);
+    color:var(--color-6);
+    font-family:var(--cuerpo1);
+    transition: background 400ms ease, color 400ms ease;
+}
+
+
+.tienda-container{
+    display:flex;
+    gap:25px;
+    padding:25px;
+    min-height:100vh;
+    align-items:flex-start;
+    position:relative;
+    overflow:hidden;
+}
+
+.tienda-container::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    background: radial-gradient(circle at top right, var(--tcolor3), transparent 50%);
+    pointer-events:none;
+    opacity:.6;
+}
+
+.tienda-left{
+    flex:2;
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+    position:relative;
+    z-index:2;
+}
+
+.tabs-tienda{
+    display:flex;
+    gap:10px;
+    padding-bottom:5px;
+}
+
+.tabs-tienda::-webkit-scrollbar{
+    height:3px;
+}
+
+.tab-btn{
+    background:var(--color-5);
+    border:1px solid var(--tcolor3);
+    border-radius:999px;
+    padding:10px 18px;
+    cursor:pointer;
+    transition:300ms ease;
+    white-space:nowrap;
+    font-size:.75rem;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    font-weight:700;
+    color:var(--color-6);
+    flex-shrink:0;
+    backdrop-filter:blur(6px);
+    font-family:var(--titulos);
+}
+
+.tab-btn:hover{
+    transform:translateY(-2px);
+    border-color:var(--color-3);
+    background:var(--tcolor5);
+}
+
+.tab-btn.active{
+    background:var(--deg2);
+    color:var(--color-4);
+    border-color:transparent;
+    box-shadow: 4px 4px 0px var(--tcolor3);
+}
+
+.productos-grid{
+    display:grid;
+    grid-template-columns: repeat(auto-fill,minmax(230px,1fr));
+    gap:20px;
+    align-items:start;
+}
+
+.producto-card{
+    background:var(--deg1);
+    border:1px solid var(--tcolor3);
+    border-radius:0.38em;
+    overflow:hidden;
+    transition: transform 300ms ease,  box-shadow 300ms ease, border-color 300ms ease;
+    display:flex;
+    flex-direction:column;
+    position:relative;
+    backdrop-filter:blur(6px);
+}
+
+.producto-card::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background: linear-gradient(180deg, transparent, var(--tcolor6));
+    opacity:.3;
+    pointer-events:none;
+}
   
-body { margin: 0; background: var(--color-1); color:var(--color-6); font-family:var(--cuerpo1); transition: background 400ms ease, color 400ms ease; }
-.tienda-container{ display:flex; gap:25px; padding:25px; min-height:100vh; align-items:flex-start; position:relative; overflow:hidden; }
-.tienda-container::before{ content:""; position:fixed; inset:0; background: radial-gradient(circle at top right, var(--tcolor3), transparent 50%); pointer-events:none; opacity:.6; }
-.tienda-left{ flex:2; display:flex; flex-direction:column; gap:20px; position:relative; z-index:2; }
-.tabs-tienda { display: flex; gap: 10px; padding-bottom: 5px; }
-.tabs-tienda::-webkit-scrollbar{ height:3px; }
-.tab-btn{ background: color-mix(in srgb, var(--color-5) 85%, transparent); border:1px solid var(--tcolor3); border-radius:999px; padding:10px 18px; cursor:pointer; transition:300ms ease; white-space:nowrap; font-size:.75rem; text-transform:uppercase; letter-spacing:1px; font-weight:700; color:var(--color-6); flex-shrink:0; backdrop-filter:blur(6px); font-family:var(--titulos); }
-.tab-btn:hover{ transform:translateY(-2px); border-color:var(--color-3); background: color-mix(in srgb, var(--color-5) 75%, var(--tcolor3)); }
-.tab-btn.active { background: var(--deg2); color: var(--color-4); border-color: transparent; box-shadow: 4px 4px 0px color-mix(in srgb, var(--color-3) 20%, transparent); }
-.productos-grid{ display:grid; grid-template-columns: repeat(auto-fill,minmax(230px,1fr)); gap:20px; align-items:start; }
-.producto-card { background: linear-gradient(180deg, var(--color-5), color-mix(in srgb, var(--color-5) 90%, black)); border: 1px solid var(--tcolor3); border-radius: 0.38em; overflow: hidden; transition: transform 300ms ease, box-shadow 300ms ease, border-color 300ms ease; display: flex; flex-direction: column; position: relative; backdrop-filter: blur(6px); }
-.producto-card::before{ content:""; position:absolute; inset:0; background: linear-gradient(180deg, transparent, var(--tcolor6)); opacity:.3; pointer-events:none; }
-.producto-card:hover{ transform: translateY(-5px); border-color: var(--color-3); box-shadow: 0 20px 35px rgba(0,0,0,.15); }
-.producto-img{ width:100%; aspect-ratio:1/1; object-fit:cover; display:block; border-bottom: 1px solid var(--tcolor3); }
-.producto-card-content{ display:flex; flex-direction:column; gap:14px; padding:16px; position:relative; z-index:2; }
-.producto-card h3{ margin:0; font-size:1rem; line-height:1.3em; color:var(--color-6); font-family:var(--titulos); text-transform:uppercase; letter-spacing:1px; }
-.precio{ color:var(--color-3); font-size:1.1rem; font-weight:bold; font-family:var(--titulos); }
-.btn-wrap{ display:flex; flex-direction:column; gap:10px; margin-top:auto; }
-.btn-add, .btn-info, .btn-pagar { border: none; padding: 12px 14px; border-radius: 0.18em; cursor: pointer; transition: 300ms ease; font-size: .8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; font-family: var(--titulos); }
-.btn-add{ background:var(--deg2); color:var(--color-4); }
-.btn-add:hover{ transform:translateY(-2px); box-shadow: 0 10px 20px color-mix(in srgb, var(--color-3) 30%, transparent); }
-.btn-info{ background: color-mix(in srgb, var(--color-5) 80%, transparent); color:var(--color-6);
-border:1px solid var(--tcolor3); }
-.btn-info:hover{ background: color-mix(in srgb, var(--color-5) 70%, var(--tcolor3)); }
-.carrito-panel{ flex:1; background: linear-gradient( 180deg, var(--color-5), color-mix(in srgb, var(--color-5) 92%, black) ); border:1px solid var(--tcolor3);border-radius:18px; padding:20px; display:flex; flex-direction:column; justify-content:space-between; position:sticky; top:20px; backdrop-filter:blur(8px); min-width:280px; }
-.carrito-panel h3{ margin-top:0; color:var(--color-6); font-family:var(--titulos); text-transform:uppercase; letter-spacing:1px; }
-#lista-carrito{ list-style:none; padding:0; margin:10px 0; max-height:50vh; overflow-y:auto; }
-#lista-carrito li{ border-bottom: 1px solid var(--tcolor3); padding:10px 0; display:flex; justify-content:space-between; align-items:center; gap:10px; }
-.total-box{ font-size:1.1rem; font-weight:bold; margin-top:15px; border-top: 1px solid var(--tcolor3); padding-top:15px; color:var(--color-6); font-family:var(--titulos); }
-.btn-pagar{ width:100%; margin-top:15px; background:var(--deg2); color:var(--color-4); }
-.modal-item{ position:fixed; inset:0; background:rgba(0,0,0,.6); backdrop-filter:blur(8px); display:flex; align-items:center; justify-content:center; padding:20px; opacity:0; visibility:hidden; transition:300ms ease; z-index:99999; }
-.modal-item.active{ opacity:1; visibility:visible; }
-.modal-box { width: min(550px, 100%); background: linear-gradient(180deg, var(--color-5), color-mix(in srgb, var(--color-5) 90%, black)); border: 1px solid var(--tcolor3); border-radius: 0.38em; padding: 25px; position: relative; display: flex; flex-direction: column; gap: 20px; transform: translateY(10px); transition: 300ms ease; backdrop-filter: blur(10px); }
-.modal-item.active .modal-box{ transform:translateY(0); }
-.modal-close { position: absolute; top: 15px; right: 15px; width: 30px; height: 30px; border: none; border-radius: 0.18em; background: var(--deg2); color: var(--color-4); cursor: pointer; transition: 300ms ease; }
-.modal-close:hover{ transform:rotate(90deg); }
-.modal-header h2{ margin:0; font-family:var(--titulos); text-transform:uppercase; color:var(--color-6); }
-.modal-body{ max-height:300px; overflow-y:auto; line-height:1.9em; color:var(--color-6); }
-::-webkit-scrollbar{ width:4px; height:4px; }
-::-webkit-scrollbar-thumb{ background:var(--color-3); border-radius:999px; }
-.theme-toggle { position: fixed; bottom: 20px; right: 20px; width: 50px; height: 50px; border: none; border-radius: 0.38em; background: var(--deg2); color: var(--color-4); cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; z-index: 999999; transition: 300ms ease; box-shadow: 0 15px 30px rgba(0, 0, 0, .2); }
-.theme-toggle:hover{ transform: translateY(-4px) rotate(8deg); }
-@media(max-width:900px){ .tienda-container{ flex-direction:column; } .carrito-panel{ position:relative; top:0; width:auto; } }
+.producto-card:hover{
+    transform:translateY(-5px);
+    border-color:var(--color-3);
+    box-shadow: 0 20px 35px rgba(0,0,0,.15);
+}
+
+.producto-img{
+    width:100%;
+    aspect-ratio:1/1;
+    object-fit:cover;
+    display:block;
+    border-bottom: 1px solid var(--tcolor3);
+}
+
+.producto-card-content{
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+    padding:16px;
+    position:relative;
+    z-index:2;
+}
+
+.producto-card h3{
+    margin:0;
+    font-size:1rem;
+    line-height:1.3em;
+    color:var(--color-6);
+    font-family:var(--titulos);
+    text-transform:uppercase;
+    letter-spacing:1px;
+}
+
+.precio{
+    color:var(--color-3);
+    font-size:1.1rem;
+    font-weight:bold;
+    font-family:var(--titulos);
+}
+
+.btn-wrap{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    margin-top:auto;
+}
+
+
+.btn-add, .btn-info, .btn-pagar{
+    border:none;
+    padding:12px 14px;
+    border-radius:0.18em;
+    cursor:pointer;
+    transition:300ms ease;
+    font-size:.8rem;
+    font-weight:700;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    font-family:var(--titulos);
+}
+
+.btn-add{
+    background:var(--deg2);
+    color:var(--color-4);
+}
+
+.btn-add:hover{
+    transform:translateY(-2px);
+    box-shadow: 0 10px 20px var(--tcolor3);
+}
+
+.btn-info{
+    background:var(--color-5);
+    color:var(--color-6);
+    border:1px solid var(--tcolor3);
+}
+  
+.btn-info:hover{
+    background:var(--tcolor5);
+}
+  
+.carrito-panel{
+    flex:1;
+    background:var(--deg1);
+    border:1px solid var(--tcolor3);
+    border-radius:0.38em;
+    padding:20px;
+    display:flex; flex-direction:column; justify-content:space-between;
+    position:sticky;
+    top:20px;
+    backdrop-filter:blur(8px);
+    min-width:280px;
+}
+
+.carrito-panel h3{
+    margin-top:0;
+    color:var(--color-6);
+    font-family:var(--titulos);
+    text-transform:uppercase;
+    letter-spacing:1px;
+}
+
+#lista-carrito{
+    list-style:none;
+    padding:0;
+    margin:10px 0;
+    max-height:50vh;
+    overflow-y:auto;
+}
+
+#lista-carrito li{
+    border-bottom:
+    1px solid var(--tcolor3);
+    padding:10px 0;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:10px;
+}
+
+.total-box{
+    font-size:1.1rem;
+    font-weight:bold;
+    margin-top:15px;
+    border-top: 1px solid var(--tcolor3);
+    padding-top:15px;
+    color:var(--color-6);
+    font-family:var(--titulos);
+}
+
+.btn-pagar{
+    width:100%;
+    margin-top:15px;
+    background:var(--deg2);
+    color:var(--color-4);
+}
+
+.modal-item{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.6);
+    backdrop-filter:blur(8px);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:20px;
+    opacity:0;
+    visibility:hidden;
+    transition:300ms ease;
+    z-index:99999;
+}
+.modal-item.active{
+    opacity:1;
+    visibility:visible;
+}
+
+.modal-box{
+    width:min(550px,100%);
+    background:var(--deg1);
+    border: 1px solid var(--tcolor3);
+    border-radius:0.38em;
+    padding:25px;
+    position:relative;
+    display:flex; flex-direction:column;
+    gap:20px;
+    transform:translateY(10px);
+    transition:300ms ease;
+    backdrop-filter:blur(10px);
+}
+
+.modal-item.active .modal-box{
+    transform:translateY(0);
+}
+
+.modal-close{
+    position:absolute;
+    top:15px;
+    right:15px;
+    width:30px;
+    height:30px;
+    border:none;
+    border-radius:0.18em;
+    background:var(--deg2);
+    color:var(--color-4);
+    cursor:pointer;
+    transition:300ms ease;
+}
+
+.modal-close:hover{
+    transform:rotate(90deg);
+}
+
+.modal-header h2{
+    margin:0;
+    font-family:var(--titulos);
+    text-transform:uppercase;
+    color:var(--color-6);
+}
+
+.modal-body{
+    max-height:300px;
+    overflow-y:auto;
+    line-height:1.9em;
+    color:var(--color-6);
+}
+
+::-webkit-scrollbar{
+    width:4px;
+    height:4px;
+}
+
+::-webkit-scrollbar-thumb{
+    background:var(--color-3);
+
+    border-radius:999px;
+}
+
+.theme-toggle{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    width:50px;
+    height:50px;
+    border:none;
+    border-radius:0.38em;
+    background:var(--deg2);
+    color:var(--color-4);
+    cursor:pointer;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:1.2rem;
+    z-index:999999;
+    transition:300ms ease;
+    box-shadow: 0 15px 30px rgba(0,0,0,.2);
+}
+
+.theme-toggle:hover{
+    transform:
+    translateY(-4px)
+    rotate(8deg);
+}
+
+@media(max-width:900px){
+
+    .tienda-container{
+        flex-direction:column;
+    }
+
+    .carrito-panel{
+        position:relative;
+        top:0;
+        width:auto;
+    }
+
+}
+
 </style>
 </head>
 
 <body>
+
 <button id="themeToggle" class="theme-toggle">
 <i class="bi bi-moon-stars-fill"></i>
-</button>  <div class="tienda-container">
-<!-- items a la izquierda --><div class="tienda-left">
+</button>
+
+<div class="tienda-container">
+
+<!-- IZQUIERDA --><div class="tienda-left">
+
 <!-- TABS --><div class="tabs-tienda">
-<button class="tab-btn active" data-categoria="todos">Todos los Items</button>
-<button class="tab-btn" data-categoria="belico"> Bélico</button>
-<button class="tab-btn" data-categoria="materiales">  Materiales</button>
-<button class="tab-btn" data-categoria="navegacion"> Navegación</button>
-<button class="tab-btn" data-categoria="cocina"> Cocina</button>
-<button class="tab-btn" data-categoria="medicina"> Medicina</button>
-<button class="tab-btn" data-categoria="armas">  Armas y metalurgia</button>
-<button class="tab-btn" data-categoria="comunicación"> comunicación</button>
-<button class="tab-btn" data-categoria="otros"> Otros</button>
-</div>  
+<button class="tab-btn active" data-categoria="todos"> Todos los Items</button>
+<button class="tab-btn" data-categoria="belico">Bélico</button>
+<button class="tab-btn" data-categoria="materiales">Materiales</button>
+<button class="tab-btn" data-categoria="navegacion">Navegación</button>
+<button class="tab-btn" data-categoria="cocina">Cocina</button>
+<button class="tab-btn" data-categoria="medicina">Medicina</button>
+<button class="tab-btn" data-categoria="armas">Armas y metalurgia</button>
+<button class="tab-btn" data-categoria="comunicacion">Comunicación</button>
+<button class="tab-btn" data-categoria="otros">Otros</button>
+</div>
 <!-- PRODUCTOS --><div class="productos-grid" id="contenedor-productos"></div>
 </div>
-
-<!-- CARRITO --><div class="carrito-panel"><div>
-<h3>Tu Compra</h3>
+<!-- CARRITO --><div class="carrito-panel"><div> <h3>Tu Compra</h3>
 <ul id="lista-carrito">
-<li style="color:var(--color-6);"> El carrito está vacío </li>
-</ul>
-</div><div><div class="total-box"> Total: $ <span id="total-precio">0</span></div>
-<button class="btn-pagar" onclick="realizarCompra()"> Confirmar Compra</button>
+<li style="color:var(--color-6);">
+El carrito está vacío
+</li></ul>
+</div><div>
+<div class="total-box">Total: $<span id="total-precio">0</span></div>
+<button class="btn-pagar" onclick="realizarCompra()">Confirmar Compra</button>
 </div>
 </div>
 </div>
-<!-- DESCRIPCIÓN DE LOS ITEMS --><div class="modal-item" id="itemModal"><div class="modal-box">
-<button class="modal-close" id="cerrarModal">
-<i class="bi bi-x-lg"></i>
-</button><div class="modal-header">
-<h2 id="modalTitulo"></h2>
-</div><div class="modal-body" id="modalDescripcion"> </div>
+<!-- MODAL --><div class="modal-item" id="itemModal"><div class="modal-box">
+<button class="modal-close" id="cerrarModal"><i class="bi bi-x-lg"></i></button><div class="modal-header"><h2 id="modalTitulo"></h2></div><div class="modal-body" id="modalDescripcion"></div>
 </div>
 </div>
-  
-  
 <script>
-/* Items */
 
 const productos = [
+
 {
 id:1,
 nombre:"Espada de Madera",
 categoria:"belico",
 precio:50,
-imagen: "https://i.pinimg.com/1200x/ec/8a/c7/ec8ac7d8fbfbb73632759e0bff8c8fde.jpg",
-descripcion: "Una espada básica usada por aprendices."
+imagen:"https://i.pinimg.com/1200x/ec/8a/c7/ec8ac7d8fbfbb73632759e0bff8c8fde.jpg",
+descripcion:"Una espada básica usada por aprendices."
 },
+
 {
 id:2,
 nombre:"Poción de Vida",
- categoria:"materiales",
+categoria:"materiales",
 precio:25,
-imagen: "https://i.pinimg.com/1200x/ec/8a/c7/ec8ac7d8fbfbb73632759e0bff8c8fde.jpg",
+imagen:"https://i.pinimg.com/1200x/ec/8a/c7/ec8ac7d8fbfbb73632759e0bff8c8fde.jpg",
 descripcion:"Recupera una pequeña cantidad de salud."
 },
+
 {
 id:3,
 nombre:"Escudo Básico",
 categoria:"cocina",
 precio:100,
-imagen: "https://i.pinimg.com/1200x/ec/8a/c7/ec8ac7d8fbfbb73632759e0bff8c8fde.jpg",
-descripcion: "Un escudo resistente para defensa básica."
-}, 
-{  
+imagen:"https://i.pinimg.com/1200x/ec/8a/c7/ec8ac7d8fbfbb73632759e0bff8c8fde.jpg",
+descripcion:"Un escudo resistente para defensa básica."
+},
+
+{
 id:4,
-nombre:"Escudo Básico",
+nombre:"Brújula Antigua",
 categoria:"navegacion",
 precio:100,
-imagen: "https://i.pinimg.com/1200x/ec/8a/c7/ec8ac7d8fbfbb73632759e0bff8c8fde.jpg",
-descripcion: "Un escudo resistente para defensa básica."
+imagen:"https://i.pinimg.com/1200x/ec/8a/c7/ec8ac7d8fbfbb73632759e0bff8c8fde.jpg",
+descripcion:"Permite orientarse en alta mar."
 },
-{  
+
+{
 id:5,
-nombre:"Escudo Básico",
+nombre:"Kit Médico",
 categoria:"medicina",
 precio:100,
-imagen: "https://i.pinimg.com/1200x/ec/8a/c7/ec8ac7d8fbfbb73632759e0bff8c8fde.jpg",
-descripcion: "Un escudo resistente para defensa básica."
+imagen:"https://i.pinimg.com/1200x/ec/8a/c7/ec8ac7d8fbfbb73632759e0bff8c8fde.jpg",
+descripcion:"Contiene suministros básicos."
 },
-{  
+
+{
 id:6,
-nombre:"Escudo Básico",
+nombre:"Martillo de Forja",
 categoria:"armas",
 precio:100,
-imagen: "https://i.pinimg.com/1200x/ec/8a/c7/ec8ac7d8fbfbb73632759e0bff8c8fde.jpg",
-descripcion: "Un escudo resistente para defensa básica."
+imagen:"https://i.pinimg.com/1200x/ec/8a/c7/ec8ac7d8fbfbb73632759e0bff8c8fde.jpg",
+descripcion:"Herramienta usada para trabajar metal."
 },
-{  
+
+{
 id:7,
-nombre:"Escudo Básico",
+nombre:"Den Den Mushi",
 categoria:"comunicacion",
 precio:100,
-imagen: "https://i.pinimg.com/1200x/ec/8a/c7/ec8ac7d8fbfbb73632759e0bff8c8fde.jpg",
-descripcion: "Un escudo resistente para defensa básica."
+imagen:"https://i.pinimg.com/1200x/ec/8a/c7/ec8ac7d8fbfbb73632759e0bff8c8fde.jpg",
+descripcion:"Dispositivo de comunicación."
 },
-{  
+
+{
 id:8,
-nombre:"Escudo Básico",
+nombre:"Caja Misteriosa",
 categoria:"otros",
 precio:100,
-imagen: "https://i.pinimg.com/1200x/ec/8a/c7/ec8ac7d8fbfbb73632759e0bff8c8fde.jpg",
-descripcion: "Un escudo resistente para defensa básica."
-},
-{  
-id:9,
-nombre:"Escudo Básico",
-categoria:"armas",
-precio:100,
-imagen: "https://i.pinimg.com/1200x/ec/8a/c7/ec8ac7d8fbfbb73632759e0bff8c8fde.jpg",
-descripcion: "Un escudo resistente para defensa básica."
-},
-{  
-id:10,
-nombre:"Escudo Básico",
-categoria:"cocina",
-precio:100,
-imagen: "https://i.pinimg.com/1200x/ec/8a/c7/ec8ac7d8fbfbb73632759e0bff8c8fde.jpg",
-descripcion: "Un escudo resistente para defensa básica."
-},   
+imagen:"https://i.pinimg.com/1200x/ec/8a/c7/ec8ac7d8fbfbb73632759e0bff8c8fde.jpg",
+descripcion:"Nadie sabe lo que contiene."
+}
+
 ];
 
-/****** NO TOCAR ******** //
+
+/**********NO TOCAR************/
 
 const ID_TEMA_DESTINO = 68;
+
 let carrito = [];
+
 
 const contenedor =
 document.getElementById(
-    'contenedor-productos'
+'contenedor-productos'
 );
 
 
 productos.forEach(prod => {
 
-    const div =
-    document.createElement('div');
+const div =
+document.createElement('div');
 
-    div.classList.add('producto-card');
+div.classList.add('producto-card');
 
-    div.dataset.categoria =
-    prod.categoria || 'otros';
+div.dataset.categoria =
+prod.categoria || 'otros';
 
-    div.innerHTML = `
+div.innerHTML = `
 
-        <img
-        src="${prod.imagen}"
-        class="producto-img"
-        alt="${prod.nombre}">
+<img
+src="${prod.imagen}"
+class="producto-img"
+alt="${prod.nombre}">
+<div class="producto-card-content">
 
-        <div class="producto-card-content">
+<h3>${prod.nombre}</h3>
+<div class="precio">
+$${prod.precio}
+</div>
+<div class="btn-wrap">
 
-            <h3>${prod.nombre}</h3>
+<button
+class="btn-add"
+onclick="agregarAlCarrito(${prod.id})">
 
-            <div class="precio">
-                $${prod.precio}
-            </div>
+Añadir
 
-            <div class="btn-wrap">
+</button>
 
-                <button
-                class="btn-add"
-                onclick="agregarAlCarrito(${prod.id})">
+<button
+class="btn-info"
+onclick="abrirModal(${prod.id})">
 
-                    Añadir
+Ver Detalles
 
-                </button>
+</button>
 
-                <button
-                class="btn-info"
-                onclick="abrirModal(${prod.id})">
+</div>
 
-                    Ver Detalles
+</div>
 
-                </button>
+`;
 
-            </div>
-
-        </div>
-
-    `;
-
-    contenedor.appendChild(div);
+contenedor.appendChild(div);
 
 });
 
@@ -309,214 +619,213 @@ document.querySelectorAll('.tab-btn');
 
 tabs.forEach(tab => {
 
-    tab.addEventListener('click', () => {
+tab.addEventListener('click', () => {
 
-        tabs.forEach(t =>
-            t.classList.remove('active')
-        );
+tabs.forEach(t =>
+t.classList.remove('active')
+);
 
-        tab.classList.add('active');
+tab.classList.add('active');
 
-        const categoria =
-        tab.dataset.categoria;
+const categoria =
+tab.dataset.categoria;
 
-        document
-        .querySelectorAll('.producto-card')
-        .forEach(card => {
+document
+.querySelectorAll('.producto-card')
+.forEach(card => {
 
-            if(
-                categoria === 'todos' ||
-                card.dataset.categoria === categoria
-            ){
+if(
+categoria === 'todos' ||
+card.dataset.categoria === categoria
+){
 
-                card.style.display = 'flex';
+card.style.display = 'flex';
 
-            }
+}
 
-            else{
+else{
 
-                card.style.display = 'none';
+card.style.display = 'none';
 
-            }
+}
 
-        });
+});
 
-    });
+});
 
 });
 
 
 function agregarAlCarrito(id){
 
-    const item =
-    productos.find(p => p.id === id);
+const item =
+productos.find(p => p.id === id);
 
-    carrito.push(item);
+carrito.push(item);
 
-    actualizarCarritoVisual();
+actualizarCarritoVisual();
 
 }
 
 
 function actualizarCarritoVisual(){
 
-    const lista =
-    document.getElementById(
-        'lista-carrito'
-    );
+const lista =
+document.getElementById(
+'lista-carrito'
+);
 
-    const totalSpan =
-    document.getElementById(
-        'total-precio'
-    );
+const totalSpan =
+document.getElementById(
+'total-precio'
+);
 
-    lista.innerHTML = '';
+lista.innerHTML = '';
 
-    let total = 0;
+let total = 0;
 
 
-    if(carrito.length === 0){
+if(carrito.length === 0){
 
-        lista.innerHTML =
-        '<li style="color:#999;">El carrito está vacío</li>';
+lista.innerHTML =
+'<li style="color:#999;">El carrito está vacío</li>';
 
-    }
+}
 
-    else{
+else{
 
-        carrito.forEach((item,index)=>{
+carrito.forEach((item,index)=>{
 
-            total += item.precio;
+total += item.precio;
 
-            const li =
-            document.createElement('li');
+const li =
+document.createElement('li');
 
-            li.innerHTML = `
+li.innerHTML = `
 
-                <span>${item.nombre}</span>
+<span>${item.nombre}</span>
+<div style="display:flex; gap:5px;">
 
-                <div style="display:flex; gap:5px;">
+<b>$${item.precio}</b>
 
-                    <b>$${item.precio}</b>
+<a
+href="#"
+onclick="eliminarItem(${index}); return false;"
+style="color:red; text-decoration:none;">
 
-                    <a
-                    href="#"
-                    onclick="eliminarItem(${index}); return false;"
-                    style="color:red; text-decoration:none;">
+&times;
 
-                        &times;
+</a>
 
-                    </a>
+</div>
 
-                </div>
+`;
 
-            `;
+lista.appendChild(li);
 
-            lista.appendChild(li);
+});
 
-        });
+}
 
-    }
-
-    totalSpan.innerText = total;
+totalSpan.innerText = total;
 
 }
 
 
 function eliminarItem(index){
 
-    carrito.splice(index,1);
+carrito.splice(index,1);
 
-    actualizarCarritoVisual();
+actualizarCarritoVisual();
 
 }
 
 
 function realizarCompra(){
 
-    if(carrito.length === 0){
+if(carrito.length === 0){
 
-        alert(
-            "El carrito está vacío."
-        );
+alert(
+"El carrito está vacío."
+);
 
-        return;
+return;
 
-    }
+}
 
-    let total =
-    document.getElementById(
-        'total-precio'
-    ).innerText;
-
-
-    let mensaje =
-    `[quote][b]SOLICITUD DE COMPRA[/b]\n\n`;
-
-    mensaje += `[list]`;
-
-    carrito.forEach(item => {
-
-        mensaje +=
-        `[*] ${item.nombre} - [b]$${item.precio}[/b]\n`;
-
-    });
-
-    mensaje += `[/list]\n`;
-
-    mensaje +=
-    `[b]TOTAL A PAGAR: $${total}[/b][/quote]`;
+let total =
+document.getElementById(
+'total-precio'
+).innerText;
 
 
-    const form =
-    document.createElement('form');
+let mensaje =
+`[quote][b]SOLICITUD DE COMPRA[/b]\n\n`;
 
-    form.method = 'post';
+mensaje += `[list]`;
 
-    form.action = '/post';
+carrito.forEach(item => {
 
+mensaje +=
+`[*] ${item.nombre} - [b]$${item.precio}[/b]\n`;
 
-    const inputT =
-    document.createElement('input');
+});
 
-    inputT.type = 'hidden';
-    inputT.name = 't';
-    inputT.value = ID_TEMA_DESTINO;
+mensaje += `[/list]\n`;
 
-    form.appendChild(inputT);
-
-
-    const inputMode =
-    document.createElement('input');
-
-    inputMode.type = 'hidden';
-    inputMode.name = 'mode';
-    inputMode.value = 'reply';
-
-    form.appendChild(inputMode);
+mensaje +=
+`[b]TOTAL A PAGAR: $${total}[/b][/quote]`;
 
 
-    const inputMsg =
-    document.createElement('input');
+const form =
+document.createElement('form');
 
-    inputMsg.type = 'hidden';
-    inputMsg.name = 'message';
-    inputMsg.value = mensaje;
+form.method = 'post';
 
-    form.appendChild(inputMsg);
-
-    document.body.appendChild(form);
+form.action = '/post';
 
 
-    if(
-        confirm(
-            "Vas a ser redirigido al tema para confirmar tu compra."
-        )
-    ){
+const inputT =
+document.createElement('input');
 
-        form.submit();
+inputT.type = 'hidden';
+inputT.name = 't';
+inputT.value = ID_TEMA_DESTINO;
 
-    }
+form.appendChild(inputT);
+
+
+const inputMode =
+document.createElement('input');
+
+inputMode.type = 'hidden';
+inputMode.name = 'mode';
+inputMode.value = 'reply';
+
+form.appendChild(inputMode);
+
+
+const inputMsg =
+document.createElement('input');
+
+inputMsg.type = 'hidden';
+inputMsg.name = 'message';
+inputMsg.value = mensaje;
+
+form.appendChild(inputMsg);
+
+document.body.appendChild(form);
+
+
+if(
+confirm(
+"Vas a ser redirigido al tema para confirmar tu compra."
+)
+){
+
+form.submit();
+
+}
 
 }
 
@@ -536,54 +845,54 @@ document.getElementById('cerrarModal');
 
 function abrirModal(id){
 
-    const item =
-    productos.find(p => p.id === id);
+const item =
+productos.find(p => p.id === id);
 
-    if(!item) return;
+if(!item) return;
 
-    modalTitulo.textContent =
-    item.nombre;
+modalTitulo.textContent =
+item.nombre;
 
-    modalDescripcion.textContent =
-    item.descripcion ||
-    'Sin descripción disponible.';
+modalDescripcion.textContent =
+item.descripcion ||
+'Sin descripción disponible.';
 
-    modal.classList.add('active');
+modal.classList.add('active');
 
 }
 
 
 function cerrarModal(){
 
-    modal.classList.remove('active');
+modal.classList.remove('active');
 
 }
 
 
 cerrarModalBtn.addEventListener(
-    'click',
-    cerrarModal
+'click',
+cerrarModal
 );
 
 
 modal.addEventListener('click',(e)=>{
 
-    if(e.target === modal){
+if(e.target === modal){
 
-        cerrarModal();
+cerrarModal();
 
-    }
+}
 
 });
 
 
 document.addEventListener('keydown',(e)=>{
 
-    if(e.key === 'Escape'){
+if(e.key === 'Escape'){
 
-        cerrarModal();
+cerrarModal();
 
-    }
+}
 
 });
 
@@ -593,18 +902,18 @@ document.getElementById('themeToggle');
 
 
 if(
-    !localStorage.getItem('theme')
+!localStorage.getItem('theme')
 ){
 
-    document.documentElement.classList.add('oscuro');
+document.documentElement.classList.add('oscuro');
 
 }
 
 else{
 
-    document.documentElement.classList.add(
-        localStorage.getItem('theme')
-    );
+document.documentElement.classList.add(
+localStorage.getItem('theme')
+);
 
 }
 
@@ -614,63 +923,64 @@ updateThemeIcon();
 
 themeToggle.addEventListener('click', () => {
 
-    const root =
-    document.documentElement;
+const root =
+document.documentElement;
 
-    if(root.classList.contains('oscuro')){
+if(root.classList.contains('oscuro')){
 
-        root.classList.remove('oscuro');
+root.classList.remove('oscuro');
 
-        root.classList.add('claro');
+root.classList.add('claro');
 
-        localStorage.setItem(
-            'theme',
-            'claro'
-        );
+localStorage.setItem(
+'theme',
+'claro'
+);
 
-    }
+}
 
-    else{
+else{
 
-        root.classList.remove('claro');
+root.classList.remove('claro');
 
-        root.classList.add('oscuro');
+root.classList.add('oscuro');
 
-        localStorage.setItem(
-            'theme',
-            'oscuro'
-        );
+localStorage.setItem(
+'theme',
+'oscuro'
+);
 
-    }
+}
 
-    updateThemeIcon();
+updateThemeIcon();
 
 });
 
+
 function updateThemeIcon(){
 
-    const icon =
-    themeToggle.querySelector('i');
+const icon =
+themeToggle.querySelector('i');
 
-    if(
-        document.documentElement
-        .classList.contains('oscuro')
-    ){
+if(
+document.documentElement
+.classList.contains('oscuro')
+){
 
-        icon.className =
-        'bi bi-sun-fill';
+icon.className =
+'bi bi-sun-fill';
 
-    }
+}
 
-    else{
+else{
 
-        icon.className =
-        'bi bi-moon-stars-fill';
+icon.className =
+'bi bi-moon-stars-fill';
 
-    }
+}
 
-}          
-          
+}
+
 </script>
 
 </body>
