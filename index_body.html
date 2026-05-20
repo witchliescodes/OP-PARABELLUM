@@ -63,13 +63,17 @@
           <p>Ahora</p>
       </div>
       {LOGGED_IN_USER_LIST}
+
+      <div class="online-data">
+      {TOTAL_USERS_ONLINE}
+     </div>
     </div>
     <div class="op-nest">
       <div class="concuaoch">
       <i class="fi fi-rr-eye"></i>
           <p>Hace 48 horas</p>
       </div>
-<span>{L_CONNECTED_MEMBERS}</span>
+{L_CONNECTED_MEMBERS}
     </div>
     <div class="op-grups">
     <div class="congroup">
@@ -89,11 +93,11 @@
         <p>Mensajes <dfn>{TOTAL_POSTS}</dfn></p>
         <p>Usuarios <dfn>{TOTAL_USERS}</dfn></p>
       </div>
-      <div class="opbsta">
-      <p>En linea</p>
-      <p>Ocultos</p>
-      <p>Invitados</p>
-      </div>
+<div class="opbsta">
+    <p class="online-count">En linea</p>
+    <p class="hidden-count">Ocultos</p>
+    <p class="guest-count">Invitados</p>
+</div>
       </div>
       <div class="backstas">
         <div class="stalinky">
@@ -149,6 +153,10 @@
 {AUTO_DST} 
 
 <style>
+.online-data{
+    display:none;
+}  
+  
 .op-est {
     margin: 20px 0 0 0;
     background: var(--color-5);
@@ -249,74 +257,132 @@
     border-radius: 0.38rem;
 }
   
-.op-aest {
-    grid-column: 1 / 2;
-    grid-row: 1 / 3;
+.op-aest{
+    grid-column:1 / 2;
+    grid-row:1 / 3;
+    position:relative;
+    overflow:auto;
+    padding:10px;
+    line-height:1.7;
+    font-size:1em;
+    min-height:0;
 }
-
-.op-aest::before {
-    content: "";
-    background: transparent;
-    position: absolute;
-    padding: 10px;
-    left: calc(38% - 25.5%);
-    height: 10px;
-    border-top-left-radius: 0.7rem;
-    display: block;
-    width: 10px;
-    box-shadow: 0px -10px 0 var(--color-5);
-}
-
-.contec {
-    width: 30%;
-    height: 40%;
-    background: var(--color-5);
-    border-bottom-right-radius: 50%;
-    display: flex;
+.contec{
+    display: inline-flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    flex-flow: column;
-    float: left;
+    gap: 4px;
+    vertical-align: middle;
+    margin-right: 12px;
+    margin-bottom: 6px;
+    padding: 10px 14px;
+    min-width: 78px;
+    border-radius: 0.38em;
+    background: rgb(from var(--color-5) r g b / 0.75);
+    border: 1px solid rgb(from var(--color-2) r g b / 0.08);
+    backdrop-filter: blur(3px);
     color: var(--color-3);
     font-weight: 800;
     text-transform: uppercase;
-    font-size: 0.8em;
+    font-size: .8em;
     font-family: var(--cuerpo1);
-    margin: 0 10px 0 0px;
+    white-space: nowrap;
 }
+
 
 .contec i {
-    font-size: 1.5em;
+    font-size:1.3em;
     line-height: 1em;
-    margin: 10px 0 0 0;
 }
 
+.contec p{
+    margin:0;
+    line-height:1;
+}
+
+.op-aest a{
+    text-decoration:none;
+    transition:.2s ease;
+    line-height:1.7;
+}
+
+.op-aest a:hover{
+    opacity:.75;
+}
+
+.op-aest::-webkit-scrollbar{
+    width: 4px;
+}
+
+.op-aest::-webkit-scrollbar-thumb{
+    background:var(--color-3);
+    border-radius:10px;
+}
+
+.op-aest::-webkit-scrollbar-track{
+    background:transparent;
+}
+  
 .op-nest {
-    grid-column: 1 / 3;
-    grid-row: 3 / 4;
+    grid-column:1 / 3;
+    grid-row:3 / 4;
+    position:relative;
+    overflow:auto;
+    height:145px;
+    padding:10px;
+    line-height:1.7;
+    font-size:1em;
+    min-height:0;
 }
 
 .concuaoch {
-    background: var(--color-5);
-    float: left;
-    display: flex;
-    padding: 5px 10px 5px 10px;
+    display: inline-flex;
     align-items: center;
-    justify-content: space-between;
-    width: calc(100% - 75%);
-    margin: 0 10px 0 0;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
+    gap: 8px;
+    margin-right: 10px;
+    margin-bottom: 6px;
+    padding: 6px 12px;
+    border-radius: 0.38em;
+    background: rgb(from var(--color-5) r g b / 0.65);
+    border: 1px solid rgb(from var(--color-2) r g b / 0.08);
+    backdrop-filter: blur(3px);
     color: var(--color-3);
     font-weight: 800;
     text-transform: uppercase;
-    font-size: 0.9em;
+    font-size: .9em;
+    white-space: nowrap;
+    vertical-align: middle;
 }
 
 .concuaoch i {
-    margin: 0;
+    font-size:14px;
+  margin: 0
+}
+  
+.op-nest a{
+    text-decoration:none;
+    transition:.2s ease;
+    line-height:1.7;
+}
+  
+.op-nest a:hover{
+    opacity: .75;
+}  
+
+.op-nest::-webkit-scrollbar{
+    width: 4px;
 }
 
+.op-nest::-webkit-scrollbar-thumb{
+    background: var(--color-3);
+    border-radius: 10px;
+}
+
+.op-nest::-webkit-scrollbar-track{
+    background: transparent;
+}  
+  
 .op-grups {
     grid-column: 2 / 3;
     grid-row: 1 / 3;
@@ -333,13 +399,14 @@
     align-items: center;
     justify-content: center;
     gap: 8px;
-    border-bottom-left-radius: 0.38em;
+    border-radius: 0.38em;
     background: var(--color-5);
     border-bottom-right-radius: 0.38em;
     color: var(--color-3);
     font-size: 1.2em;
     font-family: var(--titulos);
     text-transform: uppercase;
+    margin: 10px 0;
 }
 
 .congroup i{
@@ -371,7 +438,7 @@
     gap: 10px;
     min-height: 42px;
     padding: 6px 10px;
-    border-radius: 12px;
+    border-radius: 0.38em;
     text-decoration: none !important;
     overflow: hidden;
     transition: .25s ease;
