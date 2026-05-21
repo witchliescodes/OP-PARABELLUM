@@ -302,7 +302,14 @@ margin: 0 0 10px;
 border-radius: 6px;
 color: var(--color-6);
 }
-
+  
+/* SOLO GRID GENERAL */
+/* si queda uno solo abajo ocupa toda la fila */
+.oppfor:not(.bien):not(.pers):not(.zarp):not(.admi):not(.offr)
+>.fori:last-child:nth-child(odd){
+grid-column: 1 / -1;
+}  
+  
 .oppfor.bien{ grid-template-columns: repeat(4,minmax(180px, 1fr)); grid-auto-rows: minmax(80px, auto); }
 .oppfor.pers{ grid-template-columns: repeat(3,minmax(263px,1fr)); grid-auto-rows: minmax(80px,auto); }
 .oppfor.zarp{ grid-template-columns: repeat(3, minmax(200px, 1fr)); grid-auto-rows :minmax(80px, auto); }
