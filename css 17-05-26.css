@@ -309,6 +309,26 @@ body.claro, body.oscuro {
     box-shadow: 0px 0px 15px var(--tcolor3);
 }
 
+#wrap::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at top left, var(--tcolor4), transparent 2%);
+    pointer-events: none;
+    border-radius:20px;
+    opacity: 0.3;
+}
+
+#wrap::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at bottom right, var(--tcolor3), transparent 2%);
+    pointer-events: none;
+    border-radius: 20px;
+    opacity: 0.3;
+}
+
 .oscuro #wrap {
   color: var(--color-5);
 }
@@ -765,6 +785,11 @@ display: flex !important;
   transition: all 300ms ease-in-out;
 }
 
+.oscuro .dropdown-item a:jover {
+    color: var(--color-6) !important;
+
+}
+
 .dropdown-item::before{
   content: "";
   position: absolute;
@@ -785,7 +810,7 @@ display: flex !important;
 }
 
 .dropdown-item:hover {
-  color: var(--color-5) !important;
+  color: var(--color-6) !important;
 }
 
 .puspj, .puadmin, .puenlaces {
@@ -1115,7 +1140,7 @@ banner:hover .manga3 {
     top: 90px !important;
     right: 20px !important;
     left: auto !important;
-    width: 350px !important;
+    width: 430px !important;
     max-width: 90vw !important;
     background: var(--color-5) !important;
     border: 0px solid !important;
@@ -1135,6 +1160,9 @@ banner:hover .manga3 {
     font-weight: 600 !important;
     color: var(--color-3);
     border-radius: 12px 12px 0 0 !important;
+    font-family: var(--titulos);
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .oscuro #notif_list::before {
@@ -1150,13 +1178,13 @@ banner:hover .manga3 {
     align-items: center;
     justify-content: flex-start;
     border-top: none;
-    background: var(--color-6)!important;
+    background: var(--color-1)!important;
 }
 
-#notif_list li.unread { 
-    font-weight: 500!important;
-    background-color: var(--color-2)!important;
-    color: var(--color-6)!important;
+#notif_list li.unread {
+    font-weight: 500 !important;
+    background-color: var(--color-5) !important;
+    color: var(--color-6) !important;
 }
 #notif_list li.unread .contentText a { 
     font-weight: 500!important;
@@ -1183,7 +1211,7 @@ banner:hover .manga3 {
     margin: 0 !important;
     display: flex !important;
     align-items: center !important;
-    justify-content: space-between !important;
+    justify-content: flex-start !important;
     overflow: hidden !important;
     vertical-align: top !important;
     color: var(--color-1) !important;
@@ -1195,12 +1223,12 @@ banner:hover .manga3 {
     width: -webkit-fill-available;
     height: max-content;
     overflow: hidden;
-    color: var(--tfon2);
-    font-family: var(--tt2);
+    color: var(--color-3);
+    font-family: var(--cuerpo1);
 }
 
 .oscuro #notif_list li .contentText {
-   color: var(--texto);
+   color: var(--color-3);
 }
 
 .contentText a {
@@ -1217,7 +1245,7 @@ banner:hover .manga3 {
 
 #notif_list .content .delete::before {
     content: "\f2ed";
-    font-family: "Font Awesome 6 Free";
+    font-family: "Font Awesome 7 Free";
     font-weight: 900;
     font-size: 1.4em;
     color: var(--color-3);
@@ -1237,12 +1265,12 @@ banner:hover .manga3 {
 /* Item "Ver todas" */
 #notif_list li.see_all {
     text-align: center !important;
-    background-color: #f8f9fa !important;
+    background-color: var(--color-3) !important;
     border-radius: 0 0 12px 12px !important;
 }
 
 #notif_list li.see_all a {
-    color: var(--acento3, #007bff) !important;
+    color: var(--color-5, #007bff) !important;
     text-decoration: none !important;
     font-weight: 500 !important;
 }
