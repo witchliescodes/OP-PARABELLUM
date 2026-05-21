@@ -136,17 +136,18 @@
     <dfn><i class="game-icon game-icon-extra-time"></i> Cronología</dfn>
     <span class="valor"></span></div>
 </div>
-</div>
 
-<div class="modad">
 <!-- BEGIN switch_auth_user -->
 <div class="mod">
 <h1>Moderar el usuario</h1>
+<div class="modad">  
 <p>{ADMINISTRATE_USER}</p>
 <p>{BAN_USER}</p>
+</div>  
 </div>
 <!-- END switch_auth_user -->
 </div>
+
 
 <!--CAMPOS OCULTOS -->
 <div id="camposreales">
@@ -1138,7 +1139,7 @@ fecha | punto | contenido
 ========================= */
 
 .seco{
-    margin:0 10px 10px;
+    margin:0 10px 0 10px;
     padding:10px;
     background:var(--color-5);
     border-radius:.38em;
@@ -1374,4 +1375,31 @@ fecha | punto | contenido
    --color-2:#dbca02;
    --color-3:#dbca02;
 }    
+
+/*Administración del usuario*/
+.mod {
+    padding: 10px;
+    border: 1px solid var(--color-3);
+    border-radius: 0.38em;
+    margin: 0 10px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: stretch;
+}
+  
+.mod h1 {
+    margin: 0;
+    font-family: var(--titulos);
+    text-transform: uppercase;
+    font-size: 1em;
+    color: var(--color-3);
+}  
+  
+.modad {
+    border-radius: 0.18em;
+    background: var(--color-5);
+    padding: 5px 10px;
+}  
+  
 </style>
