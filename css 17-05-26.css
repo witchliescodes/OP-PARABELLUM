@@ -48,6 +48,9 @@ html.loading #main-content {
   --pcop: url('https://images2.imgbox.com/4c/88/bR79dzI8_o.jpg'); /*combate personajes*/
   --pcoc: url('https://images2.imgbox.com/cc/ed/cjArRFmP_o.jpg'); /*compate canon*/
   --paku: url('https://images2.imgbox.com/ec/ca/wBEjKuNC_o.jpg');  /*akuma no mi*/
+  --paku1: url('https://i.ibb.co/zTMMscnN/paramecia.jpg');  /*paramecia*/
+  --paku2: url('https://i.ibb.co/k2VMG8mH/zoan.jpg');  /*zoan*/
+  --paku3: url('https://i.ibb.co/FLVCkKVw/logia1.jpg');  /*logia*/
 /*ZARPEMOS*/
   --ztri: url('https://images2.imgbox.com/be/24/jsQ5PMSg_o.jpg'); /*tripulaciones*/
   --zmer: url('https://images2.imgbox.com/c4/d4/wnQFv1Bs_o.jpg'); /*mercados*/
@@ -100,9 +103,9 @@ html.loading #main-content {
   /*PESTAÑA1*/
 --pes1: url('https://images2.imgbox.com/6d/3a/hjFQbiE6_o.png'); /*IMagen pestaña1*/
 --botstf: url('https://images2.imgbox.com/77/39/e6m4iCFD_o.png'); /*Imagenbotonstaff*/
---staff1: url('https://i.pinimg.com/736x/ab/d1/7d/abd17d92868d81d9ca6b4f89fb740cf1.jpg'); /*Imagen 1 de staff*/
---staff2: url('https://i.pinimg.com/736x/5f/03/09/5f0309417f874fa8b3d2ccb6c122bcbd.jpg'); /*Imagen 2 de staff*/
---staff3: url('https://i.pinimg.com/1200x/86/e3/bd/86e3bd35ec6d21e69ef7f63d00fb2dda.jpg'); /*Imagen 3 de staff*/
+--staff1: url('https://2img.net/i.imgur.com/G1BGQX0.jpeg'); /*Imagen 1 de staff*/
+--staff2: url('https://2img.net/i.imgur.com/fXO4flH.jpeg'); /*Imagen 2 de staff*/
+--staff3: url('https://2img.net/i.imgur.com/RgB5Kqf.png'); /*Imagen 3 de staff*/
 --staff4: url('https://i.pinimg.com/736x/7a/56/33/7a563311267ee52a55bae59d6597fde3.jpg'); /*Imagen 4 de staff*/
 --staff5: url('https://i.pinimg.com/736x/b1/b8/ed/b1b8ed4d947adaca0346417129bb6827.jpg'); /*Imagen 5 de staff*/
 --staff6: url('https://i.pinimg.com/736x/f0/e7/d7/f0e7d79238b6f979c1700ea0216329a0.jpg'); /*Imagen 6 de staff*/
@@ -159,9 +162,9 @@ html.loading #main-content {
   /*PESTAÑA1*/
 --pes1: url('https://images2.imgbox.com/dc/e6/kVglMGAB_o.png'); /*IMagen pestaña1*/
 --botstf: url('https://images2.imgbox.com/d1/0e/8cYyxuFB_o.png'); /*Imagenbotonstaff*/  
---staff1: url('https://i.pinimg.com/736x/66/27/0b/66270b11e0717a951118061b0f59c195.jpg'); /*Imagen 1 de staff*/
---staff2: url('https://i.pinimg.com/736x/fb/af/13/fbaf13aabf8c582a9d2dd17709d061bd.jpg'); /*Imagen 2 de staff*/
---staff3: url('https://i.pinimg.com/736x/bc/51/76/bc51768d3aae88f42031874f1e983fcd.jpg'); /*Imagen 3 de staff*/
+--staff1: url('https://2img.net/i.imgur.com/G1BGQX0.jpeg'); /*Imagen 1 de staff*/
+--staff2: url('https://2img.net/i.imgur.com/fXO4flH.jpeg'); /*Imagen 2 de staff*/
+--staff3: url('https://2img.net/i.imgur.com/RgB5Kqf.png'); /*Imagen 3 de staff*/
 --staff4: url('https://i.pinimg.com/736x/f6/a6/0c/f6a60ccaed22e778aae7d5cc81966107.jpg'); /*Imagen 4 de staff*/
 --staff5: url('https://i.pinimg.com/736x/26/e6/12/26e612029595fab52c9b5f3775353b92.jpg'); /*Imagen 5 de staff*/
 --staff6: url('https://i.pinimg.com/1200x/73/f7/a5/73f7a5d3000cca8c9212acf5abeb3ab4.jpg'); /*Imagen 6 de staff*/  
@@ -902,7 +905,7 @@ banner {
     position: relative;
     z-index: 99 !important;
     margin-top: calc(100px - 50px);
-    margin-bottom: calc(200px - 50px);
+    margin-bottom: calc(80px - 50px);
 }
 
 banner .parfon {
@@ -1061,6 +1064,12 @@ banner:hover .manga3 {
 #fa_toolbar {
     position: absolute !important;
     margin: -73px 0 0 0;
+}
+
+#fa_welcome, #fa_right #fa_notifications {
+    line-height: 30px;
+    padding: 0 5px;
+    color: var(--color-7);
 }
 
 #fa_notifications {
@@ -1548,14 +1557,13 @@ ol, ul {
 }
 
 .c-pas1 {
-    height: -webkit-fill-available;
+    height: stretch;
     margin: 0 0 10px 0;
     width: -webkit-fill-available;
     border-radius: 0.38em;
     border: 1px solid var(--color-3);
     padding: 10px;
     overflow: auto;
-    max-height: 384px;
 }
 
 .c-pas2 {
@@ -2027,6 +2035,21 @@ dl.codebox code {
     color: var(--color-5);
 }
 
+/*textareas*/
+
+.sceditor-container iframe, .sceditor-container textarea {  color: var(--color-6)!important; }
+
+.post ul {
+    list-style-type: auto;
+    margin: 0 0 0 10px;
+}
+
+li::marker {
+font-family: var(--titulos); 
+color: var(--color-3);
+  
+}
+
 /*RESPONSIVE*/
 
 @media (max-width:1400px){
@@ -2044,16 +2067,9 @@ font-size: clamp(3rem,6vw,6rem);
 .sinscroll {
       margin: 10px 9px 0 0px!important;
   }
-  .c-pas1 {
-    overflow: auto;
-  }
 }
 
-@media (max-width: 1200px) {
-.c-pas1 {
-    max-height: 360px;
-  }
-}
+
 
 @media (max-width:980px){
 #wrap{
@@ -2071,7 +2087,8 @@ border-radius: 16px;
 banner {
 width: min(93%, 1000px);
 height: clamp(280px, 54vw, 530px);
-top: -60px;
+top: -120px;
+margin-bottom:-30px;
 }
 
 .parahead navbar{
