@@ -701,7 +701,7 @@ div.award {
 }
   
 /*COLORES POR GRUPO*/
-.bopost.post-group-1{
+.bopost.post-group-15 {
    --color-2: #999999;
    --color-3: #999999;
    --group-main: #999999;
