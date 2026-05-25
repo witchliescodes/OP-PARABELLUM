@@ -730,6 +730,7 @@ p {margin: 0;}
     padding: 10px;
     border-radius: 10px;
     background: var(--color-6);
+    color: var(--color-3);
 }
 
 .switcheroo__form-button {
@@ -1248,8 +1249,17 @@ banner:hover .manga3 {
 }
 
 #notif_list .content .delete {
-    background-image: none !important;  
+    background-image: none !important;
     position: relative;
+    width: 24px;
+    height: 24px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#notif_list .content .delete::before {
+    pointer-events: none;
 }
 
 #notif_list .content .delete::before {
@@ -1262,7 +1272,7 @@ banner:hover .manga3 {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-  transition: 400ms ease-in-out;
+    transition: 400ms ease-in-out;
 }
 
 #notif_list .content .delete:hover::before {
@@ -2059,6 +2069,7 @@ padding: clamp(180px,18vw,310px) clamp(20px,3vw,55px) 55px;
 }
 banner{
 height: clamp(320px,48vw,600px);
+margin-bottom: 115px;
 }
 .partitle h1{
 font-size: clamp(3rem,6vw,6rem);
