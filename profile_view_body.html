@@ -1112,13 +1112,11 @@ box-shadow:
     flex-flow: row-reverse;
 }  
   
-.objsecc > span,
-.seccup > span{
-    width:-webkit-fill-available;
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(70px,1fr));
-    justify-content:space-between;
-    gap:10px;
+.objsecc > span, .seccup > span {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 70px);
+    gap: 10px;
+    justify-content: start;
 }
   
 div.award {
