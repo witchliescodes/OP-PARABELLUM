@@ -75,12 +75,15 @@ async function cargarWanteds() {
 
         const grupoEl =
 
-          tema.querySelector('.autfe .group-5') ||
-          tema.querySelector('.autfe .group-8') ||
-          tema.querySelector('.autfe a span') ||
-          tema.querySelector('.autfe a');
+          tema.querySelector('.autorp .group-5') ||
+          tema.querySelector('.autorp .group-8') ||
+          tema.querySelector('.autorp a span') ||
+          tema.querySelector('.autorp a');
 
-        if (!grupoEl) return null;
+if (!grupoEl) return null;
+
+const perfilUrl =
+  grupoEl.closest('a')?.href || '';
 
         const clases =
           grupoEl.classList
@@ -92,19 +95,21 @@ async function cargarWanteds() {
             clase.startsWith('group-')
           ) || '';
 
-        return {
+  return {
 
-          url:
-            link.href || '#',
+  url:
+    link.href || '#',
 
-          nombre:
-            normalizar(
-              grupoEl.textContent
-            ) || 'Desconocido',
+  perfilUrl,
 
-          avatar:
-            tema.querySelector('.avalist img')
-            ?.src || fallbackAvatar,
+  nombre:
+    normalizar(
+      grupoEl.textContent
+    ) || 'Desconocido',
+
+  avatar:
+    tema.querySelector('.avalist img')
+    ?.src || fallbackAvatar,
 
           recompensa:
             normalizar(
@@ -145,6 +150,50 @@ async function cargarWanteds() {
       return;
 
     }
+	  
+for (const wanted of wanteds) {
+
+  try {
+
+    const htmlPerfil =
+      await fetch(
+        wanted.perfilUrl,
+        {
+          credentials: 'same-origin',
+          cache: 'no-store'
+        }
+      ).then(r => r.text());
+
+    const docPerfil =
+      new DOMParser().parseFromString(
+        htmlPerfil,
+        'text/html'
+      );
+
+    const avatarPerfil =
+      docPerfil.querySelector(
+        '.perfilavatar img'
+      )?.src;
+
+    if (avatarPerfil) {
+
+      wanted.avatar =
+        avatarPerfil;
+
+    }
+
+  }
+
+  catch(err){
+
+    console.warn(
+      'Avatar no encontrado para:',
+      wanted.nombre
+    );
+
+  }
+
+}
 
     const fragment =
       document.createDocumentFragment();
