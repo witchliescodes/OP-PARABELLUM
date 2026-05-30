@@ -1,0 +1,95 @@
+function cargarBusquedas(){
+
+  fetch('/f25-') 
+    .then(r => r.text())
+    .then(html => {
+
+      const doc = new DOMParser().parseFromString(html, 'text/html');
+      const filas = doc.querySelectorAll('.tema');
+
+      let contenido = '';
+      let count = 0;
+
+      filas.forEach((fila) => {
+
+        if(count >= 6) return;
+
+
+        const link = fila.querySelector('.topictitle');
+
+        if(!link) return;
+
+
+        const tipoTema = fila.querySelector('.toptt dfn')?.textContent.toLowerCase() || '';
+
+        if (
+          tipoTema.includes('anuncio') ||
+          tipoTema.includes('nota') ||
+          tipoTema.includes('global') ||
+          tipoTema.includes('sticky')
+        ){
+          return;
+        }
+
+        const titulo = link.textContent.trim();
+        const url = link.href;
+
+        const autor = fila.querySelector('.autfe a')?.textContent.trim() || '';
+
+        const fecha = fila.querySelector('.autfe dfn')?.textContent.trim() || '';
+
+        let avatar = '';
+
+        const avatarEl = fila.querySelector('.avalist img');
+
+        if (avatarEl) {
+          avatar = avatarEl.src;
+        } else {
+          avatar = 'https://2img.net/i.imgur.com/NQinKJB.png';
+        }
+
+        let claseExtra = '';
+
+        if (
+          fecha.toLowerCase().includes('hoy') ||
+          fecha.toLowerCase().includes('today')
+        ){
+          claseExtra = 'activa';
+        }
+
+        contenido += `
+          <article class="busqueda-card ${claseExtra}">
+            
+            <div class="busqueda-avatar">
+              <img src="${avatar}" alt="">
+            </div>
+
+            <div class="busqueda-info">
+              
+              <h3 class="busqueda-titulo">
+                <a href="${url}">
+                  ${titulo}
+                </a>
+              </h3>
+
+<div class="busqueda-meta">
+  <span class="busqueda-autor">${autor}</span>
+  <span class="busqueda-fecha">${fecha}</span>
+</div>
+
+            </div>
+
+          </article>
+        `;
+
+        count++;
+
+      });
+
+      document.querySelector('.mebus').innerHTML = contenido;
+
+    })
+    .catch(err => console.log('Error cargando búsquedas:', err));
+}
+
+document.addEventListener('DOMContentLoaded', cargarBusquedas);
