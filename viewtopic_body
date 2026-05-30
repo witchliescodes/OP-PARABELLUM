@@ -119,7 +119,7 @@ showHiddenMessage = function(id)
   <div class="oppost">
     <div class="rol-p">
       {postrow.displayed.MESSAGE}
-      <p>{postrow.displayed.EDITED_MESSAGE}</p>
+      <div class="editm">{postrow.displayed.EDITED_MESSAGE}</div>
       <!-- BEGIN switch_signature -->
       <div class="signature_div" id="sig{postrow.displayed.U_POST_ID}">{postrow.displayed.SIGNATURE_NEW}</div>
       <!-- END switch_signature -->
