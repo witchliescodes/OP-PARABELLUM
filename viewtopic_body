@@ -191,6 +191,44 @@ showHiddenMessage = function(id)
 <!-- END displayed -->
 <!-- END postrow -->
 </div>
+
+
+  <div class="bopp-res blw">
+    <div class="reypost">
+      <!-- BEGIN switch_user_authreply -->
+      <a href="{U_POST_REPLY_TOPIC}">
+        <i class="fi fi-rr-reply-all"></i>
+        Responder
+      </a>
+      <!-- END switch_user_authreply -->
+      <!-- BEGIN switch_user_authpost -->
+      <a href="{U_POST_NEW_TOPIC}" rel="nofollow">
+        <i class="fi fi-rr-document-writer"></i>
+        Nuevo tema
+      </a>
+      <!-- END switch_user_authpost -->
+    </div>
+    
+    <div class="belowop">
+
+<div class="vigig">
+<div class="noprint">
+<!-- BEGIN switch_user_logged_in -->
+<!-- BEGIN watchtopic -->
+<p class="right">{S_WATCH_TOPIC}</p>
+<!-- END watchtopic -->
+<!-- END switch_user_logged_in -->
+</div>      
+</div>
+
+  <div class="ppag">
+      <!-- BEGIN topicpagination -->
+      {PAGINATION}
+      <!-- END topicpagination -->
+    </div>
+</div>
+  </div>
+
 <!-- INICIO DESPUESTAS RAPIDAS-->
 <div class="quik">
 <!-- BEGIN switch_user_logged_in -->
@@ -524,6 +562,14 @@ showHiddenMessage = function(id)
 .p-ava {
     border-radius: 0.18em;
     overflow: hidden;
+}
+  
+.p-ava img {
+    max-width: 300px;
+    max-height: 500px;
+    width: 300px;
+    height: 500px;
+    object-fit: fill;
 }
   
 .p-name {
@@ -933,4 +979,23 @@ div.sceditor-group {
     text-transform: uppercase;
 }  
   
+.blw   {
+margin-top: 10px;
+}  
+  
+.belowop {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}  
+  
+.vigig {
+    background: var(--color-3);
+    padding: 10px;
+    border-radius: 0.18em;
+}  
+  
+.vigig a {
+    color: var(--color-5);
+}
 </style>  
