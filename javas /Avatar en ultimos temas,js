@@ -1,0 +1,111 @@
+jQuery(function () {
+
+  // ==================================================
+  // CONFIG
+  // ==================================================
+
+  const $topics = $(".sinscroll");
+
+  if (!$topics.length) return;
+
+  // ==================================================
+  // RECORRER TEMAS
+  // ==================================================
+
+  $topics.each(function () {
+
+    const $topic = $(this);
+
+    // ===============================================
+    // CONTENEDOR AVATAR
+    // ===============================================
+
+    const $avatarContainer = $topic.find(".ulavi");
+
+    if (!$avatarContainer.length) return;
+
+    // ===============================================
+    // URL DEL TEMA
+    // ===============================================
+
+    const topicUrl = $avatarContainer.attr("href");
+
+    if (!topicUrl) return;
+
+    // ===============================================
+    // INSERTAR ESTRUCTURA BASE
+    // ===============================================
+
+    insertAvatar($avatarContainer);
+
+    const $img = $avatarContainer.find("img");
+
+    // ===============================================
+    // CACHE
+    // ===============================================
+
+    const cacheKey = "fa_topic_avatar_" + topicUrl;
+
+    const cachedAvatar = sessionStorage.getItem(cacheKey);
+
+    if (cachedAvatar) {
+
+      $img.attr("src", cachedAvatar);
+
+      return;
+
+    }
+
+    // ===============================================
+    // CARGAR TEMA
+    // ===============================================
+
+    $.get(topicUrl)
+
+      .done(function (data) {
+
+        const $data = $(data);
+
+        // ===========================================
+        // BUSCAR AVATAR DEL POST
+        // ===========================================
+
+        const avatar = $data
+          .find(".p-ava img")
+          .first()
+          .attr("src");
+
+        // ===========================================
+        // SI ENCUENTRA AVATAR
+        // ===========================================
+
+        if (avatar && avatar.trim() !== "") {
+
+          $img.attr("src", avatar);
+
+          sessionStorage.setItem(cacheKey, avatar);
+
+        }
+
+      });
+
+  });
+
+  // ==================================================
+  // INSERTAR AVATAR
+  // ==================================================
+
+  function insertAvatar($container) {
+
+    // Evitar duplicados
+    if ($container.find(".lastpost-avatar").length) return;
+
+    $container.html(`
+      <div class="lastpost-avatar">
+        <img loading="lazy">
+      </div>
+    `);
+
+  }
+
+});
