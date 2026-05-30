@@ -1,113 +1,74 @@
-document.addEventListener(
-"DOMContentLoaded",
-()=>{
+document.addEventListener("DOMContentLoaded", () => {
 
+    function irAlPost() {
 
-function irAlPost(){
+        const hash = window.location.hash;
 
+        const match = hash.match(/^#(\d+)$/) ||
+                      hash.match(/^#p(\d+)$/);
 
-/* LEER HASH */
+        if (!match) return;
 
-const hash =
-window.location.hash;
+        const id = match[1];
 
-if(
-!hash ||
-!/^#\d+$/.test(hash)
-)
+        if (hash === `#${id}`) {
+            history.replaceState(
+                null,
+                "",
+                `${location.pathname}${location.search}#p${id}`
+            );
+        }
 
-return;
+        let intentos = 0;
 
+        const buscar = () => {
 
-/* SACAR NUMERO */
+            const objetivo =
+                document.getElementById(`p${id}`) ||
+                document.getElementById(`post-${id}`) ||
+                document.querySelector(`a[name="${id}"]`);
 
-const id =
-hash.slice(1);
+            if (objetivo) {
 
+                objetivo.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start"
+                });
 
-let intentos = 0;
+                setTimeout(() => {
+                    objetivo.scrollIntoView({
+                        behavior: "smooth",
+                        block: "start"
+                    });
+                }, 500);
 
+                setTimeout(() => {
+                    objetivo.scrollIntoView({
+                        behavior: "smooth",
+                        block: "start"
+                    });
+                }, 1000);
 
-const buscar = ()=>{
+                return;
+            }
 
+            intentos++;
 
-const objetivo =
+            if (intentos < 30) {
+                setTimeout(buscar, 300);
+            }
 
-document.querySelector(
-`#post-${id}`
-)
+        };
 
-||
+        buscar();
 
-document.querySelector(
-`#p${id}`
-)
+    }
 
-||
+    irAlPost();
 
-document.querySelector(
-`#entry${id}`
-)
-
-||
-
-document.querySelector(
-`a[name="${id}"]`
-);
-
-
-
-if(objetivo){
-
-objetivo.scrollIntoView({
-
-behavior:"smooth",
-
-block:"start"
-
-});
-
-return;
-
-}
-
-
-
-intentos++;
-
-
-/* ESPERAR FOROACTIVO */
-
-if(intentos < 20){
-
-setTimeout(
-buscar,
-300
-);
-
-}
-
-
-};
-
-
-buscar();
-
-
-}
-
-
-/* AL ENTRAR */
-
-irAlPost();
-
-
-/* POR SI AJAX CAMBIA URL */
-
-window.addEventListener(
-"hashchange",
-irAlPost
-);
-
+    window.addEventListener(
+        "hashchange",
+        irAlPost
+    );
 
 });
