@@ -1,0 +1,113 @@
+document.addEventListener(
+"DOMContentLoaded",
+()=>{
+
+
+function irAlPost(){
+
+
+/* LEER HASH */
+
+const hash =
+window.location.hash;
+
+if(
+!hash ||
+!/^#\d+$/.test(hash)
+)
+
+return;
+
+
+/* SACAR NUMERO */
+
+const id =
+hash.slice(1);
+
+
+let intentos = 0;
+
+
+const buscar = ()=>{
+
+
+const objetivo =
+
+document.querySelector(
+`#post-${id}`
+)
+
+||
+
+document.querySelector(
+`#p${id}`
+)
+
+||
+
+document.querySelector(
+`#entry${id}`
+)
+
+||
+
+document.querySelector(
+`a[name="${id}"]`
+);
+
+
+
+if(objetivo){
+
+objetivo.scrollIntoView({
+
+behavior:"smooth",
+
+block:"start"
+
+});
+
+return;
+
+}
+
+
+
+intentos++;
+
+
+/* ESPERAR FOROACTIVO */
+
+if(intentos < 20){
+
+setTimeout(
+buscar,
+300
+);
+
+}
+
+
+};
+
+
+buscar();
+
+
+}
+
+
+/* AL ENTRAR */
+
+irAlPost();
+
+
+/* POR SI AJAX CAMBIA URL */
+
+window.addEventListener(
+"hashchange",
+irAlPost
+);
+
+
+});
