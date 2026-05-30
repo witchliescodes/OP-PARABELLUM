@@ -39,7 +39,8 @@
 </div>
 <div class="autfe">
 <span>
-{topics_list_box.row.LAST_POST_AUTHOR}
+<p class="autorp">Escrito por {topics_list_box.row.TOPIC_AUTHOR}</p>
+<p class="acontp">Contestado por {topics_list_box.row.LAST_POST_AUTHOR}</p>  
 <dfn>{topics_list_box.row.LAST_POST_TIME}</dfn>
 </span>
 {topics_list_box.row.GOTO_PAGE_NEW}
@@ -312,5 +313,5 @@
     --icon: url(https://cdn.jsdelivr.net/gh/witchliescodes/ui-icons@main/icons/megafono.svg);
     --grad: linear-gradient(135deg, var(--color-2), var(--color-7));
 }  
-
+  
 </style>  
