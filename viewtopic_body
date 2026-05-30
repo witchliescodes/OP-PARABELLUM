@@ -296,6 +296,7 @@ showHiddenMessage = function(id)
     border-radius: 0.18em;
     opacity: 0.8;
     color: var(--color-3);
+    display: flex;
 }  
   
 .bopp-t {
