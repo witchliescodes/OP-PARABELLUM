@@ -316,7 +316,7 @@ body.claro, body.oscuro {
     content: "";
     position: absolute;
     inset: 0;
-    background: radial-gradient(circle at top left, var(--tcolor4), transparent 2%);
+    background: radial-gradient(circle at top left, var(--tcolor4), transparent 10%);
     pointer-events: none;
     border-radius:20px;
     opacity: 0.3;
@@ -326,7 +326,7 @@ body.claro, body.oscuro {
     content: "";
     position: absolute;
     inset: 0;
-    background: radial-gradient(circle at bottom right, var(--tcolor3), transparent 2%);
+    background: radial-gradient(circle at bottom right, var(--tcolor3), transparent 10%);
     pointer-events: none;
     border-radius: 20px;
     opacity: 0.3;
@@ -2047,7 +2047,22 @@ dl.codebox code {
 
 /*textareas*/
 
-.sceditor-container iframe, .sceditor-container textarea {  color: var(--color-6)!important; }
+.sceditor-container iframe,
+.sceditor-container textarea {  color: var(--color-6)!important; margin: 0px!important;}
+
+#text_editor_textarea, #postingbox iframe, #postingbox textarea {
+    background: var(--color-5) !important;
+    color: var(--color-6) !important;
+    padding: 20px !important;
+    font-family: var(--cuerpo1);
+    font-size: 0.95rem;
+    line-height: 1.7em;
+    border: none !important;
+    flex: 1;
+    height: 100% !important;
+    min-height: 350px !important;
+    width: 100% !important;
+}
 
 .post ul {
     list-style-type: auto;
@@ -2058,6 +2073,35 @@ li::marker {
 font-family: var(--titulos); 
 color: var(--color-3);
   
+}
+
+/*mensaje de activación*/
+
+#like_popup, #inactive_popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid var(--color-2);
+    padding: 10px;
+    border-radius: 0.38em;
+    background: var(--color-1);
+    color: var(--color-6);
+}
+
+#login_popup .h3, #like_popup .h3, #inactive_popup .h3, #push-answer .h3 {
+    margin: 0 0 10px;
+    padding: 0 0 10px;
+    font-size: 1.5em;
+    font-family: var(--titulos);
+    color: var(--color-2);
+    border-bottom: 1px solid var(--color-2);
+}
+
+#inactive_popup_message {
+    text-align: justify;
+    hyphens: auto;
 }
 
 /*RESPONSIVE*/
