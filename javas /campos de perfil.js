@@ -148,21 +148,15 @@ origen.forEach(item => {
 });
 
 }, 500);
+	
+/*ULTIMA VISITA*/	
+const ultimaEl =
+document.querySelector(".ultima");
 
-// ÚLTIMA VISITA
-const ultimaEl = document.querySelector(".ultima");
+if(ultimaEl){
 
-if (ultimaEl) {
-
-let texto = ultimaEl.textContent.trim();
-
-// quitar "Última visita:"
-texto = texto.split(":").slice(1).join(":").trim();
-
-// separar fecha y hora
-const [fechaParte, hora] = texto.split(" - ");
-
-if (fechaParte && hora) {
+const texto =
+ultimaEl.textContent;
 
 const meses = {
 
@@ -194,35 +188,83 @@ Diciembre:"12"
 
 };
 
-// busca automáticamente día mes año
-const match = fechaParte.match(
-/(\d{1,2})\s+([A-Za-zÁÉÍÓÚáéíóú]+)\s+(\d{4})/
+const match =
+texto.match(
+/(\d{1,2})\s+([A-Za-zÁÉÍÓÚáéíóú]+)\s+(\d{4}).*?(\d{1,2}:\d{2})/
 );
 
-if (match) {
+if(match){
 
 const dia =
 match[1].padStart(2,"0");
 
-const mesTexto =
-match[2];
+const mes =
+meses[match[2]];
 
 const año =
 match[3];
+
+const hora =
+match[4];
+
+if(mes){
+
+ultimaEl.innerHTML =
+`Conexión:&nbsp;${dia}/${mes}/${año} | ${hora}`;
+
+}
+
+}
+
+}
+/* ESTADO */
+
+const estadoEl =
+document.querySelector(".estado");
+
+if(estadoEl){
+
+const texto =
+estadoEl.textContent
+.trim()
+.toLowerCase();
+
+if(
+texto.includes("fuera")
+){
+
+estadoEl.innerHTML =
+`<i class="fi fi-rr-wifi-slash"></i> Fuera de línea`;
+
+estadoEl.classList.add(
+"estado-offline"
+);
+
+}
+
+else if(
+
+texto.includes("línea")
+||
+texto.includes("linea")
+||
+texto.includes("conectado")
+||
+texto.includes("online")
+
+){
+
+estadoEl.innerHTML =
+`<i class="fi fi-rr-wifi"></i> En línea`;
+
+estadoEl.classList.add(
+"estado-online"
+);
+
+}
+
+}	
 	
-const mes =
-meses[mesTexto] || mesTexto;
-
-ultimaEl.textContent =
-`Última visita:${dia}/${mes}/${año} | ${hora}`;
-
-}
-
-}
-
-}
-
-
 // EVENTO FINAL
 document.dispatchEvent(new Event("perfilListo"));
 
