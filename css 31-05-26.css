@@ -312,7 +312,7 @@ body.claro, body.oscuro {
     box-shadow: 0px 0px 15px var(--tcolor3);
 }
 
-#wrap::before {
+#wrap::before, .parahead:before {
     content: "";
     position: absolute;
     inset: 0;
@@ -322,7 +322,7 @@ body.claro, body.oscuro {
     opacity: 0.3;
 }
 
-#wrap::after {
+#wrap::after, .parahead:after {
     content: "";
     position: absolute;
     inset: 0;
