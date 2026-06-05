@@ -194,16 +194,16 @@ font-display: block;
 }
 
 @font-face {
-font-family: 'Open Sans';
-font-style: normal; 
-src: url('https://dl.dropbox.com/scl/fi/fo3u5mp48i3s9gmh26h8s/OpenSans-VariableFont_wdth-wght.ttf?rlkey=w0lu3xqf25p5i8is1w8rbokvl&st=a4oc4sty&dl=1') format('truetype');
+  font-family: 'Open Sans';
+  font-style: normal;
+  src: url('https://witchliescodes.github.io/Foroactivo-assets/fonts/Open_Sans/OpenSans-VariableFont_wdth-wght.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 900;
-  src: url('https://dl.dropbox.com/scl/fi/dljvvkwwk860ff7mgpdyn/poppins.black.ttf?rlkey=4nvdvluqk0sk8gmr2sj0nz2jt&st=e43g11nj&dl=1') format('truetype');
+  src: url('https://witchliescodes.github.io/Foroactivo-assets/fonts/Poppins/poppins.black.ttf') format('truetype');
 }
 
 body::-webkit-scrollbar { background-color:var(--color-1);width:19px;height:19px; }
