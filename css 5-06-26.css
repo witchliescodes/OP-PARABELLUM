@@ -295,7 +295,7 @@ body.claro, body.oscuro {
    flex-flow: column;
    align-items: center; 
    justify-content: center;
-   font-family: var(--cuerpo1);
+   font-family: 'Open Sans', Arial, sans-serif;
    font-size: clamp(15px, 0.9vw, 17px);
 }
 
@@ -2073,6 +2073,11 @@ li::marker {
 font-family: var(--titulos); 
 color: var(--color-3);
   
+}
+
+.search .postbody {
+    width: 68%;
+    color: var(--color-6);
 }
 
 /*mensaje de activación*/
