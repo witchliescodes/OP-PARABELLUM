@@ -92,7 +92,7 @@ form[name="jumpbox"] select { font-family: var(--cuerpo1); font-weight: 400; cur
 .wrap-conten { display: flex; flex-flow: column; gap: 12px; }
 .wrap-conten dfn { display: flex; align-items: center; gap: 10px; font-style: normal; text-transform: uppercase; font-family: var(--titulos); color: var(--color-3); font-size: 1.5rem; letter-spacing: 1px; margin: 20px 0 0 0;}
 .wrap-conten dfn::after { content: ""; flex: 1; height: 1px; background: linear-gradient(90deg, var(--color-3),transparent); }
-.wrap-conten p, .wrap-intro p { margin: 0; color: var(--color-6); line-height: 1.9em; text-align: justify; }
+.wrap-conten p, .wrap-intro p { margin: 0; color: var(--color-6); line-height: 1.9em; text-align: justify; font-family: var(--cuerpo1); }
 @media (max-width: 700px) { .gui-tl { flex-flow: column; text-align: center; } .tags-guid { grid-template-columns: 1fr; } }
 /*Tablilla de ficha de personaje*/  
 .wrap-fih br{display: none;}
@@ -193,7 +193,7 @@ grid-template-columns:1fr 1fr; }
 .wrap-admin.active .sta-lab label{ transform:rotate(180deg); background:var(--deg2); color:var(--color-4); border-color:transparent; }
 .sta-cont br { display: block;}
 .sta-cont{ max-height:0; overflow:hidden; transition: max-height 500ms ease, padding 300ms ease; padding:0; line-height:2em; opacity:0; }
-.wrap-admin.active .sta-cont{ max-height:500px; padding:0 25px 25px; opacity:1; }
+.wrap-admin.active .sta-cont{ max-height: 100vh; padding:0 25px 25px; opacity:1; }
 .wrap-admin.aceptado{ border-color:#5bb66d55; }
 .wrap-admin.aceptado .statwrap > i{ background: linear-gradient(145deg, #5bb66d, #3d9c58); }
 .wrap-admin.rechazado{ border-color:#d7606055; }
